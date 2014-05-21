@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc></loc>
+    </url>
+    
+    
+    <url>
+        <loc>/feed.xml</loc>
+    </url>
+    
+    <url>
+        <loc>/theme-setup/</loc>
+    </url>
+    
+    <url>
+        <loc>/arch/</loc>
+    </url>
+    
+    <url>
+        <loc>/index.html</loc>
+    </url>
+    
+    <url>
+        <loc>/posts/</loc>
+    </url>
+    
+    <url>
+        <loc>/about/</loc>
+    </url>
+    
+    <url>
+        <loc>/404.html</loc>
+    </url>
+    
+    <url>
+        <loc>/sitemap.xml</loc>
+    </url>
+    
+
+    
+    <url>
+        <loc>/BTK-biomechanics/</loc>
+    </url>
+    
+    <url>
+        <loc>/sample-post/</loc>
+    </url>
+    
+</urlset>
