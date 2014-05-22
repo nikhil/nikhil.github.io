@@ -7,7 +7,7 @@ tags: [Arch]
 modified: 5-21-2014
 comments: true
 image:
-  feature: texture-feature-01.jpg
+  feature: Arch.png
   credit: Texture Lovers
   creditlink: http://texturelovers.com
 ---
