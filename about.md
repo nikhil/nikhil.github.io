@@ -7,9 +7,7 @@ tags: [about]
 modified: 9-9-2013
 comments: true
 image:
-  feature: texture-feature-05.jpg
-  credit: Texture Lovers
-  creditlink: http://texturelovers.com
+  feature: python-hello.png
 ---
 
 
