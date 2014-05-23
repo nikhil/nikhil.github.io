@@ -8,6 +8,7 @@ modified: 5-21-2014
 comments: true
 image:
   feature: Arch.png
+  credit: Arch Linux Project, which I am not affiliated with.
 ---
 
 Here I will write about the fun (and the pain) I have with Arch. Here is my archey image. 
@@ -15,4 +16,5 @@ Here I will write about the fun (and the pain) I have with Arch. Here is my arch
 <img src="/images/snapshot4.png">
 <figcaption>Archey</figcaption>
 </figure>
+
 
