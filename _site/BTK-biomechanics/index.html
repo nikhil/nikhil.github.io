@@ -123,11 +123,55 @@
       
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
-      <p>A a script that reads, plots data as well as modifies c3d files using the btk library.</p>
+      <p>I am currently doing research on the diffrences between Barefoot running and Shod running(running with shoes). I am working with software known as the <code>AnyBody Modeling System</code> using the <code>Gait lower Extremity model</code>. This allows me to input motion captured data, which is givin in the form of a <code>.c3d</code> file. However, I ran into a problem where I wanted to modify the .c3d file but I could not find anyt decent software to allow me to do this. I was able to find ‘btk’ a ‘python’ package that allows me to modify .c3d files.</p>
 
-<h1 id="modules-needed">Modules needed</h1>
+<h2 id="c3d-files">C3d files</h2>
 
-<h2 id="python-pacakges">Python pacakges</h2>
+<h3 id="what-are-c3d-files">What are c3d files:</h3>
+
+<p>According to the c3d main page:</p>
+<blockquote>
+The C3D format is a public domain, binary file format that has been used in Biomechanics, Animation and Gait Analysis laboratories to record synchronized 3D and analog data since the mid 1980's.  It is supported by all 3D major Motion Capture System manufacturers, as well as other companies in the Biomechanics, Motion Capture and Animation Industries.<a href="http://www.c3d.org/"><i class="fa fa-file"></i></a></blockquote>
+
+<h3 id="file-structure">File Structure</h3>
+<p>The structure of the C3d file is as follows:</p>
+
+<pre><code>*.c3d/
+	├── Header
+	|    ├── File type
+	|    ├── Data type
+	|    ├── 3D Points
+	|    ├── Analog Channels
+	|    ├── First Frame
+	|    ├── Last Frame
+	|    ├── Start Record
+	|	 ├── AV ratio
+	|	 ├── Video rate
+	|	 └── Max interpolation Gap
+	├── Events
+	├── Groups
+	|    	 ├── Point
+	| |	├── ...
+	| |	├──Labels
+	| |	└── ...
+	|    |
+	|    ├── Analog                 
+	|    ├── Seq
+	|    ├── Manufacturer
+    |    └── Force Platform
+	├── Analog data                    
+	└── Point data                     
+</code></pre>
+
+<h2 id="instalation">Instalation</h2>
+
+<h2 id="what-is-btk">What is Btk?</h2>
+<p>According to the BTk site on google code:</p>
+<blockquote>
+BTK is an open-source and cross-platform library for biomechanical analysis. BTK read and write acquisition files and can modify them. All these operations can be done by the use of the C++ API or by the wrappers included (Matlab, Octave, and Python).<a href="https://code.google.com/p/b-tk/"><i class="fa fa-cogs"></i></a>
+</blockquote>
+
+<h2 id="python-pacakges-needed">Python pacakges needed</h2>
 
 <div class="highlight"><pre><code class="python"><span class="n">numpy</span>
 <span class="n">Matplotlib</span>
@@ -140,34 +184,68 @@ For example to install numpy, you need to run:</p>
 <div class="highlight"><pre><code class="python"><span class="n">pip</span> <span class="n">install</span> <span class="n">numpy</span>
 </code></pre></div>
 
-<p>BTK is the exception here. I was not able to get btk working through pip. BTK also seems to be architectural dependent as it was not installing in my ARCH distribution. I was able to get it working on Fedora 19 by installing the python wrapper package from here</p>
+<p class="notice"><i class="fa fa-warning"></i> <strong>Caution:</strong> BTK is the exception here. I was not able to get btk working through pip. BTK also seems to be architectural dependent as it was not installing in my ARCH distribution. </p>
 
-<pre><code>https://code.google.com/p/b-tk/
-</code></pre>
+<p>I was able to get it working on Fedora 19 by installing the python wrapper package from here </p>
+
+<p><code>https://code.google.com/p/b-tk/</code></p>
+
 <p>Then run:</p>
 
 <div class="highlight"><pre><code class="bash">yum localinstall packagename.rpm 
 </code></pre></div>
 
-<h2 id="running-it">Running it</h2>
+<h2 id="using-b-tk-to-modify-your-file">Using b-tk to modify your file</h2>
 
-<p>This program was hardcoded for the research I was doing in biomechanics. It graphs all the analog forces in the x,y, and z direction. Currently it modifies the file by setting a limit for the force in the z direction to mimic heal-toe running.</p>
+<p>You can import btk in python by specify your system path to the package or by
+just using import depending on your installation.</p>
 
-<p>Before running this script you must add in the name of your c3d file. To do that you must edit this line.</p>
-
-<div class="highlight"><pre><code class="python"><span class="n">reader</span> <span class="o">=</span> <span class="n">btk</span><span class="o">.</span><span class="n">btkAcquisitionFileReader</span><span class="p">()</span>  <span class="c"># build a btk reader object </span>
-<span class="n">reader</span><span class="o">.</span><span class="n">SetFilename</span><span class="p">(</span><span class="s">&#39;GaitNormal0003-processed.c3d&#39;</span><span class="p">)</span>      <span class="c"># set a filename to the reader</span>
-<span class="n">acq</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="n">GetOutput</span><span class="p">()</span>                 <span class="c"># btk aquisition object</span>
+<div class="highlight"><pre><code class="python"> <span class="kn">import</span> <span class="nn">sys</span>
+ <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;path to your btk python package&quot;</span><span class="p">)</span>
+ <span class="kn">import</span> <span class="nn">btk</span>
 </code></pre></div>
 
-<p>You can then run the program as follows:</p>
+<p>You then need to create a btk reader.</p>
 
-<div class="highlight"><pre><code class="python"><span class="n">python</span> <span class="n">c3dfileeditor</span><span class="o">.</span><span class="n">py</span> <span class="n">modified</span><span class="o">.</span><span class="n">c3d</span> <span class="mf">0.8</span>
+<div class="highlight"><pre><code class="python"> 
+ <span class="n">reader</span> <span class="o">=</span> <span class="n">btk</span><span class="o">.</span><span class="n">btkAcquisitionFileReader</span><span class="p">()</span>
 </code></pre></div>
 
-<p>where modified.c3d is the name you want your modified file to be and 0.8 is the cutoff.</p>
+<p>Then you need to open the file and create a btk aquisition object.</p>
 
-<p>The results are then graphed.</p>
+<div class="highlight"><pre><code class="python"> <span class="n">reader</span><span class="o">.</span><span class="n">SetFilename</span><span class="p">(</span><span class="s">&quot;sample.c3d&quot;</span><span class="p">)</span> <span class="c"># open the c3d file</span>
+ <span class="n">reader</span><span class="o">.</span><span class="n">Update</span><span class="p">()</span>
+ <span class="n">acq</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="n">GetOutput</span><span class="p">()</span> <span class="c"># creates a btk aquisition object</span>
+ 
+</code></pre></div>
+
+<p>You can then itterate through the Marker labels and Analog channels by doing:</p>
+
+<div class="highlight"><pre><code class="python"><span class="k">print</span><span class="p">(</span><span class="s">&#39;Marker labels:&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">acq</span><span class="o">.</span><span class="n">GetPoints</span><span class="p">()</span><span class="o">.</span><span class="n">GetItemNumber</span><span class="p">()):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">acq</span><span class="o">.</span><span class="n">GetPoint</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">GetLabel</span><span class="p">(),</span> <span class="n">end</span><span class="o">=</span><span class="s">&#39;  &#39;</span><span class="p">)</span>   
+<span class="k">print</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\n\n</span><span class="s">Analog channels:&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">acq</span><span class="o">.</span><span class="n">GetAnalogs</span><span class="p">()</span><span class="o">.</span><span class="n">GetItemNumber</span><span class="p">()):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">acq</span><span class="o">.</span><span class="n">GetAnalog</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">GetLabel</span><span class="p">(),</span> <span class="n">end</span><span class="o">=</span><span class="s">&#39;  &#39;</span><span class="p">)</span> 
+</code></pre></div>
+
+<p>You can then set the value in a new c3d file clone or the original c3d file useing the
+<code>SetValue</code> method.
+Here is some code I did to cut off the force at some value.</p>
+
+<div class="highlight"><pre><code class="python"><span class="c">#modifies the values in the z axis 1st force plate</span>
+
+<span class="n">ana</span> <span class="o">=</span> <span class="n">clone</span><span class="o">.</span><span class="n">GetAnalog</span><span class="p">(</span><span class="s">&quot;Fz1&quot;</span><span class="p">)</span>
+<span class="n">valz1</span> <span class="o">=</span> <span class="n">ana</span><span class="o">.</span><span class="n">GetValues</span><span class="p">()</span>
+<span class="n">scalez1</span> <span class="o">=</span> <span class="n">ana</span><span class="o">.</span><span class="n">GetScale</span><span class="p">()</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">y</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="k">for</span> <span class="n">forcez1</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">nditer</span><span class="p">(</span><span class="n">valz1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">forcez1</span><span class="o">/</span><span class="n">scalez1</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">:</span>
+			<span class="n">ana</span><span class="o">.</span><span class="n">SetValue</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">*</span> <span class="n">scalez1</span><span class="p">)</span>
+
+		<span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+</code></pre></div>
 
 
       <hr />
@@ -195,7 +273,8 @@ For example to install numpy, you need to run:</p>
 
 
         </div>
-        <p class="byline"><strong>BTK, A tool for reading C3d files</strong> was published on <time datetime="2014-05-21T00:00:00-04:00">May 21, 2014</time> by <a href="/about" title="About Nikhil Kumar">Nikhil Kumar</a>.</p>
+ <!--       <p class="byline"><strong>BTK, A tool for reading C3d files</strong> was published
+			on <time datetime="2014-05-21T00:00:00-04:00">May 21, 2014</time> by <a href="/about" title="About Nikhil Kumar">Nikhil Kumar</a>.</p> -->
       </footer>
     </div><!-- /.article-wrap -->
   
@@ -206,6 +285,8 @@ For example to install numpy, you need to run:</p>
   <div class="related-articles">
   <h4>You might also enjoy <small class="pull-right">(<a href="/posts/">View all posts</a>)</small></h4>
     <ul>
+    
+      <li><a href="/Github-Name-Squatting-Policy/" title="Github Name Squatting Policy">Github Name Squatting Policy</a></li>
     
     </ul>
     <hr />

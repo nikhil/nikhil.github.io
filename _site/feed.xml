@@ -4,13 +4,51 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2014-05-22T21:34:43-04:00</updated>
+<updated>2014-05-26T14:39:20-04:00</updated>
 <id>/</id>
 <author>
   <name>Nikhil Kumar</name>
   <uri>/</uri>
   <email>nikhilkumar516@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Github Name Squatting Policy]]></title>
+  <link rel="alternate" type="text/html" href="/Github-Name-Squatting-Policy/" />
+  <id>/Github-Name-Squatting-Policy</id>
+  <published>2014-05-26T00:00:00-04:00</published>
+  <updated>2014-05-26T00:00:00-04:00</updated>
+  <author>
+    <name>Nikhil Kumar</name>
+    <uri></uri>
+    <email>nikhilkumar516@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Github has this really cool policy that allows you to ask them to remove dusty
+user aaccounts which have not been used for an extended period of time. This
+means short usernames that have been claimed years ago might be abandoned and
+ready for a new owner. I was able to get my short username “Nikhil” through
+Github’s Name Squatting policy which states:&lt;/p&gt;
+&lt;blockquote&gt;
+GitHub account name squatting is prohibited. Inactive accounts may be renamed or removed by GitHub staff at their discretion. You can examine if there&#39;s activity on an account name and request that support release a name for your use, but keep in mind that not all activity on GitHub is publicly visible. Staff will not remove or rename any active account.
+&lt;br /&gt;
+&lt;br /&gt;
+GitHub account names are provided on a first-come, first-served basis, and are intended for immediate and active use. Account names may not be inactively held for future use.
+&lt;br /&gt;
+&lt;br /&gt;
+Attempts to sell, buy, or solicit other forms of payment in exchange for account names is prohibited and may result in permanent account suspension.
+&lt;a href=&quot;https://help.github.com/articles/name-squatting-policy&quot;&gt;&lt;i class=&quot;fa
+fa-github-alt&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Just send an email claiming your desired username is currently abandoned
+(assuming no private activity) and they will confirm and clear it.  &lt;/p&gt;
+
+&lt;p class=&quot;notice&quot;&gt;&lt;i class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;  &lt;strong&gt;Notice:&lt;/strong&gt; You will need to update your local repository remotes as well as
+your domain settings (if you are using github pages hosting). &lt;/p&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;/Github-Name-Squatting-Policy/&quot;&gt;Github Name Squatting Policy&lt;/a&gt; was originally published by Nikhil Kumar at &lt;a href=&quot;&quot;&gt;Kumarcode&lt;/a&gt; on May 26, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -24,11 +62,55 @@
     <uri></uri>
     <email>nikhilkumar516@gmail.com</email>
   </author>
-  <content type="html">&lt;p&gt;A a script that reads, plots data as well as modifies c3d files using the btk library.&lt;/p&gt;
+  <content type="html">&lt;p&gt;I am currently doing research on the diffrences between Barefoot running and Shod running(running with shoes). I am working with software known as the &lt;code&gt;AnyBody Modeling System&lt;/code&gt; using the &lt;code&gt;Gait lower Extremity model&lt;/code&gt;. This allows me to input motion captured data, which is givin in the form of a &lt;code&gt;.c3d&lt;/code&gt; file. However, I ran into a problem where I wanted to modify the .c3d file but I could not find anyt decent software to allow me to do this. I was able to find ‘btk’ a ‘python’ package that allows me to modify .c3d files.&lt;/p&gt;
 
-&lt;h1 id=&quot;modules-needed&quot;&gt;Modules needed&lt;/h1&gt;
+&lt;h2 id=&quot;c3d-files&quot;&gt;C3d files&lt;/h2&gt;
 
-&lt;h2 id=&quot;python-pacakges&quot;&gt;Python pacakges&lt;/h2&gt;
+&lt;h3 id=&quot;what-are-c3d-files&quot;&gt;What are c3d files:&lt;/h3&gt;
+
+&lt;p&gt;According to the c3d main page:&lt;/p&gt;
+&lt;blockquote&gt;
+The C3D format is a public domain, binary file format that has been used in Biomechanics, Animation and Gait Analysis laboratories to record synchronized 3D and analog data since the mid 1980&#39;s.  It is supported by all 3D major Motion Capture System manufacturers, as well as other companies in the Biomechanics, Motion Capture and Animation Industries.&lt;a href=&quot;http://www.c3d.org/&quot;&gt;&lt;i class=&quot;fa fa-file&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;file-structure&quot;&gt;File Structure&lt;/h3&gt;
+&lt;p&gt;The structure of the C3d file is as follows:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;*.c3d/
+	├── Header
+	|    ├── File type
+	|    ├── Data type
+	|    ├── 3D Points
+	|    ├── Analog Channels
+	|    ├── First Frame
+	|    ├── Last Frame
+	|    ├── Start Record
+	|	 ├── AV ratio
+	|	 ├── Video rate
+	|	 └── Max interpolation Gap
+	├── Events
+	├── Groups
+	|    	 ├── Point
+	| |	├── ...
+	| |	├──Labels
+	| |	└── ...
+	|    |
+	|    ├── Analog                 
+	|    ├── Seq
+	|    ├── Manufacturer
+    |    └── Force Platform
+	├── Analog data                    
+	└── Point data                     
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;instalation&quot;&gt;Instalation&lt;/h2&gt;
+
+&lt;h2 id=&quot;what-is-btk&quot;&gt;What is Btk?&lt;/h2&gt;
+&lt;p&gt;According to the BTk site on google code:&lt;/p&gt;
+&lt;blockquote&gt;
+BTK is an open-source and cross-platform library for biomechanical analysis. BTK read and write acquisition files and can modify them. All these operations can be done by the use of the C++ API or by the wrappers included (Matlab, Octave, and Python).&lt;a href=&quot;https://code.google.com/p/b-tk/&quot;&gt;&lt;i class=&quot;fa fa-cogs&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;python-pacakges-needed&quot;&gt;Python pacakges needed&lt;/h2&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;n&quot;&gt;numpy&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;Matplotlib&lt;/span&gt;
@@ -41,34 +123,68 @@ For example to install numpy, you need to run:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;n&quot;&gt;pip&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numpy&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;BTK is the exception here. I was not able to get btk working through pip. BTK also seems to be architectural dependent as it was not installing in my ARCH distribution. I was able to get it working on Fedora 19 by installing the python wrapper package from here&lt;/p&gt;
+&lt;p class=&quot;notice&quot;&gt;&lt;i class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt; &lt;strong&gt;Caution:&lt;/strong&gt; BTK is the exception here. I was not able to get btk working through pip. BTK also seems to be architectural dependent as it was not installing in my ARCH distribution. &lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;https://code.google.com/p/b-tk/
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I was able to get it working on Fedora 19 by installing the python wrapper package from here &lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;https://code.google.com/p/b-tk/&lt;/code&gt;&lt;/p&gt;
+
 &lt;p&gt;Then run:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;yum localinstall packagename.rpm 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;running-it&quot;&gt;Running it&lt;/h2&gt;
+&lt;h2 id=&quot;using-b-tk-to-modify-your-file&quot;&gt;Using b-tk to modify your file&lt;/h2&gt;
 
-&lt;p&gt;This program was hardcoded for the research I was doing in biomechanics. It graphs all the analog forces in the x,y, and z direction. Currently it modifies the file by setting a limit for the force in the z direction to mimic heal-toe running.&lt;/p&gt;
+&lt;p&gt;You can import btk in python by specify your system path to the package or by
+just using import depending on your installation.&lt;/p&gt;
 
-&lt;p&gt;Before running this script you must add in the name of your c3d file. To do that you must edit this line.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;btk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;btkAcquisitionFileReader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;# build a btk reader object &lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SetFilename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;GaitNormal0003-processed.c3d&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;      &lt;span class=&quot;c&quot;&gt;# set a filename to the reader&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;acq&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetOutput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;                 &lt;span class=&quot;c&quot;&gt;# btk aquisition object&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;path to your btk python package&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;btk&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;You can then run the program as follows:&lt;/p&gt;
+&lt;p&gt;You then need to create a btk reader.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;n&quot;&gt;python&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c3dfileeditor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;py&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;modified&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c3d&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.8&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt; 
+ &lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;btk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;btkAcquisitionFileReader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;where modified.c3d is the name you want your modified file to be and 0.8 is the cutoff.&lt;/p&gt;
+&lt;p&gt;Then you need to open the file and create a btk aquisition object.&lt;/p&gt;
 
-&lt;p&gt;The results are then graphed.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt; &lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SetFilename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;sample.c3d&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# open the c3d file&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;acq&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetOutput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# creates a btk aquisition object&lt;/span&gt;
+ 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You can then itterate through the Marker labels and Analog channels by doing:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;Marker labels:&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;acq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetPoints&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetItemNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;acq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetPoint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetLabel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;  &amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;   
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Analog channels:&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;acq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetAnalogs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetItemNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;acq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetAnalog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetLabel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;  &amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You can then set the value in a new c3d file clone or the original c3d file useing the
+&lt;code&gt;SetValue&lt;/code&gt; method.
+Here is some code I did to cut off the force at some value.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;c&quot;&gt;#modifies the values in the z axis 1st force plate&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;ana&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clone&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetAnalog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Fz1&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;valz1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ana&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetValues&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;scalez1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ana&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetScale&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;forcez1&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nditer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;valz1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;forcez1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scalez1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;ana&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SetValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scalez1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+		&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
   &lt;p&gt;&lt;a href=&quot;/BTK-biomechanics/&quot;&gt;BTK, A tool for reading C3d files&lt;/a&gt; was originally published by Nikhil Kumar at &lt;a href=&quot;&quot;&gt;Kumarcode&lt;/a&gt; on May 21, 2014.&lt;/p&gt;</content>
