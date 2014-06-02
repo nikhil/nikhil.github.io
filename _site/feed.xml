@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2014-05-26T14:39:20-04:00</updated>
+<updated>2014-06-02T12:34:40-04:00</updated>
 <id>/</id>
 <author>
   <name>Nikhil Kumar</name>
@@ -62,7 +62,7 @@ your domain settings (if you are using github pages hosting). &lt;/p&gt;
     <uri></uri>
     <email>nikhilkumar516@gmail.com</email>
   </author>
-  <content type="html">&lt;p&gt;I am currently doing research on the diffrences between Barefoot running and Shod running(running with shoes). I am working with software known as the &lt;code&gt;AnyBody Modeling System&lt;/code&gt; using the &lt;code&gt;Gait lower Extremity model&lt;/code&gt;. This allows me to input motion captured data, which is givin in the form of a &lt;code&gt;.c3d&lt;/code&gt; file. However, I ran into a problem where I wanted to modify the .c3d file but I could not find anyt decent software to allow me to do this. I was able to find ‘btk’ a ‘python’ package that allows me to modify .c3d files.&lt;/p&gt;
+  <content type="html">&lt;p&gt;I am currently doing research on the diffrences between Barefoot running and Shod running(running with shoes). I am working with software known as the &lt;code&gt;AnyBody Modeling System&lt;/code&gt; using the &lt;code&gt;Gait lower Extremity model&lt;/code&gt;. This allows me to input motion captured data, which is givin in the form of a &lt;code&gt;.c3d&lt;/code&gt; file. However, I ran into a problem where I wanted to modify the .c3d file but I could not find anyt decent software to allow me to do this. I was able to find &lt;code&gt;btk&lt;/code&gt; a &lt;code&gt;python&lt;/code&gt; package that allows me to modify .c3d files.&lt;/p&gt;
 
 &lt;h2 id=&quot;c3d-files&quot;&gt;C3d files&lt;/h2&gt;
 
@@ -75,7 +75,7 @@ The C3D format is a public domain, binary file format that has been used in Biom
 &lt;h3 id=&quot;file-structure&quot;&gt;File Structure&lt;/h3&gt;
 &lt;p&gt;The structure of the C3d file is as follows:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;*.c3d/
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;*.c3d/
 	├── Header
 	|    ├── File type
 	|    ├── Data type
@@ -84,23 +84,23 @@ The C3D format is a public domain, binary file format that has been used in Biom
 	|    ├── First Frame
 	|    ├── Last Frame
 	|    ├── Start Record
-	|	 ├── AV ratio
-	|	 ├── Video rate
-	|	 └── Max interpolation Gap
+	|    ├── AV ratio
+	|    ├── Video rate
+	|    └── Max interpolation Gap
 	├── Events
 	├── Groups
-	|    	 ├── Point
-	| |	├── ...
-	| |	├──Labels
-	| |	└── ...
+	|    |	├── Point
+	|    |	├── ...
+	|    |	├──Labels
+	|    |	└── ...
 	|    |
-	|    ├── Analog                 
+	|    ├── Analog
 	|    ├── Seq
 	|    ├── Manufacturer
-    |    └── Force Platform
-	├── Analog data                    
-	└── Point data                     
-&lt;/code&gt;&lt;/pre&gt;
+	|    └── Force Platform
+	├── Analog data
+	└── Point data
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;instalation&quot;&gt;Instalation&lt;/h2&gt;
 

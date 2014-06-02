@@ -17,7 +17,7 @@ The C3D format is a public domain, binary file format that has been used in Biom
 ###File Structure
 The structure of the C3d file is as follows:
 
-~~~
+{% highlight text %}
 *.c3d/
 	├── Header
 	|    ├── File type
@@ -27,23 +27,24 @@ The structure of the C3d file is as follows:
 	|    ├── First Frame
 	|    ├── Last Frame
 	|    ├── Start Record
-	|	 ├── AV ratio
-	|	 ├── Video rate
-	|	 └── Max interpolation Gap
+	|    ├── AV ratio
+	|    ├── Video rate
+	|    └── Max interpolation Gap
 	├── Events
 	├── Groups
-	|    	 ├── Point
-	| |	├── ...
-	| |	├──Labels
-	| |	└── ...
+	|    |	├── Point
+	|    |	├── ...
+	|    |	├──Labels
+	|    |	└── ...
 	|    |
-	|    ├── Analog                 
+	|    ├── Analog
 	|    ├── Seq
 	|    ├── Manufacturer
-    |    └── Force Platform
-	├── Analog data                    
-	└── Point data                     
-~~~
+	|    └── Force Platform
+	├── Analog data
+	└── Point data
+{% endhighlight %}
+
 
 
 

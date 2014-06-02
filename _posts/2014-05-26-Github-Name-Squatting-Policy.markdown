@@ -5,7 +5,7 @@ title: Github Name Squatting Policy
 ---
 
 Github has this really cool policy that allows you to ask them to remove dusty
-user aaccounts which have not been used for an extended period of time. This
+user accounts which have not been used for an extended period of time. This
 means short usernames that have been claimed years ago might be abandoned and
 ready for a new owner. I was able to get my short username "Nikhil" through
 Github's Name Squatting policy which states:

@@ -123,7 +123,7 @@
       
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
-      <p>I am currently doing research on the diffrences between Barefoot running and Shod running(running with shoes). I am working with software known as the <code>AnyBody Modeling System</code> using the <code>Gait lower Extremity model</code>. This allows me to input motion captured data, which is givin in the form of a <code>.c3d</code> file. However, I ran into a problem where I wanted to modify the .c3d file but I could not find anyt decent software to allow me to do this. I was able to find ‘btk’ a ‘python’ package that allows me to modify .c3d files.</p>
+      <p>I am currently doing research on the diffrences between Barefoot running and Shod running(running with shoes). I am working with software known as the <code>AnyBody Modeling System</code> using the <code>Gait lower Extremity model</code>. This allows me to input motion captured data, which is givin in the form of a <code>.c3d</code> file. However, I ran into a problem where I wanted to modify the .c3d file but I could not find anyt decent software to allow me to do this. I was able to find <code>btk</code> a <code>python</code> package that allows me to modify .c3d files.</p>
 
 <h2 id="c3d-files">C3d files</h2>
 
@@ -136,7 +136,7 @@ The C3D format is a public domain, binary file format that has been used in Biom
 <h3 id="file-structure">File Structure</h3>
 <p>The structure of the C3d file is as follows:</p>
 
-<pre><code>*.c3d/
+<div class="highlight"><pre><code class="text">*.c3d/
 	├── Header
 	|    ├── File type
 	|    ├── Data type
@@ -145,23 +145,23 @@ The C3D format is a public domain, binary file format that has been used in Biom
 	|    ├── First Frame
 	|    ├── Last Frame
 	|    ├── Start Record
-	|	 ├── AV ratio
-	|	 ├── Video rate
-	|	 └── Max interpolation Gap
+	|    ├── AV ratio
+	|    ├── Video rate
+	|    └── Max interpolation Gap
 	├── Events
 	├── Groups
-	|    	 ├── Point
-	| |	├── ...
-	| |	├──Labels
-	| |	└── ...
+	|    |	├── Point
+	|    |	├── ...
+	|    |	├──Labels
+	|    |	└── ...
 	|    |
-	|    ├── Analog                 
+	|    ├── Analog
 	|    ├── Seq
 	|    ├── Manufacturer
-    |    └── Force Platform
-	├── Analog data                    
-	└── Point data                     
-</code></pre>
+	|    └── Force Platform
+	├── Analog data
+	└── Point data
+</code></pre></div>
 
 <h2 id="instalation">Instalation</h2>
 
