@@ -6,15 +6,19 @@
     
     
     <url>
-        <loc>/feed.xml</loc>
+        <loc>/404.html</loc>
     </url>
     
     <url>
-        <loc>/theme-setup/</loc>
+        <loc>/about/</loc>
     </url>
     
     <url>
         <loc>/arch/</loc>
+    </url>
+    
+    <url>
+        <loc>/feed.xml</loc>
     </url>
     
     <url>
@@ -26,15 +30,11 @@
     </url>
     
     <url>
-        <loc>/about/</loc>
-    </url>
-    
-    <url>
-        <loc>/404.html</loc>
-    </url>
-    
-    <url>
         <loc>/sitemap.xml</loc>
+    </url>
+    
+    <url>
+        <loc>/theme-setup/</loc>
     </url>
     
 

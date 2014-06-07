@@ -3,7 +3,7 @@ layout: home
 description: 
 tags: [blog, template]
 image:
-  feature: texture-feature-04.jpg
-  credit: Texture Lovers
-  creditlink: http://texturelovers.com
+  feature: lilac.png 
+  credit: Taken by myself in my backyard.
+
 ---
