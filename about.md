@@ -7,7 +7,8 @@ tags: [about]
 modified: 9-9-2013
 comments: true
 image:
-  feature: python-hello.png
+  feature: asiatic-lily.jpg
+  credit: Asiatic lily taken by me from my backyard.
 ---
 
 
