@@ -42,6 +42,8 @@ links:
     url: /posts/
   - title: Arch Linux
     url: /arch/
+  - title: Gardening
+    url: /gardening  
   
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/New_York
