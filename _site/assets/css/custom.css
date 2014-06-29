@@ -1,3 +1,22 @@
+
+
+
+
+@font-face{
+	font-family: 'IconsFont';
+	src: url('../fonts/icons.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.iconsfont{
+
+	font-family: 'IconsFont';
+
+}	
+
+
+
 .top-navigation li a {
 
 

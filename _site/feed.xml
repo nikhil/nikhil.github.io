@@ -4,13 +4,59 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2014-06-28T19:19:30-04:00</updated>
+<updated>2014-06-29T17:57:38-04:00</updated>
 <id>/</id>
 <author>
   <name>Nikhil Kumar</name>
   <uri>/</uri>
   <email>nikhilkumar516@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[i3 tiling window manager]]></title>
+  <link rel="alternate" type="text/html" href="/i3-tiling-window-manager/" />
+  <id>/i3-tiling-window-manager</id>
+  <published>2014-06-29T00:00:00-04:00</published>
+  <updated>2014-06-29T00:00:00-04:00</updated>
+  <author>
+    <name>Nikhil Kumar</name>
+    <uri></uri>
+    <email>nikhilkumar516@gmail.com</email>
+  </author>
+  <content type="html">&lt;h2 id=&quot;why-did-i-switch-to-a-tiling-window-manager&quot;&gt;Why did I switch to a tiling window manager?&lt;/h2&gt;
+&lt;p&gt;I am not going to say that a minimilistic enviornment such as &lt;code&gt;i3&lt;/code&gt; is better than a desktop manager such as &lt;code&gt;KDE&lt;/code&gt;, &lt;code&gt;GNOME&lt;/code&gt;, &lt;code&gt;MATE&lt;/code&gt;, or &lt;code&gt;Xfce&lt;/code&gt;, but a minimilistic enviornment has helped me improve my tactics. After switching to a tiling window manager, I have found myself more focused on my task at hand and more effecient with my screen usage. Before	using a tiling window manager, I would often clutter up my windows on one workspace, even when I had worksapce switching as an option.&lt;/p&gt;
+
+&lt;h2 id=&quot;i3&quot;&gt;i3&lt;/h2&gt;
+&lt;p&gt;I choose i3 tiling window manager. According to the i3 webpage:&lt;/p&gt;
+&lt;blockquote&gt;
+i3 is a tiling window manager, completely written from scratch. The target platforms are GNU/Linux and BSD operating systems, our code is Free and Open Source Software (FOSS) under the BSD license. i3 is primarily targeted at advanced users and developers. &lt;a href=&quot;http://i3wm.org/&quot;&gt;&lt;i class=&quot;fa fa-desktop&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;installing-i3&quot;&gt;Installing i3&lt;/h3&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;sudo pacman -S i3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p class=&quot;notice&quot;&gt;&lt;i class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt; &lt;strong&gt;Caution:&lt;/strong&gt; If you are using &lt;code&gt;startx&lt;/code&gt;, make
+ sure to edit your &lt;code&gt;~/.xinitrc&lt;/code&gt; and add the line ‘exec i3’. I am using &lt;code&gt;KDM&lt;/code&gt;,
+ the login manager for kde to start i3.  &lt;/p&gt;
+
+&lt;h3 id=&quot;neat-keybindings-for-i3&quot;&gt;Neat keybindings for i3&lt;/h3&gt;
+
+&lt;p&gt;i3 has a special &lt;code&gt;$mod&lt;/code&gt; key which you would use anytime when you are using i3’s
+special keybindings. You can decide which key this &lt;code&gt;$mod&lt;/code&gt; is. It is usually
+&lt;code&gt;alt&lt;/code&gt; or the ‘windows’ key. Some of the most common used key bindings are: &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;$mod&lt;/code&gt; + &lt;code&gt;Enter&lt;/code&gt;                    Open terminal&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;$mod&lt;/code&gt; + &lt;code&gt;D&lt;/code&gt;                           Opens the dmenu&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;$mod&lt;/code&gt; + &lt;code&gt;Shift&lt;/code&gt; + &lt;code&gt;Q&lt;/code&gt;            Kills the current window&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;$mod&lt;/code&gt; + &lt;code&gt;Shift&lt;/code&gt; + &lt;code&gt;E&lt;/code&gt;            Exits i3&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;$mod&lt;/code&gt; + &lt;code&gt;Shift&lt;/code&gt; + &lt;code&gt;R&lt;/code&gt;            Restarts i3&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;$mod&lt;/code&gt; + &lt;code&gt;#&lt;/code&gt;                                Goes to the # wordspace&lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/i3-tiling-window-manager/&quot;&gt;i3 tiling window manager&lt;/a&gt; was originally published by Nikhil Kumar at &lt;a href=&quot;&quot;&gt;Kumarcode&lt;/a&gt; on June 29, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -63,6 +109,8 @@ your domain settings (if you are using github pages hosting). &lt;/p&gt;
     <email>nikhilkumar516@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;I am currently doing research on the diffrences between Barefoot running and Shod running(running with shoes). I am working with software known as the &lt;code&gt;AnyBody Modeling System&lt;/code&gt; using the &lt;code&gt;Gait lower Extremity model&lt;/code&gt;. This allows me to input motion captured data, which is givin in the form of a &lt;code&gt;.c3d&lt;/code&gt; file. However, I ran into a problem where I wanted to modify the .c3d file but I could not find anyt decent software to allow me to do this. I was able to find &lt;code&gt;btk&lt;/code&gt; a &lt;code&gt;python&lt;/code&gt; package that allows me to modify .c3d files.&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;iconsfont&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;c3d-files&quot;&gt;C3d files&lt;/h2&gt;
 
