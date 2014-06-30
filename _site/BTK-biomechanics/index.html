@@ -140,31 +140,31 @@ The C3D format is a public domain, binary file format that has been used in Biom
 <h3 id="file-structure">File Structure</h3>
 <p>The structure of the C3d file is as follows:</p>
 
-<div class="highlight"><pre><code class="text">*.c3d/
-	├── Header
-	|    ├── File type
-	|    ├── Data type
-	|    ├── 3D Points
-	|    ├── Analog Channels
-	|    ├── First Frame
-	|    ├── Last Frame
-	|    ├── Start Record
-	|    ├── AV ratio
-	|    ├── Video rate
-	|    └── Max interpolation Gap
-	├── Events
-	├── Groups
-	|    |	├── Point
-	|    |	├── ...
-	|    |	├──Labels
-	|    |	└── ...
-	|    |
-	|    ├── Analog
-	|    ├── Seq
-	|    ├── Manufacturer
-	|    └── Force Platform
-	├── Analog data
-	└── Point data</code></pre></div>
+<div class="highlight"><pre><code class="text"><span class="lineno"> 1</span> *.c3d/
+<span class="lineno"> 2</span> 	├── Header
+<span class="lineno"> 3</span> 	|    ├── File type
+<span class="lineno"> 4</span> 	|    ├── Data type
+<span class="lineno"> 5</span> 	|    ├── 3D Points
+<span class="lineno"> 6</span> 	|    ├── Analog Channels
+<span class="lineno"> 7</span> 	|    ├── First Frame
+<span class="lineno"> 8</span> 	|    ├── Last Frame
+<span class="lineno"> 9</span> 	|    ├── Start Record
+<span class="lineno">10</span> 	|    ├── AV ratio
+<span class="lineno">11</span> 	|    ├── Video rate
+<span class="lineno">12</span> 	|    └── Max interpolation Gap
+<span class="lineno">13</span> 	├── Events
+<span class="lineno">14</span> 	├── Groups
+<span class="lineno">15</span> 	|    |	├── Point
+<span class="lineno">16</span> 	|    |	├── ...
+<span class="lineno">17</span> 	|    |	├──Labels
+<span class="lineno">18</span> 	|    |	└── ...
+<span class="lineno">19</span> 	|    |
+<span class="lineno">20</span> 	|    ├── Analog
+<span class="lineno">21</span> 	|    ├── Seq
+<span class="lineno">22</span> 	|    ├── Manufacturer
+<span class="lineno">23</span> 	|    └── Force Platform
+<span class="lineno">24</span> 	├── Analog data
+<span class="lineno">25</span> 	└── Point data</code></pre></div>
 
 <h2 id="instalation">Instalation</h2>
 
@@ -176,71 +176,67 @@ BTK is an open-source and cross-platform library for biomechanical analysis. BTK
 
 <h2 id="python-pacakges-needed">Python pacakges needed</h2>
 
-<div class="highlight"><pre><code class="python"><span class="n">numpy</span>
-<span class="n">Matplotlib</span>
-<span class="n">BTK</span></code></pre></div>
+<div class="highlight"><pre><code class="python"><span class="lineno">1</span> <span class="n">numpy</span>
+<span class="lineno">2</span> <span class="n">Matplotlib</span>
+<span class="lineno">3</span> <span class="n">BTK</span></code></pre></div>
 
 <p>To install python2 packages you need to run pip.
 For example to install numpy, you need to run:</p>
 
-<p><code>python
-pip install numpy
-</code></p>
+<div class="highlight"><pre><code class="python"><span class="lineno">1</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">numpy</span></code></pre></div>
 
 <p class="notice"><i class="fa fa-warning"></i> <strong>Caution:</strong> BTK is the exception here. I was not able to get btk working through pip. BTK also seems to be architectural dependent as it was not installing in my ARCH distribution. </p>
 
-<p>I was able to get it working on Fedora 19 by installing the python wrapper package from here </p>
-
-<p><code>https://code.google.com/p/b-tk/</code></p>
+<p>I was able to get it working on Fedora 19 by installing the python wrapper package from <a href="https://code.google.com/p/b-tk/"> here. </a></p>
 
 <p>Then run:</p>
 
-<div class="highlight"><pre><code class="bash">yum localinstall packagename.rpm</code></pre></div>
+<div class="highlight"><pre><code class="bash"><span class="lineno">1</span> yum localinstall packagename.rpm</code></pre></div>
 
 <h2 id="using-b-tk-to-modify-your-file">Using b-tk to modify your file</h2>
 
 <p>You can import btk in python by specify your system path to the package or by
 just using import depending on your installation.</p>
 
-<div class="highlight"><pre><code class="python"><span class="kn">import</span> <span class="nn">sys</span>
- <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;path to your btk python package&quot;</span><span class="p">)</span>
- <span class="kn">import</span> <span class="nn">btk</span></code></pre></div>
+<div class="highlight"><pre><code class="python"><span class="lineno">1</span> <span class="kn">import</span> <span class="nn">sys</span>
+<span class="lineno">2</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;path to your btk python package&quot;</span><span class="p">)</span>
+<span class="lineno">3</span> <span class="kn">import</span> <span class="nn">btk</span></code></pre></div>
 
 <p>You then need to create a btk reader.</p>
 
-<div class="highlight"><pre><code class="python"><span class="n">reader</span> <span class="o">=</span> <span class="n">btk</span><span class="o">.</span><span class="n">btkAcquisitionFileReader</span><span class="p">()</span></code></pre></div>
+<div class="highlight"><pre><code class="python"><span class="lineno">1</span> <span class="n">reader</span> <span class="o">=</span> <span class="n">btk</span><span class="o">.</span><span class="n">btkAcquisitionFileReader</span><span class="p">()</span></code></pre></div>
 
 <p>Then you need to open the file and create a btk aquisition object.</p>
 
-<div class="highlight"><pre><code class="python"><span class="n">reader</span><span class="o">.</span><span class="n">SetFilename</span><span class="p">(</span><span class="s">&quot;sample.c3d&quot;</span><span class="p">)</span> <span class="c"># open the c3d file</span>
- <span class="n">reader</span><span class="o">.</span><span class="n">Update</span><span class="p">()</span>
- <span class="n">acq</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="n">GetOutput</span><span class="p">()</span> <span class="c"># creates a btk aquisition object</span></code></pre></div>
+<div class="highlight"><pre><code class="python"><span class="lineno">1</span> <span class="n">reader</span><span class="o">.</span><span class="n">SetFilename</span><span class="p">(</span><span class="s">&quot;sample.c3d&quot;</span><span class="p">)</span> <span class="c"># open the c3d file</span>
+<span class="lineno">2</span> <span class="n">reader</span><span class="o">.</span><span class="n">Update</span><span class="p">()</span>
+<span class="lineno">3</span> <span class="n">acq</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="n">GetOutput</span><span class="p">()</span> <span class="c"># creates a btk aquisition object</span></code></pre></div>
 
 <p>You can then itterate through the Marker labels and Analog channels by doing:</p>
 
-<div class="highlight"><pre><code class="python"><span class="k">print</span><span class="p">(</span><span class="s">&#39;Marker labels:&#39;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">acq</span><span class="o">.</span><span class="n">GetPoints</span><span class="p">()</span><span class="o">.</span><span class="n">GetItemNumber</span><span class="p">()):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">acq</span><span class="o">.</span><span class="n">GetPoint</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">GetLabel</span><span class="p">(),</span> <span class="n">end</span><span class="o">=</span><span class="s">&#39;  &#39;</span><span class="p">)</span>   
-<span class="k">print</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\n\n</span><span class="s">Analog channels:&#39;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">acq</span><span class="o">.</span><span class="n">GetAnalogs</span><span class="p">()</span><span class="o">.</span><span class="n">GetItemNumber</span><span class="p">()):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">acq</span><span class="o">.</span><span class="n">GetAnalog</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">GetLabel</span><span class="p">(),</span> <span class="n">end</span><span class="o">=</span><span class="s">&#39;  &#39;</span><span class="p">)</span></code></pre></div>
+<div class="highlight"><pre><code class="python"><span class="lineno">1</span> <span class="k">print</span><span class="p">(</span><span class="s">&#39;Marker labels:&#39;</span><span class="p">)</span>
+<span class="lineno">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">acq</span><span class="o">.</span><span class="n">GetPoints</span><span class="p">()</span><span class="o">.</span><span class="n">GetItemNumber</span><span class="p">()):</span>
+<span class="lineno">3</span>     <span class="k">print</span><span class="p">(</span><span class="n">acq</span><span class="o">.</span><span class="n">GetPoint</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">GetLabel</span><span class="p">(),</span> <span class="n">end</span><span class="o">=</span><span class="s">&#39;  &#39;</span><span class="p">)</span>   
+<span class="lineno">4</span> <span class="k">print</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\n\n</span><span class="s">Analog channels:&#39;</span><span class="p">)</span>
+<span class="lineno">5</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">acq</span><span class="o">.</span><span class="n">GetAnalogs</span><span class="p">()</span><span class="o">.</span><span class="n">GetItemNumber</span><span class="p">()):</span>
+<span class="lineno">6</span>     <span class="k">print</span><span class="p">(</span><span class="n">acq</span><span class="o">.</span><span class="n">GetAnalog</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">GetLabel</span><span class="p">(),</span> <span class="n">end</span><span class="o">=</span><span class="s">&#39;  &#39;</span><span class="p">)</span></code></pre></div>
 
 <p>You can then set the value in a new c3d file clone or the original c3d file useing the
 <code>SetValue</code> method.
 Here is some code I did to cut off the force at some value.</p>
 
-<div class="highlight"><pre><code class="python"><span class="c">#modifies the values in the z axis 1st force plate</span>
-
-<span class="n">ana</span> <span class="o">=</span> <span class="n">clone</span><span class="o">.</span><span class="n">GetAnalog</span><span class="p">(</span><span class="s">&quot;Fz1&quot;</span><span class="p">)</span>
-<span class="n">valz1</span> <span class="o">=</span> <span class="n">ana</span><span class="o">.</span><span class="n">GetValues</span><span class="p">()</span>
-<span class="n">scalez1</span> <span class="o">=</span> <span class="n">ana</span><span class="o">.</span><span class="n">GetScale</span><span class="p">()</span>
-<span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">y</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
-<span class="k">for</span> <span class="n">forcez1</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">nditer</span><span class="p">(</span><span class="n">valz1</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">forcez1</span><span class="o">/</span><span class="n">scalez1</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">:</span>
-			<span class="n">ana</span><span class="o">.</span><span class="n">SetValue</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">*</span> <span class="n">scalez1</span><span class="p">)</span>
-
-		<span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span></code></pre></div>
+<div class="highlight"><pre><code class="python"><span class="lineno"> 1</span> <span class="c">#modifies the values in the z axis 1st force plate</span>
+<span class="lineno"> 2</span> 
+<span class="lineno"> 3</span> <span class="n">ana</span> <span class="o">=</span> <span class="n">clone</span><span class="o">.</span><span class="n">GetAnalog</span><span class="p">(</span><span class="s">&quot;Fz1&quot;</span><span class="p">)</span>
+<span class="lineno"> 4</span> <span class="n">valz1</span> <span class="o">=</span> <span class="n">ana</span><span class="o">.</span><span class="n">GetValues</span><span class="p">()</span>
+<span class="lineno"> 5</span> <span class="n">scalez1</span> <span class="o">=</span> <span class="n">ana</span><span class="o">.</span><span class="n">GetScale</span><span class="p">()</span>
+<span class="lineno"> 6</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="lineno"> 7</span> <span class="n">y</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="lineno"> 8</span> <span class="k">for</span> <span class="n">forcez1</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">nditer</span><span class="p">(</span><span class="n">valz1</span><span class="p">):</span>
+<span class="lineno"> 9</span>       <span class="k">if</span> <span class="n">forcez1</span><span class="o">/</span><span class="n">scalez1</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">:</span>
+<span class="lineno">10</span> 			<span class="n">ana</span><span class="o">.</span><span class="n">SetValue</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">*</span> <span class="n">scalez1</span><span class="p">)</span>
+<span class="lineno">11</span> 
+<span class="lineno">12</span>       <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span></code></pre></div>
 
 
       <hr />

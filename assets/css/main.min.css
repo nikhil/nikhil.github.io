@@ -652,13 +652,13 @@ pre {
 }
 .highlight .lineno {
   padding-right: 24px;
-  color: #b3b3b1;
+  color: #FFCC99;
 }
 .highlight .hll {
   background-color: #ffffcc;
 }
 .highlight .c {
-  color: #999988;
+  color: #6c9cbd;
   font-style: italic;
 }
 .highlight .err {
@@ -666,11 +666,11 @@ pre {
   background-color: #e3d2d2;
 }
 .highlight .k {
-  color: #ffa500;
+  color: #ffc56d;
   font-weight: bold;
 }
 .highlight .o {
-  color: #ffa500;
+  color: #D08504;
   font-weight: bold;
 }
 .highlight .cm {
@@ -692,11 +692,11 @@ pre {
   font-style: italic;
 }
 .highlight .gd {
-  color: #ffa500;
+  color: #D08504;
   background-color: #ffdddd;
 }
 .highlight .ge {
-  color: #ffa500;
+  color: #D08504;
   font-style: italic;
 }
 .highlight .gr {
@@ -706,7 +706,7 @@ pre {
   color: #999999;
 }
 .highlight .gi {
-  color: #ffa500;
+  color: #D08504;
   background-color: #ddffdd;
 }
 .highlight .go {
@@ -725,23 +725,23 @@ pre {
   color: #aa0000;
 }
 .highlight .kc {
-  color: #ffa500;
+  color: #ffc56d;
   font-weight: bold;
 }
 .highlight .kd {
-  color: #ffa500;
+  color: #ffc56d;
   font-weight: bold;
 }
 .highlight .kn {
-  color: #ffa500;
+  color: #ffc56d;
   font-weight: bold;
 }
 .highlight .kp {
-  color: #ffa500;
+  color: #ffc56d;
   font-weight: bold;
 }
 .highlight .kr {
-  color: #ffa500;
+  color: #ffc56d;
   font-weight: bold;
 }
 .highlight .kt {
@@ -752,7 +752,7 @@ pre {
   color: #009999;
 }
 .highlight .s {
-  color: #d01040;
+  color: #509e4f;
 }
 .highlight .na {
   color: #008080;
@@ -787,7 +787,7 @@ pre {
   font-weight: bold;
 }
 .highlight .nn {
-  color: #555555;
+  color: #a4c260;
 }
 .highlight .nt {
   color: #000080;
@@ -796,11 +796,11 @@ pre {
   color: #008080;
 }
 .highlight .ow {
-  color: #000000;
+  color: #D08504;
   font-weight: bold;
 }
 .highlight .w {
-  color: #bbbbbb;
+  color: #00ff00;
 }
 .highlight .mf {
   color: #009999;

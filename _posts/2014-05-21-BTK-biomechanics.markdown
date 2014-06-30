@@ -6,7 +6,6 @@ title: BTK, A tool for reading C3d files
 
 I am currently doing research on the diffrences between Barefoot running and Shod running(running with shoes). I am working with software known as the `AnyBody Modeling System` using the `Gait lower Extremity model`. This allows me to input motion captured data, which is givin in the form of a `.c3d` file. However, I ran into a problem where I wanted to modify the .c3d file but I could not find anyt decent software to allow me to do this. I was able to find `btk` a `python` package that allows me to modify .c3d files.
 
-<span class="iconsfont"></span>
 
 ##C3d files
 
@@ -19,7 +18,7 @@ The C3D format is a public domain, binary file format that has been used in Biom
 ###File Structure
 The structure of the C3d file is as follows:
 
-{% highlight text %}
+{% highlight text linenos%}
 *.c3d/
 	├── Header
 	|    ├── File type
@@ -62,7 +61,7 @@ BTK is an open-source and cross-platform library for biomechanical analysis. BTK
 
 ##Python pacakges needed
 
-{% highlight python %}
+{% highlight python linenos %}
 numpy
 Matplotlib
 BTK
@@ -72,21 +71,20 @@ BTK
 To install python2 packages you need to run pip.
 For example to install numpy, you need to run:
 
-```python
+{% highlight python linenos %}
 pip install numpy
-```
+{% endhighlight %}
+
 
 <i class="fa fa-warning"></i> **Caution:** BTK is the exception here. I was not able to get btk working through pip. BTK also seems to be architectural dependent as it was not installing in my ARCH distribution. 
 {: .notice}
 
 
-I was able to get it working on Fedora 19 by installing the python wrapper package from here 
-
-`https://code.google.com/p/b-tk/`
+I was able to get it working on Fedora 19 by installing the python wrapper package from <a href="https://code.google.com/p/b-tk/"> here. </a>
 
 
 Then run:
-{% highlight bash %}
+{% highlight bash  linenos %}
 yum localinstall packagename.rpm 
 {% endhighlight %}
 
@@ -95,16 +93,16 @@ yum localinstall packagename.rpm
 You can import btk in python by specify your system path to the package or by
 just using import depending on your installation.
 
-{% highlight python %}
- import sys
- sys.path.append("path to your btk python package")
- import btk
+{% highlight python  linenos %}
+import sys
+sys.path.append("path to your btk python package")
+import btk
 
 {% endhighlight %}
 
 You then need to create a btk reader.
 
-{% highlight python %}
+{% highlight python  linenos %}
  
  reader = btk.btkAcquisitionFileReader()
 
@@ -112,16 +110,16 @@ You then need to create a btk reader.
 
 Then you need to open the file and create a btk aquisition object.
 
-{% highlight python %}
- reader.SetFilename("sample.c3d") # open the c3d file
- reader.Update()
- acq = reader.GetOutput() # creates a btk aquisition object
+{% highlight python  linenos %}
+reader.SetFilename("sample.c3d") # open the c3d file
+reader.Update()
+acq = reader.GetOutput() # creates a btk aquisition object
  
 {% endhighlight %}
 
 You can then itterate through the Marker labels and Analog channels by doing:
 
-{% highlight python %}
+{% highlight python  linenos %}
 
 print('Marker labels:')
 for i in range(0, acq.GetPoints().GetItemNumber()):
@@ -135,7 +133,7 @@ You can then set the value in a new c3d file clone or the original c3d file usei
 `SetValue` method.
 Here is some code I did to cut off the force at some value.
 
-{% highlight python %}
+{% highlight python  linenos %}
 #modifies the values in the z axis 1st force plate
 
 ana = clone.GetAnalog("Fz1")
@@ -144,10 +142,10 @@ scalez1 = ana.GetScale()
 x = 0
 y = float(sys.argv[2])
 for forcez1 in np.nditer(valz1):
-        if forcez1/scalez1 > y:
+      if forcez1/scalez1 > y:
 			ana.SetValue(x,y * scalez1)
 
-		x = x + 1
+      x = x + 1
 {% endhighlight %}
 
 
