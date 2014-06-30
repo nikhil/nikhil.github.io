@@ -572,6 +572,23 @@ pre {
   line-height: 1.5;
   overflow-x: auto;
 }
+.terminal {
+  overflow: visible;
+  position: relative;
+}
+span[rel]:before {
+  content: attr(rel);
+  color: white;
+  position: absolute;
+  top: -25px;
+  left: 0;
+  width: 100%;
+  background: #e18728;
+  font-weight: 500;
+  font-style: normal;
+  padding: 5px 0;
+  text-indent: 15px;
+}
 /* Pygments Syntax highlighting ============================= */
 .highlight {
   background-color: #1d1f21;
@@ -584,6 +601,7 @@ pre {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+  overflow: visible;
   /* Comment */
   /* Error */
   /* Keyword */

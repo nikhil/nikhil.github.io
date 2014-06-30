@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2014-06-29T22:40:02-04:00</updated>
+<updated>2014-06-30T03:25:13-04:00</updated>
 <id>/</id>
 <author>
   <name>Nikhil Kumar</name>
@@ -110,8 +110,6 @@ your domain settings (if you are using github pages hosting). &lt;/p&gt;
   </author>
   <content type="html">&lt;p&gt;I am currently doing research on the diffrences between Barefoot running and Shod running(running with shoes). I am working with software known as the &lt;code&gt;AnyBody Modeling System&lt;/code&gt; using the &lt;code&gt;Gait lower Extremity model&lt;/code&gt;. This allows me to input motion captured data, which is givin in the form of a &lt;code&gt;.c3d&lt;/code&gt; file. However, I ran into a problem where I wanted to modify the .c3d file but I could not find anyt decent software to allow me to do this. I was able to find &lt;code&gt;btk&lt;/code&gt; a &lt;code&gt;python&lt;/code&gt; package that allows me to modify .c3d files.&lt;/p&gt;
 
-&lt;p&gt;&lt;span class=&quot;iconsfont&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-
 &lt;h2 id=&quot;c3d-files&quot;&gt;C3d files&lt;/h2&gt;
 
 &lt;h3 id=&quot;what-are-c3d-files&quot;&gt;What are c3d files:&lt;/h3&gt;
@@ -122,6 +120,9 @@ The C3D format is a public domain, binary file format that has been used in Biom
 
 &lt;h3 id=&quot;file-structure&quot;&gt;File Structure&lt;/h3&gt;
 &lt;p&gt;The structure of the C3d file is as follows:&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; *.c3d/
 &lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt; 	├── Header
@@ -149,6 +150,23 @@ The C3D format is a public domain, binary file format that has been used in Biom
 &lt;span class=&quot;lineno&quot;&gt;24&lt;/span&gt; 	├── Analog data
 &lt;span class=&quot;lineno&quot;&gt;25&lt;/span&gt; 	└── Point data&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+$( document ).ready(function() {
+     
+       $(&quot;pre&quot;).addClass(&quot;terminal&quot;); 
+	   $(&quot;&lt;span&gt;&quot;,{
+	       rel: &#39;File&#39;
+		}).appendTo(&quot;pre:eq(0)&quot;);   
+	   
+
+ 
+});
+
+
+&lt;/script&gt;
+
 &lt;h2 id=&quot;instalation&quot;&gt;Instalation&lt;/h2&gt;
 
 &lt;h2 id=&quot;what-is-btk&quot;&gt;What is Btk?&lt;/h2&gt;
@@ -159,43 +177,145 @@ BTK is an open-source and cross-platform library for biomechanical analysis. BTK
 
 &lt;h2 id=&quot;python-pacakges-needed&quot;&gt;Python pacakges needed&lt;/h2&gt;
 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numpy&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Matplotlib&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BTK&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;script type=&quot;text/javascript&quot;&gt;
+$( document ).ready(function() {
+     
+       $(&quot;pre&quot;).addClass(&quot;terminal&quot;); 
+	   $(&quot;&lt;span&gt;&quot;,{
+	       rel: &#39;Packages&#39;
+		}).appendTo(&quot;pre:eq(1)&quot;);   
+	   
+
+ 
+});
+
+
+&lt;/script&gt;
+
 &lt;p&gt;To install python2 packages you need to run pip.
-For example to install numpy, you need to run:&lt;/p&gt;
+For example to install numpy, you need to run:
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pip&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numpy&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;script type=&quot;text/javascript&quot;&gt;
+$( document ).ready(function() {
+     
+       $(&quot;pre&quot;).addClass(&quot;terminal&quot;); 
+	   $(&quot;&lt;span&gt;&quot;,{
+	       rel: &#39;Bash&#39;
+		}).appendTo(&quot;pre:eq(2)&quot;);   
+	   
+
+ 
+});
+
+
+&lt;/script&gt;
+
 &lt;p class=&quot;notice&quot;&gt;&lt;i class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt; &lt;strong&gt;Caution:&lt;/strong&gt; BTK is the exception here. I was not able to get btk working through pip. BTK also seems to be architectural dependent as it was not installing in my ARCH distribution. &lt;/p&gt;
 
-&lt;p&gt;I was able to get it working on Fedora 19 by installing the python wrapper package from &lt;a href=&quot;https://code.google.com/p/b-tk/&quot;&gt; here. &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+I was able to get it working on Fedora 19 by installing the python wrapper package from &lt;a href=&quot;https://code.google.com/p/b-tk/&quot;&gt; here. &lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Then run:&lt;/p&gt;
+&lt;p&gt;Then run:
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; yum localinstall packagename.rpm&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+$( document ).ready(function() {
+     
+       $(&quot;pre&quot;).addClass(&quot;terminal&quot;); 
+	   $(&quot;&lt;span&gt;&quot;,{
+	       rel: &#39;Bash&#39;
+		}).appendTo(&quot;pre:eq(3)&quot;);   
+	   
+
+ 
+});
+
+
+&lt;/script&gt;
 
 &lt;h2 id=&quot;using-b-tk-to-modify-your-file&quot;&gt;Using b-tk to modify your file&lt;/h2&gt;
 
 &lt;p&gt;You can import btk in python by specify your system path to the package or by
 just using import depending on your installation.&lt;/p&gt;
 
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;path to your btk python package&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;btk&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;You then need to create a btk reader.&lt;/p&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+$( document ).ready(function() {
+     
+       $(&quot;pre&quot;).addClass(&quot;terminal&quot;); 
+	   $(&quot;&lt;span&gt;&quot;,{
+	       rel: &#39;Python&#39;
+		}).appendTo(&quot;pre:eq(4)&quot;);   
+	   
+
+ 
+});
+
+
+&lt;/script&gt;
+
+&lt;p&gt;You then need to create a btk reader.
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;btk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;btkAcquisitionFileReader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Then you need to open the file and create a btk aquisition object.&lt;/p&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+$( document ).ready(function() {
+     
+       $(&quot;pre&quot;).addClass(&quot;terminal&quot;); 
+	   $(&quot;&lt;span&gt;&quot;,{
+	       rel: &#39;Python&#39;
+		}).appendTo(&quot;pre:eq(5)&quot;);   
+	   
+
+ 
+});
+&lt;/script&gt;
+
+&lt;p&gt;Then you need to open the file and create a btk aquisition object.
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SetFilename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;sample.c3d&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# open the c3d file&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;acq&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetOutput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# creates a btk aquisition object&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;You can then itterate through the Marker labels and Analog channels by doing:&lt;/p&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+$( document ).ready(function() {
+     
+       $(&quot;pre&quot;).addClass(&quot;terminal&quot;); 
+	   $(&quot;&lt;span&gt;&quot;,{
+	       rel: &#39;Python&#39;
+		}).appendTo(&quot;pre:eq(6)&quot;);   
+	   
+
+ 
+});
+&lt;/script&gt;
+
+&lt;p&gt;You can then itterate through the Marker labels and Analog channels by doing:
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;Marker labels:&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;acq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetPoints&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetItemNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()):&lt;/span&gt;
@@ -204,9 +324,24 @@ just using import depending on your installation.&lt;/p&gt;
 &lt;span class=&quot;lineno&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;acq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetAnalogs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetItemNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()):&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;6&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;acq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetAnalog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetLabel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;  &amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;script type=&quot;text/javascript&quot;&gt;
+$( document ).ready(function() {
+     
+       $(&quot;pre&quot;).addClass(&quot;terminal&quot;); 
+	   $(&quot;&lt;span&gt;&quot;,{
+	       rel: &#39;Python&#39;
+		}).appendTo(&quot;pre:eq(7)&quot;);   
+	   
+
+ 
+});
+&lt;/script&gt;
+
 &lt;p&gt;You can then set the value in a new c3d file clone or the original c3d file useing the
 &lt;code&gt;SetValue&lt;/code&gt; method.
-Here is some code I did to cut off the force at some value.&lt;/p&gt;
+Here is some code I did to cut off the force at some value.
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#modifies the values in the z axis 1st force plate&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt; 
@@ -220,6 +355,19 @@ Here is some code I did to cut off the force at some value.&lt;/p&gt;
 &lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt; 			&lt;span class=&quot;n&quot;&gt;ana&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SetValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scalez1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt; 
 &lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt;       &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+$( document ).ready(function() {
+     
+       $(&quot;pre&quot;).addClass(&quot;terminal&quot;); 
+	   $(&quot;&lt;span&gt;&quot;,{
+	       rel: &#39;Python&#39;
+		}).appendTo(&quot;pre:eq(8)&quot;);   
+	   
+
+ 
+});
+&lt;/script&gt;
 
 
   &lt;p&gt;&lt;a href=&quot;/BTK-biomechanics/&quot;&gt;BTK, A tool for reading C3d files&lt;/a&gt; was originally published by Nikhil Kumar at &lt;a href=&quot;&quot;&gt;Kumarcode&lt;/a&gt; on May 21, 2014.&lt;/p&gt;</content>

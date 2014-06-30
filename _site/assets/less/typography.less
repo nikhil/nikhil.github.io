@@ -135,10 +135,41 @@ li {
 		border: 1px solid lighten(@black, 90);
 		background-color: #efefef;
 		.rounded(3px);
-	}
+		}
 }
 pre {
 	.font-rem(12);
 	line-height: 1.5;
 	overflow-x: auto;
+}
+
+.terminal
+{
+
+overflow: visible;
+position: relative;
+
+
+
+}
+
+
+
+span[rel]:before
+{
+
+content: attr(rel);
+color: white;
+position: absolute;
+top: -25px;
+left: 0;
+width: 100%;
+background: #e18728;
+font-weight: 500;
+font-style: normal;
+padding: 5px 0;
+text-indent: 15px;
+
+
+
 }
