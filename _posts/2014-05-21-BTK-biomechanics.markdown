@@ -72,9 +72,9 @@ BTK
 To install python2 packages you need to run pip.
 For example to install numpy, you need to run:
 
-{% highlight python %}
+```python
 pip install numpy
-{% endhighlight %}
+```
 
 <i class="fa fa-warning"></i> **Caution:** BTK is the exception here. I was not able to get btk working through pip. BTK also seems to be architectural dependent as it was not installing in my ARCH distribution. 
 {: .notice}
