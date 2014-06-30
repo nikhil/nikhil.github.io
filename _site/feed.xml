@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2014-06-30T03:25:13-04:00</updated>
+<updated>2014-06-30T14:40:12-04:00</updated>
 <id>/</id>
 <author>
   <name>Nikhil Kumar</name>
@@ -33,18 +33,19 @@
 i3 is a tiling window manager, completely written from scratch. The target platforms are GNU/Linux and BSD operating systems, our code is Free and Open Source Software (FOSS) under the BSD license. i3 is primarily targeted at advanced users and developers. &lt;a href=&quot;http://i3wm.org/&quot;&gt;&lt;i class=&quot;fa fa-desktop&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/blockquote&gt;
 
 &lt;h3 id=&quot;installing-i3&quot;&gt;Installing i3&lt;/h3&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;sudo pacman -S i3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; sudo pacman -S i3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p class=&quot;notice&quot;&gt;&lt;i class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt; &lt;strong&gt;Caution:&lt;/strong&gt; If you are using &lt;code&gt;startx&lt;/code&gt;, make
- sure to edit your &lt;code&gt;~/.xinitrc&lt;/code&gt; and add the line ‘exec i3’. I am using &lt;code&gt;KDM&lt;/code&gt;,
+ sure to edit your &lt;code&gt;~/.xinitrc&lt;/code&gt; and add the line &lt;code&gt;exec i3&lt;/code&gt;. I am using &lt;code&gt;KDM&lt;/code&gt;,
  the login manager for kde to start i3.  &lt;/p&gt;
 
 &lt;h3 id=&quot;neat-keybindings-for-i3&quot;&gt;Neat keybindings for i3&lt;/h3&gt;
 
 &lt;p&gt;i3 has a special &lt;code&gt;$mod&lt;/code&gt; key which you would use anytime when you are using i3’s
 special keybindings. You can decide which key this &lt;code&gt;$mod&lt;/code&gt; is. It is usually
-&lt;code&gt;alt&lt;/code&gt; or the ‘windows’ key. Some of the most common used key bindings are: &lt;/p&gt;
+&lt;code&gt;alt&lt;/code&gt; or the &lt;code&gt;windows&lt;/code&gt; key. Some of the most common used key bindings are: &lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;code&gt;$mod&lt;/code&gt; + &lt;code&gt;Enter&lt;/code&gt;                    Open terminal&lt;/li&gt;
@@ -52,8 +53,24 @@ special keybindings. You can decide which key this &lt;code&gt;$mod&lt;/code&gt;
   &lt;li&gt;&lt;code&gt;$mod&lt;/code&gt; + &lt;code&gt;Shift&lt;/code&gt; + &lt;code&gt;Q&lt;/code&gt;            Kills the current window&lt;/li&gt;
   &lt;li&gt;&lt;code&gt;$mod&lt;/code&gt; + &lt;code&gt;Shift&lt;/code&gt; + &lt;code&gt;E&lt;/code&gt;            Exits i3&lt;/li&gt;
   &lt;li&gt;&lt;code&gt;$mod&lt;/code&gt; + &lt;code&gt;Shift&lt;/code&gt; + &lt;code&gt;R&lt;/code&gt;            Restarts i3&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;$mod&lt;/code&gt; + &lt;code&gt;#&lt;/code&gt;                                Goes to the # wordspace&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;$mod&lt;/code&gt; + &lt;code&gt;#&lt;/code&gt;                                Goes to the &lt;code&gt;#&lt;/code&gt; workspace&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+$( document ).ready(function() {
+     
+       $(&quot;pre&quot;).addClass(&quot;terminal&quot;);
+	   
+		 $(&quot;&lt;span&gt;&quot;,{
+	       rel:&#39;  Bash&#39;
+		}).appendTo(&quot;pre:eq(0)&quot;);
+
+});		
+
+
+&lt;/script&gt;
 
   &lt;p&gt;&lt;a href=&quot;/i3-tiling-window-manager/&quot;&gt;i3 tiling window manager&lt;/a&gt; was originally published by Nikhil Kumar at &lt;a href=&quot;&quot;&gt;Kumarcode&lt;/a&gt; on June 29, 2014.&lt;/p&gt;</content>
 </entry>
@@ -150,23 +167,6 @@ The C3D format is a public domain, binary file format that has been used in Biom
 &lt;span class=&quot;lineno&quot;&gt;24&lt;/span&gt; 	├── Analog data
 &lt;span class=&quot;lineno&quot;&gt;25&lt;/span&gt; 	└── Point data&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script type=&quot;text/javascript&quot;&gt;
-$( document ).ready(function() {
-     
-       $(&quot;pre&quot;).addClass(&quot;terminal&quot;); 
-	   $(&quot;&lt;span&gt;&quot;,{
-	       rel: &#39;File&#39;
-		}).appendTo(&quot;pre:eq(0)&quot;);   
-	   
-
- 
-});
-
-
-&lt;/script&gt;
-
 &lt;h2 id=&quot;instalation&quot;&gt;Instalation&lt;/h2&gt;
 
 &lt;h2 id=&quot;what-is-btk&quot;&gt;What is Btk?&lt;/h2&gt;
@@ -183,42 +183,12 @@ BTK is an open-source and cross-platform library for biomechanical analysis. BTK
 &lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Matplotlib&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BTK&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;script type=&quot;text/javascript&quot;&gt;
-$( document ).ready(function() {
-     
-       $(&quot;pre&quot;).addClass(&quot;terminal&quot;); 
-	   $(&quot;&lt;span&gt;&quot;,{
-	       rel: &#39;Packages&#39;
-		}).appendTo(&quot;pre:eq(1)&quot;);   
-	   
-
- 
-});
-
-
-&lt;/script&gt;
-
 &lt;p&gt;To install python2 packages you need to run pip.
 For example to install numpy, you need to run:
 &lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pip&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numpy&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;script type=&quot;text/javascript&quot;&gt;
-$( document ).ready(function() {
-     
-       $(&quot;pre&quot;).addClass(&quot;terminal&quot;); 
-	   $(&quot;&lt;span&gt;&quot;,{
-	       rel: &#39;Bash&#39;
-		}).appendTo(&quot;pre:eq(2)&quot;);   
-	   
-
- 
-});
-
-
-&lt;/script&gt;
 
 &lt;p class=&quot;notice&quot;&gt;&lt;i class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt; &lt;strong&gt;Caution:&lt;/strong&gt; BTK is the exception here. I was not able to get btk working through pip. BTK also seems to be architectural dependent as it was not installing in my ARCH distribution. &lt;/p&gt;
 
@@ -230,21 +200,6 @@ I was able to get it working on Fedora 19 by installing the python wrapper packa
 &lt;br /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; yum localinstall packagename.rpm&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;script type=&quot;text/javascript&quot;&gt;
-$( document ).ready(function() {
-     
-       $(&quot;pre&quot;).addClass(&quot;terminal&quot;); 
-	   $(&quot;&lt;span&gt;&quot;,{
-	       rel: &#39;Bash&#39;
-		}).appendTo(&quot;pre:eq(3)&quot;);   
-	   
-
- 
-});
-
-
-&lt;/script&gt;
 
 &lt;h2 id=&quot;using-b-tk-to-modify-your-file&quot;&gt;Using b-tk to modify your file&lt;/h2&gt;
 
@@ -258,39 +213,11 @@ just using import depending on your installation.&lt;/p&gt;
 &lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;path to your btk python package&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;btk&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;script type=&quot;text/javascript&quot;&gt;
-$( document ).ready(function() {
-     
-       $(&quot;pre&quot;).addClass(&quot;terminal&quot;); 
-	   $(&quot;&lt;span&gt;&quot;,{
-	       rel: &#39;Python&#39;
-		}).appendTo(&quot;pre:eq(4)&quot;);   
-	   
-
- 
-});
-
-
-&lt;/script&gt;
-
 &lt;p&gt;You then need to create a btk reader.
 &lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;btk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;btkAcquisitionFileReader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;script type=&quot;text/javascript&quot;&gt;
-$( document ).ready(function() {
-     
-       $(&quot;pre&quot;).addClass(&quot;terminal&quot;); 
-	   $(&quot;&lt;span&gt;&quot;,{
-	       rel: &#39;Python&#39;
-		}).appendTo(&quot;pre:eq(5)&quot;);   
-	   
-
- 
-});
-&lt;/script&gt;
 
 &lt;p&gt;Then you need to open the file and create a btk aquisition object.
 &lt;br /&gt;
@@ -299,19 +226,6 @@ $( document ).ready(function() {
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SetFilename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;sample.c3d&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# open the c3d file&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;acq&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetOutput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# creates a btk aquisition object&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;script type=&quot;text/javascript&quot;&gt;
-$( document ).ready(function() {
-     
-       $(&quot;pre&quot;).addClass(&quot;terminal&quot;); 
-	   $(&quot;&lt;span&gt;&quot;,{
-	       rel: &#39;Python&#39;
-		}).appendTo(&quot;pre:eq(6)&quot;);   
-	   
-
- 
-});
-&lt;/script&gt;
 
 &lt;p&gt;You can then itterate through the Marker labels and Analog channels by doing:
 &lt;br /&gt;
@@ -323,19 +237,6 @@ $( document ).ready(function() {
 &lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Analog channels:&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;acq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetAnalogs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetItemNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()):&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;6&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;acq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetAnalog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetLabel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;  &amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;script type=&quot;text/javascript&quot;&gt;
-$( document ).ready(function() {
-     
-       $(&quot;pre&quot;).addClass(&quot;terminal&quot;); 
-	   $(&quot;&lt;span&gt;&quot;,{
-	       rel: &#39;Python&#39;
-		}).appendTo(&quot;pre:eq(7)&quot;);   
-	   
-
- 
-});
-&lt;/script&gt;
 
 &lt;p&gt;You can then set the value in a new c3d file clone or the original c3d file useing the
 &lt;code&gt;SetValue&lt;/code&gt; method.
@@ -356,12 +257,51 @@ Here is some code I did to cut off the force at some value.
 &lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt; 
 &lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt;       &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+
 &lt;script type=&quot;text/javascript&quot;&gt;
 $( document ).ready(function() {
      
-       $(&quot;pre&quot;).addClass(&quot;terminal&quot;); 
+       $(&quot;pre&quot;).addClass(&quot;terminal&quot;);
 	   $(&quot;&lt;span&gt;&quot;,{
-	       rel: &#39;Python&#39;
+	       rel: &#39;  C3d File&#39;,
+		 
+		  
+		}).appendTo(&quot;pre:eq(0)&quot;);
+		
+			
+				
+		
+		$(&quot;&lt;span&gt;&quot;,{
+	       rel: &#39;  Packages&#39;
+		}).appendTo(&quot;pre:eq(1)&quot;);
+
+		 $(&quot;&lt;span&gt;&quot;,{
+	       rel:&#39;  Bash&#39;
+		}).appendTo(&quot;pre:eq(2)&quot;);
+
+		  $(&quot;&lt;span&gt;&quot;,{
+	       rel: &#39;  Bash&#39;
+		}).appendTo(&quot;pre:eq(3)&quot;);  
+
+		 $(&quot;&lt;span&gt;&quot;,{
+	       rel: &#39;  Python&#39;
+		}).appendTo(&quot;pre:eq(4)&quot;);  
+
+		  $(&quot;&lt;span&gt;&quot;,{
+	       rel: &#39;  Python&#39;
+		}).appendTo(&quot;pre:eq(5)&quot;);   
+
+		 $(&quot;&lt;span&gt;&quot;,{
+	       rel: &#39;  Python&#39;
+		}).appendTo(&quot;pre:eq(6)&quot;);  
+
+		  $(&quot;&lt;span&gt;&quot;,{
+	       rel: &#39;  Python&#39;
+		}).appendTo(&quot;pre:eq(7)&quot;);
+
+	   $(&quot;&lt;span&gt;&quot;,{
+	       rel: &#39;  Python&#39;
 		}).appendTo(&quot;pre:eq(8)&quot;);   
 	   
 

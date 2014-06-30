@@ -7,6 +7,7 @@
 <meta charset="utf-8">
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <link href="/assets/css/custom.css" rel="stylesheet" />
+<link href="/assets/css/font-mfizz.css" rel="stylesheet" />
 <title>i3 tiling window manager &#8211; Kumarcode</title>
 <meta name="description" content="">
 <meta name="keywords" content="">
@@ -134,18 +135,19 @@
 i3 is a tiling window manager, completely written from scratch. The target platforms are GNU/Linux and BSD operating systems, our code is Free and Open Source Software (FOSS) under the BSD license. i3 is primarily targeted at advanced users and developers. <a href="http://i3wm.org/"><i class="fa fa-desktop"></i></a></blockquote>
 
 <h3 id="installing-i3">Installing i3</h3>
+<p><br /></p>
 
-<div class="highlight"><pre><code class="bash">sudo pacman -S i3</code></pre></div>
+<div class="highlight"><pre><code class="bash"><span class="lineno">1</span> sudo pacman -S i3</code></pre></div>
 
 <p class="notice"><i class="fa fa-warning"></i> <strong>Caution:</strong> If you are using <code>startx</code>, make
- sure to edit your <code>~/.xinitrc</code> and add the line ‘exec i3’. I am using <code>KDM</code>,
+ sure to edit your <code>~/.xinitrc</code> and add the line <code>exec i3</code>. I am using <code>KDM</code>,
  the login manager for kde to start i3.  </p>
 
 <h3 id="neat-keybindings-for-i3">Neat keybindings for i3</h3>
 
 <p>i3 has a special <code>$mod</code> key which you would use anytime when you are using i3’s
 special keybindings. You can decide which key this <code>$mod</code> is. It is usually
-<code>alt</code> or the ‘windows’ key. Some of the most common used key bindings are: </p>
+<code>alt</code> or the <code>windows</code> key. Some of the most common used key bindings are: </p>
 
 <ul>
   <li><code>$mod</code> + <code>Enter</code>                    Open terminal</li>
@@ -153,8 +155,24 @@ special keybindings. You can decide which key this <code>$mod</code> is. It is u
   <li><code>$mod</code> + <code>Shift</code> + <code>Q</code>            Kills the current window</li>
   <li><code>$mod</code> + <code>Shift</code> + <code>E</code>            Exits i3</li>
   <li><code>$mod</code> + <code>Shift</code> + <code>R</code>            Restarts i3</li>
-  <li><code>$mod</code> + <code>#</code>                                Goes to the # wordspace</li>
+  <li><code>$mod</code> + <code>#</code>                                Goes to the <code>#</code> workspace</li>
 </ul>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+	       rel:'  Bash'
+		}).appendTo("pre:eq(0)");
+
+});		
+
+
+</script>
 
       <hr />
       <footer role="contentinfo">

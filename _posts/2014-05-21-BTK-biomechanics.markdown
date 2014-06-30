@@ -52,22 +52,7 @@ The structure of the C3d file is as follows:
 {% endhighlight %}
 
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-<script type="text/javascript">
-$( document ).ready(function() {
-     
-       $("pre").addClass("terminal"); 
-	   $("<span>",{
-	       rel: 'File'
-		}).appendTo("pre:eq(0)");   
-	   
-
- 
-});
-
-
-</script>
 
 ##Instalation
 
@@ -89,20 +74,6 @@ Matplotlib
 BTK
 {% endhighlight %}
 
-<script type="text/javascript">
-$( document ).ready(function() {
-     
-       $("pre").addClass("terminal"); 
-	   $("<span>",{
-	       rel: 'Packages'
-		}).appendTo("pre:eq(1)");   
-	   
-
- 
-});
-
-
-</script>
 
 
 To install python2 packages you need to run pip.
@@ -112,20 +83,6 @@ For example to install numpy, you need to run:
 {% highlight python linenos %}
 pip install numpy
 {% endhighlight %}
-<script type="text/javascript">
-$( document ).ready(function() {
-     
-       $("pre").addClass("terminal"); 
-	   $("<span>",{
-	       rel: 'Bash'
-		}).appendTo("pre:eq(2)");   
-	   
-
- 
-});
-
-
-</script>
 
 
 
@@ -143,20 +100,6 @@ Then run:
 yum localinstall packagename.rpm 
 {% endhighlight %}
 
-<script type="text/javascript">
-$( document ).ready(function() {
-     
-       $("pre").addClass("terminal"); 
-	   $("<span>",{
-	       rel: 'Bash'
-		}).appendTo("pre:eq(3)");   
-	   
-
- 
-});
-
-
-</script>
 
 
 ## Using b-tk to modify your file
@@ -173,20 +116,9 @@ import btk
 
 {% endhighlight %}
 
-<script type="text/javascript">
-$( document ).ready(function() {
-     
-       $("pre").addClass("terminal"); 
-	   $("<span>",{
-	       rel: 'Python'
-		}).appendTo("pre:eq(4)");   
-	   
-
- 
-});
 
 
-</script>
+
 
 You then need to create a btk reader.
 <br>
@@ -199,18 +131,6 @@ You then need to create a btk reader.
 {% endhighlight %}
 
 
-<script type="text/javascript">
-$( document ).ready(function() {
-     
-       $("pre").addClass("terminal"); 
-	   $("<span>",{
-	       rel: 'Python'
-		}).appendTo("pre:eq(5)");   
-	   
-
- 
-});
-</script>
 
 Then you need to open the file and create a btk aquisition object.
 <br>
@@ -223,18 +143,6 @@ acq = reader.GetOutput() # creates a btk aquisition object
  
 {% endhighlight %}
 
-<script type="text/javascript">
-$( document ).ready(function() {
-     
-       $("pre").addClass("terminal"); 
-	   $("<span>",{
-	       rel: 'Python'
-		}).appendTo("pre:eq(6)");   
-	   
-
- 
-});
-</script>
 
 You can then itterate through the Marker labels and Analog channels by doing:
 <br>
@@ -251,18 +159,6 @@ for i in range(0, acq.GetAnalogs().GetItemNumber()):
 {% endhighlight %}
 
 
-<script type="text/javascript">
-$( document ).ready(function() {
-     
-       $("pre").addClass("terminal"); 
-	   $("<span>",{
-	       rel: 'Python'
-		}).appendTo("pre:eq(7)");   
-	   
-
- 
-});
-</script>
 
 You can then set the value in a new c3d file clone or the original c3d file useing the
 `SetValue` method.
@@ -285,13 +181,51 @@ for forcez1 in np.nditer(valz1):
       x = x + 1
 {% endhighlight %}
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 <script type="text/javascript">
 $( document ).ready(function() {
      
-       $("pre").addClass("terminal"); 
+       $("pre").addClass("terminal");
 	   $("<span>",{
-	       rel: 'Python'
+	       rel: '  C3d File',
+		 
+		  
+		}).appendTo("pre:eq(0)");
+		
+			
+				
+		
+		$("<span>",{
+	       rel: '  Packages'
+		}).appendTo("pre:eq(1)");
+
+		 $("<span>",{
+	       rel:'  Bash'
+		}).appendTo("pre:eq(2)");
+
+		  $("<span>",{
+	       rel: '  Bash'
+		}).appendTo("pre:eq(3)");  
+
+		 $("<span>",{
+	       rel: '  Python'
+		}).appendTo("pre:eq(4)");  
+
+		  $("<span>",{
+	       rel: '  Python'
+		}).appendTo("pre:eq(5)");   
+
+		 $("<span>",{
+	       rel: '  Python'
+		}).appendTo("pre:eq(6)");  
+
+		  $("<span>",{
+	       rel: '  Python'
+		}).appendTo("pre:eq(7)");
+
+	   $("<span>",{
+	       rel: '  Python'
 		}).appendTo("pre:eq(8)");   
 	   
 

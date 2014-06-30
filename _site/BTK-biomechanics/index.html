@@ -7,6 +7,7 @@
 <meta charset="utf-8">
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <link href="/assets/css/custom.css" rel="stylesheet" />
+<link href="/assets/css/font-mfizz.css" rel="stylesheet" />
 <title>BTK, A tool for reading C3d files &#8211; Kumarcode</title>
 <meta name="description" content="">
 <meta name="keywords" content="">
@@ -167,23 +168,6 @@ The C3D format is a public domain, binary file format that has been used in Biom
 <span class="lineno">24</span> 	├── Analog data
 <span class="lineno">25</span> 	└── Point data</code></pre></div>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
-<script type="text/javascript">
-$( document ).ready(function() {
-     
-       $("pre").addClass("terminal"); 
-	   $("<span>",{
-	       rel: 'File'
-		}).appendTo("pre:eq(0)");   
-	   
-
- 
-});
-
-
-</script>
-
 <h2 id="instalation">Instalation</h2>
 
 <h2 id="what-is-btk">What is Btk?</h2>
@@ -200,42 +184,12 @@ BTK is an open-source and cross-platform library for biomechanical analysis. BTK
 <span class="lineno">2</span> <span class="n">Matplotlib</span>
 <span class="lineno">3</span> <span class="n">BTK</span></code></pre></div>
 
-<script type="text/javascript">
-$( document ).ready(function() {
-     
-       $("pre").addClass("terminal"); 
-	   $("<span>",{
-	       rel: 'Packages'
-		}).appendTo("pre:eq(1)");   
-	   
-
- 
-});
-
-
-</script>
-
 <p>To install python2 packages you need to run pip.
 For example to install numpy, you need to run:
 <br />
 <br /></p>
 
 <div class="highlight"><pre><code class="python"><span class="lineno">1</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">numpy</span></code></pre></div>
-
-<script type="text/javascript">
-$( document ).ready(function() {
-     
-       $("pre").addClass("terminal"); 
-	   $("<span>",{
-	       rel: 'Bash'
-		}).appendTo("pre:eq(2)");   
-	   
-
- 
-});
-
-
-</script>
 
 <p class="notice"><i class="fa fa-warning"></i> <strong>Caution:</strong> BTK is the exception here. I was not able to get btk working through pip. BTK also seems to be architectural dependent as it was not installing in my ARCH distribution. </p>
 
@@ -247,21 +201,6 @@ I was able to get it working on Fedora 19 by installing the python wrapper packa
 <br /></p>
 
 <div class="highlight"><pre><code class="bash"><span class="lineno">1</span> yum localinstall packagename.rpm</code></pre></div>
-
-<script type="text/javascript">
-$( document ).ready(function() {
-     
-       $("pre").addClass("terminal"); 
-	   $("<span>",{
-	       rel: 'Bash'
-		}).appendTo("pre:eq(3)");   
-	   
-
- 
-});
-
-
-</script>
 
 <h2 id="using-b-tk-to-modify-your-file">Using b-tk to modify your file</h2>
 
@@ -275,39 +214,11 @@ just using import depending on your installation.</p>
 <span class="lineno">2</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;path to your btk python package&quot;</span><span class="p">)</span>
 <span class="lineno">3</span> <span class="kn">import</span> <span class="nn">btk</span></code></pre></div>
 
-<script type="text/javascript">
-$( document ).ready(function() {
-     
-       $("pre").addClass("terminal"); 
-	   $("<span>",{
-	       rel: 'Python'
-		}).appendTo("pre:eq(4)");   
-	   
-
- 
-});
-
-
-</script>
-
 <p>You then need to create a btk reader.
 <br />
 <br /></p>
 
 <div class="highlight"><pre><code class="python"><span class="lineno">1</span> <span class="n">reader</span> <span class="o">=</span> <span class="n">btk</span><span class="o">.</span><span class="n">btkAcquisitionFileReader</span><span class="p">()</span></code></pre></div>
-
-<script type="text/javascript">
-$( document ).ready(function() {
-     
-       $("pre").addClass("terminal"); 
-	   $("<span>",{
-	       rel: 'Python'
-		}).appendTo("pre:eq(5)");   
-	   
-
- 
-});
-</script>
 
 <p>Then you need to open the file and create a btk aquisition object.
 <br />
@@ -316,19 +227,6 @@ $( document ).ready(function() {
 <div class="highlight"><pre><code class="python"><span class="lineno">1</span> <span class="n">reader</span><span class="o">.</span><span class="n">SetFilename</span><span class="p">(</span><span class="s">&quot;sample.c3d&quot;</span><span class="p">)</span> <span class="c"># open the c3d file</span>
 <span class="lineno">2</span> <span class="n">reader</span><span class="o">.</span><span class="n">Update</span><span class="p">()</span>
 <span class="lineno">3</span> <span class="n">acq</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="n">GetOutput</span><span class="p">()</span> <span class="c"># creates a btk aquisition object</span></code></pre></div>
-
-<script type="text/javascript">
-$( document ).ready(function() {
-     
-       $("pre").addClass("terminal"); 
-	   $("<span>",{
-	       rel: 'Python'
-		}).appendTo("pre:eq(6)");   
-	   
-
- 
-});
-</script>
 
 <p>You can then itterate through the Marker labels and Analog channels by doing:
 <br />
@@ -340,19 +238,6 @@ $( document ).ready(function() {
 <span class="lineno">4</span> <span class="k">print</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\n\n</span><span class="s">Analog channels:&#39;</span><span class="p">)</span>
 <span class="lineno">5</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">acq</span><span class="o">.</span><span class="n">GetAnalogs</span><span class="p">()</span><span class="o">.</span><span class="n">GetItemNumber</span><span class="p">()):</span>
 <span class="lineno">6</span>     <span class="k">print</span><span class="p">(</span><span class="n">acq</span><span class="o">.</span><span class="n">GetAnalog</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">GetLabel</span><span class="p">(),</span> <span class="n">end</span><span class="o">=</span><span class="s">&#39;  &#39;</span><span class="p">)</span></code></pre></div>
-
-<script type="text/javascript">
-$( document ).ready(function() {
-     
-       $("pre").addClass("terminal"); 
-	   $("<span>",{
-	       rel: 'Python'
-		}).appendTo("pre:eq(7)");   
-	   
-
- 
-});
-</script>
 
 <p>You can then set the value in a new c3d file clone or the original c3d file useing the
 <code>SetValue</code> method.
@@ -373,12 +258,51 @@ Here is some code I did to cut off the force at some value.
 <span class="lineno">11</span> 
 <span class="lineno">12</span>       <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span></code></pre></div>
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
 <script type="text/javascript">
 $( document ).ready(function() {
      
-       $("pre").addClass("terminal"); 
+       $("pre").addClass("terminal");
 	   $("<span>",{
-	       rel: 'Python'
+	       rel: '  C3d File',
+		 
+		  
+		}).appendTo("pre:eq(0)");
+		
+			
+				
+		
+		$("<span>",{
+	       rel: '  Packages'
+		}).appendTo("pre:eq(1)");
+
+		 $("<span>",{
+	       rel:'  Bash'
+		}).appendTo("pre:eq(2)");
+
+		  $("<span>",{
+	       rel: '  Bash'
+		}).appendTo("pre:eq(3)");  
+
+		 $("<span>",{
+	       rel: '  Python'
+		}).appendTo("pre:eq(4)");  
+
+		  $("<span>",{
+	       rel: '  Python'
+		}).appendTo("pre:eq(5)");   
+
+		 $("<span>",{
+	       rel: '  Python'
+		}).appendTo("pre:eq(6)");  
+
+		  $("<span>",{
+	       rel: '  Python'
+		}).appendTo("pre:eq(7)");
+
+	   $("<span>",{
+	       rel: '  Python'
 		}).appendTo("pre:eq(8)");   
 	   
 
