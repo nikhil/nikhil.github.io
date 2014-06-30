@@ -125,8 +125,7 @@ You then need to create a btk reader.
 <br>
 
 {% highlight python  linenos %}
- 
- reader = btk.btkAcquisitionFileReader()
+reader = btk.btkAcquisitionFileReader()
 
 {% endhighlight %}
 
