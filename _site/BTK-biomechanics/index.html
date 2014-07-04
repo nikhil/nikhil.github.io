@@ -139,9 +139,6 @@ The C3D format is a public domain, binary file format that has been used in Biom
 <h3 id="file-structure">File Structure</h3>
 <p>The structure of the C3d file is as follows:</p>
 
-<p><br />
-<br /></p>
-
 <div class="highlight"><pre><code class="text"><span class="lineno"> 1</span> *.c3d/
 <span class="lineno"> 2</span> 	├── Header
 <span class="lineno"> 3</span> 	|    ├── File type
@@ -178,27 +175,20 @@ BTK is an open-source and cross-platform library for biomechanical analysis. BTK
 
 <h2 id="python-pacakges-needed">Python pacakges needed</h2>
 
-<p><br /></p>
-
 <div class="highlight"><pre><code class="python"><span class="lineno">1</span> <span class="n">numpy</span>
 <span class="lineno">2</span> <span class="n">Matplotlib</span>
 <span class="lineno">3</span> <span class="n">BTK</span></code></pre></div>
 
 <p>To install python2 packages you need to run pip.
-For example to install numpy, you need to run:
-<br />
-<br /></p>
+For example to install numpy, you need to run:</p>
 
 <div class="highlight"><pre><code class="python"><span class="lineno">1</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">numpy</span></code></pre></div>
 
 <p class="notice"><i class="fa fa-warning"></i> <strong>Caution:</strong> BTK is the exception here. I was not able to get btk working through pip. BTK also seems to be architectural dependent as it was not installing in my ARCH distribution. </p>
 
-<p><br />
-I was able to get it working on Fedora 19 by installing the python wrapper package from <a href="https://code.google.com/p/b-tk/"> here. </a></p>
+<p>I was able to get it working on Fedora 19 by installing the python wrapper package from <a href="https://code.google.com/p/b-tk/"> here. </a></p>
 
-<p>Then run:
-<br />
-<br /></p>
+<p>Then run:</p>
 
 <div class="highlight"><pre><code class="bash"><span class="lineno">1</span> yum localinstall packagename.rpm</code></pre></div>
 
@@ -207,30 +197,21 @@ I was able to get it working on Fedora 19 by installing the python wrapper packa
 <p>You can import btk in python by specify your system path to the package or by
 just using import depending on your installation.</p>
 
-<p><br />
-<br /></p>
-
 <div class="highlight"><pre><code class="python"><span class="lineno">1</span> <span class="kn">import</span> <span class="nn">sys</span>
 <span class="lineno">2</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;path to your btk python package&quot;</span><span class="p">)</span>
 <span class="lineno">3</span> <span class="kn">import</span> <span class="nn">btk</span></code></pre></div>
 
-<p>You then need to create a btk reader.
-<br />
-<br /></p>
+<p>You then need to create a btk reader.</p>
 
 <div class="highlight"><pre><code class="python"><span class="lineno">1</span> <span class="n">reader</span> <span class="o">=</span> <span class="n">btk</span><span class="o">.</span><span class="n">btkAcquisitionFileReader</span><span class="p">()</span></code></pre></div>
 
-<p>Then you need to open the file and create a btk aquisition object.
-<br />
-<br /></p>
+<p>Then you need to open the file and create a btk aquisition object.</p>
 
 <div class="highlight"><pre><code class="python"><span class="lineno">1</span> <span class="n">reader</span><span class="o">.</span><span class="n">SetFilename</span><span class="p">(</span><span class="s">&quot;sample.c3d&quot;</span><span class="p">)</span> <span class="c"># open the c3d file</span>
 <span class="lineno">2</span> <span class="n">reader</span><span class="o">.</span><span class="n">Update</span><span class="p">()</span>
 <span class="lineno">3</span> <span class="n">acq</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="n">GetOutput</span><span class="p">()</span> <span class="c"># creates a btk aquisition object</span></code></pre></div>
 
-<p>You can then itterate through the Marker labels and Analog channels by doing:
-<br />
-<br /></p>
+<p>You can then itterate through the Marker labels and Analog channels by doing:</p>
 
 <div class="highlight"><pre><code class="python"><span class="lineno">1</span> <span class="k">print</span><span class="p">(</span><span class="s">&#39;Marker labels:&#39;</span><span class="p">)</span>
 <span class="lineno">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">acq</span><span class="o">.</span><span class="n">GetPoints</span><span class="p">()</span><span class="o">.</span><span class="n">GetItemNumber</span><span class="p">()):</span>
@@ -241,9 +222,7 @@ just using import depending on your installation.</p>
 
 <p>You can then set the value in a new c3d file clone or the original c3d file useing the
 <code>SetValue</code> method.
-Here is some code I did to cut off the force at some value.
-<br />
-<br /></p>
+Here is some code I did to cut off the force at some value.</p>
 
 <div class="highlight"><pre><code class="python"><span class="lineno"> 1</span> <span class="c">#modifies the values in the z axis 1st force plate</span>
 <span class="lineno"> 2</span> 
@@ -348,6 +327,8 @@ $( document ).ready(function() {
   <div class="related-articles">
   <h4>You might also enjoy <small class="pull-right">(<a href="/posts/">View all posts</a>)</small></h4>
     <ul>
+    
+      <li><a href="/Designing-dynamicaly-generated-html/" title="Designing dyamically generated html from Jekyll">Designing dyamically generated html from Jekyll</a></li>
     
       <li><a href="/i3-tiling-window-manager/" title="i3 tiling window manager">i3 tiling window manager</a></li>
     

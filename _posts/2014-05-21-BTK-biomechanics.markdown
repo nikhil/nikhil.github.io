@@ -18,9 +18,6 @@ The C3D format is a public domain, binary file format that has been used in Biom
 ###File Structure
 The structure of the C3d file is as follows:
 
-<br>
-<br>
-
 {% highlight text linenos%}
 
 *.c3d/
@@ -66,7 +63,7 @@ BTK is an open-source and cross-platform library for biomechanical analysis. BTK
 
 ##Python pacakges needed
 
-<br>
+
 
 {% highlight python linenos %}
 numpy
@@ -78,8 +75,8 @@ BTK
 
 To install python2 packages you need to run pip.
 For example to install numpy, you need to run:
-<br>
-<br>
+
+
 {% highlight python linenos %}
 pip install numpy
 {% endhighlight %}
@@ -89,13 +86,11 @@ pip install numpy
 <i class="fa fa-warning"></i> **Caution:** BTK is the exception here. I was not able to get btk working through pip. BTK also seems to be architectural dependent as it was not installing in my ARCH distribution. 
 {: .notice}
 
-<br>
 I was able to get it working on Fedora 19 by installing the python wrapper package from <a href="https://code.google.com/p/b-tk/"> here. </a>
 
 
 Then run:
-<br>
-<br>
+
 {% highlight bash  linenos %}
 yum localinstall packagename.rpm 
 {% endhighlight %}
@@ -107,8 +102,8 @@ yum localinstall packagename.rpm
 You can import btk in python by specify your system path to the package or by
 just using import depending on your installation.
 
-<br>
-<br>
+
+
 {% highlight python  linenos %}
 import sys
 sys.path.append("path to your btk python package")
@@ -121,8 +116,8 @@ import btk
 
 
 You then need to create a btk reader.
-<br>
-<br>
+
+
 
 {% highlight python  linenos %}
 reader = btk.btkAcquisitionFileReader()
@@ -132,8 +127,8 @@ reader = btk.btkAcquisitionFileReader()
 
 
 Then you need to open the file and create a btk aquisition object.
-<br>
-<br>
+
+
 
 {% highlight python  linenos %}
 reader.SetFilename("sample.c3d") # open the c3d file
@@ -144,8 +139,7 @@ acq = reader.GetOutput() # creates a btk aquisition object
 
 
 You can then itterate through the Marker labels and Analog channels by doing:
-<br>
-<br>
+
 
 {% highlight python  linenos %}
 
@@ -162,8 +156,8 @@ for i in range(0, acq.GetAnalogs().GetItemNumber()):
 You can then set the value in a new c3d file clone or the original c3d file useing the
 `SetValue` method.
 Here is some code I did to cut off the force at some value.
-<br>
-<br>
+
+
 
 {% highlight python  linenos %}
 #modifies the values in the z axis 1st force plate

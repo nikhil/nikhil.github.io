@@ -13,7 +13,7 @@ I choose i3 tiling window manager. According to the i3 webpage:
 i3 is a tiling window manager, completely written from scratch. The target platforms are GNU/Linux and BSD operating systems, our code is Free and Open Source Software (FOSS) under the BSD license. i3 is primarily targeted at advanced users and developers. <a href="http://i3wm.org/"><i class="fa fa-desktop"></i></a></blockquote>
 
 ###Installing i3
-<br>
+
 {% highlight bash linenos %}
 
 sudo pacman -S i3 

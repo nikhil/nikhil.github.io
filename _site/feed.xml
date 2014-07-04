@@ -4,13 +4,31 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2014-06-30T14:44:00-04:00</updated>
+<updated>2014-07-04T13:33:29-04:00</updated>
 <id>/</id>
 <author>
   <name>Nikhil Kumar</name>
   <uri>/</uri>
   <email>nikhilkumar516@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Designing dyamically generated html from Jekyll]]></title>
+  <link rel="alternate" type="text/html" href="/Designing-dynamicaly-generated-html/" />
+  <id>/Designing-dynamicaly-generated-html</id>
+  <published>2014-07-02T00:00:00-04:00</published>
+  <updated>2014-07-02T00:00:00-04:00</updated>
+  <author>
+    <name>Nikhil Kumar</name>
+    <uri></uri>
+    <email>nikhilkumar516@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;I have recently decided to change my code block to contain a header for the
+programming language that I am using.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/Designing-dynamicaly-generated-html/&quot;&gt;Designing dyamically generated html from Jekyll&lt;/a&gt; was originally published by Nikhil Kumar at &lt;a href=&quot;&quot;&gt;Kumarcode&lt;/a&gt; on July 02, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -33,7 +51,6 @@
 i3 is a tiling window manager, completely written from scratch. The target platforms are GNU/Linux and BSD operating systems, our code is Free and Open Source Software (FOSS) under the BSD license. i3 is primarily targeted at advanced users and developers. &lt;a href=&quot;http://i3wm.org/&quot;&gt;&lt;i class=&quot;fa fa-desktop&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/blockquote&gt;
 
 &lt;h3 id=&quot;installing-i3&quot;&gt;Installing i3&lt;/h3&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; sudo pacman -S i3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -94,11 +111,9 @@ ready for a new owner. I was able to get my short username “Nikhil” through
 Github’s Name Squatting policy which states:&lt;/p&gt;
 &lt;blockquote&gt;
 GitHub account name squatting is prohibited. Inactive accounts may be renamed or removed by GitHub staff at their discretion. You can examine if there&#39;s activity on an account name and request that support release a name for your use, but keep in mind that not all activity on GitHub is publicly visible. Staff will not remove or rename any active account.
-&lt;br /&gt;
-&lt;br /&gt;
+
 GitHub account names are provided on a first-come, first-served basis, and are intended for immediate and active use. Account names may not be inactively held for future use.
-&lt;br /&gt;
-&lt;br /&gt;
+
 Attempts to sell, buy, or solicit other forms of payment in exchange for account names is prohibited and may result in permanent account suspension.
 &lt;a href=&quot;https://help.github.com/articles/name-squatting-policy&quot;&gt;&lt;i class=&quot;fa
 fa-github-alt&quot;&gt;&lt;/i&gt;&lt;/a&gt;
@@ -138,9 +153,6 @@ The C3D format is a public domain, binary file format that has been used in Biom
 &lt;h3 id=&quot;file-structure&quot;&gt;File Structure&lt;/h3&gt;
 &lt;p&gt;The structure of the C3d file is as follows:&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; *.c3d/
 &lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt; 	├── Header
 &lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt; 	|    ├── File type
@@ -177,27 +189,20 @@ BTK is an open-source and cross-platform library for biomechanical analysis. BTK
 
 &lt;h2 id=&quot;python-pacakges-needed&quot;&gt;Python pacakges needed&lt;/h2&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numpy&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Matplotlib&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BTK&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;To install python2 packages you need to run pip.
-For example to install numpy, you need to run:
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
+For example to install numpy, you need to run:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pip&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numpy&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p class=&quot;notice&quot;&gt;&lt;i class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt; &lt;strong&gt;Caution:&lt;/strong&gt; BTK is the exception here. I was not able to get btk working through pip. BTK also seems to be architectural dependent as it was not installing in my ARCH distribution. &lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;
-I was able to get it working on Fedora 19 by installing the python wrapper package from &lt;a href=&quot;https://code.google.com/p/b-tk/&quot;&gt; here. &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I was able to get it working on Fedora 19 by installing the python wrapper package from &lt;a href=&quot;https://code.google.com/p/b-tk/&quot;&gt; here. &lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Then run:
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;Then run:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; yum localinstall packagename.rpm&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -206,30 +211,21 @@ I was able to get it working on Fedora 19 by installing the python wrapper packa
 &lt;p&gt;You can import btk in python by specify your system path to the package or by
 just using import depending on your installation.&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;path to your btk python package&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;btk&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;You then need to create a btk reader.
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;You then need to create a btk reader.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;btk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;btkAcquisitionFileReader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Then you need to open the file and create a btk aquisition object.
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;Then you need to open the file and create a btk aquisition object.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SetFilename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;sample.c3d&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# open the c3d file&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;acq&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetOutput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# creates a btk aquisition object&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;You can then itterate through the Marker labels and Analog channels by doing:
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;You can then itterate through the Marker labels and Analog channels by doing:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;Marker labels:&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;acq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetPoints&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetItemNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()):&lt;/span&gt;
@@ -240,9 +236,7 @@ just using import depending on your installation.&lt;/p&gt;
 
 &lt;p&gt;You can then set the value in a new c3d file clone or the original c3d file useing the
 &lt;code&gt;SetValue&lt;/code&gt; method.
-Here is some code I did to cut off the force at some value.
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
+Here is some code I did to cut off the force at some value.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#modifies the values in the z axis 1st force plate&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt; 

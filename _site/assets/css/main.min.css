@@ -582,7 +582,7 @@ span[rel]:before {
   font-family: Helvetica, FontMfizz, FontAwesome;
   font-size: 150%;
   position: absolute;
-  top: -33px;
+  top: 0;
   left: 0;
   width: 100%;
   background: #CC7A00;
@@ -670,6 +670,7 @@ span[rel]:before {
   position: relative;
   margin: 0;
   padding: 1em;
+  padding-top: 50px;
 }
 .highlight .lineno {
   padding-right: 24px;
