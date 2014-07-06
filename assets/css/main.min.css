@@ -518,8 +518,8 @@ figcaption {
   text-indent: 0;
   font-size: 14px;
   font-size: 0.875rem;
-  background-color: #ffffff;
-  border: 1px solid #cccccc;
+  background-color: #fafafa;
+  border: 1px solid #c7c7c7;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -579,7 +579,7 @@ pre {
 span[rel]:before {
   content: attr(rel);
   color: #343434;
-  font-family: Helvetica, FontMfizz, FontAwesome;
+  font-family: Raleway, FontMfizz, FontAwesome;
   font-size: 150%;
   position: absolute;
   top: 0;
@@ -1767,7 +1767,7 @@ select:focus {
 }
 /* Page level layout styles ================================ */
 body {
-  background-color: #ffffff;
+  background-color: #fafafa;
   font-family: 'PT Serif', serif;
   color: #333332;
 }
@@ -2131,7 +2131,7 @@ body {
   width: 0;
   height: 0;
   border: 20px solid transparent;
-  border-bottom-color: #ffffff;
+  border-bottom-color: #fafafa;
 }
 @media only screen and (min-width: 37.5em) {
   .image-wrap:after {
