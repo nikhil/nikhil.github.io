@@ -60,6 +60,79 @@
   {% endif %}
   </article>
 </div><!-- /#main -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+{% for codetag in page.code %}
+
+{% if codetag.type == 'bash' %}
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+	       rel:'  Bash'
+		   }).appendTo("pre:eq({{codetag.count}})");
+
+});	
+
+</script>
+{% endif %}
+
+{% if codetag.type == 'file' %}
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+			  rel:'  {{codetag.file}}'
+		   }).appendTo("pre:eq({{codetag.count}})");
+
+});	
+
+</script>
+{% endif %}
+
+{% if codetag.type == 'python' %}
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+	       rel:'  Python'
+		   }).appendTo("pre:eq({{codetag.count}})");
+
+});	
+
+</script>
+{% endif %}
+
+{% if codetag.type == 'packages' %}
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+	       rel:'  Packages'
+		   }).appendTo("pre:eq({{codetag.count}})");
+
+});	
+
+</script>
+{% endif %}
+
+
+{% endfor %}
+
+
+
 
 <div class="footer-wrap">
   <div class="related-articles">

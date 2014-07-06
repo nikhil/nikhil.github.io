@@ -1,7 +1,9 @@
 ---
 layout: post
 title: i3 tiling window manager 
-
+code:
+- type: bash 
+  count: 0
 ---
 
 ##Why did I switch to a tiling window manager?
@@ -38,17 +40,5 @@ special keybindings. You can decide which key this `$mod` is. It is usually
 * `$mod` + `Shift` + `R`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Restarts i3
 * `$mod` + `#`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      Goes to the `#` workspace
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
-<script type="text/javascript">
-$( document ).ready(function() {
-     
-       $("pre").addClass("terminal");
-	   
-		 $("<span>",{
-	       rel:'  Bash'
-		}).appendTo("pre:eq(0)");
-
-});		
 
 

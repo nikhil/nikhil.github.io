@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2014-07-05T21:24:24-04:00</updated>
+<updated>2014-07-05T23:39:52-04:00</updated>
 <id>/</id>
 <author>
   <name>Nikhil Kumar</name>
@@ -73,21 +73,6 @@ special keybindings. You can decide which key this &lt;code&gt;$mod&lt;/code&gt;
   &lt;li&gt;&lt;code&gt;$mod&lt;/code&gt; + &lt;code&gt;#&lt;/code&gt;                                Goes to the &lt;code&gt;#&lt;/code&gt; workspace&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script type=&quot;text/javascript&quot;&gt;
-$( document ).ready(function() {
-     
-       $(&quot;pre&quot;).addClass(&quot;terminal&quot;);
-	   
-		 $(&quot;&lt;span&gt;&quot;,{
-	       rel:&#39;  Bash&#39;
-		}).appendTo(&quot;pre:eq(0)&quot;);
-
-});		
-
-
-&lt;/script&gt;
 
   &lt;p&gt;&lt;a href=&quot;/i3-tiling-window-manager/&quot;&gt;i3 tiling window manager&lt;/a&gt; was originally published by Nikhil Kumar at &lt;a href=&quot;&quot;&gt;Kumarcode&lt;/a&gt; on June 29, 2014.&lt;/p&gt;</content>
 </entry>
@@ -250,58 +235,6 @@ Here is some code I did to cut off the force at some value.&lt;/p&gt;
 &lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt; 			&lt;span class=&quot;n&quot;&gt;ana&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SetValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scalez1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt; 
 &lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt;       &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script type=&quot;text/javascript&quot;&gt;
-$( document ).ready(function() {
-     
-       $(&quot;pre&quot;).addClass(&quot;terminal&quot;);
-	   $(&quot;&lt;span&gt;&quot;,{
-	       rel: &#39;  C3d File&#39;,
-		 
-		  
-		}).appendTo(&quot;pre:eq(0)&quot;);
-		
-			
-				
-		
-		$(&quot;&lt;span&gt;&quot;,{
-	       rel: &#39;  Packages&#39;
-		}).appendTo(&quot;pre:eq(1)&quot;);
-
-		 $(&quot;&lt;span&gt;&quot;,{
-	       rel:&#39;  Bash&#39;
-		}).appendTo(&quot;pre:eq(2)&quot;);
-
-		  $(&quot;&lt;span&gt;&quot;,{
-	       rel: &#39;  Bash&#39;
-		}).appendTo(&quot;pre:eq(3)&quot;);  
-
-		 $(&quot;&lt;span&gt;&quot;,{
-	       rel: &#39;  Python&#39;
-		}).appendTo(&quot;pre:eq(4)&quot;);  
-
-		  $(&quot;&lt;span&gt;&quot;,{
-	       rel: &#39;  Python&#39;
-		}).appendTo(&quot;pre:eq(5)&quot;);   
-
-		 $(&quot;&lt;span&gt;&quot;,{
-	       rel: &#39;  Python&#39;
-		}).appendTo(&quot;pre:eq(6)&quot;);  
-
-		  $(&quot;&lt;span&gt;&quot;,{
-	       rel: &#39;  Python&#39;
-		}).appendTo(&quot;pre:eq(7)&quot;);
-
-	   $(&quot;&lt;span&gt;&quot;,{
-	       rel: &#39;  Python&#39;
-		}).appendTo(&quot;pre:eq(8)&quot;);   
-	   
-
- 
-});
-&lt;/script&gt;
 
 
   &lt;p&gt;&lt;a href=&quot;/BTK-biomechanics/&quot;&gt;BTK, A tool for reading C3d files&lt;/a&gt; was originally published by Nikhil Kumar at &lt;a href=&quot;&quot;&gt;Kumarcode&lt;/a&gt; on May 21, 2014.&lt;/p&gt;</content>

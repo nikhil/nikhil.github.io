@@ -1,7 +1,35 @@
 ---
 layout: post
 title: BTK, A tool for reading C3d files
+code:
+- type: file
+  file: C3d File
+  count: 0
 
+- type: packages
+  count: 1
+
+- type: bash
+  count: 2
+
+- type: bash
+  count: 3
+
+- type: python
+  count: 4
+
+- type: python
+  count: 5
+
+- type: python
+  count: 6
+
+- type: python
+  count: 7
+
+- type: python
+  count: 8
+ 
 ---
 
 I am currently doing research on the diffrences between Barefoot running and Shod running(running with shoes). I am working with software known as the `AnyBody Modeling System` using the `Gait lower Extremity model`. This allows me to input motion captured data, which is givin in the form of a `.c3d` file. However, I ran into a problem where I wanted to modify the .c3d file but I could not find anyt decent software to allow me to do this. I was able to find `btk` a `python` package that allows me to modify .c3d files.
@@ -174,57 +202,6 @@ for forcez1 in np.nditer(valz1):
       x = x + 1
 {% endhighlight %}
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
-<script type="text/javascript">
-$( document ).ready(function() {
-     
-       $("pre").addClass("terminal");
-	   $("<span>",{
-	       rel: '  C3d File',
-		 
-		  
-		}).appendTo("pre:eq(0)");
-		
-			
-				
-		
-		$("<span>",{
-	       rel: '  Packages'
-		}).appendTo("pre:eq(1)");
-
-		 $("<span>",{
-	       rel:'  Bash'
-		}).appendTo("pre:eq(2)");
-
-		  $("<span>",{
-	       rel: '  Bash'
-		}).appendTo("pre:eq(3)");  
-
-		 $("<span>",{
-	       rel: '  Python'
-		}).appendTo("pre:eq(4)");  
-
-		  $("<span>",{
-	       rel: '  Python'
-		}).appendTo("pre:eq(5)");   
-
-		 $("<span>",{
-	       rel: '  Python'
-		}).appendTo("pre:eq(6)");  
-
-		  $("<span>",{
-	       rel: '  Python'
-		}).appendTo("pre:eq(7)");
-
-	   $("<span>",{
-	       rel: '  Python'
-		}).appendTo("pre:eq(8)");   
-	   
-
- 
-});
-</script>
 
 
 
