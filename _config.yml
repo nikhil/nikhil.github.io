@@ -46,13 +46,13 @@ links:
     url: /arch/
     icon: icon-arch    
   - title: Gardening
-    url: /gardening 
+    url: /gardening/ 
     icon: fa fa-leaf
   - title: music
-    url: /gardening 
+    url: /music/ 
     icon: fa fa-music
   - title: PUNS
-    url: /gardening 
+    url: /puns/ 
     icon: fa fa-comments-o      
   
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones

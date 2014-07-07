@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "loversquarrel";
+  src: url("../fonts/LoversQuarrel-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.loversq {
+font-family: "loversquarrel";
+font-weight: normal;
+font-style: normal;
+
+}	
+

@@ -30,7 +30,15 @@
     </url>
     
     <url>
+        <loc>/music/</loc>
+    </url>
+    
+    <url>
         <loc>/posts/</loc>
+    </url>
+    
+    <url>
+        <loc>/puns/</loc>
     </url>
     
     <url>
