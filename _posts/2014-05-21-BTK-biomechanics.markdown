@@ -89,7 +89,7 @@ BTK is an open-source and cross-platform library for biomechanical analysis. BTK
 
 
 
-##Python pacakges needed
+##Python packages needed
 
 
 

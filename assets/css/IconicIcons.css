@@ -1,0 +1,45 @@
+/*
+  Icon Font: IconicIcons
+*/
+
+@font-face {
+  font-family: "IconicIcons";
+  src: url("../fonts/IconicIcons_dfb469acdace499f3a259fa96024e472.eot");
+  src: url("../fonts/IconicIcons_dfb469acdace499f3a259fa96024e472.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/IconicIcons_dfb469acdace499f3a259fa96024e472.woff") format("woff"),
+       url("../fonts/IconicIcons_dfb469acdace499f3a259fa96024e472.ttf") format("truetype"),
+       url("../fonts/IconicIcons_dfb469acdace499f3a259fa96024e472.svg#IconicIcons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "IconicIcons";
+    src: url("../fonts/IconicIcons_dfb469acdace499f3a259fa96024e472.svg#IconicIcons") format("svg");
+  }
+}
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+.icon-arch:before,
+.icon-book:before,
+.icon-firefox:before {
+  display: inline-block;
+  font-family: "IconicIcons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.icon-arch:before { content: "\f100"; }
+.icon-book:before { content: "\f101"; }
+.icon-firefox:before { content: "\f102"; }

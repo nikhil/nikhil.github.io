@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2014-07-05T23:39:52-04:00</updated>
+<updated>2014-07-07T01:46:17-04:00</updated>
 <id>/</id>
 <author>
   <name>Nikhil Kumar</name>
@@ -172,7 +172,7 @@ The C3D format is a public domain, binary file format that has been used in Biom
 BTK is an open-source and cross-platform library for biomechanical analysis. BTK read and write acquisition files and can modify them. All these operations can be done by the use of the C++ API or by the wrappers included (Matlab, Octave, and Python).&lt;a href=&quot;https://code.google.com/p/b-tk/&quot;&gt;&lt;i class=&quot;fa fa-cogs&quot;&gt;&lt;/i&gt;&lt;/a&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&quot;python-pacakges-needed&quot;&gt;Python pacakges needed&lt;/h2&gt;
+&lt;h2 id=&quot;python-packages-needed&quot;&gt;Python packages needed&lt;/h2&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numpy&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Matplotlib&lt;/span&gt;

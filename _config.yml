@@ -38,12 +38,22 @@ bing_verify:
 links:
   - title: About
     url: /about/
+    icon: fa fa-user    
   - title: Posts
     url: /posts/
+    icon: fa fa-bars   
   - title: Arch Linux
     url: /arch/
+    icon: icon-arch    
   - title: Gardening
-    url: /gardening  
+    url: /gardening 
+    icon: fa fa-leaf
+  - title: music
+    url: /gardening 
+    icon: fa fa-music
+  - title: PUNS
+    url: /gardening 
+    icon: fa fa-comments-o      
   
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/New_York
