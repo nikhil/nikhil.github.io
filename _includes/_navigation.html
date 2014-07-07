@@ -6,9 +6,29 @@
 		<nav role="navigation" id="site-nav" class="nav">
 		    <ul>
 		        {% for link in site.links %}
-				<span class="{{ link.title }}"><i class="{{link.icon}}"></i> <li><a href="{% if link.external %}{{ link.url }}{% else %}{{ site.url }}{{ link.url }}{% endif %}" {% if link.external %}target="_blank"{% endif %}>{{ link.title }}</a></li></span>
+				<span class="{{ link.title }}" id="{{link.count}}"> <li><a href="{% if link.external %}{{ link.url }}{% else %}{{ site.url }}{{ link.url }}{% endif %}" {% if link.external %}target="_blank"{% endif %}><i class="{{link.icon}}"></i>&nbsp;{{ link.title }}</a></li></span>
+				<script type="text/javascript">
+					$( document ).ready(function() {
+     
+     
+							$("#{{link.count}}").mouseover(function(){
+								$(this).find("i").addClass('fa-spin');
+							});
+
+							$("#{{link.count}}").mouseout(function(){
+								$(this).find("i").removeClass('fa-spin');
+							});
+
+
+
+					});	
+
+</script>
+
 		        {% endfor %}
 		    </ul>
 		</nav>
 	</div><!-- /.top-navigation -->
 </div><!-- /.navigation-wrapper -->
+
+
