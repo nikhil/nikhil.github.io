@@ -31,6 +31,41 @@ box-shadow:         -3px -3px 10px 0px rgba(50, 50, 50, 0.79);
 
 
 }
+.page article{
+
+background-color:#fdf6e3;
+
+padding-left: 40px; !important
+padding-left: 40px;
+padding-right: 40px;
+padding-top: 25px;
+
+
+-webkit-box-shadow: -3px -3px 10px 0px rgba(50, 50, 50, 0.79);
+-moz-box-shadow:    -3px -3px 10px 0px rgba(50, 50, 50, 0.79);
+box-shadow:         -3px -3px 10px 0px rgba(50, 50, 50, 0.79);
+
+
+}
+
+.post-index article{
+
+background-color:#fdf6e3;
+
+padding-left: 40px; !important
+padding-left: 40px;
+padding-right: 40px;
+padding-top: 25px;
+
+
+-webkit-box-shadow: -3px -3px 10px 0px rgba(50, 50, 50, 0.79);
+-moz-box-shadow:    -3px -3px 10px 0px rgba(50, 50, 50, 0.79);
+box-shadow:         -3px -3px 10px 0px rgba(50, 50, 50, 0.79);
+
+
+}
+
+
 
 .tospin {
 
