@@ -6,18 +6,22 @@
 		<nav role="navigation" id="site-nav" class="nav">
 		    <ul>
 		        {% for link in site.links %}
-				<span class="{{ link.title }}" id="{{link.count}}"> <li><a href="{% if link.external %}{{ link.url }}{% else %}{{ site.url }}{{ link.url }}{% endif %}" {% if link.external %}target="_blank"{% endif %}><i class="{{link.icon}}"></i>&nbsp;{{ link.title }}</a></li></span>
+				<span class="{{ link.title }}" id="{{link.count}}"> <li><a href="{% if link.external %}{{ link.url }}{% else %}{{ site.url }}{{ link.url }}{% endif %}" {% if link.external %}target="_blank"{% endif %}><i class="{{link.icon}}" id="{{link.count}}"></i>&nbsp;{{ link.title }}</a></li></span>
 				<script type="text/javascript">
 					$( document ).ready(function() {
-     
-     
+
+
+
+         				
 							$("#{{link.count}}").mouseover(function(){
-								$(this).find("i").addClass('fa-spin');
+								$(this).find("i").addClass("tospin");
 							});
 
 							$("#{{link.count}}").mouseout(function(){
-								$(this).find("i").removeClass('fa-spin');
+								$(this).find("i").removeClass("tospin");
 							});
+
+							   							
 
 
 

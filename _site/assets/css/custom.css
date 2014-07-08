@@ -32,6 +32,26 @@ box-shadow:         -3px -3px 10px 0px rgba(50, 50, 50, 0.79);
 
 }
 
+.tospin {
+
+
+display: inline-block;
+webkit-transform: rotateY(360deg);
+       -moz-transform: rotateY(360deg);
+        -ms-transform: rotateY(360deg);
+         -o-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+
+
+
+}	
+
+.siteBio {
+
+font-family: 'Lato', sans-serif;
+font-size: 100%;
+font-style: italic;
+}
 
 
 .top-navigation li a {
