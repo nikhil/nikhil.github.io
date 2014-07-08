@@ -1,6 +1,28 @@
 <div class="navigation-wrapper">
 	<div class="site-name">
-		<a href="/"><i class="fa fa-code"></i>{{ site.title }}</a>
+		<span id="titlename"><a href="/"><i class="fa fa-code"></i>{{ site.title }}</a></span>
+			<script type="text/javascript">
+					$( document ).ready(function() {
+
+
+
+         				
+							$("#titlename").mouseover(function(){
+								$(this).find("i").addClass("tospin");
+							});
+
+							$("#titlename").mouseout(function(){
+								$(this).find("i").removeClass("tospin");
+							});
+
+							   							
+
+
+
+					});	
+
+</script>
+
 	</div><!-- /.site-name -->
 	<div class="top-navigation">
 		<nav role="navigation" id="site-nav" class="nav">
