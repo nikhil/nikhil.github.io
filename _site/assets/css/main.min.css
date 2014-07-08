@@ -518,8 +518,8 @@ figcaption {
   text-indent: 0;
   font-size: 14px;
   font-size: 0.875rem;
-  background-color: #fff0e3;
-  border: 1px solid #ffb97d;
+  background-color: #eee8d5;
+  border: 1px solid #d1c08c;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -1763,7 +1763,7 @@ select:focus {
 }
 /* Page level layout styles ================================ */
 body {
-  background-color: #fff0e3;
+  background-color: #eee8d5;
   font-family: 'PT Serif', "IconicIcons", serif;
   color: #333332;
 }
@@ -2127,7 +2127,7 @@ body {
   width: 0;
   height: 0;
   border: 20px solid transparent;
-  border-bottom-color: #fff0e3;
+  border-bottom-color: #eee8d5;
 }
 @media only screen and (min-width: 37.5em) {
   .image-wrap:after {
