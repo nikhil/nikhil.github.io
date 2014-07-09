@@ -43,7 +43,9 @@ padding-top: 25px;
 padding-bottom: 35px;
 
 border-width: 4px;
-border-style: double;
+border-color: #b1ac9e;
+border-style: double double double solid;
+
 
 
 
@@ -61,7 +63,9 @@ padding-top: 25px;
 padding-bottom: 18px;
 
 border-width: 4px;
-border-style: double;
+border-color: #b1ac9e;
+border-style: double double double solid;
+
 
 
 }
