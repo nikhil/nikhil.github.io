@@ -59,7 +59,7 @@ links:
     count: 5    
   - title: PUNS
     url: /puns/ 
-    icon: fa fa-comments-o 
+    icon: fa fa-comments 
     count: 6    
   
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones

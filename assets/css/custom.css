@@ -66,9 +66,10 @@ border-style: double;
 
 }
 
-#titlename {
+#titlename i{
 
-font-size: 100%;
+color: #dc322f;	
+font-size: 135%;
 
 
 }	

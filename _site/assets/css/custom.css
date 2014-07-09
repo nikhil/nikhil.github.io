@@ -58,7 +58,7 @@ padding-left: 40px; !important
 padding-left: 40px;
 padding-right: 40px;
 padding-top: 25px;
-padding-bottom: 35px;
+padding-bottom: 18px;
 
 border-width: 4px;
 border-style: double;
@@ -66,11 +66,10 @@ border-style: double;
 
 }
 
-#titlename {
+#titlename i{
 
-font-size: 150%;
-position: absolute;
-top: 23px;
+color: #dc322f;	
+font-size: 135%;
 
 
 }	
@@ -79,7 +78,7 @@ top: 23px;
 
 
 display: inline-block;
-webkit-transform: rotateY(360deg);
+-webkit-transform: rotateY(360deg);
        -moz-transform: rotateY(360deg);
         -ms-transform: rotateY(360deg);
          -o-transform: rotateY(360deg);
