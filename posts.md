@@ -6,6 +6,6 @@ tagline: A List of Posts
 tags: [blog]
 image:
   feature: FoxGloves.jpg
-  credit: Fox gloves taken by me from my backyard.
+  credit: Fox gloves taken by me im my backyard.
 
 ---

@@ -8,7 +8,7 @@ modified: 9-9-2013
 comments: true
 image:
   feature: asiatic-lily.jpg
-  credit: Asiatic lily taken by me from my backyard.
+  credit: Asiatic lily taken by me in my backyard.
 ---
 
 
