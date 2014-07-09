@@ -87,6 +87,25 @@ webkit-transform: rotateY(360deg);
 
 
 
+}
+
+.navigation-wrapper a:hover{
+
+color: #343434;
+
+}	
+
+.navigation-wrapper a:visited{
+
+color: #343434;
+	
+
+}
+
+.navigation-wrapper a:focus{
+
+color: #343434;	
+
 }	
 
 .siteBio {

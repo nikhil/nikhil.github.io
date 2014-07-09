@@ -5,7 +5,7 @@ title: All Posts
 tagline: A List of Posts
 tags: [blog]
 image:
-  feature: fox-gloves.jpg
+  feature: FoxGloves.jpg
   credit: Fox gloves taken by me from my backyard.
 
 ---
