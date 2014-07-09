@@ -11,26 +11,26 @@ layout: none
 <id>{{ site.url }}/</id>
 <author>
   <name>{{ site.owner.name }}</name>
-  <uri>{{ site.url }}/</uri>
+  <uri>{{ site.url1 }}/</uri>
   <email>{{ site.owner.email }}</email>
 </author>
 {% for post in site.posts limit:20 %}
 
 <entry>
   <title type="html"><![CDATA[{{ post.title | cdata_escape }}]]></title>
-  <link rel="alternate" type="text/html" href="{{ site.url }}{{ post.url }}" />
-  <id>{{ site.url }}{{ post.id }}</id>
+  <link rel="alternate" type="text/html" href="{{ site.url1 }}{{ post.url }}" />
+  <id>{{ site.url1 }}{{ post.id }}</id>
   {% if post.modified %}<updated>{{ post.modified | to_xmlschema }}T00:00:00-00:00</updated>
   <published>{{ post.date | date_to_xmlschema }}</published>
   {% else %}<published>{{ post.date | date_to_xmlschema }}</published>
   <updated>{{ post.date | date_to_xmlschema }}</updated>{% endif %}
   <author>
     <name>{{ site.owner.name }}</name>
-    <uri>{{ site.url }}</uri>
+    <uri>{{ site.url1 }}</uri>
     <email>{{ site.owner.email }}</email>
   </author>
   <content type="html">{{ post.content | xml_escape }}
-  &lt;p&gt;&lt;a href=&quot;{{ site.url }}{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt; was originally published by {{ site.owner.name }} at &lt;a href=&quot;{{ site.url }}&quot;&gt;{{ site.title }}&lt;/a&gt; on {{ post.date | date: "%B %d, %Y" }}.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;{{ site.url1 }}{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt; was originally published by {{ site.owner.name }} at &lt;a href=&quot;{{ site.url1 }}&quot;&gt;{{ site.title }}&lt;/a&gt; on {{ post.date | date: "%B %d, %Y" }}.&lt;/p&gt;</content>
 </entry>
 {% endfor %}
 </feed>
