@@ -155,7 +155,7 @@
 </script>
 
 		        
-				<span class="Arch Linux" id="3"> <li><a href="/arch/" ><i class="icon-arch" id="3"></i>&nbsp;Arch Linux</a></li></span>
+				<span class="Gardening" id="3"> <li><a href="/gardening/" ><i class="fa fa-leaf" id="3"></i>&nbsp;Gardening</a></li></span>
 				<script type="text/javascript">
 					$( document ).ready(function() {
 
@@ -179,7 +179,7 @@
 </script>
 
 		        
-				<span class="Gardening" id="4"> <li><a href="/gardening/" ><i class="fa fa-leaf" id="4"></i>&nbsp;Gardening</a></li></span>
+				<span class="Arch Linux" id="4"> <li><a href="/arch/" ><i class="icon-arch" id="4"></i>&nbsp;Arch Linux</a></li></span>
 				<script type="text/javascript">
 					$( document ).ready(function() {
 
@@ -306,7 +306,7 @@ The C3D format is a public domain, binary file format that has been used in Biom
 <h3 id="file-structure">File Structure</h3>
 <p>The structure of the C3d file is as follows:</p>
 
-<div class="highlight"><pre><code class="text"><span class="lineno"> 1</span> *.c3d/
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span class="lineno"> 1</span> *.c3d/
 <span class="lineno"> 2</span> 	├── Header
 <span class="lineno"> 3</span> 	|    ├── File type
 <span class="lineno"> 4</span> 	|    ├── Data type
@@ -342,14 +342,14 @@ BTK is an open-source and cross-platform library for biomechanical analysis. BTK
 
 <h2 id="python-packages-needed">Python packages needed</h2>
 
-<div class="highlight"><pre><code class="python"><span class="lineno">1</span> <span class="n">numpy</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="lineno">1</span> <span class="n">numpy</span>
 <span class="lineno">2</span> <span class="n">Matplotlib</span>
 <span class="lineno">3</span> <span class="n">BTK</span></code></pre></div>
 
 <p>To install python2 packages you need to run pip.
 For example to install numpy, you need to run:</p>
 
-<div class="highlight"><pre><code class="python"><span class="lineno">1</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">numpy</span></code></pre></div>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="lineno">1</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">numpy</span></code></pre></div>
 
 <p class="notice"><i class="fa fa-warning"></i> <strong>Caution:</strong> BTK is the exception here. I was not able to get btk working through pip. BTK also seems to be architectural dependent as it was not installing in my ARCH distribution. </p>
 
@@ -357,30 +357,30 @@ For example to install numpy, you need to run:</p>
 
 <p>Then run:</p>
 
-<div class="highlight"><pre><code class="bash"><span class="lineno">1</span> yum localinstall packagename.rpm</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="lineno">1</span> yum localinstall packagename.rpm</code></pre></div>
 
 <h2 id="using-b-tk-to-modify-your-file">Using b-tk to modify your file</h2>
 
 <p>You can import btk in python by specify your system path to the package or by
 just using import depending on your installation.</p>
 
-<div class="highlight"><pre><code class="python"><span class="lineno">1</span> <span class="kn">import</span> <span class="nn">sys</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="lineno">1</span> <span class="kn">import</span> <span class="nn">sys</span>
 <span class="lineno">2</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;path to your btk python package&quot;</span><span class="p">)</span>
 <span class="lineno">3</span> <span class="kn">import</span> <span class="nn">btk</span></code></pre></div>
 
 <p>You then need to create a btk reader.</p>
 
-<div class="highlight"><pre><code class="python"><span class="lineno">1</span> <span class="n">reader</span> <span class="o">=</span> <span class="n">btk</span><span class="o">.</span><span class="n">btkAcquisitionFileReader</span><span class="p">()</span></code></pre></div>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="lineno">1</span> <span class="n">reader</span> <span class="o">=</span> <span class="n">btk</span><span class="o">.</span><span class="n">btkAcquisitionFileReader</span><span class="p">()</span></code></pre></div>
 
 <p>Then you need to open the file and create a btk aquisition object.</p>
 
-<div class="highlight"><pre><code class="python"><span class="lineno">1</span> <span class="n">reader</span><span class="o">.</span><span class="n">SetFilename</span><span class="p">(</span><span class="s">&quot;sample.c3d&quot;</span><span class="p">)</span> <span class="c"># open the c3d file</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="lineno">1</span> <span class="n">reader</span><span class="o">.</span><span class="n">SetFilename</span><span class="p">(</span><span class="s">&quot;sample.c3d&quot;</span><span class="p">)</span> <span class="c"># open the c3d file</span>
 <span class="lineno">2</span> <span class="n">reader</span><span class="o">.</span><span class="n">Update</span><span class="p">()</span>
 <span class="lineno">3</span> <span class="n">acq</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="n">GetOutput</span><span class="p">()</span> <span class="c"># creates a btk aquisition object</span></code></pre></div>
 
 <p>You can then itterate through the Marker labels and Analog channels by doing:</p>
 
-<div class="highlight"><pre><code class="python"><span class="lineno">1</span> <span class="k">print</span><span class="p">(</span><span class="s">&#39;Marker labels:&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="lineno">1</span> <span class="k">print</span><span class="p">(</span><span class="s">&#39;Marker labels:&#39;</span><span class="p">)</span>
 <span class="lineno">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">acq</span><span class="o">.</span><span class="n">GetPoints</span><span class="p">()</span><span class="o">.</span><span class="n">GetItemNumber</span><span class="p">()):</span>
 <span class="lineno">3</span>     <span class="k">print</span><span class="p">(</span><span class="n">acq</span><span class="o">.</span><span class="n">GetPoint</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">GetLabel</span><span class="p">(),</span> <span class="n">end</span><span class="o">=</span><span class="s">&#39;  &#39;</span><span class="p">)</span>   
 <span class="lineno">4</span> <span class="k">print</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\n\n</span><span class="s">Analog channels:&#39;</span><span class="p">)</span>
@@ -391,7 +391,7 @@ just using import depending on your installation.</p>
 <code>SetValue</code> method.
 Here is some code I did to cut off the force at some value.</p>
 
-<div class="highlight"><pre><code class="python"><span class="lineno"> 1</span> <span class="c">#modifies the values in the z axis 1st force plate</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="lineno"> 1</span> <span class="c">#modifies the values in the z axis 1st force plate</span>
 <span class="lineno"> 2</span> 
 <span class="lineno"> 3</span> <span class="n">ana</span> <span class="o">=</span> <span class="n">clone</span><span class="o">.</span><span class="n">GetAnalog</span><span class="p">(</span><span class="s">&quot;Fz1&quot;</span><span class="p">)</span>
 <span class="lineno"> 4</span> <span class="n">valz1</span> <span class="o">=</span> <span class="n">ana</span><span class="o">.</span><span class="n">GetValues</span><span class="p">()</span>

@@ -79,13 +79,13 @@ font-size: 135%;
 }	
 .top-navigation .About i{
 
-	color:#2aa198; 
+	color:#b58900; 
 
 }
 
 .top-navigation .Posts i{
 
-	color: #6c71c4;  
+	color: #cb4b16;  
 
 }
 
@@ -95,7 +95,7 @@ font-size: 135%;
 
 }
 
-.Gardening i{
+.top-navigation .Gardening i{
 
 	color: #859900;
 
@@ -103,7 +103,7 @@ font-size: 135%;
 
 .music i{
 
-	color:#cb4b16;
+	color:#6c71c4;
 
 }
 

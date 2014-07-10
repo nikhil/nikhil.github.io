@@ -155,7 +155,7 @@
 </script>
 
 		        
-				<span class="Arch Linux" id="3"> <li><a href="/arch/" ><i class="icon-arch" id="3"></i>&nbsp;Arch Linux</a></li></span>
+				<span class="Gardening" id="3"> <li><a href="/gardening/" ><i class="fa fa-leaf" id="3"></i>&nbsp;Gardening</a></li></span>
 				<script type="text/javascript">
 					$( document ).ready(function() {
 
@@ -179,7 +179,7 @@
 </script>
 
 		        
-				<span class="Gardening" id="4"> <li><a href="/gardening/" ><i class="fa fa-leaf" id="4"></i>&nbsp;Gardening</a></li></span>
+				<span class="Arch Linux" id="4"> <li><a href="/arch/" ><i class="icon-arch" id="4"></i>&nbsp;Arch Linux</a></li></span>
 				<script type="text/javascript">
 					$( document ).ready(function() {
 
@@ -354,7 +354,7 @@
 
 <h2 id="folder-structure">Folder Structure</h2>
 
-<div class="highlight"><pre><code class="text">minimal-mistakes/
+<div class="highlight"><pre><code class="language-text" data-lang="text">minimal-mistakes/
 ├── _includes/
 |    ├── _author-bio.html        # bio stuff layout. pulls optional owner data from _config.yml
 |    ├── _browser-upgrade.html   # prompt to install a modern browser for &lt; IE9
@@ -404,7 +404,7 @@
 
 <p>Edit page/post titles and URLs to include in the site’s navigation. For external links add <code>external: true</code>.</p>
 
-<div class="highlight"><pre><code class="yaml"><span class="c1"># sample top navigation links</span>
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1"># sample top navigation links</span>
 <span class="l-Scalar-Plain">links</span><span class="p-Indicator">:</span>
   <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">About Page</span>
     <span class="l-Scalar-Plain">url</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/about/</span>
@@ -422,10 +422,10 @@
 
 <p>There are two rake tasks that can be used to create a new post or page with all YAML Front Matter. Using either <code>rake new_post</code> or <code>rake new_page</code> will prompt you for a title and tags to classify them. Example below:</p>
 
-<div class="highlight"><pre><code class="bash">rake new_post
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">rake new_post
 
-Enter a title <span class="k">for </span>your post: My Awesome Post
-Enter category name to group your post in <span class="o">(</span>leave blank <span class="k">for </span>none<span class="o">)</span>: blog
+Enter a title <span class="k">for</span> your post: My Awesome Post
+Enter category name to group your post in <span class="o">(</span>leave blank <span class="k">for</span> none<span class="o">)</span>: blog
 Enter tags to classify your post <span class="o">(</span>comma separated<span class="o">)</span>: web development, code
 Creating new post: _posts/2014-02-10-my-awesome-post.md</code></pre></div>
 
@@ -437,13 +437,13 @@ Creating new post: _posts/2014-02-10-my-awesome-post.md</code></pre></div>
 
 <p>The two layouts make the assumption that the feature images live in the <code>images/</code> folder. To add a feature image to a post or page just include the filename in the front matter like so. </p>
 
-<div class="highlight"><pre><code class="yaml"><span class="l-Scalar-Plain">image</span><span class="p-Indicator">:</span>
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">image</span><span class="p-Indicator">:</span>
   <span class="l-Scalar-Plain">feature</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">feature-image-filename.jpg</span>
   <span class="l-Scalar-Plain">thumb</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">thumbnail-image.jpg</span> <span class="c1">#keep it square 200x200 px is good</span></code></pre></div>
 
 <p>If you want to apply attribution to a feature image use the following YAML front matter on posts or pages. Image credits appear directly below the feature image with a link back to the original source.</p>
 
-<div class="highlight"><pre><code class="yaml"><span class="l-Scalar-Plain">image</span><span class="p-Indicator">:</span>
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">image</span><span class="p-Indicator">:</span>
   <span class="l-Scalar-Plain">feature</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">feature-image-filename.jpg</span>
   <span class="l-Scalar-Plain">credit</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Michael Rose</span> <span class="c1">#name of the person or site you want to credit</span>
   <span class="l-Scalar-Plain">creditlink</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">http://mademistakes.com</span> <span class="c1">#url to their site or licensing</span></code></pre></div>
@@ -456,7 +456,7 @@ Creating new post: _posts/2014-02-10-my-awesome-post.md</code></pre></div>
   <li>In <code>_config.yml</code> under <code>links:</code> rename the title and URL to the following:</li>
 </ul>
 
-<div class="highlight"><pre><code class="yaml"><span class="l-Scalar-Plain">links</span><span class="p-Indicator">:</span>
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">links</span><span class="p-Indicator">:</span>
   <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Writing</span>
     <span class="l-Scalar-Plain">url</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/writing/</span></code></pre></div>
 
@@ -475,7 +475,7 @@ Creating new post: _posts/2014-02-10-my-awesome-post.md</code></pre></div>
 
 <p class="notice"><strong>PS:</strong> The TOC is hidden on small devices because I haven’t gotten around to optimizing it. For now it only appears on larger screens (tablet and desktop).</p>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;section</span> <span class="na">id=</span><span class="s">&quot;table-of-contents&quot;</span> <span class="na">class=</span><span class="s">&quot;toc&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;section</span> <span class="na">id=</span><span class="s">&quot;table-of-contents&quot;</span> <span class="na">class=</span><span class="s">&quot;toc&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;header&gt;</span>
     <span class="nt">&lt;h3&gt;</span>Contents<span class="nt">&lt;/h3&gt;</span>
   <span class="nt">&lt;/header&gt;</span>
@@ -491,7 +491,7 @@ Creating new post: _posts/2014-02-10-my-awesome-post.md</code></pre></div>
 
 <p>Not sure if this only effects Kramdown or if it’s an issue with Markdown in general. But adding YouTube video embeds causes errors when building your Jekyll site. To fix add a space between the <code>&lt;iframe&gt;</code> tags and remove <code>allowfullscreen</code>. Example below:</p>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;iframe</span> <span class="na">width=</span><span class="s">&quot;560&quot;</span> <span class="na">height=</span><span class="s">&quot;315&quot;</span> <span class="na">src=</span><span class="s">&quot;http://www.youtube.com/embed/PWf4WUoMXwg&quot;</span> <span class="na">frameborder=</span><span class="s">&quot;0&quot;</span><span class="nt">&gt;</span> <span class="nt">&lt;/iframe&gt;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;iframe</span> <span class="na">width=</span><span class="s">&quot;560&quot;</span> <span class="na">height=</span><span class="s">&quot;315&quot;</span> <span class="na">src=</span><span class="s">&quot;http://www.youtube.com/embed/PWf4WUoMXwg&quot;</span> <span class="na">frameborder=</span><span class="s">&quot;0&quot;</span><span class="nt">&gt;</span> <span class="nt">&lt;/iframe&gt;</span></code></pre></div>
 
 <hr />
 
@@ -499,7 +499,7 @@ Creating new post: _posts/2014-02-10-my-awesome-post.md</code></pre></div>
 
 <p>If you want to easily skin the themes’ colors and fonts, take a look at <code>variables.less</code> in <code>assets/less/</code> and make the necessary changes to the color and font variables. To make development easier I setup a Grunt build script to compile/minify the LESS files into <code>main.min.css</code> and lint/concatenate/minify all scripts into <code>scripts.min.js</code>. <a href="http://nodejs.org/">Install Node.js</a>, then <a href="http://gruntjs.com/getting-started">install Grunt</a>, and then finally install the dependencies for the theme contained in <code>package.json</code>:</p>
 
-<div class="highlight"><pre><code class="bash">npm install</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">npm install</code></pre></div>
 
 <p>From the theme’s root, use <code>grunt</code> to rebuild the CSS, concatenate JavaScript files, and optimize .jpg, .png, and .svg files in the <code>images/</code> folder. You can also use <code>grunt watch</code> in combination with <code>jekyll build --watch</code> to watch for updates to your LESS and JS files that Grunt will then automatically re-build as you write your code which will in turn auto-generate your Jekyll site when developing locally.</p>
 

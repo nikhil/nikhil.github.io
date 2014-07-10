@@ -45,14 +45,14 @@ links:
     url: /posts/
     icon: fa fa-bars
     count: 2    
-  - title: Arch Linux
-    url: /arch/
-    icon: icon-arch 
-    count: 3    
   - title: Gardening
     url: /gardening/ 
     icon: fa fa-leaf
-    count: 4    
+    count: 3   
+  - title: Arch Linux
+    url: /arch/
+    icon: icon-arch 
+    count: 4   
   - title: music
     url: /music/ 
     icon: fa fa-music
