@@ -8,6 +8,6 @@ modified: 6-28-2014
 comments: true
 image:
   feature: lily.jpg
-  credit: Lily taken by me from my backyard.
+  credit: Lily taken by me in my backyard.
 ---
 
