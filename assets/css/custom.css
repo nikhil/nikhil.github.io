@@ -64,7 +64,7 @@ padding-bottom: 18px;
 
 border-width: 4px;
 border-color: #b1ac9e;
-border-style: double double double solid;
+border-style: double;
 
 
 
@@ -75,6 +75,40 @@ border-style: double double double solid;
 color: #dc322f;	
 font-size: 135%;
 
+
+}	
+.top-navigation .About i{
+
+	color:#2aa198; 
+
+}
+
+.top-navigation .Posts i{
+
+	color: #6c71c4;  
+
+}
+
+.top-navigation i{
+
+	color:#268bd2;
+
+}
+
+.Gardening i{
+
+	color: #859900;
+
+}
+
+.music i{
+
+	color:#cb4b16;
+
+}
+
+.PUNS i{
+	color: #d33682;
 
 }	
 
