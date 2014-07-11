@@ -79,13 +79,13 @@ font-size: 135%;
 }	
 .top-navigation .About i{
 
-	color:#b58900; 
+	color:#cb4b16; 
 
 }
 
 .top-navigation .Posts i{
 
-	color: #cb4b16;  
+	color: #b58900;  
 
 }
 
@@ -152,20 +152,32 @@ font-size: 100%;
 font-style: italic;
 }
 
-
-.top-navigation li a {
-
-
-}	
-
-
-.nav .Posts{
-
-
-}	
-
-.nav .Arch{
+#imagecontainer{
+word-wrap: break-word;
+position: relative;
+display: block;
+padding-bottom: 300px;
 
 
 }
+
+.image{
+
+width: 150px;
+position: absolute;
+top: 50px;
+
+}	
+
+.info{
+position: absolute;
+left:180px;
+top: -5px;
+
+
+}	
+
+.colorinfo{
+color: #2aa198;
+}	
 
