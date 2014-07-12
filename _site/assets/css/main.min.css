@@ -557,6 +557,9 @@ p code {
   background-color: #fff0e3;
   -webkit-box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1), 0 -1px 0 rgba(0, 0, 0, 0.3);
   box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1), 0 -1px 0 rgba(0, 0, 0, 0.3);
+  border-style: inset;
+  border-width: 1px;
+  border-color: #e5d8cc;
   display: inline-block;
   margin: 0 2px;
   padding: 0 5px;
@@ -570,7 +573,6 @@ pre {
 }
 .terminal {
   position: relative;
-  overflow: visible;
 }
 span[rel]:before {
   content: attr(rel);
