@@ -32,7 +32,7 @@ code:
  
 ---
 
-I am currently doing research on the diffrences between Barefoot running and Shod running(running with shoes). I am working with software known as the `AnyBody Modeling System` using the `Gait lower Extremity model`. This allows me to input motion captured data, which is givin in the form of a `.c3d` file. However, I ran into a problem where I wanted to modify the .c3d file but I could not find anyt decent software to allow me to do this. I was able to find `btk` a `python` package that allows me to modify .c3d files.
+I am currently doing research on the differences between Barefoot running and Shod running(running with shoes). I am working with software known as the `AnyBody Modeling System` using the `Gait lower Extremity model`. This allows me to input motion captured data, which is givin in the form of a `.c3d` file. However, I ran into a problem where I wanted to modify the .c3d file but I could not find anyt decent software to allow me to do this. I was able to find `btk` a `python` package that allows me to modify .c3d files.
 
 
 ##C3d files

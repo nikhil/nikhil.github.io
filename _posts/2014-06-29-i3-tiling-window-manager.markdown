@@ -7,7 +7,7 @@ code:
 ---
 
 ##Why did I switch to a tiling window manager?
-I am not going to say that a minimilistic enviornment such as `i3` is better than a desktop manager such as `KDE`, `GNOME`, `MATE`, or `Xfce`, but a minimilistic enviornment has helped me improve my tactics. After switching to a tiling window manager, I have found myself more focused on my task at hand and more effecient with my screen usage. Before	using a tiling window manager, I would often clutter up my windows on one workspace, even when I had worksapce switching as an option.
+I am not going to say that a minimalistic  environment such as `i3` is better than a desktop manager such as `KDE`, `GNOME`, `MATE`, or `Xfce`, but a minimalistic environment has helped me improve my tactics. After switching to a tiling window manager, I have found myself more focused on my task at hand and more efficient with my screen usage. Before using a tiling window manager, I would often clutter up my windows on one workspace, even when I had workspace switching as an option.
 
 ##i3
 I choose i3 tiling window manager. According to the i3 webpage:

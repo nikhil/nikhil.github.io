@@ -126,6 +126,142 @@ $( document ).ready(function() {
 
 </script>
 {% endif %}
+{% if codetag.type == 'c' %}
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+	       rel:'  C'
+		   }).appendTo("pre:eq({{codetag.count}})");
+
+});	
+
+</script>
+{% endif %}
+{% if codetag.type == 'html' %}
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+	       rel:'  Html'
+		   }).appendTo("pre:eq({{codetag.count}})");
+
+});	
+
+</script>
+{% endif %}
+{% if codetag.type == 'java' %}
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+	       rel:'  Java'
+		   }).appendTo("pre:eq({{codetag.count}})");
+
+});	
+
+</script>
+{% endif %}
+{% if codetag.type == 'javascript' %}
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+	       rel:'  Javascript'
+		   }).appendTo("pre:eq({{codetag.count}})");
+
+});	
+
+</script>
+{% endif %}
+{% if codetag.type == 'nodejs' %}
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+	       rel:'  Nodejs'
+		   }).appendTo("pre:eq({{codetag.count}})");
+
+});	
+
+</script>
+{% endif %}
+{% if codetag.type == 'perl' %}
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+	       rel:'  Perl'
+		   }).appendTo("pre:eq({{codetag.count}})");
+
+});	
+
+</script>
+{% endif %}
+{% if codetag.type == 'php' %}
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+	       rel:'  Php'
+		   }).appendTo("pre:eq({{codetag.count}})");
+
+});	
+
+</script>
+{% endif %}
+{% if codetag.type == 'ruby' %}
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+	       rel:'  Ruby'
+		   }).appendTo("pre:eq({{codetag.count}})");
+
+});	
+
+</script>
+{% endif %}
+
+{% if codetag.type == 'css' %}
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+	       rel:'  Css'
+		   }).appendTo("pre:eq({{codetag.count}})");
+
+});	
+
+</script>
+{% endif %}
 
 
 {% endfor %}
