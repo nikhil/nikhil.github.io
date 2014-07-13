@@ -3,7 +3,7 @@ layout: post
 title: Designing dynamically generated html from Jekyll 
 code:
 - type: file
-  file: Yaml
+  file: Liquid
   count: 0
 
 - type: ruby
@@ -31,7 +31,7 @@ with highlighting from `Pygments`.
 <br>
 For example to display Ruby code. In my markdown I would write:
 
-{% highlight text linenos %}
+{% highlight javascript linenos %}
 
 {% raw %}
 

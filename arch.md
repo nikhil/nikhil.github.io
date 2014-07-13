@@ -10,8 +10,17 @@ image:
   feature: Arch.png
   credit: Arch Linux Project, which I am not affiliated with.
 ---
-<p>Here I will write about the fun (and the pain) I have with Arch. Here is my archey image.</p>
-<style> text-indent: 0;</style><p>I did not start my linux expereice with Arch. In 11th grade I installled ubuntu <i class="icon-ubuntu"></i>, however at that time I disliked how gnome <i class="icon-gnome"></i> was difficult to customize. In my freshmen year of college I switched to linux mint<i class="icon-linux-mint"></i> with KDE <i class="icon-kde"></i>. However, I did not like how I had to reinstall the whole distro to upgrade. I was ready to switch to Fedora <i class="icon-fedora"></i>.  However a friend convinced me to switch to Arch <i class="icon-arch"></i> with the i3 tilling window manager.</p> 
+<style> text-indent: 0;</style><p>I did not start my linux experience with Arch.
+<div class = "distrolist">
+
+Year  <span class="distros"> Distro </span> <span class="desktop"> Desktop Enviornment</span>
+<hr>
+2010 <span class="distros">  ubuntu  <i class="icon-ubuntu"></i> </span> <span class="desktop">Gnome <i class="icon-gnome"></i></span><br> 
+2012 <span class="distros"> linux mint <i class="icon-linux-mint"></i> </span> <span class="desktop">KDE <i class="icon-kde"></i></span><br>
+2013- <span class="distros"> Arch <i class="icon-arch"></i> </span> <span class="desktop"> i3</p></span><br> 
+</div>
+<br>
+
 <p>Here I will write about the fun (and the pain) I have with Arch. Here is my Arch info.</p>
 
 <div id="imagecontainer">

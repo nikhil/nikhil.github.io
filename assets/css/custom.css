@@ -179,3 +179,37 @@ top: -5px;
 color: #2aa198;
 }	
 
+.distrolist{
+
+position: relative;
+
+}	
+
+.distros{
+
+position: absolute;	
+left: 150px;
+
+}
+
+.desktop{
+
+position: absolute;	
+left: 300px;
+
+}
+
+.l-Scalar-Plain
+{
+color: #509e4f;
+
+}
+
+.p-Indicator
+{
+
+color: #0086b3;
+
+}
+
+
