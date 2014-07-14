@@ -541,10 +541,6 @@ blockquote {
 p {
   margin: 0 0 1.625rem;
 }
-p + p {
-  text-indent: 1.625rem;
-  margin-top: -1.625rem;
-}
 tt,
 code,
 kbd,

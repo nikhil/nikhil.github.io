@@ -16,7 +16,7 @@
 <link href="/assets/css/loversquarrel.css" rel="stylesheet" />
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|PT+Sans|PT+Sans+Narrow|PT+Serif+Caption|PT+Mono|PT+Serif|Source+Code+Pro|Raleway|Raleway+Dots|PT+Sans+Caption' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Lato:400italic' rel='stylesheet' type='text/css'>
-<title>Github Name Squatting Policy &#8211; Kumarcode</title>
+<title>Making your own custom icon font. &#8211; Kumarcode</title>
 <meta name="description" content="">
 <meta name="keywords" content="">
 
@@ -24,16 +24,16 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Github Name Squatting Policy">
+<meta property="og:title" content="Making your own custom icon font.">
 <meta property="og:description" content="A stylish blog on my code">
-<meta property="og:url" content="/Github-Name-Squatting-Policy/">
+<meta property="og:url" content="/Making-your-own-custom-icon-font/">
 <meta property="og:site_name" content="Kumarcode">
 
 
 
 
 
-<link rel="canonical" href="/Github-Name-Squatting-Policy/">
+<link rel="canonical" href="/Making-your-own-custom-icon-font/">
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Kumarcode Feed">
 <link rel="author" href="http://plus.google.com/+/u/0/104266827599169158890/posts?rel=author">
 
@@ -289,30 +289,75 @@
   <article>
     <div class="headline-wrap">
       
-        <h1><a href="/Github-Name-Squatting-Policy/" rel="bookmark" title="Github Name Squatting Policy">Github Name Squatting Policy</a></h1>
-		<p class="byline"><time datetime="2014-05-26T00:00:00-04:00">May 26, 2014</time></p>
+        <h1><a href="/Making-your-own-custom-icon-font/" rel="bookmark" title="Making your own custom icon font.">Making your own custom icon font.</a></h1>
+		<p class="byline"><time datetime="2014-07-13T00:00:00-04:00">July 13, 2014</time></p>
       
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
-      <p>Github has this really cool policy that allows you to ask them to remove dusty
-user accounts which have not been used for an extended period of time. This
-means short usernames that have been claimed years ago might be abandoned and
-ready for a new owner. I was able to get my short username “Nikhil” through
-Github’s Name Squatting policy which states:</p>
+      <p>I have recently decided to spice up my i3 status by adding icons to all of my info display sections. However, I also wanted to add an Arch icon in the front. This led me to an issue, as there are no icon fonts that I could find that have the arch icon included. So I decided to make my own icon font.</p>
+
+<h3 id="getting-the-arch-icon-svg">Getting the Arch icon svg</h3>
+<p>In order to create a custom icon you need to first have an <code>svg</code> image of
+picture.</p>
 <blockquote>
-GitHub account name squatting is prohibited. Inactive accounts may be renamed or removed by GitHub staff at their discretion. You can examine if there's activity on an account name and request that support release a name for your use, but keep in mind that not all activity on GitHub is publicly visible. Staff will not remove or rename any active account.
-
-GitHub account names are provided on a first-come, first-served basis, and are intended for immediate and active use. Account names may not be inactively held for future use.
-
-Attempts to sell, buy, or solicit other forms of payment in exchange for account names is prohibited and may result in permanent account suspension.
-<a href="https://help.github.com/articles/name-squatting-policy"><i class="fa
-fa-github-alt"></i></a>
+SVG: an XML-based vector image format
 </blockquote>
-<p>Just send an email claiming your desired username is currently abandoned
-(assuming no private activity) and they will confirm and clear it.  </p>
+<p>The Arch svg that I am looking for can be downloaded from the <code>Arch User
+Repository</code>. If you are on Arch, you just need to run:</p>
 
-<p class="notice"><i class="fa fa-warning"></i>  <strong>Notice:</strong> You will need to update your local repository remotes as well as
-your domain settings (if you are using github pages hosting). </p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="lineno">1</span> pacaur -S archlinux-artwork</code></pre></div>
+
+<p>The Arch icons can now be found in:</p>
+<blockquote>
+/usr/share/archlinux/icons
+</blockquote>
+<p>You now have two choices for icons:
+<br />
+<img src="/images/archbody.png" class="Arch1" alt="Arch logo" />
+<img src="/images/archtango.png" class="Arch2" alt="Arch logo" />
+<span class="Arch1t"> Crystal</span>
+<span class="Arch2t"> Tango</span>
+<br />
+<br />
+It is based on your preference but I choose the Crystal icon.</p>
+
+<h3 id="generating-the-font">Generating the font</h3>
+<p>Now that you have the svg files, you can create the font with the program
+<code>fontcustom</code>.</p>
+
+<h4 id="packages-needed">Packages needed</h4>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno">1</span> <span class="n">fontforge</span>
+<span class="lineno">2</span> <span class="n">ttfautohint</span>
+<span class="lineno">3</span> <span class="no">Ruby1</span><span class="o">.</span><span class="mi">9</span><span class="o">.</span><span class="n">x</span> <span class="ow">or</span> <span class="n">greater</span></code></pre></div>
+
+<p>Now install fontcustom:</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="lineno">1</span> <span class="n">wget</span> <span class="nl">http:</span><span class="c1">//people.mozilla.com/~jkew/woff/woff-code-latest.zip</span>
+<span class="lineno">2</span> <span class="n">unzip</span> <span class="n">woff</span><span class="o">-</span><span class="n">code</span><span class="o">-</span><span class="n">latest</span><span class="o">.</span><span class="na">zip</span> <span class="o">-</span><span class="n">d</span> <span class="n">sfnt2woff</span> <span class="o">&amp;&amp;</span> <span class="n">cd</span> <span class="n">sfnt2woff</span> 
+<span class="lineno">3</span> <span class="o">&amp;&amp;</span> <span class="n">make</span> <span class="o">&amp;&amp;</span> <span class="n">sudo</span> <span class="n">mv</span> <span class="n">sfnt2woff</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span>
+<span class="lineno">4</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">fontcustom</span></code></pre></div>
+
+<p>Now generate the config and run fontcustom on the folder where your svg images
+are stored. For me I stored my svgs in a folder called <code>svgImages</code>. You can
+also add the name of your font by editing the config. I named mine
+<code>IconicIcons</code> (They are iconic!)</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="lineno">1</span> <span class="o">~/</span><span class="n">svgimages</span><span class="o">/</span>     <span class="n">fontcustom</span> <span class="n">config</span>  <span class="o">~/</span><span class="n">svgimages</span>
+<span class="lineno">2</span> <span class="o">~/</span><span class="n">svgimages</span><span class="o">/</span>     <span class="n">fontcustom</span> <span class="n">compile</span> <span class="o">~/</span><span class="n">svgimages</span> <span class="o">--</span><span class="n">debug</span></code></pre></div>
+
+<p class="notice"><i class="fa fa-warning"></i>  <strong>Notice:</strong> Fontcustom is really sensitive to the file structure of your svg file. I have encountered many errors when trying to edit the output directory structure. It is best that you leave the structure to default. Also make sure you generate the config file in the directory that you are running fontcustom. </p>
+
+<p>If all goes well, this will generate <code>.svg</code>, <code>.ttf</code> and <code>.woff</code> files under: </p>
+<blockquote>
+~/svgimages/app/assets/fonts/
+</blockquote>
+<p>Now, after importing the css file and storing the font files in the proper
+place. You can use this font on you website by doing:</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="lineno">1</span> <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;icon-arch&quot;</span><span class="nt">&gt;&lt;/i&gt;</span></code></pre></div>
+
+<p>This will display the font. <i class="icon-arch"></i> Yay!</p>
 
 
       
@@ -340,13 +385,188 @@ your domain settings (if you are using github pages hosting). </p>
 
 
         </div>
- <!--       <p class="byline"><strong>Github Name Squatting Policy</strong> was published
-			on <time datetime="2014-05-26T00:00:00-04:00">May 26, 2014</time> by <a href="/about" title="About Nikhil Kumar">Nikhil Kumar</a>.</p> -->
+ <!--       <p class="byline"><strong>Making your own custom icon font.</strong> was published
+			on <time datetime="2014-07-13T00:00:00-04:00">July 13, 2014</time> by <a href="/about" title="About Nikhil Kumar">Nikhil Kumar</a>.</p> -->
       </footer>
     </div><!-- /.article-wrap -->
   
   </article>
 </div><!-- /#main -->
+
+
+
+
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+	       rel:'  Bash'
+		   }).appendTo("pre:eq(0)");
+
+});	
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+	       rel:'  Packages'
+		   }).appendTo("pre:eq(1)");
+
+});	
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+	       rel:'  Bash'
+		   }).appendTo("pre:eq(2)");
+
+});	
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+	       rel:'  Bash'
+		   }).appendTo("pre:eq(3)");
+
+});	
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+	       rel:'  Html'
+		   }).appendTo("pre:eq(4)");
+
+});	
+
+</script>
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -358,11 +578,11 @@ your domain settings (if you are using github pages hosting). </p>
   <h4>You might also enjoy <small class="pull-right">(<a href="/posts/">View all posts</a>)</small></h4>
     <ul>
     
-      <li><a href="/Making-your-own-custom-icon-font/" title="Making your own custom icon font.">Making your own custom icon font.</a></li>
-    
       <li><a href="/Adding-your-custom-font-to-i3status/" title="Adding your custom font to i3status">Adding your custom font to i3status</a></li>
     
       <li><a href="/The-Power-of-Liquid/" title="The Power of Liquid">The Power of Liquid</a></li>
+    
+      <li><a href="/Designing-dynamically-generated-html/" title="Designing dynamically generated html from Jekyll">Designing dynamically generated html from Jekyll</a></li>
     
     </ul>
     <hr />

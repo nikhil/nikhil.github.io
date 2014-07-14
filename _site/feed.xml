@@ -4,13 +4,183 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2014-07-12T21:43:17-04:00</updated>
+<updated>2014-07-13T21:38:43-04:00</updated>
 <id>/</id>
 <author>
   <name>Nikhil Kumar</name>
   <uri>www.kumarcode.com/</uri>
   <email>nikhilkumar516@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Making your own custom icon font.]]></title>
+  <link rel="alternate" type="text/html" href="www.kumarcode.com/Making-your-own-custom-icon-font/" />
+  <id>www.kumarcode.com/Making-your-own-custom-icon-font</id>
+  <published>2014-07-13T00:00:00-04:00</published>
+  <updated>2014-07-13T00:00:00-04:00</updated>
+  <author>
+    <name>Nikhil Kumar</name>
+    <uri>www.kumarcode.com</uri>
+    <email>nikhilkumar516@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;I have recently decided to spice up my i3 status by adding icons to all of my info display sections. However, I also wanted to add an Arch icon in the front. This led me to an issue, as there are no icon fonts that I could find that have the arch icon included. So I decided to make my own icon font.&lt;/p&gt;
+
+&lt;h3 id=&quot;getting-the-arch-icon-svg&quot;&gt;Getting the Arch icon svg&lt;/h3&gt;
+&lt;p&gt;In order to create a custom icon you need to first have an &lt;code&gt;svg&lt;/code&gt; image of
+picture.&lt;/p&gt;
+&lt;blockquote&gt;
+SVG: an XML-based vector image format
+&lt;/blockquote&gt;
+&lt;p&gt;The Arch svg that I am looking for can be downloaded from the &lt;code&gt;Arch User
+Repository&lt;/code&gt;. If you are on Arch, you just need to run:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; pacaur -S archlinux-artwork&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The Arch icons can now be found in:&lt;/p&gt;
+&lt;blockquote&gt;
+/usr/share/archlinux/icons
+&lt;/blockquote&gt;
+&lt;p&gt;You now have two choices for icons:
+&lt;br /&gt;
+&lt;img src=&quot;/images/archbody.png&quot; class=&quot;Arch1&quot; alt=&quot;Arch logo&quot; /&gt;
+&lt;img src=&quot;/images/archtango.png&quot; class=&quot;Arch2&quot; alt=&quot;Arch logo&quot; /&gt;
+&lt;span class=&quot;Arch1t&quot;&gt; Crystal&lt;/span&gt;
+&lt;span class=&quot;Arch2t&quot;&gt; Tango&lt;/span&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+It is based on your preference but I choose the Crystal icon.&lt;/p&gt;
+
+&lt;h3 id=&quot;generating-the-font&quot;&gt;Generating the font&lt;/h3&gt;
+&lt;p&gt;Now that you have the svg files, you can create the font with the program
+&lt;code&gt;fontcustom&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;packages-needed&quot;&gt;Packages needed&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fontforge&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ttfautohint&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Ruby1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;greater&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now install fontcustom:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wget&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;http:&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//people.mozilla.com/~jkew/woff/woff-code-latest.zip&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;unzip&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;woff&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;latest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;zip&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sfnt2woff&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sfnt2woff&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;make&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mv&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sfnt2woff&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;usr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;local&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fontcustom&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now generate the config and run fontcustom on the folder where your svg images
+are stored. For me I stored my svgs in a folder called &lt;code&gt;svgImages&lt;/code&gt;. You can
+also add the name of your font by editing the config. I named mine
+&lt;code&gt;IconicIcons&lt;/code&gt; (They are iconic!)&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;svgimages&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;     &lt;span class=&quot;n&quot;&gt;fontcustom&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;~/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;svgimages&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;svgimages&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;     &lt;span class=&quot;n&quot;&gt;fontcustom&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;compile&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;svgimages&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;debug&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p class=&quot;notice&quot;&gt;&lt;i class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;  &lt;strong&gt;Notice:&lt;/strong&gt; Fontcustom is really sensitive to the file structure of your svg file. I have encountered many errors when trying to edit the output directory structure. It is best that you leave the structure to default. Also make sure you generate the config file in the directory that you are running fontcustom. &lt;/p&gt;
+
+&lt;p&gt;If all goes well, this will generate &lt;code&gt;.svg&lt;/code&gt;, &lt;code&gt;.ttf&lt;/code&gt; and &lt;code&gt;.woff&lt;/code&gt; files under: &lt;/p&gt;
+&lt;blockquote&gt;
+~/svgimages/app/assets/fonts/
+&lt;/blockquote&gt;
+&lt;p&gt;Now, after importing the css file and storing the font files in the proper
+place. You can use this font on you website by doing:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;i&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;icon-arch&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/i&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This will display the font. &lt;i class=&quot;icon-arch&quot;&gt;&lt;/i&gt; Yay!&lt;/p&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;www.kumarcode.com/Making-your-own-custom-icon-font/&quot;&gt;Making your own custom icon font.&lt;/a&gt; was originally published by Nikhil Kumar at &lt;a href=&quot;www.kumarcode.com&quot;&gt;Kumarcode&lt;/a&gt; on July 13, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Adding your custom font to i3status]]></title>
+  <link rel="alternate" type="text/html" href="www.kumarcode.com/Adding-your-custom-font-to-i3status/" />
+  <id>www.kumarcode.com/Adding-your-custom-font-to-i3status</id>
+  <published>2014-07-13T00:00:00-04:00</published>
+  <updated>2014-07-13T00:00:00-04:00</updated>
+  <author>
+    <name>Nikhil Kumar</name>
+    <uri>www.kumarcode.com</uri>
+    <email>nikhilkumar516@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Now that I have created my custom icon font. I would like to add this font to
+my i3status. This will be a challenge since before I was able to use a &lt;code&gt;css
+selector&lt;/code&gt; to add my icon. I cannot use css selectors in my i3status config.
+However, if you look at the &lt;code&gt;css&lt;/code&gt; file generated with your font located in:
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+~/svgimages/app/assets/stylesheets/IconicIcons.css
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.icon-arch&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:before&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;\f100&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You can see
+the each icon has its own unique &lt;code&gt;unicode&lt;/code&gt; sequence.
+###Add the font to your font cache
+Now that you have the &lt;code&gt;ttf&lt;/code&gt; file for your font. You can now add it to you font
+cache.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~/.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;local&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;share&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fonts&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ttf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~/.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;local&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;share&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fonts&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cache&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fv&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now you should add the custom font into the i3status config located in:&lt;/p&gt;
+&lt;blockquote&gt;
+~/.i3/config
+&lt;/blockquote&gt;
+&lt;p&gt;And edit the font line to contain your font.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;font&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;pango&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:Source&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;Sans&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;Pro&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;IconicIcons&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;11&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;After that you can then add the icon in the status messages in your
+&lt;code&gt;i3status.conf&lt;/code&gt; located in:&lt;/p&gt;
+&lt;blockquote&gt;
+~/.i3/i3status.conf
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tztime&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;local&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt;         &lt;span class=&quot;n&quot;&gt;format&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot; %a %m-%d-%y %l:%M:%S %p&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;load&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt;         &lt;span class=&quot;n&quot;&gt;format&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot; %1min&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;disk&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;/&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt; 	&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;/: %free&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I decided to put the arch logo in front of the &lt;code&gt;/&lt;/code&gt; disk. To insert unicode into
+the file in &lt;code&gt;vim&lt;/code&gt; you just need to:
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;code&gt;ctrl + v&lt;/code&gt; + &lt;code&gt;u&lt;/code&gt; + &lt;code&gt;unicodesequence&lt;/code&gt; &lt;br /&gt;
+so for the Arch icon it would be:&lt;br /&gt;
+&lt;code&gt;ctrl + v&lt;/code&gt; + &lt;code&gt;u&lt;/code&gt; + &lt;code&gt;f100&lt;/code&gt;&lt;br /&gt;
+After that, all you need to do is refresh i3 by:&lt;br /&gt;
+&lt;code&gt;ctrl + shift + r&lt;/code&gt; &lt;br /&gt;
+Now, sit back and admire your icons on your i3status bar!
+Here is picture of my i3 status. To view the full screen image click &lt;a href=&quot;/images/i3status.png&quot;&gt; here.&lt;/a&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;img src=&quot;/images/i3status.png&quot; alt=&quot;i3status&quot; /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+Here is a close up picture of the &lt;i class=&quot;icon-Arch&quot;&gt;&lt;/i&gt; icon on my i3 status. To view the full screen image click &lt;a href=&quot;/images/i3statusclose.png&quot;&gt; here.&lt;/a&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;img src=&quot;/images/i3statusclose.png&quot; alt=&quot;i3status&quot; /&gt;&lt;/p&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;www.kumarcode.com/Adding-your-custom-font-to-i3status/&quot;&gt;Adding your custom font to i3status&lt;/a&gt; was originally published by Nikhil Kumar at &lt;a href=&quot;www.kumarcode.com&quot;&gt;Kumarcode&lt;/a&gt; on July 13, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -256,11 +426,11 @@ special keybindings. You can decide which key this &lt;code&gt;$mod&lt;/code&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;code&gt;$mod&lt;/code&gt; + &lt;code&gt;Enter&lt;/code&gt;                    Open terminal&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;$mod&lt;/code&gt; + &lt;code&gt;D&lt;/code&gt;                           Opens the dmenu&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;$mod&lt;/code&gt; + &lt;code&gt;D&lt;/code&gt;                            Opens the dmenu&lt;/li&gt;
   &lt;li&gt;&lt;code&gt;$mod&lt;/code&gt; + &lt;code&gt;Shift&lt;/code&gt; + &lt;code&gt;Q&lt;/code&gt;            Kills the current window&lt;/li&gt;
   &lt;li&gt;&lt;code&gt;$mod&lt;/code&gt; + &lt;code&gt;Shift&lt;/code&gt; + &lt;code&gt;E&lt;/code&gt;            Exits i3&lt;/li&gt;
   &lt;li&gt;&lt;code&gt;$mod&lt;/code&gt; + &lt;code&gt;Shift&lt;/code&gt; + &lt;code&gt;R&lt;/code&gt;            Restarts i3&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;$mod&lt;/code&gt; + &lt;code&gt;#&lt;/code&gt;                                Goes to the &lt;code&gt;#&lt;/code&gt; workspace&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;$mod&lt;/code&gt; + &lt;code&gt;#&lt;/code&gt;                                 Goes to the &lt;code&gt;#&lt;/code&gt; workspace&lt;/li&gt;
 &lt;/ul&gt;
 
 
