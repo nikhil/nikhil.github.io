@@ -4,13 +4,102 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2014-07-13T21:38:43-04:00</updated>
+<updated>2014-07-15T02:52:07-04:00</updated>
 <id>/</id>
 <author>
   <name>Nikhil Kumar</name>
   <uri>www.kumarcode.com/</uri>
   <email>nikhilkumar516@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Simple Css styling with awsome effects]]></title>
+  <link rel="alternate" type="text/html" href="www.kumarcode.com/Simple-Css-styling-with-awsome-effects/" />
+  <id>www.kumarcode.com/Simple-Css-styling-with-awsome-effects</id>
+  <published>2014-07-13T00:00:00-04:00</published>
+  <updated>2014-07-13T00:00:00-04:00</updated>
+  <author>
+    <name>Nikhil Kumar</name>
+    <uri>www.kumarcode.com</uri>
+    <email>nikhilkumar516@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Here is some work I did with the Hubble constant.&lt;/p&gt;
+&lt;div&gt;
+&lt;button onclick=&quot;getData()&quot; class=&quot;btn&quot;&gt;Retrieve Hubble constant&lt;/button&gt; 
+&lt;/div&gt;
+&lt;p class=&quot;constant&quot;&gt;The Hubble constant:&amp;nbsp; &lt;/p&gt;
+&lt;div class=&quot;hubblechart&quot;&gt;
+&lt;p class=&quot;head1&quot;&gt; Constellation&lt;/p&gt; &lt;p class=&quot;head2&quot;&gt; Redshift (km/s)&lt;/p&gt;
+&lt;p class=&quot;galaxy&quot;&gt;
+Virgo&lt;br /&gt;&lt;br /&gt; Ursa Major &lt;br /&gt;&lt;br /&gt; Corona Borealis &lt;br /&gt;&lt;br /&gt; Boötes&lt;br /&gt;&lt;br /&gt;Hydra
+
+&lt;/p&gt;
+&lt;p class=&quot;hubblediv&quot;&gt;&lt;span class=&quot;Hubble&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+//$(document).ready(function(){
+function getData() { 
+    $.ajax({
+        type: &quot;GET&quot;,
+        url: &quot;http://en.wikipedia.org/w/api.php?action=parse&amp;format=json&amp;prop=text&amp;page=Hubble&#39;s_law&amp;callback=?&quot;,
+        contentType: &quot;application/json; charset=utf-8&quot;,
+        async: false,
+        dataType: &quot;json&quot;,
+        success: function (data, textStatus, jqXHR) {
+            
+			var markup = data.parse.text[&quot;*&quot;];
+            var blurb = $(&#39;&lt;div&gt;&lt;/div&gt;&#39;).html(markup);
+            //$(&#39;article&#39;).html($(blurb).find(&#39;.wikitable td:eq(1)&#39;));
+			var str = $(blurb).find(&#39;.wikitable td:eq(1)&#39;);
+			var elem = $(str).find(&#39;span:eq(1)&#39;);
+			elem.remove();
+			var bothnumstr =  $(str).find(&#39;span:eq(0)&#39;).html();
+			var numstr = bothnumstr.substring(0,5);
+			var num = parseFloat(numstr);
+			$(&#39;.constant&#39;).append(num);
+            var distance = [&quot;23.92638037&quot;,&quot;306.7484663&quot;,&quot;429.4478528&quot;,&quot;766.8711656&quot;,&quot;1226.993865&quot;];
+
+			for(i=0; i&lt; distance.length; i++)
+			{
+
+				var dist = parseFloat(distance[i])*num;
+				var pelem = document.createElement(&quot;p&quot;);
+				var txtelem = document.createTextNode(dist);
+				console.log(txtelem);
+				var insert = $(&#39;&lt;p class = &quot;result&quot;&gt;&lt;/p&gt;&#39;).append(txtelem);
+				console.log(insert);
+				$(&#39;.Hubble&#39;).append(txtelem);
+	      		$(&#39;.Hubble&#39;).append(&#39;&lt;br&gt;&#39;);
+        		$(&#39;.Hubble&#39;).append(&#39;&lt;br&gt;&#39;);
+
+
+
+
+
+			}
+				
+			//$(&#39;.Hubble&#39;).html(numstr);
+        },
+        error: function (errorMessage) {
+        }
+    });
+}	
+//});
+
+
+
+
+
+
+
+&lt;/script&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;www.kumarcode.com/Simple-Css-styling-with-awsome-effects/&quot;&gt;Simple Css styling with awsome effects&lt;/a&gt; was originally published by Nikhil Kumar at &lt;a href=&quot;www.kumarcode.com&quot;&gt;Kumarcode&lt;/a&gt; on July 13, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>

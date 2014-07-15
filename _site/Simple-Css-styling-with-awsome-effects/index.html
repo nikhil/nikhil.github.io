@@ -16,7 +16,7 @@
 <link href="/assets/css/loversquarrel.css" rel="stylesheet" />
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|PT+Sans|PT+Sans+Narrow|PT+Serif+Caption|PT+Mono|PT+Serif|Source+Code+Pro|Raleway|Raleway+Dots|PT+Sans+Caption' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Lato:400italic' rel='stylesheet' type='text/css'>
-<title>The Power of Liquid &#8211; Kumarcode</title>
+<title>Simple Css styling with awsome effects &#8211; Kumarcode</title>
 <meta name="description" content="">
 <meta name="keywords" content="">
 
@@ -24,16 +24,16 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="The Power of Liquid">
+<meta property="og:title" content="Simple Css styling with awsome effects">
 <meta property="og:description" content="A stylish blog on my code">
-<meta property="og:url" content="/The-Power-of-Liquid/">
+<meta property="og:url" content="/Simple-Css-styling-with-awsome-effects/">
 <meta property="og:site_name" content="Kumarcode">
 
 
 
 
 
-<link rel="canonical" href="/The-Power-of-Liquid/">
+<link rel="canonical" href="/Simple-Css-styling-with-awsome-effects/">
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Kumarcode Feed">
 <link rel="author" href="http://plus.google.com/+/u/0/104266827599169158890/posts?rel=author">
 
@@ -289,78 +289,83 @@
   <article>
     <div class="headline-wrap">
       
-        <h1><a href="/The-Power-of-Liquid/" rel="bookmark" title="The Power of Liquid">The Power of Liquid</a></h1>
-		<p class="byline"><time datetime="2014-07-12T00:00:00-04:00">July 12, 2014</time></p>
+        <h1><a href="/Simple-Css-styling-with-awsome-effects/" rel="bookmark" title="Simple Css styling with awsome effects">Simple Css styling with awsome effects</a></h1>
+		<p class="byline"><time datetime="2014-07-13T00:00:00-04:00">July 13, 2014</time></p>
       
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
-      <p>After finding a way to edit my code blocks appearance. I ran into another
-issue. Currently the only solution I have to fix the issue, is to run
-javascript code on each of the code blocks. This is quite bothersome. However,
-I found a way to neatly integrate the code block design in compilation by using
-the language <code>liquid</code>.</p>
+      <p>Here is some work I did with the Hubble constant.</p>
+<div>
+<button onclick="getData()" class="btn">Retrieve Hubble constant</button> 
+</div>
+<p class="constant">The Hubble constant:&nbsp; </p>
+<div class="hubblechart">
+<p class="head1"> Constellation</p> <p class="head2"> Redshift (km/s)</p>
+<p class="galaxy">
+Virgo<br /><br /> Ursa Major <br /><br /> Corona Borealis <br /><br /> Boötes<br /><br />Hydra
 
-<h3 id="so-what-is-liquid">So what is liquid?</h3>
-<p>From their main page:</p>
-<blockquote>
-Liquid is an open-source, Ruby-based template language created by Shopify. It is the backbone of Shopify themes and is used to load dynamic content on storefronts.
-</blockquote>
-<p>Liquid allows me to make lists in my markdown files which I can then itterate
-using a for each loop in liquid. For example, for my previous post my list was.</p>
+</p>
+<p class="hubblediv"><span class="Hubble"></span></p>
+</div>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="lineno"> 1</span> <span class="l-Scalar-Plain">code</span><span class="p-Indicator">:</span>
-<span class="lineno"> 2</span> <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">file</span>
-<span class="lineno"> 3</span>   <span class="l-Scalar-Plain">file</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Yaml</span>
-<span class="lineno"> 4</span>   <span class="l-Scalar-Plain">count</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">0</span>
-<span class="lineno"> 5</span> 
-<span class="lineno"> 6</span> <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ruby</span>
-<span class="lineno"> 7</span>   <span class="l-Scalar-Plain">count</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">1</span>
-<span class="lineno"> 8</span> 
-<span class="lineno"> 9</span> <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">html</span>
-<span class="lineno">10</span>   <span class="l-Scalar-Plain">count</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">2</span> 
-<span class="lineno">11</span> 
-<span class="lineno">12</span> <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">javascript</span>
-<span class="lineno">13</span>   <span class="l-Scalar-Plain">count</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">3</span>
-<span class="lineno">14</span> 
-<span class="lineno">15</span> <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">html</span>
-<span class="lineno">16</span>   <span class="l-Scalar-Plain">count</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">4</span> 
-<span class="lineno">17</span> 
-<span class="lineno">18</span> <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">css</span>
-<span class="lineno">19</span>   <span class="l-Scalar-Plain">count</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">5</span></code></pre></div>
+<script type="text/javascript">
 
-<p>Here there are 6 elements in <code>code</code> where each element begins with <code>-</code>.The
-<code>type</code> tag specifies what language I am using. The <code>type file</code> is a dummy tag in which
-the actual name is included in <code>file</code>. The <code>count</code> tag labels the code blocks
-starting with <code>0</code> from the top.
-<br />
-<br />
-With this list I can itterate through them using liquid.</p>
+//$(document).ready(function(){
+function getData() { 
+    $.ajax({
+        type: "GET",
+        url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&page=Hubble's_law&callback=?",
+        contentType: "application/json; charset=utf-8",
+        async: false,
+        dataType: "json",
+        success: function (data, textStatus, jqXHR) {
+            
+			var markup = data.parse.text["*"];
+            var blurb = $('<div></div>').html(markup);
+            //$('article').html($(blurb).find('.wikitable td:eq(1)'));
+			var str = $(blurb).find('.wikitable td:eq(1)');
+			var elem = $(str).find('span:eq(1)');
+			elem.remove();
+			var bothnumstr =  $(str).find('span:eq(0)').html();
+			var numstr = bothnumstr.substring(0,5);
+			var num = parseFloat(numstr);
+			$('.constant').append(num);
+            var distance = ["23.92638037","306.7484663","429.4478528","766.8711656","1226.993865"];
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="lineno"> 1</span> <span class="p">{</span><span class="o">%</span> <span class="k">for</span> <span class="nx">codetag</span> <span class="k">in</span> <span class="nx">page</span><span class="p">.</span><span class="nx">code</span> <span class="o">%</span><span class="p">}</span>
-<span class="lineno"> 2</span> 
-<span class="lineno"> 3</span> <span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="nx">codetag</span><span class="p">.</span><span class="nx">type</span> <span class="o">==</span> <span class="s1">&#39;bash&#39;</span> <span class="o">%</span><span class="p">}</span>
-<span class="lineno"> 4</span> 
-<span class="lineno"> 5</span> <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
-<span class="lineno"> 6</span> <span class="nx">$</span><span class="p">(</span> <span class="nb">document</span> <span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-<span class="lineno"> 7</span>      
-<span class="lineno"> 8</span>        <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;pre&quot;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;terminal&quot;</span><span class="p">);</span>
-<span class="lineno"> 9</span> 	   
-<span class="lineno">10</span> 		 <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;&lt;span&gt;&quot;</span><span class="p">,{</span>
-<span class="lineno">11</span> 	       <span class="nx">rel</span><span class="o">:</span><span class="s1">&#39;  Bash&#39;</span>
-<span class="lineno">12</span> 		   <span class="p">}).</span><span class="nx">appendTo</span><span class="p">(</span><span class="s2">&quot;pre:eq({{codetag.count}})&quot;</span><span class="p">);</span>
-<span class="lineno">13</span> 
-<span class="lineno">14</span> <span class="p">});</span>	
-<span class="lineno">15</span> 
-<span class="lineno">16</span> <span class="o">&lt;</span><span class="err">/script&gt;</span>
-<span class="lineno">17</span> <span class="p">{</span><span class="o">%</span> <span class="nx">endif</span> <span class="o">%</span><span class="p">}</span>
-<span class="lineno">18</span> 
-<span class="lineno">19</span> <span class="p">...</span>
-<span class="lineno">20</span> 
-<span class="lineno">21</span> <span class="p">{</span><span class="o">%</span> <span class="nx">endfor</span> <span class="o">%</span><span class="p">}</span></code></pre></div>
+			for(i=0; i< distance.length; i++)
+			{
 
-<p>Where <code>codetag</code> loops through each item in <code>page.code</code>. Now, I only need to
-mention the type on the top of my <code>markdown</code> file and liquid allows me to
-generated the top bar of my code blocks with the proper label and icons.</p>
+				var dist = parseFloat(distance[i])*num;
+				var pelem = document.createElement("p");
+				var txtelem = document.createTextNode(dist);
+				console.log(txtelem);
+				var insert = $('<p class = "result"></p>').append(txtelem);
+				console.log(insert);
+				$('.Hubble').append(txtelem);
+	      		$('.Hubble').append('<br>');
+        		$('.Hubble').append('<br>');
+
+
+
+
+
+			}
+				
+			//$('.Hubble').html(numstr);
+        },
+        error: function (errorMessage) {
+        }
+    });
+}	
+//});
+
+
+
+
+
+
+
+</script>
 
 
       
@@ -388,8 +393,8 @@ generated the top bar of my code blocks with the proper label and icons.</p>
 
 
         </div>
- <!--       <p class="byline"><strong>The Power of Liquid</strong> was published
-			on <time datetime="2014-07-12T00:00:00-04:00">July 12, 2014</time> by <a href="/about" title="About Nikhil Kumar">Nikhil Kumar</a>.</p> -->
+ <!--       <p class="byline"><strong>Simple Css styling with awsome effects</strong> was published
+			on <time datetime="2014-07-13T00:00:00-04:00">July 13, 2014</time> by <a href="/about" title="About Nikhil Kumar">Nikhil Kumar</a>.</p> -->
       </footer>
     </div><!-- /.article-wrap -->
   
@@ -476,11 +481,11 @@ $( document ).ready(function() {
   <h4>You might also enjoy <small class="pull-right">(<a href="/posts/">View all posts</a>)</small></h4>
     <ul>
     
-      <li><a href="/Simple-Css-styling-with-awsome-effects/" title="Simple Css styling with awsome effects">Simple Css styling with awsome effects</a></li>
-    
       <li><a href="/Making-your-own-custom-icon-font/" title="Making your own custom icon font.">Making your own custom icon font.</a></li>
     
       <li><a href="/Adding-your-custom-font-to-i3status/" title="Adding your custom font to i3status">Adding your custom font to i3status</a></li>
+    
+      <li><a href="/The-Power-of-Liquid/" title="The Power of Liquid">The Power of Liquid</a></li>
     
     </ul>
     <hr />

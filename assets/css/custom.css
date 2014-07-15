@@ -236,3 +236,25 @@ padding-top: 20px;
 padding-left: 150px;
 padding-bottom: 20px;
 }
+
+.hubblechart
+{
+
+position:relative;
+
+}
+
+.head2{
+position:absolute;
+top:0;
+left:200px;
+
+}
+.hubblediv{
+position:absolute;
+left: 200px;
+top:48px;
+
+}	
+
+
