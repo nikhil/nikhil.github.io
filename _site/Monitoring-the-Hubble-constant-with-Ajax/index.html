@@ -1,0 +1,575 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="/assets/js/spin.js"></script>
+<script src="/assets/js/jquery.spin.js"></script>
+<link href="/assets/css/font-awesome.css" rel="stylesheet" />
+<link href="/assets/css/i3.css" rel="stylesheet" />
+<link href="/assets/css/browser.css" rel="stylesheet" />
+<link href="/assets/css/custom.css" rel="stylesheet" />
+<link href="/assets/css/IconicIcons.css" rel="stylesheet" />
+<link href="/assets/css/font-mfizz.css" rel="stylesheet" />
+<link href="/assets/css/loversquarrel.css" rel="stylesheet" />
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|PT+Sans|PT+Sans+Narrow|PT+Serif+Caption|PT+Mono|PT+Serif|Source+Code+Pro|Raleway|Raleway+Dots|PT+Sans+Caption' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato:400italic' rel='stylesheet' type='text/css'>
+<title>Monitoring the Hubble constant with Ajax &#8211; Kumarcode</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Monitoring the Hubble constant with Ajax">
+<meta property="og:description" content="A stylish blog on my code">
+<meta property="og:url" content="/Monitoring-the-Hubble-constant-with-Ajax/">
+<meta property="og:site_name" content="Kumarcode">
+
+
+
+
+
+<link rel="canonical" href="/Monitoring-the-Hubble-constant-with-Ajax/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Kumarcode Feed">
+<link rel="author" href="http://plus.google.com/+/u/0/104266827599169158890/posts?rel=author">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Webfonts -->
+<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.min.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<span id="titlename"><a href="/"><i class="fa fa-code"></i>Kumarcode</a></span>
+			<script type="text/javascript">
+					$( document ).ready(function() {
+
+
+
+         				
+							$("#titlename").mouseover(function(){
+								$(this).find("i").addClass("tospin");
+							});
+
+							$("#titlename").mouseout(function(){
+								$(this).find("i").removeClass("tospin");
+							});
+
+							   							
+
+
+
+					});	
+
+</script>
+
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav role="navigation" id="site-nav" class="nav">
+		    <ul>
+		        
+				<span class="About" id="1"> <li><a href="/about/" ><i class="fa fa-user" id="1"></i>&nbsp;About</a></li></span>
+				<script type="text/javascript">
+					$( document ).ready(function() {
+
+
+
+         				
+							$("#1").mouseover(function(){
+								$(this).find("i").addClass("tospin");
+							});
+
+							$("#1").mouseout(function(){
+								$(this).find("i").removeClass("tospin");
+							});
+
+							   							
+
+
+
+					});	
+
+</script>
+
+		        
+				<span class="Posts" id="2"> <li><a href="/posts/" ><i class="fa fa-bars" id="2"></i>&nbsp;Posts</a></li></span>
+				<script type="text/javascript">
+					$( document ).ready(function() {
+
+
+
+         				
+							$("#2").mouseover(function(){
+								$(this).find("i").addClass("tospin");
+							});
+
+							$("#2").mouseout(function(){
+								$(this).find("i").removeClass("tospin");
+							});
+
+							   							
+
+
+
+					});	
+
+</script>
+
+		        
+				<span class="Gardening" id="3"> <li><a href="/gardening/" ><i class="fa fa-leaf" id="3"></i>&nbsp;Gardening</a></li></span>
+				<script type="text/javascript">
+					$( document ).ready(function() {
+
+
+
+         				
+							$("#3").mouseover(function(){
+								$(this).find("i").addClass("tospin");
+							});
+
+							$("#3").mouseout(function(){
+								$(this).find("i").removeClass("tospin");
+							});
+
+							   							
+
+
+
+					});	
+
+</script>
+
+		        
+				<span class="Arch Linux" id="4"> <li><a href="/arch/" ><i class="icon-arch" id="4"></i>&nbsp;Arch Linux</a></li></span>
+				<script type="text/javascript">
+					$( document ).ready(function() {
+
+
+
+         				
+							$("#4").mouseover(function(){
+								$(this).find("i").addClass("tospin");
+							});
+
+							$("#4").mouseout(function(){
+								$(this).find("i").removeClass("tospin");
+							});
+
+							   							
+
+
+
+					});	
+
+</script>
+
+		        
+				<span class="music" id="5"> <li><a href="/music/" ><i class="fa fa-music" id="5"></i>&nbsp;music</a></li></span>
+				<script type="text/javascript">
+					$( document ).ready(function() {
+
+
+
+         				
+							$("#5").mouseover(function(){
+								$(this).find("i").addClass("tospin");
+							});
+
+							$("#5").mouseout(function(){
+								$(this).find("i").removeClass("tospin");
+							});
+
+							   							
+
+
+
+					});	
+
+</script>
+
+		        
+				<span class="PUNS" id="6"> <li><a href="/puns/" ><i class="fa fa-comments" id="6"></i>&nbsp;PUNS</a></li></span>
+				<script type="text/javascript">
+					$( document ).ready(function() {
+
+
+
+         				
+							$("#6").mouseover(function(){
+								$(this).find("i").addClass("tospin");
+							});
+
+							$("#6").mouseout(function(){
+								$(this).find("i").removeClass("tospin");
+							});
+
+							   							
+
+
+
+					});	
+
+</script>
+
+		        
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+	<img src="/images/bio-photo.jpg" class="bio-photo" alt="Nikhil Kumar bio photo"></a>
+
+<h3>Nikhil Kumar</h3>
+<span class="siteBio">A stylish blog on my code<br><br></span>
+
+
+<a href="http://plus.google.com//u/0/104266827599169158890/posts" class="author-social" target="_blank"><i class="icon-google-plus"></i> Google+</a>
+<a href="mailto:nikhilkumar516@gmail.com" class="author-social" target="_blank"><i class="fa fa-envelope"></i> Gmail</a>
+
+
+
+
+<a href="http://github.com/nikhil" class="author-social" target="_blank"><i class="fa fa-github-square"></i> Github</a>
+
+
+
+
+
+
+
+  </div>
+  <article>
+    <div class="headline-wrap">
+      
+        <h1><a href="/Monitoring-the-Hubble-constant-with-Ajax/" rel="bookmark" title="Monitoring the Hubble constant with Ajax">Monitoring the Hubble constant with Ajax</a></h1>
+		<p class="byline"><time datetime="2014-07-22T00:00:00-04:00">July 22, 2014</time></p>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <p>So lately I was contemplating on creating a project using Ajax. I decided that
+I wanted to do something really neat with data that is constantly changing. The first thing that came to mind was the <code>Hubble constant</code>. The Hubble constant is used to calculate the recessional velocity or the redshift of many different Nebulas. The Hubble constant is used in the Hubble law in the relation:</p>
+<blockquote>
+v = HR
+</blockquote>
+<p>V is the velocity and R is the current distance from Earth. The Hubble constant is not actually constant as the universe continues to
+expand. Here is some work I did with the Hubble constant using Ajax.</p>
+
+<p><button onclick="getData()" class="btn">
+Retrieve Hubble constant</button></p>
+
+<p>The Hubble constant:&nbsp;<span id="hubble"></span></p>
+<div class="hubblechart">
+<p class="head1"> Constellation <hr /></p> <p class="head2"> Redshift (km/s)</p>
+<p class="galaxy">
+Virgo<br /><br /> Ursa Major <br /><br /> Corona Borealis <br /><br /> Boötes<br /><br />Hydra
+
+</p>
+<p class="hubblediv"><span class="Hubble"></span></p>
+
+</div>
+
+<script type="text/javascript">
+
+//$(document).ready(function(){
+var clicked = false;
+function getData() {
+if(!clicked)
+{  clicked = true;
+    $.ajax({
+        type: "GET",
+        url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&page=Hubble's_law&callback=?",
+        //contentType: "application/json; charset=utf-8",
+		dataType: "json",
+        success: function (data) {
+            
+			var parsed = data.parse.text["*"];
+            var page = $('<div></div>').html(parsed);
+        	var str = $(page).find('.wikitable td:eq(1)');
+			var elem = $(str).find('span:eq(1)');
+			elem.remove();
+			var bothnumstr =  $(str).find('span:eq(0)').html();
+			var numstr = bothnumstr.substring(0,5);
+			var num = parseFloat(numstr);
+			$('#hubble').append(num);
+			$('#hubble').addClass("constant")
+            var distance = ["23.92638037","306.7484663","429.4478528","766.8711656","1226.993865"];
+
+			for(i=0; i< distance.length; i++)
+			{
+
+				var dist = parseFloat(distance[i])*num;
+				var pelem = document.createElement("p");
+				var txtelem = document.createTextNode(dist);
+				console.log(txtelem);
+				var insert = $('<p class = "result"></p>').append(txtelem);
+				console.log(insert);
+				$('.Hubble').append(txtelem);
+	      		$('.Hubble').append('<br>');
+        		$('.Hubble').append('<br>');
+
+
+
+
+
+			}
+				
+	   }
+        
+    });
+
+}	
+}	
+
+
+
+
+
+
+
+
+</script>
+
+<p>Getting Ajax to work on wikipedia was actually quite tricky. There were
+numerous potential solutions to extract a page from wikipeida. Eventually
+extensive trial and error showed me a correct answer. This type of reference to
+a page in wikipedia is known as a <code>Cross-domain</code> reference. This conflicts with
+the <code>Same-origin polic</code> for javascript which states that the resource domain
+must be the same as the target domain. This is where <code>JSON-P</code>
+(JSON-with-padding) comes in allowing us to receive and process data
+cross-domain. 
+<br />
+<br />
+Here is how my Ajax request looked:</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="lineno"> 1</span> <span class="n">function</span> <span class="nf">getData</span><span class="o">()</span> <span class="o">{</span>
+<span class="lineno"> 2</span>   <span class="k">if</span><span class="o">(!</span><span class="n">clicked</span><span class="o">)</span>
+<span class="lineno"> 3</span>   <span class="o">{</span><span class="n">clicked</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+<span class="lineno"> 4</span>   <span class="n">$</span><span class="o">.</span><span class="na">ajax</span><span class="o">({</span>
+<span class="lineno"> 5</span>         <span class="nl">type:</span> <span class="s">&quot;GET&quot;</span><span class="o">,</span>
+<span class="lineno"> 6</span>         <span class="nl">url:</span> <span class="s">&quot;http://en.wikipedia.org/w/api.php?action=parse&amp;format=json&amp;prop=text&amp;page=Hubble&#39;s_law&amp;callback=?&quot;</span><span class="o">,</span>
+<span class="lineno"> 7</span>         <span class="nl">contentType:</span> <span class="s">&quot;application/json; charset=utf-8&quot;</span><span class="o">,</span>
+<span class="lineno"> 8</span>         <span class="nl">dataType:</span> <span class="s">&quot;json&quot;</span><span class="o">,</span>
+<span class="lineno"> 9</span>         <span class="nl">success:</span> <span class="n">function</span> <span class="o">(</span><span class="n">data</span><span class="o">)</span> 
+<span class="lineno">10</span> 		<span class="o">{</span>
+<span class="lineno">11</span> 
+<span class="lineno">12</span> 		<span class="n">var</span> <span class="n">parsed</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="na">parse</span><span class="o">.</span><span class="na">text</span><span class="o">[</span><span class="s">&quot;*&quot;</span><span class="o">];</span>
+<span class="lineno">13</span> 		<span class="n">var</span> <span class="n">page</span> <span class="o">=</span> <span class="n">$</span><span class="o">(</span><span class="err">&#39;</span><span class="o">&lt;</span><span class="n">div</span><span class="o">&gt;&lt;/</span><span class="n">div</span><span class="o">&gt;</span><span class="err">&#39;</span><span class="o">).</span><span class="na">html</span><span class="o">(</span><span class="n">parsed</span><span class="o">);</span>
+<span class="lineno">14</span> 		<span class="n">var</span> <span class="n">str</span> <span class="o">=</span> <span class="n">$</span><span class="o">(</span><span class="n">page</span><span class="o">).</span><span class="na">find</span><span class="o">(</span><span class="err">&#39;</span><span class="o">.</span><span class="na">wikitable</span> <span class="nl">td:</span><span class="n">eq</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span><span class="err">&#39;</span><span class="o">);</span>
+<span class="lineno">15</span> 		<span class="n">var</span> <span class="n">elem</span> <span class="o">=</span> <span class="n">$</span><span class="o">(</span><span class="n">str</span><span class="o">).</span><span class="na">find</span><span class="o">(</span><span class="err">&#39;</span><span class="nl">span:</span><span class="n">eq</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span><span class="err">&#39;</span><span class="o">);</span>
+<span class="lineno">16</span> 		<span class="n">elem</span><span class="o">.</span><span class="na">remove</span><span class="o">();</span>
+<span class="lineno">17</span> 		<span class="n">var</span> <span class="n">bothnumstr</span> <span class="o">=</span>  <span class="n">$</span><span class="o">(</span><span class="n">str</span><span class="o">).</span><span class="na">find</span><span class="o">(</span><span class="err">&#39;</span><span class="nl">span:</span><span class="n">eq</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span><span class="err">&#39;</span><span class="o">).</span><span class="na">html</span><span class="o">();</span>
+<span class="lineno">18</span> 		<span class="n">var</span> <span class="n">numstr</span> <span class="o">=</span> <span class="n">bothnumstr</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span><span class="mi">5</span><span class="o">);</span>
+<span class="lineno">19</span> 		<span class="n">var</span> <span class="n">num</span> <span class="o">=</span> <span class="n">parseFloat</span><span class="o">(</span><span class="n">numstr</span><span class="o">);</span>
+<span class="lineno">20</span> 		<span class="n">$</span><span class="o">(</span><span class="err">&#39;#</span><span class="n">hubble</span><span class="err">&#39;</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="n">num</span><span class="o">);</span>
+<span class="lineno">21</span> 		<span class="n">$</span><span class="o">(</span><span class="err">&#39;#</span><span class="n">hubble</span><span class="err">&#39;</span><span class="o">).</span><span class="na">addClass</span><span class="o">(</span><span class="s">&quot;constant&quot;</span><span class="o">);</span>
+<span class="lineno">22</span> 
+<span class="lineno">23</span> 		<span class="o">...</span>
+<span class="lineno">24</span> 
+<span class="lineno">25</span> 		<span class="o">},</span>
+<span class="lineno">26</span> 		<span class="nl">error:</span> <span class="n">function</span> <span class="o">(</span><span class="n">errorMessage</span><span class="o">)</span> 
+<span class="lineno">27</span> 		<span class="o">{</span>
+<span class="lineno">28</span>         
+<span class="lineno">29</span> 		<span class="o">...</span>
+<span class="lineno">30</span> 
+<span class="lineno">31</span> 		<span class="o">}</span>
+<span class="lineno">32</span> 
+<span class="lineno">33</span>   <span class="o">});</span>
+<span class="lineno">34</span>   <span class="o">}</span>
+<span class="lineno">35</span> <span class="o">}</span></code></pre></div>
+
+<p>This combs through the Wikipedia page given by the Ajax command and finds the
+Hubble constant form the research paper logs. It then converts it into a
+number, displays by identifying the id  Hubble in the <code>DOM</code>. It then adds the
+element with a new class to add some styling to the number.</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="lineno">1</span> <span class="nt">&lt;p&gt;&lt;button</span> <span class="na">onclick=</span><span class="s">&quot;getData()&quot;</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span><span class="nt">&gt;</span>
+<span class="lineno">2</span> Retrieve Hubble constant<span class="nt">&lt;/button&gt;&lt;/p&gt;</span> 
+<span class="lineno">3</span> 
+<span class="lineno">4</span> <span class="nt">&lt;p&gt;</span>The Hubble constant:<span class="ni">&amp;nbsp;</span><span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">&quot;hubble&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/p&gt;</span></code></pre></div>
+
+
+      
+      <footer role="contentinfo">
+        <div class="article-author-bottom">
+          
+	<img src="/images/bio-photo.jpg" class="bio-photo" alt="Nikhil Kumar bio photo"></a>
+
+<h3>Nikhil Kumar</h3>
+<span class="siteBio">A stylish blog on my code<br><br></span>
+
+
+<a href="http://plus.google.com//u/0/104266827599169158890/posts" class="author-social" target="_blank"><i class="icon-google-plus"></i> Google+</a>
+<a href="mailto:nikhilkumar516@gmail.com" class="author-social" target="_blank"><i class="fa fa-envelope"></i> Gmail</a>
+
+
+
+
+<a href="http://github.com/nikhil" class="author-social" target="_blank"><i class="fa fa-github-square"></i> Github</a>
+
+
+
+
+
+
+
+        </div>
+ <!--       <p class="byline"><strong>Monitoring the Hubble constant with Ajax</strong> was published
+			on <time datetime="2014-07-22T00:00:00-04:00">July 22, 2014</time> by <a href="/about" title="About Nikhil Kumar">Nikhil Kumar</a>.</p> -->
+      </footer>
+    </div><!-- /.article-wrap -->
+  
+  </article>
+</div><!-- /#main -->
+
+
+
+
+
+
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+			  rel:'  javascript'
+		   }).appendTo("pre:eq(0)");
+
+});	
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+			  rel:'  html'
+		   }).appendTo("pre:eq(1)");
+
+});	
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="footer-wrap">
+  <div class="related-articles">
+  <h4>You might also enjoy <small class="pull-right">(<a href="/posts/">View all posts</a>)</small></h4>
+    <ul>
+    
+      <li><a href="/Simple-Css-styling-with-awsome-effects/" title="Simple Css styling with Awsome effects">Simple Css styling with Awsome effects</a></li>
+    
+      <li><a href="/Making-your-own-custom-icon-font/" title="Making your own custom icon font.">Making your own custom icon font.</a></li>
+    
+      <li><a href="/Adding-your-custom-font-to-i3status/" title="Adding your custom font to i3status">Adding your custom font to i3status</a></li>
+    
+    </ul>
+    <hr />
+  </div><!-- /.related-articles -->
+  <footer>
+    <span>&copy; 2014 Nikhil Kumar. Powered by <a href="http://jekyllrb.com">Jekyll</a></span>
+
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="/assets/js/scripts.min.js"></script>
+
+	        
+
+</body>
+</html>

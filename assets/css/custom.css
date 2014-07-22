@@ -253,8 +253,71 @@ left:200px;
 .hubblediv{
 position:absolute;
 left: 200px;
-top:48px;
+top:77px;
 
 }	
 
+.boxcode{
 
+	background-color: #fff0e3;
+	-webkit-box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1), 0 -1px 0 rgba(0, 0, 0, 0.3);
+	box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, .1), 0 -1px 0 rgba(0, 0, 0, .3);
+	border-style: inset;
+	border-width: 1px;
+	border-color: #e5d8cc;
+	display: inline-block;
+	margin: 0 2px;
+	padding: 0 5px;
+		
+	
+
+}
+
+.constant{
+
+	background-color: #fff0e3;
+	-webkit-box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1), 0 -1px 0 rgba(0, 0, 0, 0.3);
+	box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, .1), 0 -1px 0 rgba(0, 0, 0, .3);
+	border-style: inset;
+	border-width: 1px;
+	border-color: #e5d8cc;
+	display: inline-block;
+	margin: 0 2px;
+	padding: 0 5px;
+		
+	
+
+
+
+
+
+}
+
+.browsercontainer
+{
+
+position: relative;
+
+}	
+
+.browser
+{
+
+position: absolute;
+left: 350px;
+top: 0px;
+
+}
+.propertytxt
+{
+position: absolute;
+text-align: right;
+
+}	
+
+.property
+{
+
+position: relative;
+padding-bottom: 130px;
+}	

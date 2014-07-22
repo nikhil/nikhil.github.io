@@ -10,13 +10,14 @@
 <script src="/assets/js/jquery.spin.js"></script>
 <link href="/assets/css/font-awesome.css" rel="stylesheet" />
 <link href="/assets/css/i3.css" rel="stylesheet" />
+<link href="/assets/css/browser.css" rel="stylesheet" />
 <link href="/assets/css/custom.css" rel="stylesheet" />
 <link href="/assets/css/IconicIcons.css" rel="stylesheet" />
 <link href="/assets/css/font-mfizz.css" rel="stylesheet" />
 <link href="/assets/css/loversquarrel.css" rel="stylesheet" />
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|PT+Sans|PT+Sans+Narrow|PT+Serif+Caption|PT+Mono|PT+Serif|Source+Code+Pro|Raleway|Raleway+Dots|PT+Sans+Caption' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Lato:400italic' rel='stylesheet' type='text/css'>
-<title>Simple Css styling with awsome effects &#8211; Kumarcode</title>
+<title>Simple Css styling with Awsome effects &#8211; Kumarcode</title>
 <meta name="description" content="">
 <meta name="keywords" content="">
 
@@ -24,7 +25,7 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Simple Css styling with awsome effects">
+<meta property="og:title" content="Simple Css styling with Awsome effects">
 <meta property="og:description" content="A stylish blog on my code">
 <meta property="og:url" content="/Simple-Css-styling-with-awsome-effects/">
 <meta property="og:site_name" content="Kumarcode">
@@ -289,83 +290,51 @@
   <article>
     <div class="headline-wrap">
       
-        <h1><a href="/Simple-Css-styling-with-awsome-effects/" rel="bookmark" title="Simple Css styling with awsome effects">Simple Css styling with awsome effects</a></h1>
-		<p class="byline"><time datetime="2014-07-13T00:00:00-04:00">July 13, 2014</time></p>
+        <h1><a href="/Simple-Css-styling-with-awsome-effects/" rel="bookmark" title="Simple Css styling with Awsome effects">Simple Css styling with Awsome effects</a></h1>
+		<p class="byline"><time datetime="2014-07-22T00:00:00-04:00">July 22, 2014</time></p>
       
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
-      <p>Here is some work I did with the Hubble constant.</p>
-<div>
-<button onclick="getData()" class="btn">Retrieve Hubble constant</button> 
+      <p>You can make you website look awsome with not much code at all. You just need a
+bit of creativity, a bit of css, and alot of criticism. In this post, I will
+talk about the <code>css transform</code> property. Just a few lines of code can greatly
+change the appearance of your website. To get an icon to spin in the y
+direction, it is simple:</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="lineno"> 1</span> <span class="nc">.tospin</span>
+<span class="lineno"> 2</span> <span class="p">{</span>
+<span class="lineno"> 3</span> <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
+<span class="lineno"> 4</span>     <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="n">rotateY</span><span class="p">(</span><span class="m">360</span><span class="n">deg</span><span class="p">);</span>
+<span class="lineno"> 5</span>        <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="n">rotateY</span><span class="p">(</span><span class="m">360</span><span class="n">deg</span><span class="p">);</span>
+<span class="lineno"> 6</span>         <span class="o">-</span><span class="n">ms</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="n">rotateY</span><span class="p">(</span><span class="m">360</span><span class="n">deg</span><span class="p">);</span>
+<span class="lineno"> 7</span>          <span class="o">-</span><span class="n">o</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="n">rotateY</span><span class="p">(</span><span class="m">360</span><span class="n">deg</span><span class="p">);</span>
+<span class="lineno"> 8</span>             <span class="n">transform</span><span class="o">:</span> <span class="n">rotateY</span><span class="p">(</span><span class="m">360</span><span class="n">deg</span><span class="p">);</span>
+<span class="lineno"> 9</span> 
+<span class="lineno">10</span> <span class="p">}</span></code></pre></div>
+
+<h3 id="browser-support">Browser support</h3>
+<p>Different browsers have different versions of the same css command.</p>
+<div class="browsercontainer">
+<div class="property">
+<div class="propertytxt">
+   -webkit-transform: rotateY(360deg);<br />
+       -moz-transform: rotateY(360deg);<br />
+        -ms-transform: rotateY(360deg);<br />
+         -o-transform: rotateY(360deg);<br />
+</div>		 
 </div>
-<p class="constant">The Hubble constant:&nbsp; </p>
-<div class="hubblechart">
-<p class="head1"> Constellation</p> <p class="head2"> Redshift (km/s)</p>
-<p class="galaxy">
-Virgo<br /><br /> Ursa Major <br /><br /> Corona Borealis <br /><br /> Boötes<br /><br />Hydra
-
-</p>
-<p class="hubblediv"><span class="Hubble"></span></p>
+<div class="browser">
+<i class="icon-chrome"></i>&nbsp;<i class="icon-safari"></i>&nbsp;<i class="icon-opera"></i>
+<br />
+<i class="icon-firefox"></i>
+<br />
+<i class="icon-IE"></i>
+<br />
+<i class="icon-opera"></i>
 </div>
-
-<script type="text/javascript">
-
-//$(document).ready(function(){
-function getData() { 
-    $.ajax({
-        type: "GET",
-        url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&page=Hubble's_law&callback=?",
-        contentType: "application/json; charset=utf-8",
-        async: false,
-        dataType: "json",
-        success: function (data, textStatus, jqXHR) {
-            
-			var markup = data.parse.text["*"];
-            var blurb = $('<div></div>').html(markup);
-            //$('article').html($(blurb).find('.wikitable td:eq(1)'));
-			var str = $(blurb).find('.wikitable td:eq(1)');
-			var elem = $(str).find('span:eq(1)');
-			elem.remove();
-			var bothnumstr =  $(str).find('span:eq(0)').html();
-			var numstr = bothnumstr.substring(0,5);
-			var num = parseFloat(numstr);
-			$('.constant').append(num);
-            var distance = ["23.92638037","306.7484663","429.4478528","766.8711656","1226.993865"];
-
-			for(i=0; i< distance.length; i++)
-			{
-
-				var dist = parseFloat(distance[i])*num;
-				var pelem = document.createElement("p");
-				var txtelem = document.createTextNode(dist);
-				console.log(txtelem);
-				var insert = $('<p class = "result"></p>').append(txtelem);
-				console.log(insert);
-				$('.Hubble').append(txtelem);
-	      		$('.Hubble').append('<br>');
-        		$('.Hubble').append('<br>');
-
-
-
-
-
-			}
-				
-			//$('.Hubble').html(numstr);
-        },
-        error: function (errorMessage) {
-        }
-    });
-}	
-//});
-
-
-
-
-
-
-
-</script>
+</div>
+<p>In addition, to make things run smoother, especially on firfox make sure to
+include the line <code>display: inline-block;</code></p>
 
 
       
@@ -393,13 +362,27 @@ function getData() {
 
 
         </div>
- <!--       <p class="byline"><strong>Simple Css styling with awsome effects</strong> was published
-			on <time datetime="2014-07-13T00:00:00-04:00">July 13, 2014</time> by <a href="/about" title="About Nikhil Kumar">Nikhil Kumar</a>.</p> -->
+ <!--       <p class="byline"><strong>Simple Css styling with Awsome effects</strong> was published
+			on <time datetime="2014-07-22T00:00:00-04:00">July 22, 2014</time> by <a href="/about" title="About Nikhil Kumar">Nikhil Kumar</a>.</p> -->
       </footer>
     </div><!-- /.article-wrap -->
   
   </article>
 </div><!-- /#main -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -413,7 +396,7 @@ $( document ).ready(function() {
        $("pre").addClass("terminal");
 	   
 		 $("<span>",{
-			  rel:'  Liquid'
+	       rel:'  Css'
 		   }).appendTo("pre:eq(0)");
 
 });	
@@ -427,65 +410,16 @@ $( document ).ready(function() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script type="text/javascript">
-$( document ).ready(function() {
-     
-       $("pre").addClass("terminal");
-	   
-		 $("<span>",{
-			  rel:'  Liquid'
-		   }).appendTo("pre:eq(1)");
-
-});	
-
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="footer-wrap">
   <div class="related-articles">
   <h4>You might also enjoy <small class="pull-right">(<a href="/posts/">View all posts</a>)</small></h4>
     <ul>
     
+      <li><a href="/Monitoring-the-Hubble-constant-with-Ajax/" title="Monitoring the Hubble constant with Ajax">Monitoring the Hubble constant with Ajax</a></li>
+    
       <li><a href="/Making-your-own-custom-icon-font/" title="Making your own custom icon font.">Making your own custom icon font.</a></li>
     
       <li><a href="/Adding-your-custom-font-to-i3status/" title="Adding your custom font to i3status">Adding your custom font to i3status</a></li>
-    
-      <li><a href="/The-Power-of-Liquid/" title="The Power of Liquid">The Power of Liquid</a></li>
     
     </ul>
     <hr />

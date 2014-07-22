@@ -4,62 +4,129 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2014-07-15T02:52:07-04:00</updated>
+<updated>2014-07-22T03:55:52-04:00</updated>
 <id>/</id>
 <author>
   <name>Nikhil Kumar</name>
-  <uri>www.kumarcode.com/</uri>
+  <uri>http://www.kumarcode.com/</uri>
   <email>nikhilkumar516@gmail.com</email>
 </author>
 
 
 <entry>
-  <title type="html"><![CDATA[Simple Css styling with awsome effects]]></title>
-  <link rel="alternate" type="text/html" href="www.kumarcode.com/Simple-Css-styling-with-awsome-effects/" />
-  <id>www.kumarcode.com/Simple-Css-styling-with-awsome-effects</id>
-  <published>2014-07-13T00:00:00-04:00</published>
-  <updated>2014-07-13T00:00:00-04:00</updated>
+  <title type="html"><![CDATA[Simple Css styling with Awsome effects]]></title>
+  <link rel="alternate" type="text/html" href="http://www.kumarcode.com/Simple-Css-styling-with-awsome-effects/" />
+  <id>http://www.kumarcode.com/Simple-Css-styling-with-awsome-effects</id>
+  <published>2014-07-22T00:00:00-04:00</published>
+  <updated>2014-07-22T00:00:00-04:00</updated>
   <author>
     <name>Nikhil Kumar</name>
-    <uri>www.kumarcode.com</uri>
+    <uri>http://www.kumarcode.com</uri>
     <email>nikhilkumar516@gmail.com</email>
   </author>
-  <content type="html">&lt;p&gt;Here is some work I did with the Hubble constant.&lt;/p&gt;
-&lt;div&gt;
-&lt;button onclick=&quot;getData()&quot; class=&quot;btn&quot;&gt;Retrieve Hubble constant&lt;/button&gt; 
+  <content type="html">&lt;p&gt;You can make you website look awsome with not much code at all. You just need a
+bit of creativity, a bit of css, and alot of criticism. In this post, I will
+talk about the &lt;code&gt;css transform&lt;/code&gt; property. Just a few lines of code can greatly
+change the appearance of your website. To get an icon to spin in the y
+direction, it is simple:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.tospin&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;inline&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt;     &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;webkit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rotateY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;360&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;deg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt;        &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;moz&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rotateY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;360&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;deg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt;         &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rotateY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;360&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;deg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt;          &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rotateY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;360&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;deg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt;             &lt;span class=&quot;n&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rotateY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;360&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;deg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;browser-support&quot;&gt;Browser support&lt;/h3&gt;
+&lt;p&gt;Different browsers have different versions of the same css command.&lt;/p&gt;
+&lt;div class=&quot;browsercontainer&quot;&gt;
+&lt;div class=&quot;property&quot;&gt;
+&lt;div class=&quot;propertytxt&quot;&gt;
+   -webkit-transform: rotateY(360deg);&lt;br /&gt;
+       -moz-transform: rotateY(360deg);&lt;br /&gt;
+        -ms-transform: rotateY(360deg);&lt;br /&gt;
+         -o-transform: rotateY(360deg);&lt;br /&gt;
+&lt;/div&gt;		 
 &lt;/div&gt;
-&lt;p class=&quot;constant&quot;&gt;The Hubble constant:&amp;nbsp; &lt;/p&gt;
+&lt;div class=&quot;browser&quot;&gt;
+&lt;i class=&quot;icon-chrome&quot;&gt;&lt;/i&gt;&amp;nbsp;&lt;i class=&quot;icon-safari&quot;&gt;&lt;/i&gt;&amp;nbsp;&lt;i class=&quot;icon-opera&quot;&gt;&lt;/i&gt;
+&lt;br /&gt;
+&lt;i class=&quot;icon-firefox&quot;&gt;&lt;/i&gt;
+&lt;br /&gt;
+&lt;i class=&quot;icon-IE&quot;&gt;&lt;/i&gt;
+&lt;br /&gt;
+&lt;i class=&quot;icon-opera&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;In addition, to make things run smoother, especially on firfox make sure to
+include the line &lt;code&gt;display: inline-block;&lt;/code&gt;&lt;/p&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;http://www.kumarcode.com/Simple-Css-styling-with-awsome-effects/&quot;&gt;Simple Css styling with Awsome effects&lt;/a&gt; was originally published by Nikhil Kumar at &lt;a href=&quot;http://www.kumarcode.com&quot;&gt;Kumarcode&lt;/a&gt; on July 22, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Monitoring the Hubble constant with Ajax]]></title>
+  <link rel="alternate" type="text/html" href="http://www.kumarcode.com/Monitoring-the-Hubble-constant-with-Ajax/" />
+  <id>http://www.kumarcode.com/Monitoring-the-Hubble-constant-with-Ajax</id>
+  <published>2014-07-22T00:00:00-04:00</published>
+  <updated>2014-07-22T00:00:00-04:00</updated>
+  <author>
+    <name>Nikhil Kumar</name>
+    <uri>http://www.kumarcode.com</uri>
+    <email>nikhilkumar516@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;So lately I was contemplating on creating a project using Ajax. I decided that
+I wanted to do something really neat with data that is constantly changing. The first thing that came to mind was the &lt;code&gt;Hubble constant&lt;/code&gt;. The Hubble constant is used to calculate the recessional velocity or the redshift of many different Nebulas. The Hubble constant is used in the Hubble law in the relation:&lt;/p&gt;
+&lt;blockquote&gt;
+v = HR
+&lt;/blockquote&gt;
+&lt;p&gt;V is the velocity and R is the current distance from Earth. The Hubble constant is not actually constant as the universe continues to
+expand. Here is some work I did with the Hubble constant using Ajax.&lt;/p&gt;
+
+&lt;p&gt;&lt;button onclick=&quot;getData()&quot; class=&quot;btn&quot;&gt;
+Retrieve Hubble constant&lt;/button&gt;&lt;/p&gt;
+
+&lt;p&gt;The Hubble constant:&amp;nbsp;&lt;span id=&quot;hubble&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;div class=&quot;hubblechart&quot;&gt;
-&lt;p class=&quot;head1&quot;&gt; Constellation&lt;/p&gt; &lt;p class=&quot;head2&quot;&gt; Redshift (km/s)&lt;/p&gt;
+&lt;p class=&quot;head1&quot;&gt; Constellation &lt;hr /&gt;&lt;/p&gt; &lt;p class=&quot;head2&quot;&gt; Redshift (km/s)&lt;/p&gt;
 &lt;p class=&quot;galaxy&quot;&gt;
 Virgo&lt;br /&gt;&lt;br /&gt; Ursa Major &lt;br /&gt;&lt;br /&gt; Corona Borealis &lt;br /&gt;&lt;br /&gt; Boötes&lt;br /&gt;&lt;br /&gt;Hydra
 
 &lt;/p&gt;
 &lt;p class=&quot;hubblediv&quot;&gt;&lt;span class=&quot;Hubble&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
 &lt;/div&gt;
 
 &lt;script type=&quot;text/javascript&quot;&gt;
 
 //$(document).ready(function(){
-function getData() { 
+var clicked = false;
+function getData() {
+if(!clicked)
+{  clicked = true;
     $.ajax({
         type: &quot;GET&quot;,
         url: &quot;http://en.wikipedia.org/w/api.php?action=parse&amp;format=json&amp;prop=text&amp;page=Hubble&#39;s_law&amp;callback=?&quot;,
-        contentType: &quot;application/json; charset=utf-8&quot;,
-        async: false,
-        dataType: &quot;json&quot;,
-        success: function (data, textStatus, jqXHR) {
+        //contentType: &quot;application/json; charset=utf-8&quot;,
+		dataType: &quot;json&quot;,
+        success: function (data) {
             
-			var markup = data.parse.text[&quot;*&quot;];
-            var blurb = $(&#39;&lt;div&gt;&lt;/div&gt;&#39;).html(markup);
-            //$(&#39;article&#39;).html($(blurb).find(&#39;.wikitable td:eq(1)&#39;));
-			var str = $(blurb).find(&#39;.wikitable td:eq(1)&#39;);
+			var parsed = data.parse.text[&quot;*&quot;];
+            var page = $(&#39;&lt;div&gt;&lt;/div&gt;&#39;).html(parsed);
+        	var str = $(page).find(&#39;.wikitable td:eq(1)&#39;);
 			var elem = $(str).find(&#39;span:eq(1)&#39;);
 			elem.remove();
 			var bothnumstr =  $(str).find(&#39;span:eq(0)&#39;).html();
 			var numstr = bothnumstr.substring(0,5);
 			var num = parseFloat(numstr);
-			$(&#39;.constant&#39;).append(num);
+			$(&#39;#hubble&#39;).append(num);
+			$(&#39;#hubble&#39;).addClass(&quot;constant&quot;)
             var distance = [&quot;23.92638037&quot;,&quot;306.7484663&quot;,&quot;429.4478528&quot;,&quot;766.8711656&quot;,&quot;1226.993865&quot;];
 
 			for(i=0; i&lt; distance.length; i++)
@@ -81,13 +148,13 @@ function getData() {
 
 			}
 				
-			//$(&#39;.Hubble&#39;).html(numstr);
-        },
-        error: function (errorMessage) {
-        }
+	   }
+        
     });
+
 }	
-//});
+}	
+
 
 
 
@@ -97,20 +164,78 @@ function getData() {
 
 &lt;/script&gt;
 
+&lt;p&gt;Getting Ajax to work on wikipedia was actually quite tricky. There were
+numerous potential solutions to extract a page from wikipeida. Eventually
+extensive trial and error showed me a correct answer. This type of reference to
+a page in wikipedia is known as a &lt;code&gt;Cross-domain&lt;/code&gt; reference. This conflicts with
+the &lt;code&gt;Same-origin polic&lt;/code&gt; for javascript which states that the resource domain
+must be the same as the target domain. This is where &lt;code&gt;JSON-P&lt;/code&gt;
+(JSON-with-padding) comes in allowing us to receive and process data
+cross-domain. 
+&lt;br /&gt;
+&lt;br /&gt;
+Here is how my Ajax request looked:&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;www.kumarcode.com/Simple-Css-styling-with-awsome-effects/&quot;&gt;Simple Css styling with awsome effects&lt;/a&gt; was originally published by Nikhil Kumar at &lt;a href=&quot;www.kumarcode.com&quot;&gt;Kumarcode&lt;/a&gt; on July 13, 2014.&lt;/p&gt;</content>
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getData&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt;   &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;clicked&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;clicked&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ajax&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;({&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt;         &lt;span class=&quot;nl&quot;&gt;type:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;GET&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt;         &lt;span class=&quot;nl&quot;&gt;url:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;http://en.wikipedia.org/w/api.php?action=parse&amp;amp;format=json&amp;amp;prop=text&amp;amp;page=Hubble&amp;#39;s_law&amp;amp;callback=?&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt;         &lt;span class=&quot;nl&quot;&gt;contentType:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;application/json; charset=utf-8&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt;         &lt;span class=&quot;nl&quot;&gt;dataType:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;json&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt;         &lt;span class=&quot;nl&quot;&gt;success:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt; 		&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt; 		&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parsed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;*&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;13&lt;/span&gt; 		&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;page&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parsed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;14&lt;/span&gt; 		&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;wikitable&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;td:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;eq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;15&lt;/span&gt; 		&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;elem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;span:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;eq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;16&lt;/span&gt; 		&lt;span class=&quot;n&quot;&gt;elem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;17&lt;/span&gt; 		&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bothnumstr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;span:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;eq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;18&lt;/span&gt; 		&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numstr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bothnumstr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;substring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;19&lt;/span&gt; 		&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parseFloat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;numstr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;20&lt;/span&gt; 		&lt;span class=&quot;n&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;#&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hubble&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;21&lt;/span&gt; 		&lt;span class=&quot;n&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;#&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hubble&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addClass&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;constant&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;22&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;23&lt;/span&gt; 		&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;24&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;25&lt;/span&gt; 		&lt;span class=&quot;o&quot;&gt;},&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;26&lt;/span&gt; 		&lt;span class=&quot;nl&quot;&gt;error:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;errorMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;27&lt;/span&gt; 		&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;28&lt;/span&gt;         
+&lt;span class=&quot;lineno&quot;&gt;29&lt;/span&gt; 		&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;30&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;31&lt;/span&gt; 		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;32&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;33&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;34&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;35&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This combs through the Wikipedia page given by the Ajax command and finds the
+Hubble constant form the research paper logs. It then converts it into a
+number, displays by identifying the id  Hubble in the &lt;code&gt;DOM&lt;/code&gt;. It then adds the
+element with a new class to add some styling to the number.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&amp;lt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;onclick=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;getData()&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;btn&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; Retrieve Hubble constant&lt;span class=&quot;nt&quot;&gt;&amp;lt;/button&amp;gt;&amp;lt;/p&amp;gt;&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;The Hubble constant:&lt;span class=&quot;ni&quot;&gt;&amp;amp;nbsp;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;hubble&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;http://www.kumarcode.com/Monitoring-the-Hubble-constant-with-Ajax/&quot;&gt;Monitoring the Hubble constant with Ajax&lt;/a&gt; was originally published by Nikhil Kumar at &lt;a href=&quot;http://www.kumarcode.com&quot;&gt;Kumarcode&lt;/a&gt; on July 22, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Making your own custom icon font.]]></title>
-  <link rel="alternate" type="text/html" href="www.kumarcode.com/Making-your-own-custom-icon-font/" />
-  <id>www.kumarcode.com/Making-your-own-custom-icon-font</id>
+  <link rel="alternate" type="text/html" href="http://www.kumarcode.com/Making-your-own-custom-icon-font/" />
+  <id>http://www.kumarcode.com/Making-your-own-custom-icon-font</id>
   <published>2014-07-13T00:00:00-04:00</published>
   <updated>2014-07-13T00:00:00-04:00</updated>
   <author>
     <name>Nikhil Kumar</name>
-    <uri>www.kumarcode.com</uri>
+    <uri>http://www.kumarcode.com</uri>
     <email>nikhilkumar516@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;I have recently decided to spice up my i3 status by adding icons to all of my info display sections. However, I also wanted to add an Arch icon in the front. This led me to an issue, as there are no icon fonts that I could find that have the arch icon included. So I decided to make my own icon font.&lt;/p&gt;
@@ -179,19 +304,19 @@ place. You can use this font on you website by doing:&lt;/p&gt;
 &lt;p&gt;This will display the font. &lt;i class=&quot;icon-arch&quot;&gt;&lt;/i&gt; Yay!&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;www.kumarcode.com/Making-your-own-custom-icon-font/&quot;&gt;Making your own custom icon font.&lt;/a&gt; was originally published by Nikhil Kumar at &lt;a href=&quot;www.kumarcode.com&quot;&gt;Kumarcode&lt;/a&gt; on July 13, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://www.kumarcode.com/Making-your-own-custom-icon-font/&quot;&gt;Making your own custom icon font.&lt;/a&gt; was originally published by Nikhil Kumar at &lt;a href=&quot;http://www.kumarcode.com&quot;&gt;Kumarcode&lt;/a&gt; on July 13, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Adding your custom font to i3status]]></title>
-  <link rel="alternate" type="text/html" href="www.kumarcode.com/Adding-your-custom-font-to-i3status/" />
-  <id>www.kumarcode.com/Adding-your-custom-font-to-i3status</id>
+  <link rel="alternate" type="text/html" href="http://www.kumarcode.com/Adding-your-custom-font-to-i3status/" />
+  <id>http://www.kumarcode.com/Adding-your-custom-font-to-i3status</id>
   <published>2014-07-13T00:00:00-04:00</published>
   <updated>2014-07-13T00:00:00-04:00</updated>
   <author>
     <name>Nikhil Kumar</name>
-    <uri>www.kumarcode.com</uri>
+    <uri>http://www.kumarcode.com</uri>
     <email>nikhilkumar516@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;Now that I have created my custom icon font. I would like to add this font to
@@ -268,19 +393,19 @@ Here is a close up picture of the &lt;i class=&quot;icon-Arch&quot;&gt;&lt;/i&gt
 &lt;img src=&quot;/images/i3statusclose.png&quot; alt=&quot;i3status&quot; /&gt;&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;www.kumarcode.com/Adding-your-custom-font-to-i3status/&quot;&gt;Adding your custom font to i3status&lt;/a&gt; was originally published by Nikhil Kumar at &lt;a href=&quot;www.kumarcode.com&quot;&gt;Kumarcode&lt;/a&gt; on July 13, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://www.kumarcode.com/Adding-your-custom-font-to-i3status/&quot;&gt;Adding your custom font to i3status&lt;/a&gt; was originally published by Nikhil Kumar at &lt;a href=&quot;http://www.kumarcode.com&quot;&gt;Kumarcode&lt;/a&gt; on July 13, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[The Power of Liquid]]></title>
-  <link rel="alternate" type="text/html" href="www.kumarcode.com/The-Power-of-Liquid/" />
-  <id>www.kumarcode.com/The-Power-of-Liquid</id>
+  <link rel="alternate" type="text/html" href="http://www.kumarcode.com/The-Power-of-Liquid/" />
+  <id>http://www.kumarcode.com/The-Power-of-Liquid</id>
   <published>2014-07-12T00:00:00-04:00</published>
   <updated>2014-07-12T00:00:00-04:00</updated>
   <author>
     <name>Nikhil Kumar</name>
-    <uri>www.kumarcode.com</uri>
+    <uri>http://www.kumarcode.com</uri>
     <email>nikhilkumar516@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;After finding a way to edit my code blocks appearance. I ran into another
@@ -352,19 +477,19 @@ mention the type on the top of my &lt;code&gt;markdown&lt;/code&gt; file and liq
 generated the top bar of my code blocks with the proper label and icons.&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;www.kumarcode.com/The-Power-of-Liquid/&quot;&gt;The Power of Liquid&lt;/a&gt; was originally published by Nikhil Kumar at &lt;a href=&quot;www.kumarcode.com&quot;&gt;Kumarcode&lt;/a&gt; on July 12, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://www.kumarcode.com/The-Power-of-Liquid/&quot;&gt;The Power of Liquid&lt;/a&gt; was originally published by Nikhil Kumar at &lt;a href=&quot;http://www.kumarcode.com&quot;&gt;Kumarcode&lt;/a&gt; on July 12, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Designing dynamically generated html from Jekyll]]></title>
-  <link rel="alternate" type="text/html" href="www.kumarcode.com/Designing-dynamically-generated-html/" />
-  <id>www.kumarcode.com/Designing-dynamically-generated-html</id>
+  <link rel="alternate" type="text/html" href="http://www.kumarcode.com/Designing-dynamically-generated-html/" />
+  <id>http://www.kumarcode.com/Designing-dynamically-generated-html</id>
   <published>2014-07-02T00:00:00-04:00</published>
   <updated>2014-07-02T00:00:00-04:00</updated>
   <author>
     <name>Nikhil Kumar</name>
-    <uri>www.kumarcode.com</uri>
+    <uri>http://www.kumarcode.com</uri>
     <email>nikhilkumar516@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;I have recently decided to change my code block to contain a header for the
@@ -476,19 +601,19 @@ code blcok is messy and a pain. In my next post I will write about how I use
 liquid to generate the javascript which generates the html selectors.&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;www.kumarcode.com/Designing-dynamically-generated-html/&quot;&gt;Designing dynamically generated html from Jekyll&lt;/a&gt; was originally published by Nikhil Kumar at &lt;a href=&quot;www.kumarcode.com&quot;&gt;Kumarcode&lt;/a&gt; on July 02, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://www.kumarcode.com/Designing-dynamically-generated-html/&quot;&gt;Designing dynamically generated html from Jekyll&lt;/a&gt; was originally published by Nikhil Kumar at &lt;a href=&quot;http://www.kumarcode.com&quot;&gt;Kumarcode&lt;/a&gt; on July 02, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[i3 tiling window manager]]></title>
-  <link rel="alternate" type="text/html" href="www.kumarcode.com/i3-tiling-window-manager/" />
-  <id>www.kumarcode.com/i3-tiling-window-manager</id>
+  <link rel="alternate" type="text/html" href="http://www.kumarcode.com/i3-tiling-window-manager/" />
+  <id>http://www.kumarcode.com/i3-tiling-window-manager</id>
   <published>2014-06-29T00:00:00-04:00</published>
   <updated>2014-06-29T00:00:00-04:00</updated>
   <author>
     <name>Nikhil Kumar</name>
-    <uri>www.kumarcode.com</uri>
+    <uri>http://www.kumarcode.com</uri>
     <email>nikhilkumar516@gmail.com</email>
   </author>
   <content type="html">&lt;h2 id=&quot;why-did-i-switch-to-a-tiling-window-manager&quot;&gt;Why did I switch to a tiling window manager?&lt;/h2&gt;
@@ -523,19 +648,19 @@ special keybindings. You can decide which key this &lt;code&gt;$mod&lt;/code&gt;
 &lt;/ul&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;www.kumarcode.com/i3-tiling-window-manager/&quot;&gt;i3 tiling window manager&lt;/a&gt; was originally published by Nikhil Kumar at &lt;a href=&quot;www.kumarcode.com&quot;&gt;Kumarcode&lt;/a&gt; on June 29, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://www.kumarcode.com/i3-tiling-window-manager/&quot;&gt;i3 tiling window manager&lt;/a&gt; was originally published by Nikhil Kumar at &lt;a href=&quot;http://www.kumarcode.com&quot;&gt;Kumarcode&lt;/a&gt; on June 29, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Github Name Squatting Policy]]></title>
-  <link rel="alternate" type="text/html" href="www.kumarcode.com/Github-Name-Squatting-Policy/" />
-  <id>www.kumarcode.com/Github-Name-Squatting-Policy</id>
+  <link rel="alternate" type="text/html" href="http://www.kumarcode.com/Github-Name-Squatting-Policy/" />
+  <id>http://www.kumarcode.com/Github-Name-Squatting-Policy</id>
   <published>2014-05-26T00:00:00-04:00</published>
   <updated>2014-05-26T00:00:00-04:00</updated>
   <author>
     <name>Nikhil Kumar</name>
-    <uri>www.kumarcode.com</uri>
+    <uri>http://www.kumarcode.com</uri>
     <email>nikhilkumar516@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;Github has this really cool policy that allows you to ask them to remove dusty
@@ -559,19 +684,19 @@ fa-github-alt&quot;&gt;&lt;/i&gt;&lt;/a&gt;
 your domain settings (if you are using github pages hosting). &lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;www.kumarcode.com/Github-Name-Squatting-Policy/&quot;&gt;Github Name Squatting Policy&lt;/a&gt; was originally published by Nikhil Kumar at &lt;a href=&quot;www.kumarcode.com&quot;&gt;Kumarcode&lt;/a&gt; on May 26, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://www.kumarcode.com/Github-Name-Squatting-Policy/&quot;&gt;Github Name Squatting Policy&lt;/a&gt; was originally published by Nikhil Kumar at &lt;a href=&quot;http://www.kumarcode.com&quot;&gt;Kumarcode&lt;/a&gt; on May 26, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[BTK, A tool for reading C3d files]]></title>
-  <link rel="alternate" type="text/html" href="www.kumarcode.com/BTK-biomechanics/" />
-  <id>www.kumarcode.com/BTK-biomechanics</id>
+  <link rel="alternate" type="text/html" href="http://www.kumarcode.com/BTK-biomechanics/" />
+  <id>http://www.kumarcode.com/BTK-biomechanics</id>
   <published>2014-05-21T00:00:00-04:00</published>
   <updated>2014-05-21T00:00:00-04:00</updated>
   <author>
     <name>Nikhil Kumar</name>
-    <uri>www.kumarcode.com</uri>
+    <uri>http://www.kumarcode.com</uri>
     <email>nikhilkumar516@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;I am currently doing research on the differences between Barefoot running and Shod running(running with shoes). I am working with software known as the &lt;code&gt;AnyBody Modeling System&lt;/code&gt; using the &lt;code&gt;Gait lower Extremity model&lt;/code&gt;. This allows me to input motion captured data, which is givin in the form of a &lt;code&gt;.c3d&lt;/code&gt; file. However, I ran into a problem where I wanted to modify the .c3d file but I could not find anyt decent software to allow me to do this. I was able to find &lt;code&gt;btk&lt;/code&gt; a &lt;code&gt;python&lt;/code&gt; package that allows me to modify .c3d files.&lt;/p&gt;
@@ -686,7 +811,7 @@ Here is some code I did to cut off the force at some value.&lt;/p&gt;
 &lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt;       &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;www.kumarcode.com/BTK-biomechanics/&quot;&gt;BTK, A tool for reading C3d files&lt;/a&gt; was originally published by Nikhil Kumar at &lt;a href=&quot;www.kumarcode.com&quot;&gt;Kumarcode&lt;/a&gt; on May 21, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://www.kumarcode.com/BTK-biomechanics/&quot;&gt;BTK, A tool for reading C3d files&lt;/a&gt; was originally published by Nikhil Kumar at &lt;a href=&quot;http://www.kumarcode.com&quot;&gt;Kumarcode&lt;/a&gt; on May 21, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
