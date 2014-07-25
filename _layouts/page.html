@@ -45,7 +45,6 @@
   </article>
 </div><!-- /#index -->
 
-{% for albumel in page.music %}
 
 <script type="text/javascript">
 
@@ -58,6 +57,12 @@ var lastfm = new LastFM({
   cache: cache
 
 });
+</script>
+
+
+{% for albumel in page.music %}
+
+<script type="text/javascript">
 
 /* Load some artist info. */
 lastfm.album.getInfo({artist: '{{albumel.by}}',album: '{{albumel.name}}'}, {success: function(data){
