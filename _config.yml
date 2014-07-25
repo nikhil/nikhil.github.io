@@ -43,7 +43,7 @@ links:
     count: 1    
   - title: Posts
     url: /posts/
-    icon: fa fa-bars
+    icon: fa fa-inbox
     count: 2    
   - title: Gardening
     url: /gardening/ 
@@ -57,9 +57,9 @@ links:
     url: /music/ 
     icon: fa fa-music
     count: 5    
-  - title: PUNS
-    url: /puns/ 
-    icon: fa fa-comments 
+  - title: projects
+    url: /projects/ 
+    icon: fa fa-flask 
     count: 6    
   
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones

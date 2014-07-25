@@ -67,7 +67,7 @@ var lastfm = new LastFM({
 /* Load some artist info. */
 lastfm.album.getInfo({artist: '{{albumel.by}}',album: '{{albumel.name}}'}, {success: function(data){
 
-console.log(data);
+
 var name = data.album.name;
 var artist = data.album.artist;
 var releasedate = data.album.releasedate;
@@ -90,8 +90,6 @@ var dateelem = '<p>' +'Released: '+ date + '</p>';
 var html = title;
 html += dateelem;
 var codetag;
-console.log(tags);
-console.log(tags[0]);
 var tag;
 var length = tags.length;
 html += '<p>';

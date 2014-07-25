@@ -8,6 +8,10 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="/assets/js/spin.js"></script>
 <script src="/assets/js/lastfm.api.md5.js"></script>
+<script src="/assets/js/base64.js"></script>
+<script src="/assets/js/underscore-min.js"></script>
+<script src="/assets/js/github.js"></script>
+
 <script src="/assets/js/lastfm.api.cache.js"></script>
 <script src="/assets/js/lastfm.api.js"></script>
 <link href="/assets/css/font-awesome.css" rel="stylesheet" />
@@ -135,7 +139,7 @@
 </script>
 
 		        
-				<span class="Posts" id="2"> <li><a href="/posts/" ><i class="fa fa-bars" id="2"></i>&nbsp;Posts</a></li></span>
+				<span class="Posts" id="2"> <li><a href="/posts/" ><i class="fa fa-inbox" id="2"></i>&nbsp;Posts</a></li></span>
 				<script type="text/javascript">
 					$( document ).ready(function() {
 
@@ -231,7 +235,7 @@
 </script>
 
 		        
-				<span class="PUNS" id="6"> <li><a href="/puns/" ><i class="fa fa-comments" id="6"></i>&nbsp;PUNS</a></li></span>
+				<span class="projects" id="6"> <li><a href="/projects/" ><i class="fa fa-flask" id="6"></i>&nbsp;projects</a></li></span>
 				<script type="text/javascript">
 					$( document ).ready(function() {
 
@@ -285,17 +289,57 @@
 <span class="siteBio">A stylish blog on my code<br><br></span>
 
 
-<a href="http://plus.google.com//u/0/104266827599169158890/posts" class="author-social" target="_blank"><i class="icon-google-plus"></i> Google+</a>
-<a href="mailto:nikhilkumar516@gmail.com" class="author-social" target="_blank"><i class="fa fa-envelope"></i> Gmail</a>
+<a href="http://plus.google.com//u/0/104266827599169158890/posts" class="author-social" target="_blank">&nbsp;<i class="icon-google-plus"></i>&nbsp;<span class = "socialelm" style= "position: relative; left: 1px;"><font color="#586e75">G</font>oogle+</span></a>
+<a href="mailto:nikhilkumar516@gmail.com" class="author-social" target="_blank"><i class="fa fa-envelope fa-fw"></i><span class = "socialelm"> <font color="#586e75"> G</font>maili</span></a>
 
 
 
 
-<a href="http://github.com/nikhil" class="author-social" target="_blank"><i class="fa fa-github-square"></i> Github</a>
+<a href="http://github.com/nikhil" class="author-social" target="_blank"><i class="fa fa-github-square fa-fw"></i> <span class = "socialelm"><font color="#586e75">G</font>ithub</span></a>
 
 
 
 
+
+
+<br>
+<i class="fa fa-git-square"></i><span class ="changelog"> Change log: </span>
+<script type="text/javascript">
+$.get(
+		"https://api.github.com/repos/nikhil/nikhil.github.io/commits",
+		function(data){
+           	var date;
+			var datepart;
+			var messagestr;
+			var html = '<br><span class = "changeitems">';
+			for(i=0;i < 8; i++)
+			{	
+				messagestr = data[i].commit.message;
+				date = data[i].commit.committer.date;
+                datepart = date.split("T")[0];
+				html += '<font color = "#586e75">'+ datepart.substring(5)+'</font>'+'&nbsp;&nbsp;'+messagestr+ '<br>';
+
+				        
+			
+			
+			} 
+
+		     html += '</span>';
+			 $('.changelog').append(html);
+
+		}
+
+
+
+
+	  )
+
+
+
+
+
+
+</script>
 
 
 
@@ -344,10 +388,8 @@
 
 <iframe width="640" height="390" src="//www.youtube.com/embed/zLiWov6aAKc" frameborder="0" allowfullscreen=""></iframe>
 
-<p>Yoko Kanno: </p>
-
 <h1 id="mashups">Mashups</h1>
-<p>Crocodile Chop: Elten John “Crocodile Rock” + System of a down “Chop Suey”</p>
+<p>Crocodile Chop: Elton John “Crocodile Rock” + System of a down “Chop Suey”</p>
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/147141693&amp;color=00aabb&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false"></iframe>
 
@@ -397,7 +439,7 @@ var lastfm = new LastFM({
 /* Load some artist info. */
 lastfm.album.getInfo({artist: 'Dream Theater',album: 'A Change of Seasons'}, {success: function(data){
 
-console.log(data);
+
 var name = data.album.name;
 var artist = data.album.artist;
 var releasedate = data.album.releasedate;
@@ -416,8 +458,6 @@ var dateelem = '<p>' +'Released: '+ date + '</p>';
 var html = title;
 html += dateelem;
 var codetag;
-console.log(tags);
-console.log(tags[0]);
 var tag;
 var length = tags.length;
 html += '<p>';
@@ -455,7 +495,7 @@ $('.albums').append(html);
 /* Load some artist info. */
 lastfm.album.getInfo({artist: 'Iron Maiden',album: 'Brave New World'}, {success: function(data){
 
-console.log(data);
+
 var name = data.album.name;
 var artist = data.album.artist;
 var releasedate = data.album.releasedate;
@@ -474,8 +514,6 @@ var dateelem = '<p>' +'Released: '+ date + '</p>';
 var html = title;
 html += dateelem;
 var codetag;
-console.log(tags);
-console.log(tags[0]);
 var tag;
 var length = tags.length;
 html += '<p>';
@@ -513,7 +551,7 @@ $('.albums').append(html);
 /* Load some artist info. */
 lastfm.album.getInfo({artist: 'Iron Maiden',album: 'Powerslave'}, {success: function(data){
 
-console.log(data);
+
 var name = data.album.name;
 var artist = data.album.artist;
 var releasedate = data.album.releasedate;
@@ -532,8 +570,6 @@ var dateelem = '<p>' +'Released: '+ date + '</p>';
 var html = title;
 html += dateelem;
 var codetag;
-console.log(tags);
-console.log(tags[0]);
 var tag;
 var length = tags.length;
 html += '<p>';
@@ -571,7 +607,7 @@ $('.albums').append(html);
 /* Load some artist info. */
 lastfm.album.getInfo({artist: 'Led Zeppelin',album: 'IV'}, {success: function(data){
 
-console.log(data);
+
 var name = data.album.name;
 var artist = data.album.artist;
 var releasedate = data.album.releasedate;
@@ -592,8 +628,6 @@ var dateelem = '<p>' +'Released: '+ date + '</p>';
 var html = title;
 html += dateelem;
 var codetag;
-console.log(tags);
-console.log(tags[0]);
 var tag;
 var length = tags.length;
 html += '<p>';
@@ -631,7 +665,7 @@ $('.albums').append(html);
 /* Load some artist info. */
 lastfm.album.getInfo({artist: 'Pink Floyd',album: 'A Momentary Lapse of Reason'}, {success: function(data){
 
-console.log(data);
+
 var name = data.album.name;
 var artist = data.album.artist;
 var releasedate = data.album.releasedate;
@@ -650,8 +684,6 @@ var dateelem = '<p>' +'Released: '+ date + '</p>';
 var html = title;
 html += dateelem;
 var codetag;
-console.log(tags);
-console.log(tags[0]);
 var tag;
 var length = tags.length;
 html += '<p>';
@@ -689,7 +721,7 @@ $('.albums').append(html);
 /* Load some artist info. */
 lastfm.album.getInfo({artist: 'Jimi Hendrix',album: 'Are You Experienced'}, {success: function(data){
 
-console.log(data);
+
 var name = data.album.name;
 var artist = data.album.artist;
 var releasedate = data.album.releasedate;
@@ -708,8 +740,6 @@ var dateelem = '<p>' +'Released: '+ date + '</p>';
 var html = title;
 html += dateelem;
 var codetag;
-console.log(tags);
-console.log(tags[0]);
 var tag;
 var length = tags.length;
 html += '<p>';
@@ -747,7 +777,7 @@ $('.albums').append(html);
 /* Load some artist info. */
 lastfm.album.getInfo({artist: 'Electric Light Orchestra',album: 'Out Of The Blue'}, {success: function(data){
 
-console.log(data);
+
 var name = data.album.name;
 var artist = data.album.artist;
 var releasedate = data.album.releasedate;
@@ -766,8 +796,6 @@ var dateelem = '<p>' +'Released: '+ date + '</p>';
 var html = title;
 html += dateelem;
 var codetag;
-console.log(tags);
-console.log(tags[0]);
 var tag;
 var length = tags.length;
 html += '<p>';
@@ -805,7 +833,7 @@ $('.albums').append(html);
 /* Load some artist info. */
 lastfm.album.getInfo({artist: 'Electric Light Orchestra',album: 'Face the Music'}, {success: function(data){
 
-console.log(data);
+
 var name = data.album.name;
 var artist = data.album.artist;
 var releasedate = data.album.releasedate;
@@ -824,8 +852,6 @@ var dateelem = '<p>' +'Released: '+ date + '</p>';
 var html = title;
 html += dateelem;
 var codetag;
-console.log(tags);
-console.log(tags[0]);
 var tag;
 var length = tags.length;
 html += '<p>';
@@ -863,7 +889,7 @@ $('.albums').append(html);
 /* Load some artist info. */
 lastfm.album.getInfo({artist: 'Avantasia',album: 'The Metal Opera, Part II'}, {success: function(data){
 
-console.log(data);
+
 var name = data.album.name;
 var artist = data.album.artist;
 var releasedate = data.album.releasedate;
@@ -882,8 +908,6 @@ var dateelem = '<p>' +'Released: '+ date + '</p>';
 var html = title;
 html += dateelem;
 var codetag;
-console.log(tags);
-console.log(tags[0]);
 var tag;
 var length = tags.length;
 html += '<p>';
@@ -921,7 +945,7 @@ $('.albums').append(html);
 /* Load some artist info. */
 lastfm.album.getInfo({artist: 'Nightwish',album: 'Once'}, {success: function(data){
 
-console.log(data);
+
 var name = data.album.name;
 var artist = data.album.artist;
 var releasedate = data.album.releasedate;
@@ -940,8 +964,6 @@ var dateelem = '<p>' +'Released: '+ date + '</p>';
 var html = title;
 html += dateelem;
 var codetag;
-console.log(tags);
-console.log(tags[0]);
 var tag;
 var length = tags.length;
 html += '<p>';
@@ -979,7 +1001,7 @@ $('.albums').append(html);
 /* Load some artist info. */
 lastfm.album.getInfo({artist: 'Nightwish',album: 'Century Child'}, {success: function(data){
 
-console.log(data);
+
 var name = data.album.name;
 var artist = data.album.artist;
 var releasedate = data.album.releasedate;
@@ -998,8 +1020,6 @@ var dateelem = '<p>' +'Released: '+ date + '</p>';
 var html = title;
 html += dateelem;
 var codetag;
-console.log(tags);
-console.log(tags[0]);
 var tag;
 var length = tags.length;
 html += '<p>';
@@ -1037,7 +1057,7 @@ $('.albums').append(html);
 /* Load some artist info. */
 lastfm.album.getInfo({artist: 'Porcupine Tree',album: 'Deadwing'}, {success: function(data){
 
-console.log(data);
+
 var name = data.album.name;
 var artist = data.album.artist;
 var releasedate = data.album.releasedate;
@@ -1056,8 +1076,6 @@ var dateelem = '<p>' +'Released: '+ date + '</p>';
 var html = title;
 html += dateelem;
 var codetag;
-console.log(tags);
-console.log(tags[0]);
 var tag;
 var length = tags.length;
 html += '<p>';
@@ -1095,7 +1113,7 @@ $('.albums').append(html);
 /* Load some artist info. */
 lastfm.album.getInfo({artist: 'Queen',album: 'Hot Space'}, {success: function(data){
 
-console.log(data);
+
 var name = data.album.name;
 var artist = data.album.artist;
 var releasedate = data.album.releasedate;
@@ -1116,8 +1134,6 @@ var dateelem = '<p>' +'Released: '+ date + '</p>';
 var html = title;
 html += dateelem;
 var codetag;
-console.log(tags);
-console.log(tags[0]);
 var tag;
 var length = tags.length;
 html += '<p>';
@@ -1155,7 +1171,7 @@ $('.albums').append(html);
 /* Load some artist info. */
 lastfm.album.getInfo({artist: 'Kamelot',album: 'The Black Halo'}, {success: function(data){
 
-console.log(data);
+
 var name = data.album.name;
 var artist = data.album.artist;
 var releasedate = data.album.releasedate;
@@ -1174,8 +1190,6 @@ var dateelem = '<p>' +'Released: '+ date + '</p>';
 var html = title;
 html += dateelem;
 var codetag;
-console.log(tags);
-console.log(tags[0]);
 var tag;
 var length = tags.length;
 html += '<p>';
@@ -1213,7 +1227,7 @@ $('.albums').append(html);
 /* Load some artist info. */
 lastfm.album.getInfo({artist: 'The Police',album: 'Greatest Hits'}, {success: function(data){
 
-console.log(data);
+
 var name = data.album.name;
 var artist = data.album.artist;
 var releasedate = data.album.releasedate;
@@ -1232,8 +1246,6 @@ var dateelem = '<p>' +'Released: '+ date + '</p>';
 var html = title;
 html += dateelem;
 var codetag;
-console.log(tags);
-console.log(tags[0]);
 var tag;
 var length = tags.length;
 html += '<p>';
@@ -1271,7 +1283,7 @@ $('.albums').append(html);
 /* Load some artist info. */
 lastfm.album.getInfo({artist: 'Rush',album: 'Moving Pictures'}, {success: function(data){
 
-console.log(data);
+
 var name = data.album.name;
 var artist = data.album.artist;
 var releasedate = data.album.releasedate;
@@ -1290,8 +1302,6 @@ var dateelem = '<p>' +'Released: '+ date + '</p>';
 var html = title;
 html += dateelem;
 var codetag;
-console.log(tags);
-console.log(tags[0]);
 var tag;
 var length = tags.length;
 html += '<p>';
@@ -1329,7 +1339,7 @@ $('.albums').append(html);
 /* Load some artist info. */
 lastfm.album.getInfo({artist: 'Sabaton',album: 'The Art of War'}, {success: function(data){
 
-console.log(data);
+
 var name = data.album.name;
 var artist = data.album.artist;
 var releasedate = data.album.releasedate;
@@ -1348,8 +1358,6 @@ var dateelem = '<p>' +'Released: '+ date + '</p>';
 var html = title;
 html += dateelem;
 var codetag;
-console.log(tags);
-console.log(tags[0]);
 var tag;
 var length = tags.length;
 html += '<p>';
@@ -1387,7 +1395,7 @@ $('.albums').append(html);
 /* Load some artist info. */
 lastfm.album.getInfo({artist: 'Sabaton',album: 'Coat of Arms'}, {success: function(data){
 
-console.log(data);
+
 var name = data.album.name;
 var artist = data.album.artist;
 var releasedate = data.album.releasedate;
@@ -1406,8 +1414,6 @@ var dateelem = '<p>' +'Released: '+ date + '</p>';
 var html = title;
 html += dateelem;
 var codetag;
-console.log(tags);
-console.log(tags[0]);
 var tag;
 var length = tags.length;
 html += '<p>';
@@ -1445,7 +1451,7 @@ $('.albums').append(html);
 /* Load some artist info. */
 lastfm.album.getInfo({artist: 'Within Temptation',album: 'The Heart Of Everything'}, {success: function(data){
 
-console.log(data);
+
 var name = data.album.name;
 var artist = data.album.artist;
 var releasedate = data.album.releasedate;
@@ -1464,8 +1470,6 @@ var dateelem = '<p>' +'Released: '+ date + '</p>';
 var html = title;
 html += dateelem;
 var codetag;
-console.log(tags);
-console.log(tags[0]);
 var tag;
 var length = tags.length;
 html += '<p>';

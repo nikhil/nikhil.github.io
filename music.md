@@ -108,7 +108,7 @@ Yoko Kanno: Dew
 
 <iframe width="640" height="390" src="//www.youtube.com/embed/zLiWov6aAKc" frameborder="0" allowfullscreen></iframe>
 
-Yoko Kanno: 
+ 
 
 
 #Mashups
