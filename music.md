@@ -49,7 +49,7 @@ music:
 - name: Hot Space
   by: Queen
 
-- name: Epica
+- name: The Black Halo
   by: Kamelot
 
 - name: Greatest Hits
