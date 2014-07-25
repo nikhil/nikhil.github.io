@@ -7,7 +7,8 @@
 <meta charset="utf-8">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="/assets/js/spin.js"></script>
-<script src="/assets/js/jquery.spin.js"></script>
+<script src="/assets/js/lastfm.api.md5.js"></script>
+<script src="/assets/js/lastfm.api.js"></script>
 <link href="/assets/css/font-awesome.css" rel="stylesheet" />
 <link href="/assets/css/i3.css" rel="stylesheet" />
 <link href="/assets/css/browser.css" rel="stylesheet" />
@@ -301,7 +302,70 @@
   <article class="Music">
     <h1>Music</h1>
     <div class="article-wrap">
-      
+      <p> A log of my favorite music tracks</p>
+<h1>Albums</h1>
+
+<div class="albums">
+
+</div>
+
+<h1>Tracks</h1>
+
+<p>Dexys Midnight Runners: Come on Eileen</p>
+
+<iframe width="640" height="390" src="//www.youtube.com/embed/rVxcwe7EcaY" frameborder="0" allowfullscreen=""></iframe>
+
+<p>Focus: Hocus Pocus</p>
+
+<iframe width="640" height="390" src="//www.youtube.com/embed/NGaVUApDVuY" frameborder="0" allowfullscreen=""></iframe>
+
+<p>Warren Zevon: Werewolves of London</p>
+
+<iframe width="640" height="390" src="//www.youtube.com/embed/iDpYBT0XyvA" frameborder="0" allowfullscreen=""></iframe>
+
+<p>Frank Zappa: Joe’s garage</p>
+
+<iframe width="640" height="390" src="//www.youtube.com/embed/ZlIe5mBqIB4" frameborder="0" allowfullscreen=""></iframe>
+
+<p>Ryan Star: Losing Your Memory</p>
+
+<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/36507408&amp;color=00aabb&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false"></iframe>
+
+<p>Buckethead: Carpal Tunnel Slug</p>
+
+<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/20337145&amp;color=00aabb&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false"></iframe>
+
+<p>Yoko Kanno &amp; Scott Matthey:Beauty is Within Us</p>
+
+<iframe width="640" height="390" src="//www.youtube.com/embed/QOt-sqiVQtI" frameborder="0" allowfullscreen=""></iframe>
+
+<p>Yoko Kanno: Dew</p>
+
+<iframe width="640" height="390" src="//www.youtube.com/embed/zLiWov6aAKc" frameborder="0" allowfullscreen=""></iframe>
+
+<p>Yoko Kanno: </p>
+
+<h1 id="mashups">Mashups</h1>
+<p>Crocodile Chop: Elten John “Crocodile Rock” + System of a down “Chop Suey”</p>
+
+<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/147141693&amp;color=00aabb&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false"></iframe>
+
+<p>Marley Maiden: Iron Maiden “Revelations” + Bob Marley “Exodus”</p>
+
+<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/17218042&amp;color=00aabb&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false"></iframe>
+
+<p>Carry On My Wayward Slam: Kansas “Carry on Wayward Son” + Space Jam</p>
+
+<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/136095566&amp;color=00aabb&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false"></iframe>
+
+<p>We are Coming Undone: Korn “Coming Undone” + Taylor Swift “We are never getting back together”</p>
+
+<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/69595950&amp;color=00aabb&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false"></iframe>
+
+<p>Call Me A Hole: Nine Inch Nails “Head Like A Hole” + Carly Rae Jepsen “Call Me Maybe”</p>
+
+<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/81761778&amp;color=00aabb&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false"></iframe>
+
 
     </div><!-- /.article-wrap -->
     
@@ -309,6 +373,1249 @@
     
   </article>
 </div><!-- /#index -->
+
+
+
+<script type="text/javascript">
+
+
+/* Create a LastFM object */
+var lastfm = new LastFM({
+  apiKey    : '3f7a62bedd43ef8963c8a9895fdc7ad0',
+  apiSecret : '7e732871d0fcabc9c85cb0830a52041a',
+
+});
+
+/* Load some artist info. */
+lastfm.album.getInfo({artist: 'Dream Theater',album: 'A Change of Seasons'}, {success: function(data){
+
+console.log(data);
+var name = data.album.name;
+var artist = data.album.artist;
+var releasedate = data.album.releasedate;
+
+ 
+
+var pieces = releasedate.split(",");
+var date = pieces[0];
+var tags = data.album.toptags.tag;
+var tag;
+var url = data.album.image[2]["#text"];
+var albumimage = '<img src="'+url+'">';
+var title = '<p>' + artist + ' - ' + name +'</p>';
+var dateelem = '<p>' +'Released: '+ date + '</p>';
+
+var html = title;
+html += dateelem;
+var codetag;
+console.log(tags);
+console.log(tags[0]);
+var tag;
+var length = tags.length;
+html += '<p>';
+html += 'Tags: ';
+for(var i=0; i<tags.length; i++)
+{
+   tag = tags[i];  
+   codetag = '<code>'+ tag.name + '</code>';
+   html += codetag;
+
+
+}
+html += '</p>';
+html = '<div class="album"> <div class="albumimage">'+albumimage+'</div><div class="albumcontent">'+html+'</div></div>';
+$('.albums').append(html);
+}, error: function(code, message){
+  
+}});
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+
+
+/* Create a LastFM object */
+var lastfm = new LastFM({
+  apiKey    : '3f7a62bedd43ef8963c8a9895fdc7ad0',
+  apiSecret : '7e732871d0fcabc9c85cb0830a52041a',
+
+});
+
+/* Load some artist info. */
+lastfm.album.getInfo({artist: 'Iron Maiden',album: 'Brave New World'}, {success: function(data){
+
+console.log(data);
+var name = data.album.name;
+var artist = data.album.artist;
+var releasedate = data.album.releasedate;
+
+ 
+
+var pieces = releasedate.split(",");
+var date = pieces[0];
+var tags = data.album.toptags.tag;
+var tag;
+var url = data.album.image[2]["#text"];
+var albumimage = '<img src="'+url+'">';
+var title = '<p>' + artist + ' - ' + name +'</p>';
+var dateelem = '<p>' +'Released: '+ date + '</p>';
+
+var html = title;
+html += dateelem;
+var codetag;
+console.log(tags);
+console.log(tags[0]);
+var tag;
+var length = tags.length;
+html += '<p>';
+html += 'Tags: ';
+for(var i=0; i<tags.length; i++)
+{
+   tag = tags[i];  
+   codetag = '<code>'+ tag.name + '</code>';
+   html += codetag;
+
+
+}
+html += '</p>';
+html = '<div class="album"> <div class="albumimage">'+albumimage+'</div><div class="albumcontent">'+html+'</div></div>';
+$('.albums').append(html);
+}, error: function(code, message){
+  
+}});
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+
+
+/* Create a LastFM object */
+var lastfm = new LastFM({
+  apiKey    : '3f7a62bedd43ef8963c8a9895fdc7ad0',
+  apiSecret : '7e732871d0fcabc9c85cb0830a52041a',
+
+});
+
+/* Load some artist info. */
+lastfm.album.getInfo({artist: 'Iron Maiden',album: 'Powerslave'}, {success: function(data){
+
+console.log(data);
+var name = data.album.name;
+var artist = data.album.artist;
+var releasedate = data.album.releasedate;
+
+ 
+
+var pieces = releasedate.split(",");
+var date = pieces[0];
+var tags = data.album.toptags.tag;
+var tag;
+var url = data.album.image[2]["#text"];
+var albumimage = '<img src="'+url+'">';
+var title = '<p>' + artist + ' - ' + name +'</p>';
+var dateelem = '<p>' +'Released: '+ date + '</p>';
+
+var html = title;
+html += dateelem;
+var codetag;
+console.log(tags);
+console.log(tags[0]);
+var tag;
+var length = tags.length;
+html += '<p>';
+html += 'Tags: ';
+for(var i=0; i<tags.length; i++)
+{
+   tag = tags[i];  
+   codetag = '<code>'+ tag.name + '</code>';
+   html += codetag;
+
+
+}
+html += '</p>';
+html = '<div class="album"> <div class="albumimage">'+albumimage+'</div><div class="albumcontent">'+html+'</div></div>';
+$('.albums').append(html);
+}, error: function(code, message){
+  
+}});
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+
+
+/* Create a LastFM object */
+var lastfm = new LastFM({
+  apiKey    : '3f7a62bedd43ef8963c8a9895fdc7ad0',
+  apiSecret : '7e732871d0fcabc9c85cb0830a52041a',
+
+});
+
+/* Load some artist info. */
+lastfm.album.getInfo({artist: 'Led Zeppelin',album: 'IV'}, {success: function(data){
+
+console.log(data);
+var name = data.album.name;
+var artist = data.album.artist;
+var releasedate = data.album.releasedate;
+
+releasedate = '8 Nov 1971'
+
+ 
+
+var pieces = releasedate.split(",");
+var date = pieces[0];
+var tags = data.album.toptags.tag;
+var tag;
+var url = data.album.image[2]["#text"];
+var albumimage = '<img src="'+url+'">';
+var title = '<p>' + artist + ' - ' + name +'</p>';
+var dateelem = '<p>' +'Released: '+ date + '</p>';
+
+var html = title;
+html += dateelem;
+var codetag;
+console.log(tags);
+console.log(tags[0]);
+var tag;
+var length = tags.length;
+html += '<p>';
+html += 'Tags: ';
+for(var i=0; i<tags.length; i++)
+{
+   tag = tags[i];  
+   codetag = '<code>'+ tag.name + '</code>';
+   html += codetag;
+
+
+}
+html += '</p>';
+html = '<div class="album"> <div class="albumimage">'+albumimage+'</div><div class="albumcontent">'+html+'</div></div>';
+$('.albums').append(html);
+}, error: function(code, message){
+  
+}});
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+
+
+/* Create a LastFM object */
+var lastfm = new LastFM({
+  apiKey    : '3f7a62bedd43ef8963c8a9895fdc7ad0',
+  apiSecret : '7e732871d0fcabc9c85cb0830a52041a',
+
+});
+
+/* Load some artist info. */
+lastfm.album.getInfo({artist: 'Pink Floyd',album: 'A Momentary Lapse of Reason'}, {success: function(data){
+
+console.log(data);
+var name = data.album.name;
+var artist = data.album.artist;
+var releasedate = data.album.releasedate;
+
+ 
+
+var pieces = releasedate.split(",");
+var date = pieces[0];
+var tags = data.album.toptags.tag;
+var tag;
+var url = data.album.image[2]["#text"];
+var albumimage = '<img src="'+url+'">';
+var title = '<p>' + artist + ' - ' + name +'</p>';
+var dateelem = '<p>' +'Released: '+ date + '</p>';
+
+var html = title;
+html += dateelem;
+var codetag;
+console.log(tags);
+console.log(tags[0]);
+var tag;
+var length = tags.length;
+html += '<p>';
+html += 'Tags: ';
+for(var i=0; i<tags.length; i++)
+{
+   tag = tags[i];  
+   codetag = '<code>'+ tag.name + '</code>';
+   html += codetag;
+
+
+}
+html += '</p>';
+html = '<div class="album"> <div class="albumimage">'+albumimage+'</div><div class="albumcontent">'+html+'</div></div>';
+$('.albums').append(html);
+}, error: function(code, message){
+  
+}});
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+
+
+/* Create a LastFM object */
+var lastfm = new LastFM({
+  apiKey    : '3f7a62bedd43ef8963c8a9895fdc7ad0',
+  apiSecret : '7e732871d0fcabc9c85cb0830a52041a',
+
+});
+
+/* Load some artist info. */
+lastfm.album.getInfo({artist: 'Jimi Hendrix',album: 'Are You Experienced'}, {success: function(data){
+
+console.log(data);
+var name = data.album.name;
+var artist = data.album.artist;
+var releasedate = data.album.releasedate;
+
+ 
+
+var pieces = releasedate.split(",");
+var date = pieces[0];
+var tags = data.album.toptags.tag;
+var tag;
+var url = data.album.image[2]["#text"];
+var albumimage = '<img src="'+url+'">';
+var title = '<p>' + artist + ' - ' + name +'</p>';
+var dateelem = '<p>' +'Released: '+ date + '</p>';
+
+var html = title;
+html += dateelem;
+var codetag;
+console.log(tags);
+console.log(tags[0]);
+var tag;
+var length = tags.length;
+html += '<p>';
+html += 'Tags: ';
+for(var i=0; i<tags.length; i++)
+{
+   tag = tags[i];  
+   codetag = '<code>'+ tag.name + '</code>';
+   html += codetag;
+
+
+}
+html += '</p>';
+html = '<div class="album"> <div class="albumimage">'+albumimage+'</div><div class="albumcontent">'+html+'</div></div>';
+$('.albums').append(html);
+}, error: function(code, message){
+  
+}});
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+
+
+/* Create a LastFM object */
+var lastfm = new LastFM({
+  apiKey    : '3f7a62bedd43ef8963c8a9895fdc7ad0',
+  apiSecret : '7e732871d0fcabc9c85cb0830a52041a',
+
+});
+
+/* Load some artist info. */
+lastfm.album.getInfo({artist: 'Electric Light Orchestra',album: 'Out Of The Blue'}, {success: function(data){
+
+console.log(data);
+var name = data.album.name;
+var artist = data.album.artist;
+var releasedate = data.album.releasedate;
+
+ 
+
+var pieces = releasedate.split(",");
+var date = pieces[0];
+var tags = data.album.toptags.tag;
+var tag;
+var url = data.album.image[2]["#text"];
+var albumimage = '<img src="'+url+'">';
+var title = '<p>' + artist + ' - ' + name +'</p>';
+var dateelem = '<p>' +'Released: '+ date + '</p>';
+
+var html = title;
+html += dateelem;
+var codetag;
+console.log(tags);
+console.log(tags[0]);
+var tag;
+var length = tags.length;
+html += '<p>';
+html += 'Tags: ';
+for(var i=0; i<tags.length; i++)
+{
+   tag = tags[i];  
+   codetag = '<code>'+ tag.name + '</code>';
+   html += codetag;
+
+
+}
+html += '</p>';
+html = '<div class="album"> <div class="albumimage">'+albumimage+'</div><div class="albumcontent">'+html+'</div></div>';
+$('.albums').append(html);
+}, error: function(code, message){
+  
+}});
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+
+
+/* Create a LastFM object */
+var lastfm = new LastFM({
+  apiKey    : '3f7a62bedd43ef8963c8a9895fdc7ad0',
+  apiSecret : '7e732871d0fcabc9c85cb0830a52041a',
+
+});
+
+/* Load some artist info. */
+lastfm.album.getInfo({artist: 'Electric Light Orchestra',album: 'Face the Music'}, {success: function(data){
+
+console.log(data);
+var name = data.album.name;
+var artist = data.album.artist;
+var releasedate = data.album.releasedate;
+
+ 
+
+var pieces = releasedate.split(",");
+var date = pieces[0];
+var tags = data.album.toptags.tag;
+var tag;
+var url = data.album.image[2]["#text"];
+var albumimage = '<img src="'+url+'">';
+var title = '<p>' + artist + ' - ' + name +'</p>';
+var dateelem = '<p>' +'Released: '+ date + '</p>';
+
+var html = title;
+html += dateelem;
+var codetag;
+console.log(tags);
+console.log(tags[0]);
+var tag;
+var length = tags.length;
+html += '<p>';
+html += 'Tags: ';
+for(var i=0; i<tags.length; i++)
+{
+   tag = tags[i];  
+   codetag = '<code>'+ tag.name + '</code>';
+   html += codetag;
+
+
+}
+html += '</p>';
+html = '<div class="album"> <div class="albumimage">'+albumimage+'</div><div class="albumcontent">'+html+'</div></div>';
+$('.albums').append(html);
+}, error: function(code, message){
+  
+}});
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+
+
+/* Create a LastFM object */
+var lastfm = new LastFM({
+  apiKey    : '3f7a62bedd43ef8963c8a9895fdc7ad0',
+  apiSecret : '7e732871d0fcabc9c85cb0830a52041a',
+
+});
+
+/* Load some artist info. */
+lastfm.album.getInfo({artist: 'Avantasia',album: 'The Metal Opera, Part II'}, {success: function(data){
+
+console.log(data);
+var name = data.album.name;
+var artist = data.album.artist;
+var releasedate = data.album.releasedate;
+
+ 
+
+var pieces = releasedate.split(",");
+var date = pieces[0];
+var tags = data.album.toptags.tag;
+var tag;
+var url = data.album.image[2]["#text"];
+var albumimage = '<img src="'+url+'">';
+var title = '<p>' + artist + ' - ' + name +'</p>';
+var dateelem = '<p>' +'Released: '+ date + '</p>';
+
+var html = title;
+html += dateelem;
+var codetag;
+console.log(tags);
+console.log(tags[0]);
+var tag;
+var length = tags.length;
+html += '<p>';
+html += 'Tags: ';
+for(var i=0; i<tags.length; i++)
+{
+   tag = tags[i];  
+   codetag = '<code>'+ tag.name + '</code>';
+   html += codetag;
+
+
+}
+html += '</p>';
+html = '<div class="album"> <div class="albumimage">'+albumimage+'</div><div class="albumcontent">'+html+'</div></div>';
+$('.albums').append(html);
+}, error: function(code, message){
+  
+}});
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+
+
+/* Create a LastFM object */
+var lastfm = new LastFM({
+  apiKey    : '3f7a62bedd43ef8963c8a9895fdc7ad0',
+  apiSecret : '7e732871d0fcabc9c85cb0830a52041a',
+
+});
+
+/* Load some artist info. */
+lastfm.album.getInfo({artist: 'Nightwish',album: 'Once'}, {success: function(data){
+
+console.log(data);
+var name = data.album.name;
+var artist = data.album.artist;
+var releasedate = data.album.releasedate;
+
+ 
+
+var pieces = releasedate.split(",");
+var date = pieces[0];
+var tags = data.album.toptags.tag;
+var tag;
+var url = data.album.image[2]["#text"];
+var albumimage = '<img src="'+url+'">';
+var title = '<p>' + artist + ' - ' + name +'</p>';
+var dateelem = '<p>' +'Released: '+ date + '</p>';
+
+var html = title;
+html += dateelem;
+var codetag;
+console.log(tags);
+console.log(tags[0]);
+var tag;
+var length = tags.length;
+html += '<p>';
+html += 'Tags: ';
+for(var i=0; i<tags.length; i++)
+{
+   tag = tags[i];  
+   codetag = '<code>'+ tag.name + '</code>';
+   html += codetag;
+
+
+}
+html += '</p>';
+html = '<div class="album"> <div class="albumimage">'+albumimage+'</div><div class="albumcontent">'+html+'</div></div>';
+$('.albums').append(html);
+}, error: function(code, message){
+  
+}});
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+
+
+/* Create a LastFM object */
+var lastfm = new LastFM({
+  apiKey    : '3f7a62bedd43ef8963c8a9895fdc7ad0',
+  apiSecret : '7e732871d0fcabc9c85cb0830a52041a',
+
+});
+
+/* Load some artist info. */
+lastfm.album.getInfo({artist: 'Nightwish',album: 'Century Child'}, {success: function(data){
+
+console.log(data);
+var name = data.album.name;
+var artist = data.album.artist;
+var releasedate = data.album.releasedate;
+
+ 
+
+var pieces = releasedate.split(",");
+var date = pieces[0];
+var tags = data.album.toptags.tag;
+var tag;
+var url = data.album.image[2]["#text"];
+var albumimage = '<img src="'+url+'">';
+var title = '<p>' + artist + ' - ' + name +'</p>';
+var dateelem = '<p>' +'Released: '+ date + '</p>';
+
+var html = title;
+html += dateelem;
+var codetag;
+console.log(tags);
+console.log(tags[0]);
+var tag;
+var length = tags.length;
+html += '<p>';
+html += 'Tags: ';
+for(var i=0; i<tags.length; i++)
+{
+   tag = tags[i];  
+   codetag = '<code>'+ tag.name + '</code>';
+   html += codetag;
+
+
+}
+html += '</p>';
+html = '<div class="album"> <div class="albumimage">'+albumimage+'</div><div class="albumcontent">'+html+'</div></div>';
+$('.albums').append(html);
+}, error: function(code, message){
+  
+}});
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+
+
+/* Create a LastFM object */
+var lastfm = new LastFM({
+  apiKey    : '3f7a62bedd43ef8963c8a9895fdc7ad0',
+  apiSecret : '7e732871d0fcabc9c85cb0830a52041a',
+
+});
+
+/* Load some artist info. */
+lastfm.album.getInfo({artist: 'Porcupine Tree',album: 'Deadwing'}, {success: function(data){
+
+console.log(data);
+var name = data.album.name;
+var artist = data.album.artist;
+var releasedate = data.album.releasedate;
+
+ 
+
+var pieces = releasedate.split(",");
+var date = pieces[0];
+var tags = data.album.toptags.tag;
+var tag;
+var url = data.album.image[2]["#text"];
+var albumimage = '<img src="'+url+'">';
+var title = '<p>' + artist + ' - ' + name +'</p>';
+var dateelem = '<p>' +'Released: '+ date + '</p>';
+
+var html = title;
+html += dateelem;
+var codetag;
+console.log(tags);
+console.log(tags[0]);
+var tag;
+var length = tags.length;
+html += '<p>';
+html += 'Tags: ';
+for(var i=0; i<tags.length; i++)
+{
+   tag = tags[i];  
+   codetag = '<code>'+ tag.name + '</code>';
+   html += codetag;
+
+
+}
+html += '</p>';
+html = '<div class="album"> <div class="albumimage">'+albumimage+'</div><div class="albumcontent">'+html+'</div></div>';
+$('.albums').append(html);
+}, error: function(code, message){
+  
+}});
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+
+
+/* Create a LastFM object */
+var lastfm = new LastFM({
+  apiKey    : '3f7a62bedd43ef8963c8a9895fdc7ad0',
+  apiSecret : '7e732871d0fcabc9c85cb0830a52041a',
+
+});
+
+/* Load some artist info. */
+lastfm.album.getInfo({artist: 'Queen',album: 'Hot Space'}, {success: function(data){
+
+console.log(data);
+var name = data.album.name;
+var artist = data.album.artist;
+var releasedate = data.album.releasedate;
+
+ 
+releasedate = '21 Nov 1981'
+
+
+var pieces = releasedate.split(",");
+var date = pieces[0];
+var tags = data.album.toptags.tag;
+var tag;
+var url = data.album.image[2]["#text"];
+var albumimage = '<img src="'+url+'">';
+var title = '<p>' + artist + ' - ' + name +'</p>';
+var dateelem = '<p>' +'Released: '+ date + '</p>';
+
+var html = title;
+html += dateelem;
+var codetag;
+console.log(tags);
+console.log(tags[0]);
+var tag;
+var length = tags.length;
+html += '<p>';
+html += 'Tags: ';
+for(var i=0; i<tags.length; i++)
+{
+   tag = tags[i];  
+   codetag = '<code>'+ tag.name + '</code>';
+   html += codetag;
+
+
+}
+html += '</p>';
+html = '<div class="album"> <div class="albumimage">'+albumimage+'</div><div class="albumcontent">'+html+'</div></div>';
+$('.albums').append(html);
+}, error: function(code, message){
+  
+}});
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+
+
+/* Create a LastFM object */
+var lastfm = new LastFM({
+  apiKey    : '3f7a62bedd43ef8963c8a9895fdc7ad0',
+  apiSecret : '7e732871d0fcabc9c85cb0830a52041a',
+
+});
+
+/* Load some artist info. */
+lastfm.album.getInfo({artist: 'Kamelot',album: 'Epica'}, {success: function(data){
+
+console.log(data);
+var name = data.album.name;
+var artist = data.album.artist;
+var releasedate = data.album.releasedate;
+
+ 
+
+var pieces = releasedate.split(",");
+var date = pieces[0];
+var tags = data.album.toptags.tag;
+var tag;
+var url = data.album.image[2]["#text"];
+var albumimage = '<img src="'+url+'">';
+var title = '<p>' + artist + ' - ' + name +'</p>';
+var dateelem = '<p>' +'Released: '+ date + '</p>';
+
+var html = title;
+html += dateelem;
+var codetag;
+console.log(tags);
+console.log(tags[0]);
+var tag;
+var length = tags.length;
+html += '<p>';
+html += 'Tags: ';
+for(var i=0; i<tags.length; i++)
+{
+   tag = tags[i];  
+   codetag = '<code>'+ tag.name + '</code>';
+   html += codetag;
+
+
+}
+html += '</p>';
+html = '<div class="album"> <div class="albumimage">'+albumimage+'</div><div class="albumcontent">'+html+'</div></div>';
+$('.albums').append(html);
+}, error: function(code, message){
+  
+}});
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+
+
+/* Create a LastFM object */
+var lastfm = new LastFM({
+  apiKey    : '3f7a62bedd43ef8963c8a9895fdc7ad0',
+  apiSecret : '7e732871d0fcabc9c85cb0830a52041a',
+
+});
+
+/* Load some artist info. */
+lastfm.album.getInfo({artist: 'The Police',album: 'Greatest Hits'}, {success: function(data){
+
+console.log(data);
+var name = data.album.name;
+var artist = data.album.artist;
+var releasedate = data.album.releasedate;
+
+ 
+
+var pieces = releasedate.split(",");
+var date = pieces[0];
+var tags = data.album.toptags.tag;
+var tag;
+var url = data.album.image[2]["#text"];
+var albumimage = '<img src="'+url+'">';
+var title = '<p>' + artist + ' - ' + name +'</p>';
+var dateelem = '<p>' +'Released: '+ date + '</p>';
+
+var html = title;
+html += dateelem;
+var codetag;
+console.log(tags);
+console.log(tags[0]);
+var tag;
+var length = tags.length;
+html += '<p>';
+html += 'Tags: ';
+for(var i=0; i<tags.length; i++)
+{
+   tag = tags[i];  
+   codetag = '<code>'+ tag.name + '</code>';
+   html += codetag;
+
+
+}
+html += '</p>';
+html = '<div class="album"> <div class="albumimage">'+albumimage+'</div><div class="albumcontent">'+html+'</div></div>';
+$('.albums').append(html);
+}, error: function(code, message){
+  
+}});
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+
+
+/* Create a LastFM object */
+var lastfm = new LastFM({
+  apiKey    : '3f7a62bedd43ef8963c8a9895fdc7ad0',
+  apiSecret : '7e732871d0fcabc9c85cb0830a52041a',
+
+});
+
+/* Load some artist info. */
+lastfm.album.getInfo({artist: 'Rush',album: 'Moving Pictures'}, {success: function(data){
+
+console.log(data);
+var name = data.album.name;
+var artist = data.album.artist;
+var releasedate = data.album.releasedate;
+
+ 
+
+var pieces = releasedate.split(",");
+var date = pieces[0];
+var tags = data.album.toptags.tag;
+var tag;
+var url = data.album.image[2]["#text"];
+var albumimage = '<img src="'+url+'">';
+var title = '<p>' + artist + ' - ' + name +'</p>';
+var dateelem = '<p>' +'Released: '+ date + '</p>';
+
+var html = title;
+html += dateelem;
+var codetag;
+console.log(tags);
+console.log(tags[0]);
+var tag;
+var length = tags.length;
+html += '<p>';
+html += 'Tags: ';
+for(var i=0; i<tags.length; i++)
+{
+   tag = tags[i];  
+   codetag = '<code>'+ tag.name + '</code>';
+   html += codetag;
+
+
+}
+html += '</p>';
+html = '<div class="album"> <div class="albumimage">'+albumimage+'</div><div class="albumcontent">'+html+'</div></div>';
+$('.albums').append(html);
+}, error: function(code, message){
+  
+}});
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+
+
+/* Create a LastFM object */
+var lastfm = new LastFM({
+  apiKey    : '3f7a62bedd43ef8963c8a9895fdc7ad0',
+  apiSecret : '7e732871d0fcabc9c85cb0830a52041a',
+
+});
+
+/* Load some artist info. */
+lastfm.album.getInfo({artist: 'Sabaton',album: 'The Art of War'}, {success: function(data){
+
+console.log(data);
+var name = data.album.name;
+var artist = data.album.artist;
+var releasedate = data.album.releasedate;
+
+ 
+
+var pieces = releasedate.split(",");
+var date = pieces[0];
+var tags = data.album.toptags.tag;
+var tag;
+var url = data.album.image[2]["#text"];
+var albumimage = '<img src="'+url+'">';
+var title = '<p>' + artist + ' - ' + name +'</p>';
+var dateelem = '<p>' +'Released: '+ date + '</p>';
+
+var html = title;
+html += dateelem;
+var codetag;
+console.log(tags);
+console.log(tags[0]);
+var tag;
+var length = tags.length;
+html += '<p>';
+html += 'Tags: ';
+for(var i=0; i<tags.length; i++)
+{
+   tag = tags[i];  
+   codetag = '<code>'+ tag.name + '</code>';
+   html += codetag;
+
+
+}
+html += '</p>';
+html = '<div class="album"> <div class="albumimage">'+albumimage+'</div><div class="albumcontent">'+html+'</div></div>';
+$('.albums').append(html);
+}, error: function(code, message){
+  
+}});
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+
+
+/* Create a LastFM object */
+var lastfm = new LastFM({
+  apiKey    : '3f7a62bedd43ef8963c8a9895fdc7ad0',
+  apiSecret : '7e732871d0fcabc9c85cb0830a52041a',
+
+});
+
+/* Load some artist info. */
+lastfm.album.getInfo({artist: 'Sabaton',album: 'Coat of Arms'}, {success: function(data){
+
+console.log(data);
+var name = data.album.name;
+var artist = data.album.artist;
+var releasedate = data.album.releasedate;
+
+ 
+
+var pieces = releasedate.split(",");
+var date = pieces[0];
+var tags = data.album.toptags.tag;
+var tag;
+var url = data.album.image[2]["#text"];
+var albumimage = '<img src="'+url+'">';
+var title = '<p>' + artist + ' - ' + name +'</p>';
+var dateelem = '<p>' +'Released: '+ date + '</p>';
+
+var html = title;
+html += dateelem;
+var codetag;
+console.log(tags);
+console.log(tags[0]);
+var tag;
+var length = tags.length;
+html += '<p>';
+html += 'Tags: ';
+for(var i=0; i<tags.length; i++)
+{
+   tag = tags[i];  
+   codetag = '<code>'+ tag.name + '</code>';
+   html += codetag;
+
+
+}
+html += '</p>';
+html = '<div class="album"> <div class="albumimage">'+albumimage+'</div><div class="albumcontent">'+html+'</div></div>';
+$('.albums').append(html);
+}, error: function(code, message){
+  
+}});
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+
+
+/* Create a LastFM object */
+var lastfm = new LastFM({
+  apiKey    : '3f7a62bedd43ef8963c8a9895fdc7ad0',
+  apiSecret : '7e732871d0fcabc9c85cb0830a52041a',
+
+});
+
+/* Load some artist info. */
+lastfm.album.getInfo({artist: 'Within Temptation',album: 'The Heart Of Everything'}, {success: function(data){
+
+console.log(data);
+var name = data.album.name;
+var artist = data.album.artist;
+var releasedate = data.album.releasedate;
+
+ 
+
+var pieces = releasedate.split(",");
+var date = pieces[0];
+var tags = data.album.toptags.tag;
+var tag;
+var url = data.album.image[2]["#text"];
+var albumimage = '<img src="'+url+'">';
+var title = '<p>' + artist + ' - ' + name +'</p>';
+var dateelem = '<p>' +'Released: '+ date + '</p>';
+
+var html = title;
+html += dateelem;
+var codetag;
+console.log(tags);
+console.log(tags[0]);
+var tag;
+var length = tags.length;
+html += '<p>';
+html += 'Tags: ';
+for(var i=0; i<tags.length; i++)
+{
+   tag = tags[i];  
+   codetag = '<code>'+ tag.name + '</code>';
+   html += codetag;
+
+
+}
+html += '</p>';
+html = '<div class="album"> <div class="albumimage">'+albumimage+'</div><div class="albumcontent">'+html+'</div></div>';
+$('.albums').append(html);
+}, error: function(code, message){
+  
+}});
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
 
 <div class="footer-wrap">
   <footer>

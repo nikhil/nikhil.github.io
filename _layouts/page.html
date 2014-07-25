@@ -45,6 +45,79 @@
   </article>
 </div><!-- /#index -->
 
+
+{% for albumel in page.music %}
+<script type="text/javascript">
+
+
+/* Create a LastFM object */
+var lastfm = new LastFM({
+  apiKey    : '3f7a62bedd43ef8963c8a9895fdc7ad0',
+  apiSecret : '7e732871d0fcabc9c85cb0830a52041a',
+
+});
+
+/* Load some artist info. */
+lastfm.album.getInfo({artist: '{{albumel.by}}',album: '{{albumel.name}}'}, {success: function(data){
+
+console.log(data);
+var name = data.album.name;
+var artist = data.album.artist;
+var releasedate = data.album.releasedate;
+{% if albumel.name == 'IV' %}
+releasedate = '8 Nov 1971'
+{% endif %}
+ {% if albumel.name == 'Hot Space' %}
+releasedate = '21 Nov 1981'
+{% endif %}
+
+var pieces = releasedate.split(",");
+var date = pieces[0];
+var tags = data.album.toptags.tag;
+var tag;
+var url = data.album.image[2]["#text"];
+var albumimage = '<img src="'+url+'">';
+var title = '<p>' + artist + ' - ' + name +'</p>';
+var dateelem = '<p>' +'Released: '+ date + '</p>';
+
+var html = title;
+html += dateelem;
+var codetag;
+console.log(tags);
+console.log(tags[0]);
+var tag;
+var length = tags.length;
+html += '<p>';
+html += 'Tags: ';
+for(var i=0; i<tags.length; i++)
+{
+   tag = tags[i];  
+   codetag = '<code>'+ tag.name + '</code>';
+   html += codetag;
+
+
+}
+html += '</p>';
+html = '<div class="album"> <div class="albumimage">'+albumimage+'</div><div class="albumcontent">'+html+'</div></div>';
+$('.albums').append(html);
+}, error: function(code, message){
+  
+}});
+
+
+
+
+
+
+
+</script>
+
+
+
+
+{% endfor %}
+
+
 <div class="footer-wrap">
   <footer>
     {% include _footer.html %}

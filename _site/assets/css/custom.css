@@ -320,4 +320,21 @@ text-align: right;
 
 position: relative;
 padding-bottom: 130px;
+}
+
+.album
+{
+
+position: relative;
+padding-bottom: 30px;
+
+}
+
+.albumcontent
+{
+position: absolute;
+left: 200px;
+top: 0px;
+
+
 }	
