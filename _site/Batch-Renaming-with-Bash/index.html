@@ -23,24 +23,24 @@
 <link href="/assets/css/loversquarrel.css" rel="stylesheet" />
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|PT+Sans|PT+Sans+Narrow|PT+Serif+Caption|PT+Mono|PT+Serif|Source+Code+Pro|Raleway|Raleway+Dots|PT+Sans+Caption' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Lato:400italic' rel='stylesheet' type='text/css'>
-<title>Kumarcode</title>
+<title>Batch Renaming with Bash &#8211; Kumarcode</title>
 <meta name="description" content="">
-<meta name="keywords" content="blog, template">
+<meta name="keywords" content="">
 
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Kumarcode">
+<meta property="og:title" content="Batch Renaming with Bash">
 <meta property="og:description" content="A stylish blog on my code">
-<meta property="og:url" content="/index.html">
+<meta property="og:url" content="/Batch-Renaming-with-Bash/">
 <meta property="og:site_name" content="Kumarcode">
 
 
 
 
 
-<link rel="canonical" href="/">
+<link rel="canonical" href="/Batch-Renaming-with-Bash/">
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Kumarcode Feed">
 <link rel="author" href="http://plus.google.com/+/u/0/104266827599169158890/posts?rel=author">
 
@@ -81,7 +81,7 @@
 
 </head>
 
-<body class="home">
+<body class="post">
 
 <!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
 
@@ -268,20 +268,10 @@
 
 
 
-  <div class="image-wrap">
-  <img src=
-    
-      "/images/lilac1.jpg"
-    
-  alt=" feature image">
-  
-    <span class="image-credit">Photo Credit: <a href="">Lilacs taken by me in my backyard.</a></span>
-  
-  </div><!-- /.image-wrap -->
 
-
-<div class="article-author-side">
-  
+<div id="main" role="main">
+  <div class="article-author-side">
+    
 	<img src="/images/bio-photo.jpg" class="bio-photo" alt="Nikhil Kumar bio photo"></a>
 
 <h3>Nikhil Kumar</h3>
@@ -342,60 +332,246 @@ $.get(
 
 
 
-</div>
-
-<div id="index">
-  <h3><a href="/posts/">Recent Posts</a></h3>
-      
+  </div>
   <article>
-    
-      <h2><a href="/Using-Lastfm-to-display-music/" title="Using Lastfm to display music">Using Lastfm to display music</a></h2>
-      <p>After creating a music page, I have decided to take advantage of my knowledge of javascript to make the task of displaying my music selection easier. I wanted to create a script that would pull from a list of albums a...</p>
-    
-  </article>
+    <div class="headline-wrap">
       
-  <article>
-    
-      <h2><a href="/Fetching-github-commit-messages/" title="Fetching Github Commit Messages">Fetching Github Commit Messages</a></h2>
-      <p>I thought of an idea that will be pretty unique for my website. Since my
-website is hosted on github, I would like to access the commit messages to my
-git repository and display them to show the changes that are being...</p>
-    
-  </article>
+        <h1><a href="/Batch-Renaming-with-Bash/" rel="bookmark" title="Batch Renaming with Bash">Batch Renaming with Bash</a></h1>
+		<p class="byline"><time datetime="2014-07-27T00:00:00-04:00">July 27, 2014</time></p>
       
-  <article>
-    
-      <h2><a href="/Batch-Renaming-with-Bash/" title="Batch Renaming with Bash">Batch Renaming with Bash</a></h2>
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
       <p>I recently had to rename 350+ files. So I decided it was time that I learned
 how to rename files using bash scripting. There are multiple parts to this.
-First you need to create and itterate through a list of files. T...</p>
-    
-  </article>
-      
-  <article>
-    
-      <h2><a href="/Simple-Css-styling-with-awsome-effects/" title="Simple Css styling with Awsome effects">Simple Css styling with Awsome effects</a></h2>
-      <p>You can make you website look awsome with not much code at all. You just need a
-bit of creativity, a bit of css, and alot of criticism. In this post, I will
-talk about the css transform property. Just a few lines of c...</p>
-    
-  </article>
-      
-  <article>
-    
-      <h2><a href="/Monitoring-the-Hubble-constant-with-Ajax/" title="Monitoring the Hubble constant with Ajax">Monitoring the Hubble constant with Ajax</a></h2>
-      <p>So lately I was contemplating on creating a project using Ajax. I decided that
-I wanted to do something really neat with data that is constantly changing. The first thing that came to mind was the Hubble constant. The...</p>
-    
-  </article>
-  
-</div><!-- /#index -->
+First you need to <code>create</code> and <code>itterate</code> through a list of files. Then you
+need to send this into the <code>mv</code> command where you can rename the file using
+special operations.</p>
 
-<body class="post-index">
+<p>Here is an example of a script that removes all the <code>.tabular</code> extensions.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="lineno">1</span> <span class="k">for</span> f in *<span class="p">;</span> 
+<span class="lineno">2</span> <span class="k">do</span> mv <span class="nv">$f</span> <span class="k">${</span><span class="nv">f</span><span class="p">%.tabular</span><span class="k">}</span><span class="p">;</span> 
+<span class="lineno">3</span> <span class="k">done</span></code></pre></div>
+
+<p>Notice the <code>%</code> and the <code>f</code>. This is telling the script to remove the string
+<code>.tabular</code> from the back f wich is your filename.
+If you want something removed from the front of your file you should use <code>#</code>.
+You may want to change the caseing of your file names. In that case, you can
+just do:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="lineno">1</span> <span class="k">for</span> f in *<span class="p">;</span>
+<span class="lineno">2</span> <span class="k">do</span> mv <span class="nv">$f</span> <span class="sb">`</span><span class="nb">echo</span> <span class="nv">$f</span> <span class="p">|</span> tr <span class="s1">&#39;[:upper:]&#39;</span> <span class="s1">&#39;[:lower:]&#39;</span><span class="sb">`</span><span class="p">;</span> 
+<span class="lineno">3</span> <span class="k">done</span></code></pre></div>
+
+<p>Both of these scripts scans for all the files indicates by the <code>*</code>. If you
+would like a specific file you can insert <code>*.txt</code> or <code>*.tabular</code>.</p>
+
+<p>In addition, you can use the pipe command to get more complex. If you wanted to
+remove the second occurrence of <code>_</code> from every file you can just pipe in <code>sed</code>
+as so:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="lineno">1</span> <span class="k">for</span> f in tss*<span class="p">;</span>
+<span class="lineno">2</span> <span class="k">do</span> <span class="nb">test</span> <span class="k">${</span><span class="nv">f</span><span class="p">%.*</span><span class="k">}</span> <span class="o">=</span> <span class="nv">$f</span> <span class="o">&amp;&amp;</span> mv <span class="nv">$f</span> <span class="sb">`</span><span class="nb">echo</span> <span class="nv">$f</span> <span class="p">|</span> sed <span class="s1">&#39;s/_/./2&#39;</span><span class="sb">`</span><span class="p">;</span> 
+<span class="lineno">3</span> <span class="k">done</span></code></pre></div>
+
+
+      
+      <footer role="contentinfo">
+        <div class="article-author-bottom">
+          
+	<img src="/images/bio-photo.jpg" class="bio-photo" alt="Nikhil Kumar bio photo"></a>
+
+<h3>Nikhil Kumar</h3>
+<span class="siteBio">A stylish blog on my code<br><br></span>
+
+
+<a href="http://plus.google.com//u/0/104266827599169158890/posts" class="author-social" target="_blank">&nbsp;<i class="icon-google-plus"></i>&nbsp;<span class = "socialelm" style= "position: relative; left: 1px;"><font color="#586e75">G</font>oogle+</span></a>
+<a href="mailto:nikhilkumar516@gmail.com" class="author-social" target="_blank"><i class="fa fa-envelope fa-fw"></i><span class = "socialelm"> <font color="#586e75"> G</font>mail</span></a>
+
+
+
+
+<a href="http://github.com/nikhil" class="author-social" target="_blank"><i class="fa fa-github-square fa-fw"></i> <span class = "socialelm"><font color="#586e75">G</font>ithub</span></a>
+
+
+
+
+
+
+<br>
+<i class="fa fa-git-square"></i><span class ="changelog"> Change log: </span>
+<script type="text/javascript">
+$.get(
+		"https://api.github.com/repos/nikhil/nikhil.github.io/commits",
+		function(data){
+           	var date;
+			var datepart;
+			var messagestr;
+			var html = '<br><span class = "changeitems">';
+			for(i=0;i < 8; i++)
+			{	
+				messagestr = data[i].commit.message;
+				date = data[i].commit.committer.date;
+                datepart = date.split("T")[0];
+				html += '<font color = "#586e75">'+ datepart.substring(5)+'</font>'+'&nbsp;&nbsp;'+messagestr+ '<br>';
+
+				        
+			
+			
+			} 
+
+		     html += '</span>';
+			 $('.changelog').append(html);
+
+		}
+
+
+
+
+	  )
+
+
+
+
+
+
+</script>
+
+
+
+        </div>
+ <!--       <p class="byline"><strong>Batch Renaming with Bash</strong> was published
+			on <time datetime="2014-07-27T00:00:00-04:00">July 27, 2014</time> by <a href="/about" title="About Nikhil Kumar">Nikhil Kumar</a>.</p> -->
+      </footer>
+    </div><!-- /.article-wrap -->
+  
+  </article>
+</div><!-- /#main -->
+
+
+
+
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+	       rel:'  Bash'
+		   }).appendTo("pre:eq(0)");
+
+});	
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+	       rel:'  Bash'
+		   }).appendTo("pre:eq(1)");
+
+});	
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+	       rel:'  Bash'
+		   }).appendTo("pre:eq(2)");
+
+});	
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div class="footer-wrap">
+  <div class="related-articles">
+  <h4>You might also enjoy <small class="pull-right">(<a href="/posts/">View all posts</a>)</small></h4>
+    <ul>
+    
+      <li><a href="/Using-Lastfm-to-display-music/" title="Using Lastfm to display music">Using Lastfm to display music</a></li>
+    
+      <li><a href="/Fetching-github-commit-messages/" title="Fetching Github Commit Messages">Fetching Github Commit Messages</a></li>
+    
+      <li><a href="/Simple-Css-styling-with-awsome-effects/" title="Simple Css styling with Awsome effects">Simple Css styling with Awsome effects</a></li>
+    
+    </ul>
+    <hr />
+  </div><!-- /.related-articles -->
   <footer>
     <span>&copy; 2014 Nikhil Kumar. Powered by <a href="http://jekyllrb.com">Jekyll</a></span>
 
@@ -406,7 +582,7 @@ I wanted to do something really neat with data that is constantly changing. The 
 <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 <script src="/assets/js/scripts.min.js"></script>
 
+	        
 
-  
 </body>
 </html>

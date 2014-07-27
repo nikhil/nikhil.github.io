@@ -23,7 +23,7 @@
 <link href="/assets/css/loversquarrel.css" rel="stylesheet" />
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|PT+Sans|PT+Sans+Narrow|PT+Serif+Caption|PT+Mono|PT+Serif|Source+Code+Pro|Raleway|Raleway+Dots|PT+Sans+Caption' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Lato:400italic' rel='stylesheet' type='text/css'>
-<title>The Power of Liquid &#8211; Kumarcode</title>
+<title>Using Lastfm to display music &#8211; Kumarcode</title>
 <meta name="description" content="">
 <meta name="keywords" content="">
 
@@ -31,16 +31,16 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="The Power of Liquid">
+<meta property="og:title" content="Using Lastfm to display music">
 <meta property="og:description" content="A stylish blog on my code">
-<meta property="og:url" content="/The-Power-of-Liquid/">
+<meta property="og:url" content="/Using-Lastfm-to-display-music/">
 <meta property="og:site_name" content="Kumarcode">
 
 
 
 
 
-<link rel="canonical" href="/The-Power-of-Liquid/">
+<link rel="canonical" href="/Using-Lastfm-to-display-music/">
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Kumarcode Feed">
 <link rel="author" href="http://plus.google.com/+/u/0/104266827599169158890/posts?rel=author">
 
@@ -336,78 +336,73 @@ $.get(
   <article>
     <div class="headline-wrap">
       
-        <h1><a href="/The-Power-of-Liquid/" rel="bookmark" title="The Power of Liquid">The Power of Liquid</a></h1>
-		<p class="byline"><time datetime="2014-07-12T00:00:00-04:00">July 12, 2014</time></p>
+        <h1><a href="/Using-Lastfm-to-display-music/" rel="bookmark" title="Using Lastfm to display music">Using Lastfm to display music</a></h1>
+		<p class="byline"><time datetime="2014-07-27T00:00:00-04:00">July 27, 2014</time></p>
       
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
-      <p>After finding a way to edit my code blocks appearance. I ran into another
-issue. Currently the only solution I have to fix the issue, is to run
-javascript code on each of the code blocks. This is quite bothersome. However,
-I found a way to neatly integrate the code block design in compilation by using
-the language <code>liquid</code>.</p>
+      <p>After creating a music page, I have decided to take advantage of my knowledge of javascript to make the task of displaying my music selection easier. I wanted to create a script that would pull from a list of albums and display the album art, the year it was released, and the tags given to it from last.fm. You would need to first download the Lastfm package found <a href="https://github.com/fxb/javascript-last.fm-api ">here:</a></p>
 
-<h3 id="so-what-is-liquid">So what is liquid?</h3>
-<p>From their main page:</p>
+<p>Here is the basic overview of the api taken from the github page:</p>
 <blockquote>
-Liquid is an open-source, Ruby-based template language created by Shopify. It is the backbone of Shopify themes and is used to load dynamic content on storefronts.
+
+The JavaScript last.fm API allows you to call last.fm API methods and get the corresponding JSON responses. Basically it just acts as a wrapper that gives easy access to API methods. Responses can be cached using the localStorage API.
+
 </blockquote>
-<p>Liquid allows me to make lists in my markdown files which I can then itterate
-using a for each loop in liquid. For example, for my previous post my list was.</p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="lineno"> 1</span> <span class="l-Scalar-Plain">code</span><span class="p-Indicator">:</span>
-<span class="lineno"> 2</span> <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">file</span>
-<span class="lineno"> 3</span>   <span class="l-Scalar-Plain">file</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Yaml</span>
-<span class="lineno"> 4</span>   <span class="l-Scalar-Plain">count</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">0</span>
-<span class="lineno"> 5</span> 
-<span class="lineno"> 6</span> <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">ruby</span>
-<span class="lineno"> 7</span>   <span class="l-Scalar-Plain">count</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">1</span>
-<span class="lineno"> 8</span> 
-<span class="lineno"> 9</span> <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">html</span>
-<span class="lineno">10</span>   <span class="l-Scalar-Plain">count</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">2</span> 
-<span class="lineno">11</span> 
-<span class="lineno">12</span> <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">javascript</span>
-<span class="lineno">13</span>   <span class="l-Scalar-Plain">count</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">3</span>
-<span class="lineno">14</span> 
-<span class="lineno">15</span> <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">html</span>
-<span class="lineno">16</span>   <span class="l-Scalar-Plain">count</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">4</span> 
-<span class="lineno">17</span> 
-<span class="lineno">18</span> <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">css</span>
-<span class="lineno">19</span>   <span class="l-Scalar-Plain">count</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">5</span></code></pre></div>
+<p>To use the api, you need to first register for the last.fm api keys.</p>
 
-<p>Here there are 6 elements in <code>code</code> where each element begins with <code>-</code>.The
-<code>type</code> tag specifies what language I am using. The <code>type file</code> is a dummy tag in which
-the actual name is included in <code>file</code>. The <code>count</code> tag labels the code blocks
-starting with <code>0</code> from the top.
-<br />
-<br />
-With this list I can itterate through them using liquid.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="lineno">1</span> <span class="cm">/* Create a cache object */</span>
+<span class="lineno">2</span> <span class="kd">var</span> <span class="nx">cache</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">LastFMCache</span><span class="p">();</span>
+<span class="lineno">3</span> <span class="cm">/* Create a LastFM object */</span>
+<span class="lineno">4</span> <span class="kd">var</span> <span class="nx">lastfm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">LastFM</span><span class="p">({</span>
+<span class="lineno">5</span>   <span class="nx">apiKey</span>    <span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="lineno">6</span>   <span class="nx">apiSecret</span> <span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="lineno">7</span>   <span class="nx">cache</span><span class="o">:</span> <span class="nx">cache</span>
+<span class="lineno">8</span> 
+<span class="lineno">9</span> <span class="p">});</span></code></pre></div>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="lineno"> 1</span> <span class="p">{</span><span class="o">%</span> <span class="k">for</span> <span class="nx">codetag</span> <span class="k">in</span> <span class="nx">page</span><span class="p">.</span><span class="nx">code</span> <span class="o">%</span><span class="p">}</span>
+<p>I then coupled javascript wiht yaml to retreieve my album info. I need to fix some dates that were incorrect or not given.</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="lineno"> 1</span> <span class="nx">lastfm</span><span class="p">.</span><span class="nx">album</span><span class="p">.</span><span class="nx">getInfo</span><span class="p">({</span><span class="nx">artist</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nx">album</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">},</span> <span class="p">{</span><span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
 <span class="lineno"> 2</span> 
-<span class="lineno"> 3</span> <span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="nx">codetag</span><span class="p">.</span><span class="nx">type</span> <span class="o">==</span> <span class="s1">&#39;bash&#39;</span> <span class="o">%</span><span class="p">}</span>
-<span class="lineno"> 4</span> 
-<span class="lineno"> 5</span> <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
-<span class="lineno"> 6</span> <span class="nx">$</span><span class="p">(</span> <span class="nb">document</span> <span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-<span class="lineno"> 7</span>      
-<span class="lineno"> 8</span>        <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;pre&quot;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;terminal&quot;</span><span class="p">);</span>
-<span class="lineno"> 9</span> 	   
-<span class="lineno">10</span> 		 <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;&lt;span&gt;&quot;</span><span class="p">,{</span>
-<span class="lineno">11</span> 	       <span class="nx">rel</span><span class="o">:</span><span class="s1">&#39;  Bash&#39;</span>
-<span class="lineno">12</span> 		   <span class="p">}).</span><span class="nx">appendTo</span><span class="p">(</span><span class="s2">&quot;pre:eq({{codetag.count}})&quot;</span><span class="p">);</span>
-<span class="lineno">13</span> 
-<span class="lineno">14</span> <span class="p">});</span>	
-<span class="lineno">15</span> 
-<span class="lineno">16</span> <span class="o">&lt;</span><span class="err">/script&gt;</span>
-<span class="lineno">17</span> <span class="p">{</span><span class="o">%</span> <span class="nx">endif</span> <span class="o">%</span><span class="p">}</span>
+<span class="lineno"> 3</span> 
+<span class="lineno"> 4</span> <span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">album</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+<span class="lineno"> 5</span> <span class="kd">var</span> <span class="nx">artist</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">album</span><span class="p">.</span><span class="nx">artist</span><span class="p">;</span>
+<span class="lineno"> 6</span> <span class="kd">var</span> <span class="nx">releasedate</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">album</span><span class="p">.</span><span class="nx">releasedate</span><span class="p">;</span>
+<span class="lineno"> 7</span> 
+<span class="lineno"> 8</span>  
+<span class="lineno"> 9</span> 
+<span class="lineno">10</span> <span class="kd">var</span> <span class="nx">pieces</span> <span class="o">=</span> <span class="nx">releasedate</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">);</span>
+<span class="lineno">11</span> <span class="kd">var</span> <span class="nx">date</span> <span class="o">=</span> <span class="nx">pieces</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="lineno">12</span> <span class="kd">var</span> <span class="nx">tags</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">album</span><span class="p">.</span><span class="nx">toptags</span><span class="p">.</span><span class="nx">tag</span><span class="p">;</span>
+<span class="lineno">13</span> <span class="kd">var</span> <span class="nx">tag</span><span class="p">;</span>
+<span class="lineno">14</span> <span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">album</span><span class="p">.</span><span class="nx">image</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="s2">&quot;#text&quot;</span><span class="p">];</span>
+<span class="lineno">15</span> <span class="kd">var</span> <span class="nx">albumimage</span> <span class="o">=</span> <span class="s1">&#39;&lt;img src=&quot;&#39;</span><span class="o">+</span><span class="nx">url</span><span class="o">+</span><span class="s1">&#39;&quot;&gt;&#39;</span><span class="p">;</span>
+<span class="lineno">16</span> <span class="kd">var</span> <span class="nx">title</span> <span class="o">=</span> <span class="s1">&#39;&lt;p&gt;&#39;</span> <span class="o">+</span> <span class="nx">artist</span> <span class="o">+</span> <span class="s1">&#39; - &#39;</span> <span class="o">+</span> <span class="nx">name</span> <span class="o">+</span><span class="s1">&#39;&lt;/p&gt;&#39;</span><span class="p">;</span>
+<span class="lineno">17</span> <span class="kd">var</span> <span class="nx">dateelem</span> <span class="o">=</span> <span class="s1">&#39;&lt;p&gt;&#39;</span> <span class="o">+</span><span class="s1">&#39;Released: &#39;</span><span class="o">+</span> <span class="nx">date</span> <span class="o">+</span> <span class="s1">&#39;&lt;/p&gt;&#39;</span><span class="p">;</span>
 <span class="lineno">18</span> 
-<span class="lineno">19</span> <span class="p">...</span>
-<span class="lineno">20</span> 
-<span class="lineno">21</span> <span class="p">{</span><span class="o">%</span> <span class="nx">endfor</span> <span class="o">%</span><span class="p">}</span></code></pre></div>
-
-<p>Where <code>codetag</code> loops through each item in <code>page.code</code>. Now, I only need to
-mention the type on the top of my <code>markdown</code> file and liquid allows me to
-generated the top bar of my code blocks with the proper label and icons.</p>
+<span class="lineno">19</span> <span class="kd">var</span> <span class="nx">html</span> <span class="o">=</span> <span class="nx">title</span><span class="p">;</span>
+<span class="lineno">20</span> <span class="nx">html</span> <span class="o">+=</span> <span class="nx">dateelem</span><span class="p">;</span>
+<span class="lineno">21</span> <span class="kd">var</span> <span class="nx">codetag</span><span class="p">;</span>
+<span class="lineno">22</span> <span class="kd">var</span> <span class="nx">tag</span><span class="p">;</span>
+<span class="lineno">23</span> <span class="kd">var</span> <span class="nx">length</span> <span class="o">=</span> <span class="nx">tags</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+<span class="lineno">24</span> <span class="nx">html</span> <span class="o">+=</span> <span class="s1">&#39;&lt;p&gt;&#39;</span><span class="p">;</span>
+<span class="lineno">25</span> <span class="nx">html</span> <span class="o">+=</span> <span class="s1">&#39;Tags: &#39;</span><span class="p">;</span>
+<span class="lineno">26</span> <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">tags</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span>
+<span class="lineno">27</span> <span class="p">{</span>
+<span class="lineno">28</span>    <span class="nx">tag</span> <span class="o">=</span> <span class="nx">tags</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>  
+<span class="lineno">29</span>    <span class="nx">codetag</span> <span class="o">=</span> <span class="s1">&#39;&lt;code&gt;&#39;</span><span class="o">+</span> <span class="nx">tag</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s1">&#39;&lt;/code&gt;&#39;</span><span class="p">;</span>
+<span class="lineno">30</span>    <span class="nx">html</span> <span class="o">+=</span> <span class="nx">codetag</span><span class="p">;</span>
+<span class="lineno">31</span> 
+<span class="lineno">32</span> 
+<span class="lineno">33</span> <span class="p">}</span>
+<span class="lineno">34</span> <span class="nx">html</span> <span class="o">+=</span> <span class="s1">&#39;&lt;/p&gt;&#39;</span><span class="p">;</span>
+<span class="lineno">35</span> <span class="nx">html</span> <span class="o">=</span> <span class="s1">&#39;&lt;div class=&quot;album&quot;&gt; &lt;div class=&quot;albumimage&quot;&gt;&#39;</span><span class="o">+</span><span class="nx">albumimage</span><span class="o">+</span><span class="s1">&#39;&lt;/div&gt;&lt;div class=&quot;albumcontent&quot;&gt;&#39;</span><span class="o">+</span><span class="nx">html</span><span class="o">+</span><span class="s1">&#39;&lt;/div&gt;&lt;/div&gt;&#39;</span><span class="p">;</span>
+<span class="lineno">36</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.albums&#39;</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="nx">html</span><span class="p">);</span>
+<span class="lineno">37</span> <span class="p">},</span> <span class="nx">error</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">code</span><span class="p">,</span> <span class="nx">message</span><span class="p">){</span>
+<span class="lineno">38</span>   
+<span class="lineno">39</span> <span class="p">}});</span></code></pre></div>
 
 
       
@@ -475,15 +470,13 @@ $.get(
 
 
         </div>
- <!--       <p class="byline"><strong>The Power of Liquid</strong> was published
-			on <time datetime="2014-07-12T00:00:00-04:00">July 12, 2014</time> by <a href="/about" title="About Nikhil Kumar">Nikhil Kumar</a>.</p> -->
+ <!--       <p class="byline"><strong>Using Lastfm to display music</strong> was published
+			on <time datetime="2014-07-27T00:00:00-04:00">July 27, 2014</time> by <a href="/about" title="About Nikhil Kumar">Nikhil Kumar</a>.</p> -->
       </footer>
     </div><!-- /.article-wrap -->
   
   </article>
 </div><!-- /#main -->
-
-
 
 
 
@@ -495,7 +488,7 @@ $( document ).ready(function() {
        $("pre").addClass("terminal");
 	   
 		 $("<span>",{
-			  rel:'  Liquid'
+	       rel:'  Bash'
 		   }).appendTo("pre:eq(0)");
 
 });	
@@ -530,7 +523,7 @@ $( document ).ready(function() {
        $("pre").addClass("terminal");
 	   
 		 $("<span>",{
-			  rel:'  Liquid'
+	       rel:'  Bash'
 		   }).appendTo("pre:eq(1)");
 
 });	
@@ -558,16 +551,53 @@ $( document ).ready(function() {
 
 
 
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+	       rel:'  Bash'
+		   }).appendTo("pre:eq(2)");
+
+});	
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="footer-wrap">
   <div class="related-articles">
   <h4>You might also enjoy <small class="pull-right">(<a href="/posts/">View all posts</a>)</small></h4>
     <ul>
     
-      <li><a href="/Using-Lastfm-to-display-music/" title="Using Lastfm to display music">Using Lastfm to display music</a></li>
-    
       <li><a href="/Fetching-github-commit-messages/" title="Fetching Github Commit Messages">Fetching Github Commit Messages</a></li>
     
       <li><a href="/Batch-Renaming-with-Bash/" title="Batch Renaming with Bash">Batch Renaming with Bash</a></li>
+    
+      <li><a href="/Simple-Css-styling-with-awsome-effects/" title="Simple Css styling with Awsome effects">Simple Css styling with Awsome effects</a></li>
     
     </ul>
     <hr />
