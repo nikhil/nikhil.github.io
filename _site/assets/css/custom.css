@@ -354,12 +354,27 @@ font-size: 80%;
 	}
 
 #sinbtn {
+	background-color: #eee8d5;
+	border-color: grey;
+	border-style: groove;
+	border-width: 3px;
 	position: absolute;
     right: 30px;
 	top: 450px;
 
 
 }
+
+#sinbtn:active {
+    background-color: #eee8d5;
+	border-color: grey;
+	border-style: ridge;
+	border-width: 3px;
+
+
+
+}
+
 
 .sidesine
 {

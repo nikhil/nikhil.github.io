@@ -292,7 +292,7 @@
 
 
 <br>
-<i class="fa fa-git-square"></i><span class ="changelog"> Change log: </span>
+<i class="fa fa-git-square"></i><span class ="changelog"> Changelog: </span>
 <script type="text/javascript">
 $.get(
   		"https://api.github.com/repos/nikhil/nikhil.github.io/commits",
@@ -476,7 +476,7 @@ Here is some code I did to cut off the force at some value.</p>
 
 
 <br>
-<i class="fa fa-git-square"></i><span class ="changelog"> Change log: </span>
+<i class="fa fa-git-square"></i><span class ="changelog"> Changelog: </span>
 <script type="text/javascript">
 $.get(
   		"https://api.github.com/repos/nikhil/nikhil.github.io/commits",
@@ -549,10 +549,12 @@ while( x<400)
     {
           amp =  Math.floor(Math.random() * 75)+.01;
         width = Math.floor(Math.random() * 1.5)+.01;
+		wavelength =  Math.floor(Math.random() * 1.57);
+
     }    
         
     
-    var y=amp*Math.sin(width*x)+ 80;
+    var y=amp*Math.sin(width*x+wavelength)+ 80;
     ctx.lineTo(y,x);
      x=x+.05;
 }
@@ -580,7 +582,7 @@ ctx.stroke();
 getSine();
 </script>
 
-<button onclick ="getSine()" class = "btn" id = "sinbtn"> Regenerate Sine </button>
+<button onclick ="getSine()" class = "btnsine" id = "sinbtn"> Regenerate </button>
 
  </div>
   
