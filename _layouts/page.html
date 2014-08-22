@@ -100,10 +100,15 @@ html += '<p>';
 html += 'Tags: ';
 for(var i=0; i<tags.length; i++)
 {
-   tag = tags[i];  
-   codetag = '<code>'+ tag.name + '</code>';
-   html += codetag;
+   tag = tags[i];
+   if(tag.name != "albums i own")
+   {
+		codetag = '<code>'+ tag.name + '</code>';
+        html += codetag;
 
+
+   } 
+   
 
 }
 html += '</p>';
