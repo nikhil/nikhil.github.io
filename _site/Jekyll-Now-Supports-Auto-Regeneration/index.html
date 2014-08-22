@@ -23,7 +23,7 @@
 <link href="/assets/css/loversquarrel.css" rel="stylesheet" />
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|PT+Sans|PT+Sans+Narrow|PT+Serif+Caption|PT+Mono|PT+Serif|Source+Code+Pro|Raleway|Raleway+Dots|PT+Sans+Caption' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Lato:400italic' rel='stylesheet' type='text/css'>
-<title>Fetching Github Commit Messages &#8211; Kumarcode</title>
+<title>Jekyll Now Supports Auto-Regeneration &#8211; Kumarcode</title>
 <meta name="description" content="">
 <meta name="keywords" content="">
 
@@ -31,16 +31,16 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Fetching Github Commit Messages">
+<meta property="og:title" content="Jekyll Now Supports Auto-Regeneration">
 <meta property="og:description" content="A stylish blog on my code">
-<meta property="og:url" content="/Fetching-github-commit-messages/">
+<meta property="og:url" content="/Jekyll-Now-Supports-Auto-Regeneration/">
 <meta property="og:site_name" content="Kumarcode">
 
 
 
 
 
-<link rel="canonical" href="/Fetching-github-commit-messages/">
+<link rel="canonical" href="/Jekyll-Now-Supports-Auto-Regeneration/">
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Kumarcode Feed">
 <link rel="author" href="http://plus.google.com/+/u/0/104266827599169158890/posts?rel=author">
 
@@ -390,55 +390,24 @@ getSine();
   <article>
     <div class="headline-wrap">
       
-        <h1><a href="/Fetching-github-commit-messages/" rel="bookmark" title="Fetching Github Commit Messages">Fetching Github Commit Messages</a></h1>
-		<p class="byline"><time datetime="2014-07-27T00:00:00-04:00">July 27, 2014</time></p>
+        <h1><a href="/Jekyll-Now-Supports-Auto-Regeneration/" rel="bookmark" title="Jekyll Now Supports Auto-Regeneration">Jekyll Now Supports Auto-Regeneration</a></h1>
+		<p class="byline"><time datetime="2014-08-21T00:00:00-04:00">August 21, 2014</time></p>
       
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
-      <p>I thought of an idea that will be pretty unique for my website. Since my
-website is hosted on <code>github</code>, I would like to access the commit messages to my
-git repository and display them to show the changes that are being made and
-also to make the point that this website is constantly being developed and
-tweaked by me.</p>
+      <p>Jekyll has just added a new feature which is Auto- Regeneration. This update is
+really neat and saves web developers a lot of time. Before the update, Jekyll
+has given developers the option to launch their website on the local server
+<code>localhost:4000</code> by using the command:</p>
 
-<p>Initially I thought it would be a good idea to use the javascript wrapper to
-access the github api. However, that made things more confusing. So I was able
-to retrieve the messages with just a simple get request.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="lineno">1</span> jekyll serve</code></pre></div>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="lineno"> 1</span> <span class="nv">$.</span>get<span class="o">(</span>
-<span class="lineno"> 2</span> <span class="s2">&quot;https://api.github.com/repos/nikhil/nikhil.github.io/commits&quot;</span>,
-<span class="lineno"> 3</span> <span class="k">function</span><span class="o">(</span>data<span class="o">){</span>
-<span class="lineno"> 4</span>    	var date<span class="p">;</span>
-<span class="lineno"> 5</span> 	var datepart<span class="p">;</span>
-<span class="lineno"> 6</span> 	var messagestr<span class="p">;</span>
-<span class="lineno"> 7</span> 	var <span class="nv">html</span> <span class="o">=</span> <span class="s1">&#39;&lt;br&gt;&lt;span class = &quot;changeitems&quot;&gt;&#39;</span><span class="p">;</span>
-<span class="lineno"> 8</span> 	
-<span class="lineno"> 9</span> 	<span class="k">for</span><span class="o">(</span><span class="nv">i</span><span class="o">=</span>0<span class="p">;</span>i &lt; 8<span class="p">;</span> i++<span class="o">)</span>
-<span class="lineno">10</span> 	<span class="o">{</span>	
-<span class="lineno">11</span> 		
-<span class="lineno">12</span> 	<span class="nv">messagestr</span> <span class="o">=</span> data<span class="o">[</span>i<span class="o">]</span>.commit.message<span class="p">;</span>
-<span class="lineno">13</span> 	<span class="nv">date</span> <span class="o">=</span> data<span class="o">[</span>i<span class="o">]</span>.commit.committer.date<span class="p">;</span>
-<span class="lineno">14</span> 	<span class="nv">datepart</span> <span class="o">=</span> date.split<span class="o">(</span><span class="s2">&quot;T&quot;</span><span class="o">)[</span>0<span class="o">]</span><span class="p">;</span>
-<span class="lineno">15</span> 	html +<span class="o">=</span> <span class="s1">&#39;&lt;font color = &quot;#586e75&quot;&gt;&#39;</span>+ datepart.substring<span class="o">(</span>5<span class="o">)</span>
-<span class="lineno">16</span> 	+<span class="s1">&#39;&lt;/font&gt;&#39;</span>+<span class="s1">&#39;&amp;nbsp;&amp;nbsp;&#39;</span>+messagestr+ <span class="s1">&#39;&lt;br&gt;&#39;</span><span class="p">;</span>
-<span class="lineno">17</span> 
-<span class="lineno">18</span> 				        
-<span class="lineno">19</span> 			
-<span class="lineno">20</span> 			
-<span class="lineno">21</span> 	<span class="o">}</span> 
-<span class="lineno">22</span> 
-<span class="lineno">23</span> 		html +<span class="o">=</span> <span class="s1">&#39;&lt;/span&gt;&#39;</span><span class="p">;</span>
-<span class="lineno">24</span> 		<span class="k">$(</span><span class="s1">&#39;.changelog&#39;</span><span class="k">)</span>.append<span class="o">(</span>html<span class="o">)</span><span class="p">;</span>
-<span class="lineno">25</span> 	<span class="o">}</span>
-<span class="lineno">26</span> 
-<span class="lineno">27</span> 
-<span class="lineno">28</span> 
-<span class="lineno">29</span> 
-<span class="lineno">30</span> <span class="o">)</span></code></pre></div>
+<p>However, anytime a change is made you would have to rerun the command to
+regenerate the site.Now Jekyll has a neat feature known as auto-regeneration. Basically, it will
+watch for any changes in the directory of your website and will automatically
+regenerate anytime a change is made. You just need to add <code>--watch</code> as so:</p>
 
-<p>Notice the format of the url. It goes </p>
-
-<p>https://api.github.com/repos/<code>user</code>/<code>repo</code>/commits.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="lineno">1</span> jekyll serve --watch</code></pre></div>
 
 
       
@@ -560,13 +529,38 @@ getSine();
 <button onclick ="getSine()" class = "btn" id = "sinbtn"> Regenerate Sine </button>
 
         </div>
- <!--       <p class="byline"><strong>Fetching Github Commit Messages</strong> was published
-			on <time datetime="2014-07-27T00:00:00-04:00">July 27, 2014</time> by <a href="/about" title="About Nikhil Kumar">Nikhil Kumar</a>.</p> -->
+ <!--       <p class="byline"><strong>Jekyll Now Supports Auto-Regeneration</strong> was published
+			on <time datetime="2014-08-21T00:00:00-04:00">August 21, 2014</time> by <a href="/about" title="About Nikhil Kumar">Nikhil Kumar</a>.</p> -->
       </footer>
     </div><!-- /.article-wrap -->
   
   </article>
 </div><!-- /#main -->
+
+
+
+
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+	       rel:'  Bash'
+		   }).appendTo("pre:eq(0)");
+
+});	
+
+</script>
+
+
+
+
+
+
+
+
 
 
 
@@ -588,12 +582,22 @@ $( document ).ready(function() {
        $("pre").addClass("terminal");
 	   
 		 $("<span>",{
-	       rel:'  Javascript'
-		   }).appendTo("pre:eq(0)");
+	       rel:'  Bash'
+		   }).appendTo("pre:eq(1)");
 
 });	
 
 </script>
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -613,11 +617,11 @@ $( document ).ready(function() {
   <h4>You might also enjoy <small class="pull-right">(<a href="/posts/">View all posts</a>)</small></h4>
     <ul>
     
-      <li><a href="/Jekyll-Now-Supports-Auto-Regeneration/" title="Jekyll Now Supports Auto-Regeneration">Jekyll Now Supports Auto-Regeneration</a></li>
-    
       <li><a href="/Getting-Black-Hat-on-my-Android/" title="Getting Black Hat on my Android">Getting Black Hat on my Android</a></li>
     
       <li><a href="/Developing-Random-Math-Art/" title="Developing Random Math Art">Developing Random Math Art</a></li>
+    
+      <li><a href="/Adding-FontAwsome-icons-to-my-resume-using-Latex/" title="Adding FontAwsome Icons to my resume using Latex">Adding FontAwsome Icons to my resume using Latex</a></li>
     
     </ul>
     <hr />

@@ -317,7 +317,7 @@ text-align: right;
 
 .property
 {
-
+<canvas id="canvas" width=300 height=300></canvas>
 position: relative;
 padding-bottom: 130px;
 }
@@ -347,5 +347,17 @@ font-size: 80%;
 }
 
 
+.sin {
+	position: absolute;
+	left: 840px;
+	top: 360px;
+}
 
-	
+#sinbtn {
+	position: absolute;
+	left: 850px;
+	top: 800px;
+
+
+
+}

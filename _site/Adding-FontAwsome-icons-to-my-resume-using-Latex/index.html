@@ -23,7 +23,7 @@
 <link href="/assets/css/loversquarrel.css" rel="stylesheet" />
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|PT+Sans|PT+Sans+Narrow|PT+Serif+Caption|PT+Mono|PT+Serif|Source+Code+Pro|Raleway|Raleway+Dots|PT+Sans+Caption' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Lato:400italic' rel='stylesheet' type='text/css'>
-<title>Fetching Github Commit Messages &#8211; Kumarcode</title>
+<title>Adding FontAwsome Icons to my resume using Latex &#8211; Kumarcode</title>
 <meta name="description" content="">
 <meta name="keywords" content="">
 
@@ -31,16 +31,16 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Fetching Github Commit Messages">
+<meta property="og:title" content="Adding FontAwsome Icons to my resume using Latex">
 <meta property="og:description" content="A stylish blog on my code">
-<meta property="og:url" content="/Fetching-github-commit-messages/">
+<meta property="og:url" content="/Adding-FontAwsome-icons-to-my-resume-using-Latex/">
 <meta property="og:site_name" content="Kumarcode">
 
 
 
 
 
-<link rel="canonical" href="/Fetching-github-commit-messages/">
+<link rel="canonical" href="/Adding-FontAwsome-icons-to-my-resume-using-Latex/">
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Kumarcode Feed">
 <link rel="author" href="http://plus.google.com/+/u/0/104266827599169158890/posts?rel=author">
 
@@ -390,55 +390,52 @@ getSine();
   <article>
     <div class="headline-wrap">
       
-        <h1><a href="/Fetching-github-commit-messages/" rel="bookmark" title="Fetching Github Commit Messages">Fetching Github Commit Messages</a></h1>
-		<p class="byline"><time datetime="2014-07-27T00:00:00-04:00">July 27, 2014</time></p>
+        <h1><a href="/Adding-FontAwsome-icons-to-my-resume-using-Latex/" rel="bookmark" title="Adding FontAwsome Icons to my resume using Latex">Adding FontAwsome Icons to my resume using Latex</a></h1>
+		<p class="byline"><time datetime="2014-08-21T00:00:00-04:00">August 21, 2014</time></p>
       
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
-      <p>I thought of an idea that will be pretty unique for my website. Since my
-website is hosted on <code>github</code>, I would like to access the commit messages to my
-git repository and display them to show the changes that are being made and
-also to make the point that this website is constantly being developed and
-tweaked by me.</p>
+      <p>Yesterday I have decided to remodel my resume in latex. I decided that I would
+like to use some of the icons from FontAwsome on my contact section to save
+space. This was not as easy as expected, nevertheless I found a solution.</p>
 
-<p>Initially I thought it would be a good idea to use the javascript wrapper to
-access the github api. However, that made things more confusing. So I was able
-to retrieve the messages with just a simple get request.</p>
+<h2 id="packages-needed">Packages needed</h2>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="lineno"> 1</span> <span class="nv">$.</span>get<span class="o">(</span>
-<span class="lineno"> 2</span> <span class="s2">&quot;https://api.github.com/repos/nikhil/nikhil.github.io/commits&quot;</span>,
-<span class="lineno"> 3</span> <span class="k">function</span><span class="o">(</span>data<span class="o">){</span>
-<span class="lineno"> 4</span>    	var date<span class="p">;</span>
-<span class="lineno"> 5</span> 	var datepart<span class="p">;</span>
-<span class="lineno"> 6</span> 	var messagestr<span class="p">;</span>
-<span class="lineno"> 7</span> 	var <span class="nv">html</span> <span class="o">=</span> <span class="s1">&#39;&lt;br&gt;&lt;span class = &quot;changeitems&quot;&gt;&#39;</span><span class="p">;</span>
-<span class="lineno"> 8</span> 	
-<span class="lineno"> 9</span> 	<span class="k">for</span><span class="o">(</span><span class="nv">i</span><span class="o">=</span>0<span class="p">;</span>i &lt; 8<span class="p">;</span> i++<span class="o">)</span>
-<span class="lineno">10</span> 	<span class="o">{</span>	
-<span class="lineno">11</span> 		
-<span class="lineno">12</span> 	<span class="nv">messagestr</span> <span class="o">=</span> data<span class="o">[</span>i<span class="o">]</span>.commit.message<span class="p">;</span>
-<span class="lineno">13</span> 	<span class="nv">date</span> <span class="o">=</span> data<span class="o">[</span>i<span class="o">]</span>.commit.committer.date<span class="p">;</span>
-<span class="lineno">14</span> 	<span class="nv">datepart</span> <span class="o">=</span> date.split<span class="o">(</span><span class="s2">&quot;T&quot;</span><span class="o">)[</span>0<span class="o">]</span><span class="p">;</span>
-<span class="lineno">15</span> 	html +<span class="o">=</span> <span class="s1">&#39;&lt;font color = &quot;#586e75&quot;&gt;&#39;</span>+ datepart.substring<span class="o">(</span>5<span class="o">)</span>
-<span class="lineno">16</span> 	+<span class="s1">&#39;&lt;/font&gt;&#39;</span>+<span class="s1">&#39;&amp;nbsp;&amp;nbsp;&#39;</span>+messagestr+ <span class="s1">&#39;&lt;br&gt;&#39;</span><span class="p">;</span>
-<span class="lineno">17</span> 
-<span class="lineno">18</span> 				        
-<span class="lineno">19</span> 			
-<span class="lineno">20</span> 			
-<span class="lineno">21</span> 	<span class="o">}</span> 
-<span class="lineno">22</span> 
-<span class="lineno">23</span> 		html +<span class="o">=</span> <span class="s1">&#39;&lt;/span&gt;&#39;</span><span class="p">;</span>
-<span class="lineno">24</span> 		<span class="k">$(</span><span class="s1">&#39;.changelog&#39;</span><span class="k">)</span>.append<span class="o">(</span>html<span class="o">)</span><span class="p">;</span>
-<span class="lineno">25</span> 	<span class="o">}</span>
-<span class="lineno">26</span> 
-<span class="lineno">27</span> 
-<span class="lineno">28</span> 
-<span class="lineno">29</span> 
-<span class="lineno">30</span> <span class="o">)</span></code></pre></div>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="lineno">1</span> <span class="n">fontspec</span>
+<span class="lineno">2</span> <span class="n">ttf</span><span class="o">-</span><span class="n">font</span><span class="o">-</span><span class="n">awesome</span>
+<span class="lineno">3</span> <span class="n">XeLaTeX</span> <span class="ow">or</span> <span class="n">LuaTex</span></code></pre></div>
 
-<p>Notice the format of the url. It goes </p>
+<h2 id="load-the-font">Load the font</h2>
 
-<p>https://api.github.com/repos/<code>user</code>/<code>repo</code>/commits.</p>
+<p>After installing the packages you can load the font by creating a file such as
+<code>fontawesome.sty</code> that would be used as a LaTeX package.</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="lineno">1</span> <span class="err">\</span><span class="n">ProvidesPackage</span><span class="o">{</span><span class="n">fontawesome</span><span class="o">}</span>
+<span class="lineno">2</span> <span class="err">\</span><span class="n">usepackage</span><span class="o">{</span><span class="n">fontspec</span><span class="o">}</span>
+<span class="lineno">3</span> <span class="err">\</span><span class="n">newfontfamily</span><span class="o">{</span><span class="err">\</span><span class="n">FA</span><span class="o">}{</span><span class="n">FontAwesome</span><span class="o">}</span></code></pre></div>
+
+<p>After that, you need to map the symbols to its unicode. You can do that by
+adding lines like this:</p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="lineno">1</span> <span class="err">\</span><span class="n">def</span><span class="err">\</span><span class="n">faCamera</span><span class="o">{</span><span class="err">\</span><span class="n">symbol</span><span class="o">{</span><span class="s">&quot;F030}}</span>
+<span class="lineno">2</span> <span class="s">\def\faFont{\symbol{&quot;</span><span class="n">F031</span><span class="o">}}</span>
+<span class="lineno">3</span> <span class="err">\</span><span class="n">def</span><span class="err">\</span><span class="n">faBold</span><span class="o">{</span><span class="err">\</span><span class="n">symbol</span><span class="o">{</span><span class="err">&quot;</span><span class="n">F032</span><span class="o">}}</span>
+<span class="lineno">4</span> <span class="o">...</span></code></pre></div>
+
+<p>Many of these maps cna be found online. One can be found <a href="https://gist.github.com/sway/3101743">here.</a></p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="lineno">1</span> <span class="err">\</span><span class="n">documentclass</span><span class="o">{</span><span class="n">article</span><span class="o">}</span>
+<span class="lineno">2</span> <span class="err">\</span><span class="n">usepackage</span><span class="o">{</span><span class="n">fontawesome</span><span class="o">}</span>
+<span class="lineno">3</span> <span class="err">\</span><span class="n">begin</span><span class="o">{</span><span class="n">document</span><span class="o">}</span>
+<span class="lineno">4</span> <span class="err">\</span><span class="n">faCamera</span>
+<span class="lineno">5</span> <span class="err">\</span><span class="n">end</span><span class="o">{</span><span class="n">document</span><span class="o">}</span></code></pre></div>
+
+<p class="notice"><i class="fa fa-warning"></i> <strong>Notice:</strong> You will not be able to use
+FontAwsome’s fw option which help make lists with icons more aligned. A workaround would be to put icons and text in a tabular table with icons on one column and text in another.</p>
+
+<p>After finishing your resume you just need to run:</p>
+
+<div class="highlight"><pre><code class="language-tex" data-lang="tex"><span class="lineno">1</span> xelatex resume.tex</code></pre></div>
 
 
       
@@ -560,13 +557,40 @@ getSine();
 <button onclick ="getSine()" class = "btn" id = "sinbtn"> Regenerate Sine </button>
 
         </div>
- <!--       <p class="byline"><strong>Fetching Github Commit Messages</strong> was published
-			on <time datetime="2014-07-27T00:00:00-04:00">July 27, 2014</time> by <a href="/about" title="About Nikhil Kumar">Nikhil Kumar</a>.</p> -->
+ <!--       <p class="byline"><strong>Adding FontAwsome Icons to my resume using Latex</strong> was published
+			on <time datetime="2014-08-21T00:00:00-04:00">August 21, 2014</time> by <a href="/about" title="About Nikhil Kumar">Nikhil Kumar</a>.</p> -->
       </footer>
     </div><!-- /.article-wrap -->
   
   </article>
 </div><!-- /#main -->
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+	       rel:'  Packages'
+		   }).appendTo("pre:eq(0)");
+
+});	
+
+</script>
+
+
+
+
 
 
 
@@ -588,12 +612,125 @@ $( document ).ready(function() {
        $("pre").addClass("terminal");
 	   
 		 $("<span>",{
-	       rel:'  Javascript'
-		   }).appendTo("pre:eq(0)");
+			  rel:'  XeLaTeX'
+		   }).appendTo("pre:eq(1)");
 
 });	
 
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+			  rel:'  XeLaTeXe'
+		   }).appendTo("pre:eq(2)");
+
+});	
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+			  rel:'  XeLaTeXe'
+		   }).appendTo("pre:eq(3)");
+
+});	
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+	       rel:'  Bash'
+		   }).appendTo("pre:eq(4)");
+
+});	
+
+</script>
+
+
+
+
+
+
+
+
+
+
 
 
 

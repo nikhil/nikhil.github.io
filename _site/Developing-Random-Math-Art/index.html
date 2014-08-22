@@ -23,7 +23,7 @@
 <link href="/assets/css/loversquarrel.css" rel="stylesheet" />
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|PT+Sans|PT+Sans+Narrow|PT+Serif+Caption|PT+Mono|PT+Serif|Source+Code+Pro|Raleway|Raleway+Dots|PT+Sans+Caption' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Lato:400italic' rel='stylesheet' type='text/css'>
-<title>Fetching Github Commit Messages &#8211; Kumarcode</title>
+<title>Developing Random Math Art &#8211; Kumarcode</title>
 <meta name="description" content="">
 <meta name="keywords" content="">
 
@@ -31,16 +31,16 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Fetching Github Commit Messages">
+<meta property="og:title" content="Developing Random Math Art">
 <meta property="og:description" content="A stylish blog on my code">
-<meta property="og:url" content="/Fetching-github-commit-messages/">
+<meta property="og:url" content="/Developing-Random-Math-Art/">
 <meta property="og:site_name" content="Kumarcode">
 
 
 
 
 
-<link rel="canonical" href="/Fetching-github-commit-messages/">
+<link rel="canonical" href="/Developing-Random-Math-Art/">
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Kumarcode Feed">
 <link rel="author" href="http://plus.google.com/+/u/0/104266827599169158890/posts?rel=author">
 
@@ -390,55 +390,68 @@ getSine();
   <article>
     <div class="headline-wrap">
       
-        <h1><a href="/Fetching-github-commit-messages/" rel="bookmark" title="Fetching Github Commit Messages">Fetching Github Commit Messages</a></h1>
-		<p class="byline"><time datetime="2014-07-27T00:00:00-04:00">July 27, 2014</time></p>
+        <h1><a href="/Developing-Random-Math-Art/" rel="bookmark" title="Developing Random Math Art">Developing Random Math Art</a></h1>
+		<p class="byline"><time datetime="2014-08-21T00:00:00-04:00">August 21, 2014</time></p>
       
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
-      <p>I thought of an idea that will be pretty unique for my website. Since my
-website is hosted on <code>github</code>, I would like to access the commit messages to my
-git repository and display them to show the changes that are being made and
-also to make the point that this website is constantly being developed and
-tweaked by me.</p>
+      <p>You may have noticed the graph on the side. This is created dynamically by Javascript using random numbers and basic trig alterations of sine graphs. After a lot of googling, I was finally able to find a method. You first need to create a <code>canvas</code> object in your html</p>
 
-<p>Initially I thought it would be a good idea to use the javascript wrapper to
-access the github api. However, that made things more confusing. So I was able
-to retrieve the messages with just a simple get request.</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="lineno">1</span> <span class="nt">&lt;canvas</span> <span class="na">class =</span><span class="err"> </span><span class="s">&quot;sine&quot;</span> <span class="na">id=</span><span class="s">&quot;canvas&quot;</span> <span class="na">width=</span><span class="s">160</span> <span class="na">height=</span><span class="s">635</span><span class="nt">&gt;&lt;/canvas&gt;</span></code></pre></div>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="lineno"> 1</span> <span class="nv">$.</span>get<span class="o">(</span>
-<span class="lineno"> 2</span> <span class="s2">&quot;https://api.github.com/repos/nikhil/nikhil.github.io/commits&quot;</span>,
-<span class="lineno"> 3</span> <span class="k">function</span><span class="o">(</span>data<span class="o">){</span>
-<span class="lineno"> 4</span>    	var date<span class="p">;</span>
-<span class="lineno"> 5</span> 	var datepart<span class="p">;</span>
-<span class="lineno"> 6</span> 	var messagestr<span class="p">;</span>
-<span class="lineno"> 7</span> 	var <span class="nv">html</span> <span class="o">=</span> <span class="s1">&#39;&lt;br&gt;&lt;span class = &quot;changeitems&quot;&gt;&#39;</span><span class="p">;</span>
-<span class="lineno"> 8</span> 	
-<span class="lineno"> 9</span> 	<span class="k">for</span><span class="o">(</span><span class="nv">i</span><span class="o">=</span>0<span class="p">;</span>i &lt; 8<span class="p">;</span> i++<span class="o">)</span>
-<span class="lineno">10</span> 	<span class="o">{</span>	
-<span class="lineno">11</span> 		
-<span class="lineno">12</span> 	<span class="nv">messagestr</span> <span class="o">=</span> data<span class="o">[</span>i<span class="o">]</span>.commit.message<span class="p">;</span>
-<span class="lineno">13</span> 	<span class="nv">date</span> <span class="o">=</span> data<span class="o">[</span>i<span class="o">]</span>.commit.committer.date<span class="p">;</span>
-<span class="lineno">14</span> 	<span class="nv">datepart</span> <span class="o">=</span> date.split<span class="o">(</span><span class="s2">&quot;T&quot;</span><span class="o">)[</span>0<span class="o">]</span><span class="p">;</span>
-<span class="lineno">15</span> 	html +<span class="o">=</span> <span class="s1">&#39;&lt;font color = &quot;#586e75&quot;&gt;&#39;</span>+ datepart.substring<span class="o">(</span>5<span class="o">)</span>
-<span class="lineno">16</span> 	+<span class="s1">&#39;&lt;/font&gt;&#39;</span>+<span class="s1">&#39;&amp;nbsp;&amp;nbsp;&#39;</span>+messagestr+ <span class="s1">&#39;&lt;br&gt;&#39;</span><span class="p">;</span>
-<span class="lineno">17</span> 
-<span class="lineno">18</span> 				        
-<span class="lineno">19</span> 			
-<span class="lineno">20</span> 			
-<span class="lineno">21</span> 	<span class="o">}</span> 
-<span class="lineno">22</span> 
-<span class="lineno">23</span> 		html +<span class="o">=</span> <span class="s1">&#39;&lt;/span&gt;&#39;</span><span class="p">;</span>
-<span class="lineno">24</span> 		<span class="k">$(</span><span class="s1">&#39;.changelog&#39;</span><span class="k">)</span>.append<span class="o">(</span>html<span class="o">)</span><span class="p">;</span>
-<span class="lineno">25</span> 	<span class="o">}</span>
-<span class="lineno">26</span> 
-<span class="lineno">27</span> 
-<span class="lineno">28</span> 
-<span class="lineno">29</span> 
-<span class="lineno">30</span> <span class="o">)</span></code></pre></div>
+<p>Then create a canvas object in javascript pointing to that canvas.</p>
 
-<p>Notice the format of the url. It goes </p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="lineno">1</span> <span class="kd">var</span> <span class="nx">canvas</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;canvas&quot;</span><span class="p">);</span>
+<span class="lineno">2</span> <span class="kd">var</span> <span class="nx">ctx</span><span class="o">=</span><span class="nx">canvas</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="s2">&quot;2d&quot;</span><span class="p">);</span></code></pre></div>
 
-<p>https://api.github.com/repos/<code>user</code>/<code>repo</code>/commits.</p>
+<p>Then you have to clear the canvas for any previous lines:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="lineno">1</span> <span class="nx">ctx</span><span class="p">.</span><span class="nx">save</span><span class="p">();</span>
+<span class="lineno">2</span> 
+<span class="lineno">3</span> <span class="nx">ctx</span><span class="p">.</span><span class="nx">setTransform</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="lineno">4</span> <span class="nx">ctx</span><span class="p">.</span><span class="nx">clearRect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">width</span><span class="p">,</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">height</span><span class="p">);</span>
+<span class="lineno">5</span> 
+<span class="lineno">6</span> <span class="nx">ctx</span><span class="p">.</span><span class="nx">restore</span><span class="p">();</span></code></pre></div>
+
+<p>Now, draw the sine curve. There are many option you have here. I have a
+randomized amplitude and frequency for every <code>12th</code> number with a max amplitude
+of <code>75</code> and a max frequency of <code>1.5</code>.</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="lineno"> 1</span> <span class="k">while</span><span class="p">(</span> <span class="nx">x</span><span class="o">&lt;</span><span class="mi">400</span><span class="p">)</span>
+<span class="lineno"> 2</span> <span class="p">{</span>   <span class="k">if</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="o">%</span><span class="mi">12</span> <span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+<span class="lineno"> 3</span>     <span class="p">{</span>
+<span class="lineno"> 4</span>           <span class="nx">amp</span> <span class="o">=</span>  <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">75</span><span class="p">)</span><span class="o">+</span><span class="p">.</span><span class="mi">01</span><span class="p">;</span>
+<span class="lineno"> 5</span>         <span class="nx">width</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mf">1.5</span><span class="p">)</span><span class="o">+</span><span class="p">.</span><span class="mi">01</span><span class="p">;</span>
+<span class="lineno"> 6</span>     <span class="p">}</span>    
+<span class="lineno"> 7</span>         
+<span class="lineno"> 8</span>     
+<span class="lineno"> 9</span>     <span class="kd">var</span> <span class="nx">y</span><span class="o">=</span><span class="nx">amp</span><span class="o">*</span><span class="nb">Math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="nx">width</span><span class="o">*</span><span class="nx">x</span><span class="p">)</span><span class="o">+</span> <span class="mi">80</span><span class="p">;</span>
+<span class="lineno">10</span>     <span class="nx">ctx</span><span class="p">.</span><span class="nx">lineTo</span><span class="p">(</span><span class="nx">y</span><span class="p">,</span><span class="nx">x</span><span class="p">);</span>
+<span class="lineno">11</span>      <span class="nx">x</span><span class="o">=</span><span class="nx">x</span><span class="o">+</span><span class="p">.</span><span class="mi">05</span><span class="p">;</span>
+<span class="lineno">12</span> <span class="p">}</span></code></pre></div>
+
+<p>After that, you need to generate a randomized color gradient for the graph. To
+do so I used <code>createLinearGradient</code>.</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="lineno"> 1</span> <span class="kd">var</span> <span class="nx">gradient</span><span class="o">=</span><span class="nx">ctx</span><span class="p">.</span><span class="nx">createLinearGradient</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">300</span><span class="p">);</span>
+<span class="lineno"> 2</span> <span class="kd">var</span> <span class="nx">color1</span> <span class="o">=</span> <span class="s1">&#39;#&#39;</span><span class="o">+</span><span class="p">(</span><span class="mh">0x1000000</span><span class="o">+</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">())</span><span class="o">*</span><span class="mh">0xffffff</span><span class="p">).</span><span class="nx">toString</span><span class="p">(</span><span class="mi">16</span><span class="p">).</span><span class="nx">substr</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="lineno"> 3</span> <span class="nx">gradient</span><span class="p">.</span><span class="nx">addColorStop</span><span class="p">(</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nx">color1</span><span class="p">);</span>
+<span class="lineno"> 4</span> <span class="kd">var</span> <span class="nx">color2</span> <span class="o">=</span> <span class="s1">&#39;#&#39;</span><span class="o">+</span><span class="p">(</span><span class="mh">0x1000000</span><span class="o">+</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">())</span><span class="o">*</span><span class="mh">0xffffff</span><span class="p">).</span><span class="nx">toString</span><span class="p">(</span><span class="mi">16</span><span class="p">).</span><span class="nx">substr</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="lineno"> 5</span> <span class="nx">gradient</span><span class="p">.</span><span class="nx">addColorStop</span><span class="p">(</span><span class="s2">&quot;.25&quot;</span><span class="p">,</span><span class="nx">color2</span><span class="p">);</span>
+<span class="lineno"> 6</span> <span class="kd">var</span> <span class="nx">color3</span> <span class="o">=</span> <span class="s1">&#39;#&#39;</span><span class="o">+</span><span class="p">(</span><span class="mh">0x1000000</span><span class="o">+</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">())</span><span class="o">*</span><span class="mh">0xffffff</span><span class="p">).</span><span class="nx">toString</span><span class="p">(</span><span class="mi">16</span><span class="p">).</span><span class="nx">substr</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="lineno"> 7</span> <span class="kd">var</span> <span class="nx">color4</span> <span class="o">=</span> <span class="s1">&#39;#&#39;</span><span class="o">+</span><span class="p">(</span><span class="mh">0x1000000</span><span class="o">+</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">())</span><span class="o">*</span><span class="mh">0xffffff</span><span class="p">).</span><span class="nx">toString</span><span class="p">(</span><span class="mi">16</span><span class="p">).</span><span class="nx">substr</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="lineno"> 8</span> <span class="nx">gradient</span><span class="p">.</span><span class="nx">addColorStop</span><span class="p">(</span><span class="s2">&quot;.5&quot;</span><span class="p">,</span><span class="nx">color3</span><span class="p">);</span>
+<span class="lineno"> 9</span> <span class="nx">gradient</span><span class="p">.</span><span class="nx">addColorStop</span><span class="p">(</span><span class="s2">&quot;1.0&quot;</span><span class="p">,</span><span class="nx">color4</span><span class="p">);</span>
+<span class="lineno">10</span> 
+<span class="lineno">11</span> <span class="c1">// Fill with gradient</span>
+<span class="lineno">12</span> <span class="nx">ctx</span><span class="p">.</span><span class="nx">strokeStyle</span><span class="o">=</span><span class="nx">gradient</span><span class="p">;</span>
+<span class="lineno">13</span> <span class="nx">ctx</span><span class="p">.</span><span class="nx">lineWidth</span><span class="o">=</span><span class="mf">2.4</span><span class="p">;</span>
+<span class="lineno">14</span> 
+<span class="lineno">15</span> <span class="nx">ctx</span><span class="p">.</span><span class="nx">stroke</span><span class="p">();</span></code></pre></div>
+
+<p>Finally, a button to regenerate the sine.</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="lineno">1</span> <span class="nt">&lt;button</span> <span class="na">onclick =</span><span class="s">&quot;getSine()&quot;</span> <span class="na">class =</span><span class="err"> </span><span class="s">&quot;btn&quot;</span> <span class="na">id =</span><span class="err"> </span><span class="s">&quot;sinbtn&quot;</span><span class="nt">&gt;</span> Regenerate Sine <span class="nt">&lt;/button&gt;</span></code></pre></div>
 
 
       
@@ -560,13 +573,48 @@ getSine();
 <button onclick ="getSine()" class = "btn" id = "sinbtn"> Regenerate Sine </button>
 
         </div>
- <!--       <p class="byline"><strong>Fetching Github Commit Messages</strong> was published
-			on <time datetime="2014-07-27T00:00:00-04:00">July 27, 2014</time> by <a href="/about" title="About Nikhil Kumar">Nikhil Kumar</a>.</p> -->
+ <!--       <p class="byline"><strong>Developing Random Math Art</strong> was published
+			on <time datetime="2014-08-21T00:00:00-04:00">August 21, 2014</time> by <a href="/about" title="About Nikhil Kumar">Nikhil Kumar</a>.</p> -->
       </footer>
     </div><!-- /.article-wrap -->
   
   </article>
 </div><!-- /#main -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+	       rel:'  Html'
+		   }).appendTo("pre:eq(0)");
+
+});	
+
+</script>
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -589,11 +637,151 @@ $( document ).ready(function() {
 	   
 		 $("<span>",{
 	       rel:'  Javascript'
-		   }).appendTo("pre:eq(0)");
+		   }).appendTo("pre:eq(1)");
 
 });	
 
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+	       rel:'  Javascript'
+		   }).appendTo("pre:eq(2)");
+
+});	
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+	       rel:'  Javascript'
+		   }).appendTo("pre:eq(3)");
+
+});	
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+	       rel:'  Javascript'
+		   }).appendTo("pre:eq(4)");
+
+});	
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+	       rel:'  Html'
+		   }).appendTo("pre:eq(5)");
+
+});	
+
+</script>
+
+
 
 
 
@@ -617,7 +805,7 @@ $( document ).ready(function() {
     
       <li><a href="/Getting-Black-Hat-on-my-Android/" title="Getting Black Hat on my Android">Getting Black Hat on my Android</a></li>
     
-      <li><a href="/Developing-Random-Math-Art/" title="Developing Random Math Art">Developing Random Math Art</a></li>
+      <li><a href="/Adding-FontAwsome-icons-to-my-resume-using-Latex/" title="Adding FontAwsome Icons to my resume using Latex">Adding FontAwsome Icons to my resume using Latex</a></li>
     
     </ul>
     <hr />
