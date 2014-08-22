@@ -349,15 +349,24 @@ font-size: 80%;
 
 .sin {
 	position: absolute;
-	left: 840px;
-	top: 360px;
-}
+	right: 0px;
+
+	}
 
 #sinbtn {
 	position: absolute;
-	left: 850px;
-	top: 800px;
-
+    right: 30px;
+	top: 450px;
 
 
 }
+
+.sidesine
+{
+position: relative;	
+display: block;
+display: inline;
+left: 165px;
+margin-right: 4.16666667%;
+
+}	

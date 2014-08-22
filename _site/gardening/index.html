@@ -304,7 +304,6 @@
 
 <br>
 <i class="fa fa-git-square"></i><span class ="changelog"> Change log: </span>
-<canvas class = "sin" id="canvas" width=160 height=635></canvas>
 <script type="text/javascript">
 $.get(
   		"https://api.github.com/repos/nikhil/nikhil.github.io/commits",
@@ -338,6 +337,23 @@ $.get(
 
 	  )
 
+</script>
+
+
+  </div>
+  <article class="Gardening">
+    <h1>Gardening</h1>
+    <div class="article-wrap">
+      
+
+    </div><!-- /.article-wrap -->
+    
+      <section id="disqus_thread"></section><!-- /#disqus_thread -->
+    
+  </article>
+  <div class="sidesine">
+	 <canvas class = "sin" id="canvas" width=160 height=635></canvas>
+<script type="text/javascript">
 function getSine()
 {
 
@@ -387,8 +403,8 @@ ctx.strokeStyle=gradient;
 ctx.lineWidth=2.4;
 
 ctx.stroke();
-$('.post .sin').css('top','80px');
-$('.post #sinbtn').css('top','520px');
+//$('.post .sin').css('top','80px');
+//$('.post #sinbtn').css('top','520px');
 
 }
 
@@ -397,17 +413,8 @@ getSine();
 
 <button onclick ="getSine()" class = "btn" id = "sinbtn"> Regenerate Sine </button>
 
-  </div>
-  <article class="Gardening">
-    <h1>Gardening</h1>
-    <div class="article-wrap">
-      
+ </div>
 
-    </div><!-- /.article-wrap -->
-    
-      <section id="disqus_thread"></section><!-- /#disqus_thread -->
-    
-  </article>
 </div><!-- /#index -->
 
 
