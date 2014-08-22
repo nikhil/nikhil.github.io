@@ -7,7 +7,7 @@ tags: [about]
 modified: 9-9-2013
 comments: true
 image:
-  feature: asiatic-lily.jpg
+  feature: asiatic-lily1.jpg
   credit: Asiatic lily taken by me in my backyard.
 ---
 
