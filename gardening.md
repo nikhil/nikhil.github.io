@@ -60,7 +60,7 @@ image:
 
 <img src="/images/gardening/trees.jpg"/>
 
-<img src="/images/gardening/treesclosel.JPG"/>
+<img src="/images/gardening/treesclose.JPG"/>
 
 <img src="/images/gardening/unknown.JPG"/>
 
