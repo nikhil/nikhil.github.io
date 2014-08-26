@@ -489,7 +489,7 @@ var w = setTimeout(function() { // give external JS 1 second of time to load
 <i class="fa fa-warning"></i>  **Notice:** Running the image capture on the
 javascript itself actually interfered with the javascript code generating the
 animation. It made the animation much slower. The only way to make the
-animation faster is to reduce the rate or frame capture. This noticeably
+animation faster is to reduce the rate of frame capture. This noticeably
 reduces the quality of the animation. 
 {: .notice}
 
