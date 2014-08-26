@@ -226,6 +226,8 @@ function drawinSine(t) {
 
 #Example
 
+Here is how the loading canvas animation looks:
+
 <div id="canvas-container" style="width: 500px; height: 300px;">
     <canvas id="sineCanvas" style="width: 500px; height: 300px;" width="500" height="300"></canvas>
 </div>
