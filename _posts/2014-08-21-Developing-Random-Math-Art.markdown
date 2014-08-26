@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Developing Random Math Art  
+title: Developing Random Math Art
+comments: true
 code:
 - type: html 
   count: 0

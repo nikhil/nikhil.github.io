@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Generating a .gif from a Http canvas  
+title: Generating a .gif from a Http canvas 
+comments: true
 code:
 - type: html 
   count: 0

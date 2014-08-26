@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Adding FontAwsome Icons to my resume using Latex 
+title: Adding FontAwsome Icons to my resume using Latex
+comments: true
 code:
 - type: packages
   count: 0

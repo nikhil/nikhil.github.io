@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: Simple Css styling with Awsome effects 
 code:
 - type: css

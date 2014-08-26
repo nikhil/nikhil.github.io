@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: Using Lastfm to display music 
 code:
 - type: bash

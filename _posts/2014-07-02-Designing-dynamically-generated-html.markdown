@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Designing dynamically generated html from Jekyll 
+title: Designing dynamically generated html from Jekyll
+comments: true
 code:
 - type: file
   file: Liquid

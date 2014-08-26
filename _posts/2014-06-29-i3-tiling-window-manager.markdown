@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: i3 tiling window manager 
 code:
 - type: bash 

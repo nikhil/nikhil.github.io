@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: Monitoring the Hubble constant with Ajax 
 code:
 - type: file

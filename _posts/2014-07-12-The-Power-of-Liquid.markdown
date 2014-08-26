@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: The Power of Liquid 
 code:
 - type: file

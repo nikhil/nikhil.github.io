@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  Adding your custom font to i3status
 code:
 - type: css 

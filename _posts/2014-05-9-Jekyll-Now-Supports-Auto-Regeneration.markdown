@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: Jekyll Now Supports Auto-Regeneration 
 code:
 - type: bash

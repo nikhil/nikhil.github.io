@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Getting Black Hat on my Android
+comments: true
 
 ---
 Today I decided to try something new. This project was actually quite

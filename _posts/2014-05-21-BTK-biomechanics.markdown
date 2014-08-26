@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: BTK, A tool for reading C3d files
 code:
 - type: file

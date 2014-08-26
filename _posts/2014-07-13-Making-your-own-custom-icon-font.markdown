@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: Making your own custom icon font. 
 code:
 - type: bash 

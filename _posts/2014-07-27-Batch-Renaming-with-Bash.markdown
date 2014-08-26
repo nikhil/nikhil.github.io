@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: Batch Renaming with Bash 
 code:
 - type: bash

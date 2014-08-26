@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: Fetching Github Commit Messages 
 code:
 - type: javascript 
