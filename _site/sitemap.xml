@@ -52,7 +52,7 @@
 
     
     <url>
-        <loc>/Jekyll-Now-Supports-Auto-Regeneration/</loc>
+        <loc>/Generating-a-GIF-from-a-Http-canvas/</loc>
     </url>
     
     <url>
@@ -113,6 +113,10 @@
     
     <url>
         <loc>/BTK-biomechanics/</loc>
+    </url>
+    
+    <url>
+        <loc>/Jekyll-Now-Supports-Auto-Regeneration/</loc>
     </url>
     
 </urlset>

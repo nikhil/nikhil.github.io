@@ -10,72 +10,78 @@ image:
   feature: lily.jpg
   credit: Lily taken by me in my backyard.
 ---
-<img class="lazy-img" src="/images/gardening/asiaticlily.JPG"/>
+<img class="lazy" data-src="/images/gardening/asiaticlily.JPG" src="/images/loading.gif" />
 
-<img class="lazy-img" src="/images/gardening/bellflower.jpg"/>
+<img class="lazy" data-src="/images/gardening/bellflower.jpg" src="/images/loading.gif"/>
 
-<img class="lazy-img" src="/images/gardening/bellflower.JPG"/>
+<img class="lazy" data-src="/images/gardening/bellflower.JPG" src="/images/loading.gif"/>
 
-<img class="lazy-img" src="/images/gardening/bleadinghearts.JPG"/>
+<img class="lazy" data-src="/images/gardening/bleadinghearts.JPG" src="/images/loading.gif"/>
 
-<img class="lazy-img" src="/images/gardening/cardinal.JPG"/>
+<img class="lazy" data-src="/images/gardening/cardinal.JPG" src="/images/loading.gif"/>
 
-<img class="lazy-img" src="/images/gardening/climbing.jpg"/>
+<img class="lazy" data-src="/images/gardening/climbing.jpg" src="/images/loading.gif"/>
 
-<img class="lazy-img" src="/images/gardening/dianthis.jpg"/>
+<img class="lazy" data-src="/images/gardening/dianthis.jpg" src="/images/loading.gif"/>
 
-<img class="lazy-img" src="/images/gardening/forgetmenot.JPG"/>
+<img class="lazy" data-src="/images/gardening/forgetmenot.JPG" src="/images/loading.gif"/>
 
-<img class="lazy-img" src="/images/gardening/foxgloves.jpg"/>
+<img class="lazy" data-src="/images/gardening/foxgloves.jpg" src="/images/loading.gif"/>
 
-<img class="lazy-img" src="/images/gardening/foxgloveswhite.JPG" />
+<img class="lazy" data-src="/images/gardening/foxgloveswhite.JPG"  src="/images/loading.gif"/>
 
-<img class="lazy-img" src="/images/gardening/hydrangea.jpg"/>
+<img class="lazy" data-src="/images/gardening/hydrangea.jpg" src="/images/loading.gif"/>
 
-<img class="lazy-img" src="/images/gardening/hydrangea.JPG"/>
+<img class="lazy" data-src="/images/gardening/hydrangea.JPG" src="/images/loading.gif"/>
 
-<img class="lazy-img" src="/images/gardening/iceroterand.JPG"/>
+<img class="lazy" data-src="/images/gardening/iceroterand.JPG" src="/images/loading.gif"/>
 
-<img class="lazy-img" src="/images/gardening/lambsear.JPG"/>
+<img class="lazy" data-src="/images/gardening/lambsear.JPG" src="/images/loading.gif"/>
 
-<img class="lazy-img" src="/images/gardening/left.JPG"/>
+<img class="lazy" data-src="/images/gardening/left.JPG" src="/images/loading.gif"/>
 
-<img class="lazy-img" src="/images/gardening/lilac.JPG"/>
+<img class="lazy" data-src="/images/gardening/lilac.JPG" src="/images/loading.gif"/>
 
-<img class="lazy-img" src="/images/gardening/lily.JPG"/>
+<img class="lazy" data-src="/images/gardening/lily.JPG" src="/images/loading.gif"/>
 
-<img class="lazy-img" src="/images/gardening/mums.jpg"/>
+<img class="lazy" data-src="/images/gardening/mums.jpg" src="/images/loading.gif"/>
 
-<img class="lazy-img" src="/images/gardening/babyrabbit.JPG"/>
+<img class="lazy" data-src="/images/gardening/babyrabbit.JPG" src="/images/loading.gif"/>
 
-<img class="lazy-img" src="/images/gardening/rabbit.jpg"/>
+<img class="lazy" data-src="/images/gardening/rabbit.jpg" src="/images/loading.gif"/>
 
-<img class="lazy-img" src="/images/gardening/right.JPG"/>
+<img class="lazy" data-src="/images/gardening/right.JPG"  src="/images/loading.gif"/>
 
-<img class="lazy-img" src="/images/gardening/roterand.JPG"/>
+<img class="lazy" data-src="/images/gardening/roterand.JPG" src="/images/loading.gif"/>
 
-<img class="lazy-img" src="/images/gardening/squirrel.JPG"/>
+<img class="lazy" data-src="/images/gardening/squirrel.JPG" src="/images/loading.gif"/>
 
-<img class="lazy-img" src="/images/gardening/steps.JPG"/>
+<img class="lazy" data-src="/images/gardening/steps.JPG" src="/images/loading.gif"/>
 
-<img class="lazy-img" src="/images/gardening/trees.jpg"/>
+<img class="lazy" data-src="/images/gardening/trees.jpg" src="/images/loading.gif"/>
 
-<img class="lazy-img" src="/images/gardening/treesclose.JPG"/>
+<img class="lazy" data-src="/images/gardening/treesclose.JPG"  src="/images/loading.gif"/>
 
-<img class="lazy-img" src="/images/gardening/unknown.JPG"/>
+<img class="lazy" data-src="/images/gardening/unknown.JPG"  src="/images/loading.gif"/>
 
-<img class="lazy-img" src="/images/gardening/unknown2.JPG"/>
+<img class="lazy" data-src="/images/gardening/unknown2.JPG"  src="/images/loading.gif"/>
 
-<img class="lazy-img" src="/images/gardening/back.JPG"/>
+<img class="lazy" data-src="/images/gardening/back.JPG"  src="/images/loading.gif"/>
 
-<img class="lazy-img" src="/images/gardening/left.JPG"/>
+<img class="lazy" data-src="/images/gardening/left.JPG"  src="/images/loading.gif"/>
 
-<img class="lazy-img" src="/images/gardening/right.JPG"/>
+<img class="lazy" data-src="/images/gardening/right.JPG"  src="/images/loading.gif"/>
 
 
 <script>
-  $(function() {
-    $('.lazy-img').imageloader();
-  });
+$(document).ready(function() {
+
+$(".lazy").unveil();
+
+
+});
 </script>
+
+
+
 
