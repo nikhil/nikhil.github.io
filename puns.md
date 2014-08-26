@@ -53,6 +53,13 @@ y<br>
 y<br>
 y<br>
 y<br>
+<br>
+<br>
+<li>
+Friend holds phone to his eye. "What is this?"<br>
+Me: "An iphone"
+<br>
+<br>
 
 
 
