@@ -25,24 +25,24 @@
 <link href="/assets/css/loversquarrel.css" rel="stylesheet" />
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|PT+Sans|PT+Sans+Narrow|PT+Serif+Caption|PT+Mono|PT+Serif|Source+Code+Pro|Raleway|Raleway+Dots|PT+Sans+Caption' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Lato:400italic' rel='stylesheet' type='text/css'>
-<title>Adding your custom font to i3status &#8211; Kumarcode</title>
+<title>Projects &#8211; Kumarcode</title>
 <meta name="description" content="">
-<meta name="keywords" content="">
+<meta name="keywords" content="projects">
 
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Adding your custom font to i3status">
+<meta property="og:title" content="Projects">
 <meta property="og:description" content="A stylish blog on my code">
-<meta property="og:url" content="/Adding-your-custom-font-to-i3status/">
+<meta property="og:url" content="/projects/">
 <meta property="og:site_name" content="Kumarcode">
 
 
 
 
 
-<link rel="canonical" href="/Adding-your-custom-font-to-i3status/">
+<link rel="canonical" href="/projects/">
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Kumarcode Feed">
 <link rel="author" href="http://plus.google.com/+/u/0/104266827599169158890/posts?rel=author">
 
@@ -83,7 +83,7 @@
 
 </head>
 
-<body class="post">
+<body class="page">
 
 <!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
 
@@ -270,6 +270,17 @@
 
 
 
+  <div class="image-wrap">
+  <img src=
+    
+      "/images/rabbit.jpg"
+    
+  alt="Projects feature image">
+  
+    <span class="image-credit">Photo Credit: <a href="">A Rabbit from my backyard.</a></span>
+  
+  </div><!-- /.image-wrap -->
+
 
 <div id="main" role="main">
   <div class="article-author-side">
@@ -332,161 +343,17 @@ $.get(
 
 
   </div>
-  <article>
-    <div class="headline-wrap">
-      
-        <h1><a href="/Adding-your-custom-font-to-i3status/" rel="bookmark" title="Adding your custom font to i3status">Adding your custom font to i3status</a></h1>
-		<p class="byline"><time datetime="2014-07-13T00:00:00-04:00">July 13, 2014</time></p>
-      
-    </div><!--/ .headline-wrap -->
-
-
+  <article class="Projects">
+    <h1>Projects</h1>
     <div class="article-wrap">
-      <p>Now that I have created my custom icon font. I would like to add this font to
-my i3status. This will be a challenge since before I was able to use a <code>css
-selector</code> to add my icon. I cannot use css selectors in my i3status config.
-However, if you look at the <code>css</code> file generated with your font located in:
-<br />
-<br /></p>
-
-<blockquote>
-~/svgimages/app/assets/stylesheets/IconicIcons.css
-</blockquote>
-
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="lineno">1</span> <span class="nc">.icon-arch</span><span class="nd">:before</span> 
-<span class="lineno">2</span> <span class="p">{</span> 
-<span class="lineno">3</span> <span class="k">content</span><span class="o">:</span> <span class="s2">&quot;\f100&quot;</span><span class="p">;</span> 
-<span class="lineno">4</span> <span class="p">}</span></code></pre></div>
-
-<p>You can see
-the each icon has its own unique <code>unicode</code> sequence.
-###Add the font to your font cache
-Now that you have the <code>ttf</code> file for your font. You can now add it to you font
-cache.</p>
-
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="lineno">1</span> <span class="n">mkdir</span> <span class="o">~/.</span><span class="na">local</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">fonts</span>
-<span class="lineno">2</span> <span class="n">cp</span> <span class="o">*.</span><span class="na">ttf</span> <span class="o">~/.</span><span class="na">local</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">fonts</span>
-<span class="lineno">3</span> <span class="n">fc</span><span class="o">-</span><span class="n">cache</span> <span class="o">-</span><span class="n">fv</span></code></pre></div>
-
-<p>Now you should add the custom font into the i3status config located in:</p>
-<blockquote>
-~/.i3/config
-</blockquote>
-<p>And edit the font line to contain your font.</p>
-
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="lineno">1</span> <span class="nt">font</span> <span class="nt">pango</span><span class="nd">:Source</span> <span class="nt">Sans</span> <span class="nt">Pro</span><span class="o">,</span> <span class="nt">IconicIcons</span> <span class="nt">11</span></code></pre></div>
-
-<p>After that you can then add the icon in the status messages in your
-<code>i3status.conf</code> located in:</p>
-<blockquote>
-~/.i3/i3status.conf
-</blockquote>
-
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="lineno"> 1</span> <span class="n">tztime</span> <span class="n">local</span> <span class="o">{</span>
-<span class="lineno"> 2</span>         <span class="n">format</span> <span class="o">=</span> <span class="s">&quot; %a %m-%d-%y %l:%M:%S %p&quot;</span>
-<span class="lineno"> 3</span> <span class="o">}</span>
-<span class="lineno"> 4</span> 
-<span class="lineno"> 5</span> <span class="n">load</span> <span class="o">{</span>
-<span class="lineno"> 6</span>         <span class="n">format</span> <span class="o">=</span> <span class="s">&quot; %1min&quot;</span>
-<span class="lineno"> 7</span> <span class="o">}</span>
-<span class="lineno"> 8</span> 
-<span class="lineno"> 9</span> <span class="n">disk</span> <span class="s">&quot;/&quot;</span> <span class="o">{</span>
-<span class="lineno">10</span> 	<span class="n">format</span> <span class="o">=</span> <span class="s">&quot;/: %free&quot;</span>
-<span class="lineno">11</span> <span class="o">}</span></code></pre></div>
-
-<p>I decided to put the arch logo in front of the <code>/</code> disk. To insert unicode into
-the file in <code>vim</code> you just need to:
-<br />
-<br />
-<code>ctrl + v</code> + <code>u</code> + <code>unicodesequence</code> <br />
-so for the Arch icon it would be:<br />
-<code>ctrl + v</code> + <code>u</code> + <code>f100</code><br />
-After that, all you need to do is refresh i3 by:<br />
-<code>ctrl + shift + r</code> <br />
-Now, sit back and admire your icons on your i3status bar!
-Here is picture of my i3 status. To view the full screen image click <a href="/images/i3status.png"> here.</a>
-<br />
-<br />
-<img src="/images/i3status.png" alt="i3status" />
-<br />
-<br />
-Here is a close up picture of the <i class="icon-Arch"></i> icon on my i3 status. To view the full screen image click <a href="/images/i3statusclose.png"> here.</a>
-<br />
-<br />
-<img src="/images/i3statusclose.png" alt="i3status" /></p>
-
-
       
-      <footer role="contentinfo">
-        <div class="article-author-bottom">
-          
-	<img src="/images/bio-photo.jpg" class="bio-photo" alt="Nikhil Kumar bio photo"></a>
 
-<h3>Nikhil Kumar</h3>
-<span class="siteBio">A stylish blog on my code<br><br></span>
-
-
-<a href="http://plus.google.com//u/0/104266827599169158890/posts" class="author-social" target="_blank">&nbsp;<i class="icon-google-plus"></i>&nbsp;<span class = "socialelm" style= "position: relative; left: 1px;"><font color="#d34836">G</font>oogle+</span></a>
-<a href="mailto:nikhilkumar516@gmail.com" class="author-social" target="_blank"><i class="fa fa-envelope fa-fw"></i><span class = "socialelm"> <font color="#d34836"> G</font>mail</span></a>
-
-
-
-
-<a href="http://github.com/nikhil" class="author-social" target="_blank"><i class="fa fa-github-square fa-fw"></i> <span class = "socialelm"><font color="#d34836">G</font>ithub</span></a>
-
-
-
-
-
-
-<br>
-<i class="fa fa-git-square"></i><span class ="changelog"> Changelog: </span>
-<script type="text/javascript">
-$.get(
-  		"https://api.github.com/repos/nikhil/nikhil.github.io/commits",
-		function(data){
-		   	var date;
-			var datepart;
-			var messagestr;
-			var html = '<br><span class = "changeitems">';
-			for(i=0;i < 8; i++)
-			{	
-				messagestr = data[i].commit.message;
-				date = data[i].commit.committer.date;
-                datepart = date.split("T")[0];
-				html += '<font color = "#586e75">'+ datepart.substring(5)+'</font>'+'&nbsp;&nbsp;'+messagestr+ '<br>';
-
-				        
-			
-			
-			} 
-
-		     html += '</span>';
-			 $('.changelog').append(html);
-			 $('.changelog').removeClass('changelog');
-
-			 
-	
-		}
-
-
-
-
-	  )
-
-</script>
-
-
-        </div>
- <!--       <p class="byline"><strong>Adding your custom font to i3status</strong> was published
-			on <time datetime="2014-07-13T00:00:00-04:00">July 13, 2014</time> by <a href="/about" title="About Nikhil Kumar">Nikhil Kumar</a>.</p> -->
-      </footer>
     </div><!-- /.article-wrap -->
-  
-    <section id="disqus_thread"></section><!-- /#disqus_thread -->
-  
+    
+      <section id="disqus_thread"></section><!-- /#disqus_thread -->
+    
   </article>
-<div class="sidesine">
+  <div class="sidesine">
 	 <canvas class = "sin" id="canvas" width=160 height=635></canvas>
 <script type="text/javascript">
 function getSine()
@@ -551,168 +418,28 @@ getSine();
 <button onclick ="getSine()" class = "btnsine" id = "sinbtn"> Regenerate </button>
 
  </div>
-  
-</div><!-- /#main -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div><!-- /#index -->
 
 
 <script type="text/javascript">
-$( document ).ready(function() {
-     
-       $("pre").addClass("terminal");
-	   
-		 $("<span>",{
-	       rel:'  Css'
-		   }).appendTo("pre:eq(0)");
 
-});	
+/* Create a cache object */
+var cache = new LastFMCache();
+/* Create a LastFM object */
+var lastfm = new LastFM({
+  apiKey    : '3f7a62bedd43ef8963c8a9895fdc7ad0',
+  apiSecret : '7e732871d0fcabc9c85cb0830a52041a',
+  cache: cache
 
+});
 </script>
-
-
-
-
-
-
-
-<script type="text/javascript">
-$( document ).ready(function() {
-     
-       $("pre").addClass("terminal");
-	   
-		 $("<span>",{
-	       rel:'  Bash'
-		   }).appendTo("pre:eq(1)");
-
-});	
-
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script type="text/javascript">
-$( document ).ready(function() {
-     
-       $("pre").addClass("terminal");
-	   
-		 $("<span>",{
-			  rel:'  config'
-		   }).appendTo("pre:eq(2)");
-
-});	
-
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script type="text/javascript">
-$( document ).ready(function() {
-     
-       $("pre").addClass("terminal");
-	   
-		 $("<span>",{
-			  rel:'  i3status.conf'
-		   }).appendTo("pre:eq(3)");
-
-});	
-
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 
 <div class="footer-wrap">
-  <div class="related-articles">
-  <h4>You might also enjoy <small class="pull-right">(<a href="/posts/">View all posts</a>)</small></h4>
-    <ul>
-    
-      <li><a href="/Generating-a-GIF-from-a-Http-canvas/" title="Generating a .gif from a Http canvas">Generating a .gif from a Http canvas</a></li>
-    
-      <li><a href="/Getting-Black-Hat-on-my-Android/" title="Getting Black Hat on my Android">Getting Black Hat on my Android</a></li>
-    
-      <li><a href="/Developing-Random-Math-Art/" title="Developing Random Math Art">Developing Random Math Art</a></li>
-    
-    </ul>
-    <hr />
-  </div><!-- /.related-articles -->
   <footer>
     <span>&copy; 2014 Nikhil Kumar. Powered by <a href="http://jekyllrb.com">Jekyll</a>. Not <a href="/puns/">Hyde</a>n by <a href="https://pages.github.com/">Github pages</a></span> 
 
@@ -746,7 +473,7 @@ $( document ).ready(function() {
 <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
-	        
+          
 
 </body>
 </html>
