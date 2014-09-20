@@ -66,6 +66,24 @@ music:
 
 - name: The Heart Of Everything
   by: Within Temptation
+
+- name: Lateralus
+  by: Tool
+
+- name: 10,000 Days
+  by: Tool
+
+- name: Dance of Death
+  by: Iron Maiden
+
+- name: "Metropolis Part 2: Scenes From a Memory"
+  by: Dream Theater
+
+- name: Boston
+  by: Boston
+
+- name: London Calling
+  by: The Clash
 ---
 <p> A log of my favorite music tracks</p>
 <h1>Albums</h1>

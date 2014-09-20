@@ -1672,6 +1672,372 @@ $('.albums').append(html);
 
 
 
+<script type="text/javascript">
+
+/* Load some artist info. */
+lastfm.album.getInfo({artist: 'Tool',album: 'Lateralus'}, {success: function(data){
+
+
+var name = data.album.name;
+var artist = data.album.artist;
+var releasedate = data.album.releasedate;
+
+ 
+
+var pieces = releasedate.split(",");
+var date = pieces[0];
+var tags = data.album.toptags.tag;
+var tag;
+var url = data.album.image[2]["#text"];
+var albumimage = '<img src="'+url+'">';
+var title = '<p>' + artist + ' - ' + name +'</p>';
+var dateelem = '<p>' +'Released: '+ date + '</p>';
+
+var html = title;
+html += dateelem;
+var codetag;
+var tag;
+var length = tags.length;
+html += '<p>';
+html += 'Tags: ';
+for(var i=0; i<tags.length; i++)
+{
+   tag = tags[i];
+   if(tag.name != "albums i own")
+   {
+		codetag = '<code>'+ tag.name + '</code>';
+        html += codetag;
+
+
+   } 
+   
+
+}
+html += '</p>';
+html = '<div class="album"> <div class="albumimage">'+albumimage+'</div><div class="albumcontent">'+html+'</div></div>';
+$('.albums').append(html);
+}, error: function(code, message){
+  
+}});
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+
+/* Load some artist info. */
+lastfm.album.getInfo({artist: 'Tool',album: '10,000 Days'}, {success: function(data){
+
+
+var name = data.album.name;
+var artist = data.album.artist;
+var releasedate = data.album.releasedate;
+
+ 
+
+var pieces = releasedate.split(",");
+var date = pieces[0];
+var tags = data.album.toptags.tag;
+var tag;
+var url = data.album.image[2]["#text"];
+var albumimage = '<img src="'+url+'">';
+var title = '<p>' + artist + ' - ' + name +'</p>';
+var dateelem = '<p>' +'Released: '+ date + '</p>';
+
+var html = title;
+html += dateelem;
+var codetag;
+var tag;
+var length = tags.length;
+html += '<p>';
+html += 'Tags: ';
+for(var i=0; i<tags.length; i++)
+{
+   tag = tags[i];
+   if(tag.name != "albums i own")
+   {
+		codetag = '<code>'+ tag.name + '</code>';
+        html += codetag;
+
+
+   } 
+   
+
+}
+html += '</p>';
+html = '<div class="album"> <div class="albumimage">'+albumimage+'</div><div class="albumcontent">'+html+'</div></div>';
+$('.albums').append(html);
+}, error: function(code, message){
+  
+}});
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+
+/* Load some artist info. */
+lastfm.album.getInfo({artist: 'Iron Maiden',album: 'Dance of Death'}, {success: function(data){
+
+
+var name = data.album.name;
+var artist = data.album.artist;
+var releasedate = data.album.releasedate;
+
+ 
+
+var pieces = releasedate.split(",");
+var date = pieces[0];
+var tags = data.album.toptags.tag;
+var tag;
+var url = data.album.image[2]["#text"];
+var albumimage = '<img src="'+url+'">';
+var title = '<p>' + artist + ' - ' + name +'</p>';
+var dateelem = '<p>' +'Released: '+ date + '</p>';
+
+var html = title;
+html += dateelem;
+var codetag;
+var tag;
+var length = tags.length;
+html += '<p>';
+html += 'Tags: ';
+for(var i=0; i<tags.length; i++)
+{
+   tag = tags[i];
+   if(tag.name != "albums i own")
+   {
+		codetag = '<code>'+ tag.name + '</code>';
+        html += codetag;
+
+
+   } 
+   
+
+}
+html += '</p>';
+html = '<div class="album"> <div class="albumimage">'+albumimage+'</div><div class="albumcontent">'+html+'</div></div>';
+$('.albums').append(html);
+}, error: function(code, message){
+  
+}});
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+
+/* Load some artist info. */
+lastfm.album.getInfo({artist: 'Dream Theater',album: 'Metropolis Part 2: Scenes From a Memory'}, {success: function(data){
+
+
+var name = data.album.name;
+var artist = data.album.artist;
+var releasedate = data.album.releasedate;
+
+ 
+
+var pieces = releasedate.split(",");
+var date = pieces[0];
+var tags = data.album.toptags.tag;
+var tag;
+var url = data.album.image[2]["#text"];
+var albumimage = '<img src="'+url+'">';
+var title = '<p>' + artist + ' - ' + name +'</p>';
+var dateelem = '<p>' +'Released: '+ date + '</p>';
+
+var html = title;
+html += dateelem;
+var codetag;
+var tag;
+var length = tags.length;
+html += '<p>';
+html += 'Tags: ';
+for(var i=0; i<tags.length; i++)
+{
+   tag = tags[i];
+   if(tag.name != "albums i own")
+   {
+		codetag = '<code>'+ tag.name + '</code>';
+        html += codetag;
+
+
+   } 
+   
+
+}
+html += '</p>';
+html = '<div class="album"> <div class="albumimage">'+albumimage+'</div><div class="albumcontent">'+html+'</div></div>';
+$('.albums').append(html);
+}, error: function(code, message){
+  
+}});
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+
+/* Load some artist info. */
+lastfm.album.getInfo({artist: 'Boston',album: 'Boston'}, {success: function(data){
+
+
+var name = data.album.name;
+var artist = data.album.artist;
+var releasedate = data.album.releasedate;
+
+ 
+
+var pieces = releasedate.split(",");
+var date = pieces[0];
+var tags = data.album.toptags.tag;
+var tag;
+var url = data.album.image[2]["#text"];
+var albumimage = '<img src="'+url+'">';
+var title = '<p>' + artist + ' - ' + name +'</p>';
+var dateelem = '<p>' +'Released: '+ date + '</p>';
+
+var html = title;
+html += dateelem;
+var codetag;
+var tag;
+var length = tags.length;
+html += '<p>';
+html += 'Tags: ';
+for(var i=0; i<tags.length; i++)
+{
+   tag = tags[i];
+   if(tag.name != "albums i own")
+   {
+		codetag = '<code>'+ tag.name + '</code>';
+        html += codetag;
+
+
+   } 
+   
+
+}
+html += '</p>';
+html = '<div class="album"> <div class="albumimage">'+albumimage+'</div><div class="albumcontent">'+html+'</div></div>';
+$('.albums').append(html);
+}, error: function(code, message){
+  
+}});
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+
+/* Load some artist info. */
+lastfm.album.getInfo({artist: 'The Clash',album: 'London Calling'}, {success: function(data){
+
+
+var name = data.album.name;
+var artist = data.album.artist;
+var releasedate = data.album.releasedate;
+
+ 
+
+var pieces = releasedate.split(",");
+var date = pieces[0];
+var tags = data.album.toptags.tag;
+var tag;
+var url = data.album.image[2]["#text"];
+var albumimage = '<img src="'+url+'">';
+var title = '<p>' + artist + ' - ' + name +'</p>';
+var dateelem = '<p>' +'Released: '+ date + '</p>';
+
+var html = title;
+html += dateelem;
+var codetag;
+var tag;
+var length = tags.length;
+html += '<p>';
+html += 'Tags: ';
+for(var i=0; i<tags.length; i++)
+{
+   tag = tags[i];
+   if(tag.name != "albums i own")
+   {
+		codetag = '<code>'+ tag.name + '</code>';
+        html += codetag;
+
+
+   } 
+   
+
+}
+html += '</p>';
+html = '<div class="album"> <div class="albumimage">'+albumimage+'</div><div class="albumcontent">'+html+'</div></div>';
+$('.albums').append(html);
+}, error: function(code, message){
+  
+}});
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
 <div class="footer-wrap">
   <footer>
     <span>&copy; 2014 Nikhil Kumar. Powered by <a href="http://jekyllrb.com">Jekyll</a>. Not <a href="/puns/">Hyde</a>n by <a href="https://pages.github.com/">Github pages</a></span> 
