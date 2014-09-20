@@ -101,7 +101,7 @@ programs:
   - name: LaTeX
   - name: Resumes
 - name: HubbleConstantMonitor 
-  url: https://github.com/nikhil/Resume
+  url: https://github.com/nikhil/HubbleConstantMonitor.js
   description: Monitors the Hubble Constant on wikipedia 
   images: 
   - image: hubble.jpg
