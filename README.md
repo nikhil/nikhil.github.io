@@ -1,11 +1,12 @@
 # Kumarcode.com
-My Personal website. this website was based from the Minamal Mistakes theme.
+My Personal website. This website was based from the Minimal Mistakes theme.
 However, I added in several neat features such as:
 <ul>
 <li> a different color scheme.</li>
 <li>Separating the content from the website. Adding Neat shadowing and css designs.</li>
 <li>Remaking the terminal windows and the code blocks. Adding navigation icons with
 special rotation effects.</li>
+#Minimal Mistakes
 **[Minimal Mistakes](http://mmistakes.github.io/minimal-mistakes)** is a two column responsive Jekyll theme perfect for powering your GitHub hosted blog.
 
 ## Minimal Mistakes is all about:
