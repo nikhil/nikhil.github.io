@@ -27,8 +27,10 @@ code:
   count: 6
 
 ---
-Today I decided to use a program known as `i3blocks` to customize my `i3status`. It allows me to run outputs of scripts and colorize sections as well.<br>
+Today I decided to use a program known as `i3blocks` to customize my `i3status`. It allows me to run outputs of scripts and colorize sections as well.
+
 ##Installing and configuring i3bars
+
 First you need to install i3bars:
 
 {% highlight java linenos %}
