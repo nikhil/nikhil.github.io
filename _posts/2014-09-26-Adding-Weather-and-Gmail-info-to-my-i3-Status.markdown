@@ -41,8 +41,9 @@ Then add the `i3blocks` script to your `i3` config file.
 
 {% highlight bash linenos %}
 
-bar {
-    status_command i3blocks -c ~/.i3/i3blocks.conf
+bar 
+	{
+	status_command i3blocks -c ~/.i3/i3blocks.conf
 	}
 
 {% endhighlight %}
