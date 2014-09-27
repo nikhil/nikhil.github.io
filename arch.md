@@ -21,7 +21,11 @@ Year  <span class="distros"> Distro </span> <span class="desktop"> Desktop Envio
 </div>
 <br>
 
+
+
 <p>Here I will write about the fun (and the pain) I have with Arch. Here is my Arch info.</p>
+
+
 
 <div id="imagecontainer">
 <img src="/images/archbody.png" class="image" alt="Arch logo"/>
@@ -41,6 +45,7 @@ Year  <span class="distros"> Distro </span> <span class="desktop"> Desktop Envio
 
 </p>
 </div>
+
 
 For my computer I have am using a dual monitor setup. I have a portal background scheme coupled with a really nice transparent terminal background.<br>
 Here is the snapshot of my first screen at 1366x768 with vim and archey open. To view the full screen image click <a href = "/images/firstscreen.png"> here.</a>

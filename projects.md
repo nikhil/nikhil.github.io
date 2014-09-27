@@ -109,6 +109,29 @@ programs:
   tags:
   - name: javascript
   - name: Hubble Constant
+- name: IconicWeather 
+  url: https://github.com/nikhil/IconicWeather
+  description: A script used with i3blocks that monitors weather from Accuweather and displays the weather on your bar. 
+  images: 
+  - image: aw-logo.png
+  - image: i3bar.png
+  location: Independent
+  tags:
+  - name: Perl
+  - name: Weather
+  - name: i3blocks
+  - name: Font Awsome
+- name: GmailMonitor 
+  url: https://github.com/nikhil/GmailMonitor
+  description: Monitors new emails from Gmail 
+  images: 
+  - image: Gmail_logo.png
+  - image: i3bar.png
+  location: Independent
+  tags:
+  - name: Shell
+  - name: i3blocks
+  - name: Gmail
 
 ---
 
