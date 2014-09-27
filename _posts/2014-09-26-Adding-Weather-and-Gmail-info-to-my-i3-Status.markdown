@@ -31,7 +31,7 @@ Today I decided to use a program known as `i3blocks` to customize my `i3status`.
 
 ##Installing and configuring i3blocks
 
-First you need to install i3bars:
+First you need to install i3blocks:
 
 {% highlight java linenos %}
 
