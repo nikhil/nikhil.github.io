@@ -32,16 +32,16 @@ Year  <span class="distros"> Distro </span> <span class="desktop"> Desktop Envio
 <p class ="info"><span class="colorinfo">User: </span>Nikhil <br> 
 <span class="colorinfo">Hostname: </span>NKlap <br>
 <span class="colorinfo">Distro: </span>Arch Linux<br>
-<span class="colorinfo">Kernel: </span>3.15-5-1-ck<br>
-<span class="colorinfo">Uptime: </span>0:39<br>
+<span class="colorinfo">Kernel: </span>3.16.3-1-ck<br>
+<span class="colorinfo">Uptime: </span>3:26<br>
 <span class="colorinfo">Window Manager: </span>i3<br>
 <span class="colorinfo">Desktop Environment: </span>None<br>
 <span class="colorinfo">Shell: </span>/bin/zsh<br>
 <span class="colorinfo">Terminal: </span>rxvt-unicode-256color<br>
-<span class="colorinfo">Pacages: </span>1323<br>
+<span class="colorinfo">Pacages: </span>1427<br>
 <span class="colorinfo">Cpu: </span>Intel(R) Core(TM) i5-3210M 2.50 GHz<br>
-<span class="colorinfo">Ram: </span>1072 MB / 7872 MB<br>
-<span class="colorinfo">Disk: </span>798 G / 908 G <br>
+<span class="colorinfo">Ram: </span>1338 MB / 7872 MB<br>
+<span class="colorinfo">Disk: </span>777 G / 908 G <br>
 
 </p>
 </div>
