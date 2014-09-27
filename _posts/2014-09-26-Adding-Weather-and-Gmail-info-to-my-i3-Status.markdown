@@ -29,7 +29,7 @@ code:
 ---
 Today I decided to use a program known as `i3blocks` to customize my `i3status`. It allows me to run outputs of scripts and colorize sections as well.
 
-##Installing and configuring i3bars
+##Installing and configuring i3blocks
 
 First you need to install i3bars:
 
