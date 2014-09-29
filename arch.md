@@ -48,6 +48,12 @@ Year  <span class="distros"> Distro </span> <span class="desktop"> Desktop Envio
 
 
 For my computer I have am using a dual monitor setup. I have a portal background scheme coupled with a really nice transparent terminal background.<br>
+Here is a full snapshot.To view the full screen image click <a href = "/images/full.png"> here.</a>
+<br>
+<br>
+<img src="/images/full.png" alt="full screen"/>
+<br>
+<br>
 Here is the snapshot of my first screen at 1366x768 with vim and archey open. To view the full screen image click <a href = "/images/firstscreen.png"> here.</a>
 <br>
 <br>
