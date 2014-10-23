@@ -55,8 +55,13 @@ ctx.stroke();
 //$('.post #sinbtn').css('top','520px');
 
 }
-
-getSine();
+var width = $(window).width();
+if( width >= 600)
+{	//alert($(window).width()); 
+	getSine();
+	var $input = $('<button onclick ="getSine()" class = "btnsine" id = "sinbtn"> Regenerate </button>');
+	$input.appendTo($(".sidesine"));
+}	
 </script>
 
-<button onclick ="getSine()" class = "btnsine" id = "sinbtn"> Regenerate </button>
+
