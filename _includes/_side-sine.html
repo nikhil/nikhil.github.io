@@ -48,7 +48,7 @@ gradient.addColorStop("1.0",color4);
 
 // Fill with gradient
 ctx.strokeStyle=gradient;
-ctx.lineWidth=2.4;
+ctx.lineWidth=2;
 
 ctx.stroke();
 //$('.post .sin').css('top','80px');
@@ -61,7 +61,39 @@ if( width >= 600)
 	getSine();
 	var $input = $('<button onclick ="getSine()" class = "btnsine" id = "sinbtn"> Regenerate </button>');
 	$input.appendTo($(".sidesine"));
-}	
+}
+$(window).resize(function(){
+var width = $(window).width();
+if( width < 600)
+{	//alert($(window).width()); 
+	//getSine();
+	//var $input = $('<button onclick ="getSine()" class = "btnsine" id = "sinbtn"> Regenerate </button>');
+	var canvas=document.getElementById("canvas");
+	var ctx=canvas.getContext("2d");
+
+	//clears the canvas
+	ctx.save();
+
+	ctx.setTransform(1, 0, 0, 1, 0, 0);
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+	ctx.restore();
+
+	$(".btnsine").remove();
+}
+if(width >600)
+{
+	getSine();
+	var $input = $('<button onclick ="getSine()" class = "btnsine" id = "sinbtn"> Regenerate </button>');
+	$input.appendTo($(".sidesine"));
+
+
+
+}
+
+
+});
+
 </script>
 
 
