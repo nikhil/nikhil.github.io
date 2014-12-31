@@ -1,0 +1,43 @@
+Request URL:https://s3.amazonaws.com/static.echonest.com
+Request Headers
+Provisional headers are shown
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Content-Type:multipart/form-data; boundary=----WebKitFormBoundaryB5bWt0um5FBgedpB
+Origin:http://localhost
+Referer:http://localhost/Mashup/sandbox.html
+User-Agent:Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.45 Safari/537.36
+Request Payload
+------WebKitFormBoundaryB5bWt0um5FBgedpB
+Content-Disposition: form-data; name="key"
+
+remix_audio/SWHCFHJA2PPHKX7A5/1419971630687/6081.mp3
+------WebKitFormBoundaryB5bWt0um5FBgedpB
+Content-Disposition: form-data; name="AWSAccessKeyId"
+
+AKIAJRDFEY23UEVW42BQ
+------WebKitFormBoundaryB5bWt0um5FBgedpB
+Content-Disposition: form-data; name="acl"
+
+public-read
+------WebKitFormBoundaryB5bWt0um5FBgedpB
+Content-Disposition: form-data; name="success_action_redirect"
+
+http://localhost/Mashup/sandbox.html
+------WebKitFormBoundaryB5bWt0um5FBgedpB
+Content-Disposition: form-data; name="policy"
+
+eyJjb25kaXRpb25zIjogW3siYnVja2V0IjogInN0YXRpYy5lY2hvbmVzdC5jb20ifSwgWyJzdGFydHMtd2l0aCIsICIka2V5IiwgInJlbWl4X2F1ZGlvLyJdLCB7ImFjbCI6ICJwdWJsaWMtcmVhZCJ9LCBbInN0YXJ0cy13aXRoIiwgIiRzdWNjZXNzX2FjdGlvbl9yZWRpcmVjdCIsICJodHRwOi8vIl0sIFsic3RhcnRzLXdpdGgiLCAiJENvbnRlbnQtVHlwZSIsICJhdWRpby9tcGVnIl0sIFsiY29udGVudC1sZW5ndGgtcmFuZ2UiLCAwLCA0MDAwMDAwMF1dLCAiZXhwaXJhdGlvbiI6ICIyMDE0LTEyLTMxVDA2OjM1OjMzLjMwNzA0MVoifQ==
+------WebKitFormBoundaryB5bWt0um5FBgedpB
+Content-Disposition: form-data; name="signature"
+
+6uDi8pHYXSycdjM9bOuVqNgDjHY=
+------WebKitFormBoundaryB5bWt0um5FBgedpB
+Content-Disposition: form-data; name="Content-Type"
+
+audio/mpeg
+------WebKitFormBoundaryB5bWt0um5FBgedpB
+Content-Disposition: form-data; name="file"; filename="Heart Of Gold.mp3"
+Content-Type: audio/mp3
+
+
+------WebKitFormBoundaryB5bWt0um5FBgedpB--
