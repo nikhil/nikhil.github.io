@@ -2,15 +2,14 @@
 <html lang="en">
  <head>
     <meta charset="utf-8">
-	<title>SwitchBeat</title>
+	<title>Echo Nest Remix</title>
 	<link href='http://fonts.googleapis.com/css?family=Lato|Great+Vibes' rel='stylesheet' type='text/css'>
-	<meta http-equiv="Pragma" content="no-cache">
-	<meta http-equiv="Expires" content="-1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+    <meta name="description" content="Echo Nest Remix:  The Internet Synthesizer">
+    <meta name="author" content="Brian Whitman / Paul Lamere / Thor Kell">
+
    <link href="bootstrap.css" rel="stylesheet">
    <link href="font-awesome.css" rel="stylesheet">
-   <link href="font-mfizz.css" rel="stylesheet">
     <link href="custom.css" rel="stylesheet">
     <link href="bootstrap-responsive.css" rel="stylesheet">
 	
@@ -22,8 +21,8 @@
 <body>
 
 <script src="jquery.min.js"></script>
-<script type="text/javascript" src='remix1.js'></script>
 <script src="bootstrap.min.js"></script>
+<script type="text/javascript" src='remix.js'></script>
 <script src="wavesurfer.js"></script>
 <script src="drawer.js"></script>
 <script src="dropzone.js"></script>
@@ -85,25 +84,18 @@ var myPieChart;
 
 var gradCounter = 1;
 
-var timbreW =30;
-var pitchW =40;
-var loudStartW = 10;
-var loudMaxW =10;
+var timbreW =1;
+var pitchW =10;
+var loudStartW = 1;
+var loudMaxW =1;
 var durationW =100;
-var confidenceW =10;
+var confidenceW =1;
 
 var midh =0;
 
 var diffMean = 0;
 var diffStd = 0;
 var diffArray = [];
-
-var firstTrackIndex = [];
-var secondTrackIndex = [];
-var blockDiffList = [[]];
-var jumpedNum =0;
-var isPlaying =0;
-var isStopped = 0;
 
 function createChart()
 {
@@ -169,10 +161,10 @@ var dataTrack = [
    
 
 
-myBarChartL = new Chart(ctxL).Bar(dataL, {scaleBeginAtZero : false,  scaleShowGridLines : false,showScale: false, animationSteps: 30, showTooltips: false, animationEasing: "easeOutQuad", barValueSpacing : 0 , segmentStrokeColor : "#fdf6e3"});
-myBarChartP = new Chart(ctxP).Bar(dataP, {scaleBeginAtZero : false,  scaleShowGridLines : false,showScale: false, animationSteps: 30, showTooltips: false,animationEasing: "easeOutQuad", barValueSpacing : 0, segmentStrokeColor : "#fdf6e3"});
-myBarChartT = new Chart(ctxT).Bar(dataT, {scaleBeginAtZero : false,  scaleShowGridLines : false,showScale: false, animationSteps: 30, showTooltips: false,animationEasing: "easeOutQuad",barValueSpacing : 0 , segmentStrokeColor : "#fdf6e3"});
-myPieChart = new Chart(ctxTrack).Pie(dataTrack,{animationEasing: "linear", segmentStrokeColor : "#fdf6e3", animationSteps: 10});
+myBarChartL = new Chart(ctxL).Bar(dataL, {scaleBeginAtZero : false,  scaleShowGridLines : false,showScale: false, animationSteps: 30, showTooltips: false, animationEasing: "easeOutQuad", barValueSpacing : 0 });
+myBarChartP = new Chart(ctxP).Bar(dataP, {scaleBeginAtZero : false,  scaleShowGridLines : false,showScale: false, animationSteps: 30, showTooltips: false,animationEasing: "easeOutQuad", barValueSpacing : 0});
+myBarChartT = new Chart(ctxT).Bar(dataT, {scaleBeginAtZero : false,  scaleShowGridLines : false,showScale: false, animationSteps: 30, showTooltips: false,animationEasing: "easeOutQuad",barValueSpacing : 0 });
+myPieChart = new Chart(ctxTrack).Pie(dataTrack,{animationEasing: "linear"});
 	
 }
 function createBlocks(trackNum){
@@ -251,7 +243,7 @@ var blocktype =  {
     },
 	
 	 select: function(){
-		 this.rect.attr("fill", "#114141");
+		 this.rect.attr("fill", "#fffff");
 		
 
 		
@@ -451,6 +443,8 @@ while(block2.Line[block2num])
 
 }	
 
+//var colorLine = "90-"+block1.normalColor+"-"+block2.normalColor;
+//console.log(colorLine);
 var gradId = "grad"+gradCounter;
 gradCounter = gradCounter +1;
 
@@ -551,8 +545,41 @@ function createBlock(number,beat,trackNum)
 
 	
 }
+function PlayRemix(){
+
+
+
+	
+
+}
+function sleep(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds){
+      break;
+    }
+  }
+    
+}
 function Mashup(tracknum){
 
+	 //remixed = new Array();
+                  		//vair meter = parseInt(track.analysis.track.time_signature);
+                  		
+	//					for (var i=0; i < track.analysis.beats.length; i++) {
+            					
+	//								remixed.push(track.analysis.beats[i]);
+	///								if(track.analysis.beats[i])
+	//								{	
+	//								console.log(track.analysis.beats[i].children);
+	//								}										
+									
+
+									
+                        		//player.play(0,track.analysis.segments[i]);
+								//sleep(100);
+                      			 
+      //              	} 
                    
 						if(tracknum == 1)
 						{	
@@ -568,8 +595,10 @@ function Mashup(tracknum){
 							blocks = createBlocks(1);
 							blocks1 = createBlocks(2);
 							Layout();
+							//drawLine(blocks[blocks.length-1],blocks1[0]);
 							calculateLinks();
-							
+							//console.log("tracks are ready");
+
 
 
 						}	
@@ -577,7 +606,9 @@ function Mashup(tracknum){
 
 
                         $('#beginRemix').removeAttr('disabled');
-                      
+                       // wavesurfer.loadBuffer(track.analysis.segments);
+						//remixedWavesurfer.loadBuffer(remixed);
+
 
 
 
@@ -633,7 +664,7 @@ if(num>0 && num1>0)
 		var rw = w - margin *2;
 		var rh = h - margin *2;
 		var tilesPerRow = Math.floor(rw/14);
-		h = (Math.ceil(num/tilesPerRow) * 16) + 2*tspace + spaceInbetween + (Math.ceil(num1/tilesPerRow) * 16) + 20;
+		h = (Math.ceil(num/tilesPerRow) * 16) + 2*tspace + spaceInbetween + (Math.ceil(num1/tilesPerRow) * 16);
 		paper.setSize(w,h);
 
 
@@ -665,8 +696,8 @@ if(num>0 && num1>0)
 		middleHeight = middleHeight - 37.5;
 		midH = middleHeight;
 		middleHeight = middleHeight +"px";
-		var middleWidth = (-1 * w/2)+200 + "px";
-		midW = (-1*w/2)+200;
+		var middleWidth = (-1 * w/2)+185 + "px";
+		midW = (-1*w/2)+185;
 		
 		$(".MusicStatus").css({top: middleHeight, right: middleWidth});
 
@@ -710,25 +741,20 @@ if(num>0 && num1>0)
 function start()
 {	
 
-	if(isPlaying == 0)
-	{
-	isPlaying = 1;
-	isStopped =0;
 	play(1,-1,0,0);
-	}
 
 }
 function play(track,num,pTrack,pNum)
 {
-if(isStopped!=1)
-{	
-if(track == 1 && num>=blocks.length && sessionStorage.isInfinite ==1)
+//console.log("starting");	
+
+if(track == 1 && num>=blocks.length)
 {
 	play(2,0,1,blocks.length-1);
 
 		
 }
-else if(track ==2 && num>=blocks1.length && sessionStorage.isInfinite ==1)
+else if(track ==2 && num>=blocks1.length)
 {
 	play(1,0,2,blocks1.length-1);
 
@@ -754,6 +780,9 @@ if(track == 1)
 
 		
 		setTimeout(function () {
+	//	endTime = performance.now();
+		//console.log(diffrence);
+		//diffrence = (endTime -startTime) - 1000*blocks[num].beat.duration;
 		if( num !=-1)
 		{
 			if(pTrack == 1)
@@ -803,15 +832,13 @@ if(track == 1)
 		for(var i =0; i < lineList.length; i++)
 		{
 
-			lineList[i].attr({stroke:"#114141"});
+			lineList[i].attr("stroke", "#00000");
 			randomNum = Math.random();
-			if(randomNum < (sessionStorage.pJump/100))
+			if(randomNum < (sessionStorage.probability/100))
 			{
-				if(blocks[num].otherLineIndex[i] != pNum && jumpedNum != 1)
-				{	
 				nextTrack = 2;
 				nextNum = blocks[num].otherIndex[i];
-				}
+
 			}	
 
 		}
@@ -828,13 +855,12 @@ if(track == 1)
 
 		if(nextTrack == -1 && nextNum == -1)
 		{
-			jumpedNum = 0;
+
 			play(track,num+1,track,num);
 
 		}
 		else
 		{
-			jumpedNum = 1;
 			play(nextTrack,nextNum,track,num);
 
 
@@ -861,6 +887,9 @@ else if(track == 2)
 	}
 		
 		setTimeout(function () {
+	//	endTime = performance.now();
+		//console.log(diffrence);
+		//diffrence = (endTime -startTime) - 1000*blocks[num].beat.duration;
 	
 		if( num !=-1)
 		{
@@ -882,7 +911,7 @@ else if(track == 2)
 			}	
 			var str;
 
-			
+
 			for(var i=0; i< plineList.length;i++)
 			{
 				
@@ -890,7 +919,7 @@ else if(track == 2)
 
 			
 			}	
-			
+
 				
 		}
     	else
@@ -910,16 +939,13 @@ else if(track == 2)
 		for(var i =0; i < lineList.length; i++)
 		{
 
-			lineList[i].attr("stroke", "#114141");
+			lineList[i].attr("stroke", "#00000");
 			randomNum = Math.random();
-			if(randomNum < (sessionStorage.pJump/100))
+			if(randomNum < (sessionStorage.probability/100))
 			{
-				if(blocks1[num].otherIndex[i] != pNum && jumpedNum != 1)
-				{
 				nextTrack = 1;
 				nextNum = blocks1[num].otherIndex[i];
-				
-				}
+
 			}	
 
 		}
@@ -936,12 +962,12 @@ else if(track == 2)
 
 		if(nextTrack == -1 && nextNum == -1)
 		{
-			jumpedNum = 0;	
+
 			play(track,num+1,track,num);
 
 		}
 		else
-		{	jumpedNum =1;
+		{
 			play(nextTrack,nextNum,track,num);
 
 
@@ -954,47 +980,12 @@ else if(track == 2)
 
 }
 
-}
-else
-{
-	if(pTrack == 1)
-	{	
-	blocks[pNum].normal();	
-	var pdefIdList = blocks[pNum].LineDefId;
-	var plineList = blocks[pNum].Line;
-	for(var i=0; i< plineList.length;i++)
-			{
-				
-				plineList[i].strokeLinearGradient (pdefIdList[i], 2);
 
-			
-			}	
-	}
-	else
-	{
-		blocks1[pNum].normal();	
-		var pdefIdList = blocks1[pNum].LineDefId;
-		var plineList = blocks1[pNum].Line;
-		for(var i=0; i< plineList.length;i++)
-				{
-				
-				plineList[i].strokeLinearGradient (pdefIdList[i], 2);
-
-			
-				}		
-
-		
-
-
-	}	
-
-}	
 }
 
 function stop()
 {
-	isStopped =1;
-	isPlaying =0;	
+	blocks[blocks.length-1].normal();
 	player.stop();
 
 }	
@@ -1014,7 +1005,7 @@ function fetchQinfo() {
 function analyzeAudio(audio, tag, callback) {
     var url = 'http://remix.echonest.com/Uploader/qanalyze?callback=?'
     $.getJSON(url, { url:audio, api_key:apiKey, tag:tag}, function(data) {
-		if (data.status === 'done' || data.status === 'error') {
+        if (data.status === 'done' || data.status === 'error') {
             callback(data);
         } else {
             $("#info").text(data.status + ' - ready in about ' + data.estimated_wait + ' secs. ');
@@ -1024,11 +1015,41 @@ function analyzeAudio(audio, tag, callback) {
     });
 }
 
-				  
-
-
 //program starts here
 function init() {
+
+//	$("#select-track1").hide();
+
+
+
+
+
+if(sessionStorage.trid1 !=0 && sessionStorage.trid1) 
+{	
+	
+	if(!sessionStorage.trid2 || sessionStorage.trid2 ==0)
+	{	
+	$("#select-track").remove();
+	$("#select-track1").removeClass("hidden");
+	$("#infoO").hide();
+	fetchSignature();
+	//fetchQinfo();	
+	}
+}	
+else
+{	
+
+	if(!sessionStorage.trid2 || sessionStorage.trid2 ==0)
+	{	
+	$("#inputParem").removeClass("hidden");
+		
+	}
+
+
+	$("#infoO1").hide();
+
+
+}	
 
 	 var contextFunction = window.webkitAudioContext || window.AudioContext;
     if (contextFunction === undefined) {
@@ -1047,50 +1068,6 @@ function init() {
             params[p] = v;
         }
     }
-	if('trid1' in params)
-	{
-
-		trid1 = params['trid1'];
-
-
-	}
-	if('trid2' in params)
-	{
-
-		trid2 = params['trid2'];
-
-	}
-	
-	if(trid1) 
-	{	
-
-		if(!trid2)
-		{	
-		$("#select-track").remove();
-		$("#select-track1").removeClass("hidden");
-		$("#infoO").hide();
-		fetchSignature();
-		//fetchQinfo();	
-		}
-	}	
-	else
-	{	
-
-		if(!trid2 && !('key' in params))
-		{	
-		$("#inputParem").removeClass("hidden");
-		//$(".MusicStatus").hide();
-		 $("#play-remix").hide();
-
-		
-		}
-
-
-		$("#infoO1").hide();
-
-
-	}	
-
 
     if ('key' in params) {
         // We just uploaded a track.
@@ -1104,39 +1081,71 @@ function init() {
 
         analyzeAudio(trackURL, 'tag', function(data) {
             if (data.status === 'done') {
-				 var newUrl = location.protocol + "//" +  location.host + location.pathname;
-				 if(trid1)
-				 {
+                var newUrl = location.protocol + "//" +  location.host + location.pathname;
 
-					newUrl = newUrl + "?trid1="+trid1 + "&trid2="+data.trid;
+				if(!sessionStorage.trid1)
+				{
+					sessionStorage.trid1 = data.trid;
+					location.href = newUrl;
+					
 
-				 }
-				 else
-				 {
 
-					newUrl = newUrl + "?trid1="+data.trid;
+				}	
+				else if(sessionStorage.trid1==0)
+				{
 
-				 }
-				 location.href = newUrl;
-			
+					sessionStorage.trid1 = data.trid;
+					location.href = newUrl;
+					
+
+
+
+
+				}	
+				else
+				{
+						if(!sessionStorage.trid2)
+						{
+							sessionStorage.trid2 = data.trid;
+							location.href = newUrl;
+							
+
+
+						}	
+						else if(sessionStorage.trid2==0)
+						{
+
+							sessionStorage.trid2 = data.trid;
+							location.href = newUrl;
+							
+
+
+
+						}	
+
+
+				}	
+
 
             }
         });
     } 
 
-   else  if (trid1 && trid2) 
-   {   
-	   // We were passed a trackID directly in the url
+   else  if (sessionStorage.trid1 && sessionStorage.trid2 && sessionStorage.trid1 !=0 && sessionStorage.trid2 !=0) {
+        // We were passed a trackID directly in the url
         // We can remix the track we get back!
         //trackID = params['trid'];
-	   	$("#select-track").hide();
+		trid1 = sessionStorage.trid1;
+		trid2 = sessionStorage.trid2;
+		sessionStorage.trid1 =0;
+		sessionStorage.trid2 = 0;
+        $("#play-remix").show();
+        $("#select-track").hide();
 		$("#select-track1").hide();
 		$("#infoO").show();
 		$("#infoO1").show();
 
 
-
-		
         var urlXHR = getProfile(trid1, function(data) {
 			
             trackURL = data.url;
@@ -1176,11 +1185,11 @@ function init() {
         			label: "Not loaded"
     			}
     			]
- ProgChart = new Chart(ctxProg).Doughnut(Progdata,{ animation: false, animationEasing: "linear",showTooltips: false, segmentStrokeColor:"#fdf6e3"});
+ ProgChart = new Chart(ctxProg).Doughnut(Progdata,{ animation: false, animationEasing: "linear",showTooltips: false});
 
 
 
-				
+		
 				remixer.remixTrackById(trid1, trackURL, function(t, percent) {
                     track1 = t;
 									
@@ -1204,8 +1213,8 @@ function init() {
                         $('.btn-original').removeAttr('disabled');
                     }
                     else if (track1.status == 'error' ) {
-                       // $("#info").text("Error getting the track URL - please try again, or re-upload the file.");
-					 }
+                        $("#info").text("Error getting the track URL - please try again, or re-upload the file.");
+                    }
 
                 });
             }
@@ -1231,18 +1240,36 @@ function init() {
                 );
                 fetchSignature();
             }
-				
-				
-		});
-
-		
+        });
 		//##########################end of first file upload#####################
-	
+
 		  var urlXHR1 = getProfile(trid2, function(data) {
             trackURL = data.url;
 		  if (data.status == true) {
                 console.log("Track 2 ready to remix");
-             
+                //var context = new contextFunction();
+                
+                // Only use the filesystem if we have access to it.
+               // if (window.File && window.FileReader && window.FileList && window.Blob && window.webkitRequestFileSystem) {
+                //    window.requestFileSystem  = window.requestFileSystem || window.webkitRequestFileSystem;
+                //    window.requestFileSystem(window.TEMPORARY, 1024*1024, function(filesystem) {
+                //        fs = filesystem;
+                //    }, fileErrorHandler);
+               // }
+
+              
+                //remixer = createJRemixer(context, $, apiKey);
+                //player = remixer.getPlayer();
+				//var context = new contextFunction();
+                
+                // Only use the filesystem if we have access to it.
+                //if (window.File && window.FileReader && window.FileList && window.Blob && window.webkitRequestFileSystem) {
+                //    window.requestFileSystem  = window.requestFileSystem || window.webkitRequestFileSystem;
+                //    window.requestFileSystem(window.TEMPORARY, 1024*1024, function(filesystem) {
+               //         fs = filesystem;
+               //     }, fileErrorHandler);
+               // }
+
              if(!remixer) 
 		     {	var context = new contextFunction();
                 remixer = createJRemixer(context, $, apiKey);
@@ -1269,11 +1296,12 @@ function init() {
         			label: "Not loaded"
     			}
     			]
- ProgChart1 = new Chart(ctxProg1).Doughnut(Progdata1,{ animation: false, animationEasing: "linear",showTooltips: false,segmentStrokeColor : "#fdf6e3"});
+ ProgChart1 = new Chart(ctxProg1).Doughnut(Progdata1,{ animation: false, animationEasing: "linear",showTooltips: false});
 
 
 
-			
+
+
                 remixer.remixTrackById(trid2, trackURL, function(t, percent) {
 
 					track2 = t;
@@ -1300,7 +1328,7 @@ function init() {
                     }
                     else if (track2.status == 'error' ) {
                         $("#info1").text("Error getting the track URL - please try again, or re-upload the file.");
-					}
+                    }
 
                 });
             }
@@ -1339,7 +1367,7 @@ function init() {
 
         $("#file").change( 
             function() {
-				var filename = $("#file").val();
+                var filename = $("#file").val();
                 if (endsWith(filename.toLowerCase(), ".mp3")) {
                     $("#f-filename").attr('value', fixFileName(filename));
                     $("#upload").removeAttr('disabled');
@@ -1359,25 +1387,18 @@ function init() {
 function submitForm(oFormElement)
 {
 
-	sessionStorage.pConnect = document.getElementById("rangeInput").value;
-	sessionStorage.pJump = document.getElementById("rangeInputJump").value;
-	sessionStorage.connectMax = document.getElementById("rangeInputConnection").value;
-	if($("#myonoffswitch").is(':checked'))
-	{	sessionStorage.isInfinite = 1;
+	var cutoff = document.getElementById("rangeInput").value;
+	var probability = document.getElementById("rangeInputJump").value;
 
-	}	
-	else
-	{
-		sessionStorage.isInfinite =0;
-		
-	}	
+	sessionStorage.cutoff = cutoff;
+	sessionStorage.probability = probability;
 
-	
-	
+	console.log(cutoff);
+	console.log(probability);
 
 	 $("#inputParem").hide();
   	 $("#select-track").hide();
- 	 	
+ 	 console.log(oFormElement);	
 
     //check whether browser fully supports all File API
     if (window.File && window.FileReader && window.FileList && window.Blob)
@@ -1387,14 +1408,16 @@ function submitForm(oFormElement)
 		fsize = (fsize/1000000).toFixed(2);
 		$('#info').text("Uploading Track 1 -  "+fsize+" MB");
         
-	}
+		console.log(fsize);
+    }
 
 }
 function submitForm1(oFormElement)
 {
    $("#select-track1").hide();
 
-	 //check whether browser fully supports all File API
+	 console.log(oFormElement);	
+    //check whether browser fully supports all File API
     if (window.File && window.FileReader && window.FileList && window.Blob)
     {
         //get the file size and file type from file input field
@@ -1402,185 +1425,18 @@ function submitForm1(oFormElement)
 		fsize = (fsize/1000000).toFixed(2);
 		$('#info1').text("Uploading Track 2 -  "+fsize+" MB");
         
-	}
+		console.log(fsize);
+    }
 
 }
-function removeExcess(exTrackNumber, exBlockNumber, connectNumList)
-{
-	var i =0;
-	var currentMax;
-	var maxOtherIndex;
-	var maxThisIndex;
-	var diffrence = connectNumList.length - sessionStorage.connectMax;
-	
-	if(exTrackNumber ==1)
-	{	
-
-		i =0;
-	while(i<diffrence)
-	{
-		
-		currentMax = blockDiffList[exBlockNumber][connectNumList[i]];
-		maxOtherIndex = connectNumList[i];
-		maxThisIndex = i;
-		for(var j =0; j<connectNumList.length; j++)
-		{
-			if(blockDiffList[exBlockNumber][connectNumList[j]]>=currentMax)
-			{
-				currentMax = blockDiffList[exBlockNumber][connectNumList[j]];
-				maxOtherIndex = connectNumList[j];
-				maxThisIndex = j;
-				
-
-			}	
 
 
-
-		}
-		
-		blockDiffList[exBlockNumber][maxOtherIndex] = -1;
-		
-	
-
-		i = i+1;
-
-
-	
-		
-
-
-	}
-		
-
-	}
-	if(exTrackNumber ==2)
-	{	
-
-	i =0;	
-	while(i<diffrence)
-	{	
-		currentMax = blockDiffList[connectNumList[i]][exBlockNumber];
-		maxOtherIndex = connectNumList[i];
-		maxThisIndex = i;
-		for(var j =0; j<connectNumList.length; j++)
-		{
-			if(blockDiffList[connectNumList[j]][exBlockNumber]>=currentMax)
-			{
-				currentMax = blockDiffList[connectNumList[j]][exBlockNumber];
-				maxOtherIndex = connectNumList[j];
-				maxThisIndex = j;
-				
-
-			}	
-
-
-
-		}
-		
-		blockDiffList[maxOtherIndex][exBlockNumber]= -1;
-			
-
-		i = i+1;
-
-
-	
-		
-
-
-	}	
-
-
-
-
-		
-
-	}
-
-
-
-}	
-function filterLinks(block1List, block2List)
-{	
-
-	var doneList = [];
-	var doneListCounter =0;
-	var currBlock =0;
-	var connectionToOther = [];
-	var connectionToOtherCounter =0;
-	for(var i =0; i<block1List.length; i++)
-	{
-		currBlock = block1List[i];
-		connectionToOtherCounter =0;
-        connectionToOther = [];
-		if($.inArray(currBlock,doneList) == -1)
-		{		
-				
-	
-
-			for(var j =0; j<block1List.length; j++)
-			{
-		
-				if(block1List[j] == currBlock)
-				{
-					connectionToOther[connectionToOtherCounter] = block2List[j];
-					connectionToOtherCounter = connectionToOtherCounter +1;
-					
-					
-			
-				}	
-		
-			}
-			doneList[doneListCounter] = currBlock;
-			doneListCounter = doneListCounter+1;
-			removeExcess(1,currBlock,connectionToOther);
-		}
-		
-	}
-	doneList = [];
-	doneListOCunter =0;
-
-
-	for(var i =0; i<block2List.length; i++)
-	{
-		currBlock = block2List[i];
-		connectionToOtherCounter =0;
-        connectionToOther = [];
-
-		if($.inArray(currBlock,doneList) == -1)
-		{		
-
-			
-
-			for(var j =0; j<block2List.length; j++)
-			{
-		
-				if(block2List[j] == currBlock && blockDiffList[block1List[j]][currBlock] != -1)
-				{
-					connectionToOther[connectionToOtherCounter] = block1List[j];
-					connectionToOtherCounter = connectionToOtherCounter +1;
-									
-			
-				}	
-		
-			}
-			doneList[doneListCounter] = currBlock;
-			doneListCounter = doneListCounter+1;
-			removeExcess(2,currBlock,connectionToOther);
-		}
-		
-	}	
-	
-
-
-
-
-
-}	
 function calculateLinks()
 {	
 
+console.log("started");
 
-//var blockDiffList = [[]];
+var blockDiffList = [[]];
 var blockNormList = [];
 var result;
 var listNum =0;
@@ -1611,14 +1467,16 @@ var listNum =0;
 
 	}	
 
+	console.log("endloop");
 	diffArray = blockNormList;
 	calculateMeanAndStd();
+	console.log("afterMean");
 	var percentage =0;
 
-	var TrackIndexNum =0;
+	var firstTrackIndex = [];
+	var secondTrackIndex = [];
 
-	var selectBlock1List = [];
-	var selectBlock2List = [];
+	var TrackIndexNum =0;
 
 	for(var i =0; i<blocks.length; i++)
 	{
@@ -1627,18 +1485,16 @@ var listNum =0;
 		{
 			
 			percentage = compute(blockDiffList[i][j],diffMean,diffStd);
-		if(percentage<(sessionStorage.pConnect/100))
+		if(percentage<(sessionStorage.cutoff/100))
 			{
 					
 				//drawLine(blocks[i],blocks1[j]);
 				firstTrackIndex[TrackIndexNum] = blocks[i];
 				secondTrackIndex[TrackIndexNum] = blocks1[j];
-				selectBlock1List[TrackIndexNum] = i;
-				selectBlock2List[TrackIndexNum] = j;
 				TrackIndexNum = TrackIndexNum +1;
 
 			}	
-			
+			//console.log(percentage);
 			
 
 		}	
@@ -1649,22 +1505,6 @@ var listNum =0;
 
 	$("#infoO1").hide();
 	$("#info").text("Creating connections between tracks");
-	filterLinks(selectBlock1List,selectBlock2List);
-	
-	for(var i=0;i<TrackIndexNum;i++)
-	{
-		if(blockDiffList[selectBlock1List[i]][selectBlock2List[i]] ==-1)
-		{   
-			firstTrackIndex[i] = -1;
-			secondTrackIndex[i] = -1;
-
-			
-		}
-	
-
-	}	
-
-	
 
 	var contextConnectionProg = document.getElementById("myChartProg").getContext('2d');
 	contextConnectionProg.clearRect(0, 0,  document.getElementById("myChartProg").width,  document.getElementById("myChartProg").height);
@@ -1684,30 +1524,26 @@ var listNum =0;
     			}
     			]
  
-	var myConnectionChart = new Chart(contextConnectionProg).Doughnut(ConnectionData1,{ animation: false, animationEasing: "linear",showTooltips: false,segmentStrokeColor : "#fdf6e3"});
+	var myConnectionChart = new Chart(contextConnectionProg).Doughnut(ConnectionData1,{ animation: false, animationEasing: "linear",showTooltips: false});
 
 
 		for(var i =0; i<TrackIndexNum; i++)
 		{
 			
 					myConnectionChart.options.animation = true;
-					myConnectionChart.options.animationSteps = 10;
+					myConnectionChart.options.animationSteps = 30;
 					myConnectionChart.segments[1].value = myConnectionChart.segments[1].value -1;
 					myConnectionChart.segments[0].value = myConnectionChart.segments[0].value +1;
 					myConnectionChart.update();
-					if(firstTrackIndex[i] != -1 && secondTrackIndex[i] != -1)
-					{	
 					drawLine(firstTrackIndex[i],secondTrackIndex[i]);
-					}
+
 
 
 
 
 
 		}	
-		$("#info").text("Ready to play.");
-		$("#play-remix").removeClass("hidden");
-		$("#musicTilesStatus").removeClass("hidden");
+
 
 
 
@@ -1931,7 +1767,7 @@ for(var j =0; j<diffArray.length; j++)
 
         Raphael.fn.defineLinearGradient = function(defId, stops) {
 			
-			
+			console.log(stops);
 
             this.defs.appendChild(defLinearGrad(defId, stops));
         };
@@ -1948,8 +1784,8 @@ window.onload = init;
 
        
     <div class="container">
-		<span id="programTitle">SwitchBeat&nbsp;&nbsp;<span class="musicAndCode">{</span><i class="fa  fs-fw fa-music"></i><span class="musicAndCode">}</span></span>
-		<span id="programDescrip">&nbsp;&nbsp;&nbsp;&nbsp;<em>Mashup two of your favorite songs</em></span><br><br>
+		<span id="programTitle">SwitchBeat</span>
+		<span id="programDescrip"><em>Mashups two of your favorite songs</em></span><br><br>
        	<div id="inputParem" class="hidden">
 			<h3><i class="fa fa-toggle-on fa-fw optionicon"></i>&nbsp;&nbsp;Options</h3>
 			<hr>
@@ -1963,16 +1799,8 @@ window.onload = init;
 			<form oninput="JumpAmount.value=rangeInputJump.value">
     		<input type="range" id="rangeInputJump" name="rangeInputJump" min=".1" max="100" value="50" step=".1">                                                       
         	&nbsp;<output name="JumpAmount" for="rangeInputJump">50</output>%
-			
-			</form>
-		</span>
-		<span id="sliderConnection">Select the maximum connections per beat:
-			<form oninput="ConnectionAmount.value=rangeInputConnection.value">
-    		<input type="range" id="rangeInputConnection" name="rangeInputConnection" min="1" max="10" value="5" step="1">                                                       
-        	&nbsp;<output name="ConnectionAmount" for="rangeInputConnection">5</output>
-			
-			</form>
-		</span>
+			<br>
+			<br>
 			<span id="switchText" style="
   			  /* height: 20px; */
    			 line-height: 2;
@@ -1988,14 +1816,12 @@ window.onload = init;
 		</span>
 		</div>
 
-		<br>
 
-		<div id = "uploadParem">
-			<h3><i class="fa fa-upload fa-fw"></i>&nbsp;&nbsp;Upload</h3>
-			<hr>
+
+
 		<span id="infoO"><span id="info"></span>&nbsp;&nbsp;<canvas id="myChartProg" width="25" height="25"></canvas><br></span>
 		<span id="infoO1"><span id="info1"></span>&nbsp;&nbsp;<canvas id="myChartProg1" width="25" height="25"></canvas><br></span>
-		
+
 
         <section>
         <div id='select-track'>
@@ -2032,15 +1858,30 @@ window.onload = init;
 		<div id="status"></div>
 
         </section>
-		</div>	
-        <section id='play-remix' class="hidden">
+
+        <section id='play-remix'>
+            <div id="userCode">
+                <p><textarea id="userInput"></textarea></p>
+                <button class='btn btn-original' id='beginRemix' onClick="beginRemix()">Remix!</button>
+            </div>
+            <div id='waveform'>
+            <h2>Original Track</h2>
+            <canvas id='waveCanvas' width='1024px' height='100px'></canvas>
             <br />
-            <button class='btn btn-inverse btn-remixed' onClick="playClicked();"><i class="fa  fa-fw fa-play"></i>&nbsp;Play</button>
-            <button class='btn btn-remixed' onClick="stop();"><i class="fa fa-fw fa-stop"></i>&nbsp;Stop</button>
+            <button class='btn btn-inverse btn-original' onClick="player.play(0, track.analysis.beats);">Play Original</button>
+            <button class='btn btn-original' onClick="player.stop()">Stop Original</button>
+            </div>
+
+            <div id='newWaveform'>
+            <h2>Remixed Track</h2>
+            <canvas id='RemixedWaveCanvas' width='1024px' height='100px'></canvas>
+            <br />
+            <button class='btn btn-inverse btn-remixed' onClick="playClicked();">Play Remix</button>
+            <button class='btn btn-remixed' onClick="stop();">Stop Remix</button>
             <span id='downloadButton'></a>
             </div>
-			<div id="musicTilesStatus" class="hidden">
-			<div id='tiles' ></div>
+
+			<div id='tiles'></div>
 			<div class="MusicStatus">
 			&nbsp;&nbsp;	
 			<canvas id="myChartL" width="50" height="50"></canvas>
@@ -2050,26 +1891,16 @@ window.onload = init;
 			 Block: <span id='BlockNum'> 1 </span>
 			&nbsp;
 			Track: <span id='TrackNum'> 1 </span>
-			&nbsp;&nbsp;
-			<canvas id="myChartTrack" width="50" height="50"></canvas>
+			&nbsp;
+			<canvas id="myChartTrack1" width="50" height="50"></canvas>
 			<br>
 			<span id="chartLabels" style="
     font-size: 12px;
-">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loud&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pitch&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Timbre&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Track ratio</span>
-			</div>
+">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loud&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pitch&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Timbre&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Track ratio</span>
 			</div>
         </section>
-   
+  <img src="http://the.echonest.com/media/images/logos/250x80_lt.gif" />
+ 
   </div> <!-- /container -->
-<footer>
-	<br>
-	<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Brought to you by:<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://the.echonest.com/"> <img src="EchoNest.png" alt="EchoNest"></a> 
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://pages.github.com/"><img src="github.png" alt="Github Pages" height="29"></a> 	
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://jekyllrb.com/"><img src="jekyll.png" alt="Jekyll"></a> 	
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><i class="icon-javascript" style="color:#ffbf00; font-size: 72px; position: relative; top: -30px;"></i></a><br><br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="bottomTitle">SwitchBeat</span> is coded by <span id ="name">Nikhil Kumar </span> inspired by <a href="http://labs.echonest.com/Uploader/index.html" style="color:#d33682">The Infinite Jukebox</a>, check out more at <a href="http://kumarcode.com/" style="color:#dc322f">Kumarcode.com</a>
-</footer>
 </body>
 </html>

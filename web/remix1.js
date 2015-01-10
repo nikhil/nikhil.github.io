@@ -2,7 +2,6 @@
 // Thor Kell & Paul Lamere, 12/2012
 // Based on Paul Lamere's Infinite Jukebox and assorted other javascript projects
 
-
 function createJRemixer(context, jquery, apiKey) {
     var $ = jquery;
     $.ajaxSetup({ cache: false });
@@ -26,6 +25,7 @@ function createJRemixer(context, jquery, apiKey) {
                     $.getJSON("http://query.yahooapis.com/v1/public/yql", 
                         { q: "select * from json where url=\"" + analysisURL + "\"", format: "json"}, 
                         function(data) {
+							console.log(data);
                             if (data.query.results != null) {
                                 track.analysis = data.query.results.json;
                                 console.log("Analysis obtained...");
@@ -98,7 +98,7 @@ function createJRemixer(context, jquery, apiKey) {
 
         remixTrack : function(track, trackURL, callback) {
             function fetchAudio(url) {
-		        var request = new XMLHttpRequest();
+                var request = new XMLHttpRequest();
                 trace("fetchAudio " + url);
                 track.buffer = null;
                 request.open("GET", url, true);
@@ -126,21 +126,15 @@ function createJRemixer(context, jquery, apiKey) {
                     }
                 }
                 request.onerror = function(e) {
-                    //trace('error loading loaded');
-                    //track.status = 'error'
-					setTimeout(function(){
-   						fetchAudio(trackURL);
-					}, 1000);
-					
-					//callback(track, 0);
+                    trace('error loading loaded');
+                    track.status = 'error: loading audio'
                 }
                 request.onprogress = function(e) {
                     var percent = Math.round(e.loaded * 100 / e.total);
                     callback(track, percent);   
                 }
                 request.send();
-			
-}
+            }
 
             function preprocessTrack(track) {
                 trace('preprocessTrack');
@@ -295,8 +289,7 @@ function createJRemixer(context, jquery, apiKey) {
 
             if (track.status == 'complete') {
                 preprocessTrack(track);
-				fetchAudio(trackURL);
-			
+                fetchAudio(trackURL);
             } else {
                 track.status = 'error: incomplete analysis';
             }
@@ -636,6 +629,7 @@ function fetchSignature() {
 
 function getProfile(trackID, callback) {
     var url = 'http://remix.echonest.com/Uploader/profile?callback=?';
+	console.log(url+'trid='+trackID);
     return $.getJSON(url, {trid: trackID}, callback); 
 }
 
