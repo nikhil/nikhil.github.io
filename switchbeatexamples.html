@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="utf-8">
+	<title>SwitchBeat</title>
+	<link href='http://fonts.googleapis.com/css?family=Lato|Great+Vibes' rel='stylesheet' type='text/css'>
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="-1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   <link href="css/bootstrap.css" rel="stylesheet">
+   <link href="css/font-awesome.css" rel="stylesheet">
+   <link href="css/font-mfizz.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+	
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<script src="javascript/jquery.min.js"></script>
+<script type="text/javascript" src='javascript/remix.js'></script>
+<script src="javascript/bootstrap.min.js"></script>
+<script src="javascript/raphael-min.js"></script>
+<script src="javascript/Chart.js"></script>
+
+<script> 
+function playPause(id) {
+	var myVideo = document.getElementById(id); 
+    if (myVideo.paused) 
+        myVideo.play(); 
+    else 
+        myVideo.pause(); 
+} 
+</script>
+       
+    <div class="container">
+		<span id="programTitle">SwitchBeat&nbsp;&nbsp;<span class="musicAndCode">{</span><i class="fa  fs-fw fa-music"></i><span class="musicAndCode">}</span></span>
+		<span id="programDescrip">&nbsp;&nbsp;&nbsp;&nbsp;<em>Mashup two of your favorite songs</em></span><br><br>
+       	
+		
+		<div id = "uploadParem" style="width:90%;">
+			<h3><i class="fa fa-video-camera fa-fw" style="color:#683A5E"></i>&nbsp;&nbsp;Upload</h3>
+			<hr>
+			<div id = "videos" style="text-align:center;">
+				<h3> Sweet Talking Women + Come on Eileen </h3>	
+			<button onclick="playPause('video1')">Play/Pause</button> 
+			<video id="video1" style="width:100%; height:100%;" >
+  				<source src="videos/SweetTalkingEileen.webm" type="video/webm">
+  				Your browser does not support the video tag.
+			</video>
+				<br>
+				<h3>Doug + Space Jam </h3>	
+			<button onclick="playPause('video2')">Play/Pause</button> 
+			<video id="video2" style="width:100%; height:100%;" >
+  				<source src="videos/SpaceDoug.webm" type="video/webm">
+  				Your browser does not support the video tag.
+			</video>
+				<br>
+				<h3>Thrift Shop + Gangnam style</h3>
+			<button onclick="playPause('video3')">Play/Pause</button> 
+			<video id="video3" style="width:100%; height:100%;" >
+  				<source src="videos/ThriftStyle.webm" type="video/webm">
+  				Your browser does not support the video tag.
+			</video>
+				<br>
+				<h3>Seinfeld Theme + Constanza's Masterpiece</h3>
+			<button onclick="playPause('video4')">Play/Pause</button> 
+			<video id="video4" style="width:100%; height:100%;" >
+  				<source src="videos/Seinfeld.webm" type="video/webm">
+  				Your browser does not support the video tag.
+			</video>
+
+			</div>	
+		</div>
+		
+
+           
+  </div> <!-- /container -->
+<div class="container">
+	<br>
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Brought to you by:<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://the.echonest.com/"> <img src="images/EchoNest.png" alt="EchoNest"></a> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://pages.github.com/"><img src="images/github.png" alt="Github Pages" height="29"></a> 	
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://jekyllrb.com/"><img src="images/jekyll.png" alt="Jekyll"></a> 	
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><i class="icon-javascript" style="color:#ffbf00; font-size: 72px; position: relative; top: -30px;"></i></a><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="bottomTitle">SwitchBeat</span> is coded by <span id ="name">Nikhil Kumar </span> inspired by <a href="http://labs.echonest.com/Uploader/index.html" style="color:#d33682">The Infinite Jukebox</a>, check out more at <a href="http://kumarcode.com/" style="color:#dc322f">Kumarcode.com</a>
+</div>
+</body>
+
+<style>#forkongithub a{background:#482841;color:#fff;text-decoration:none;font-family:arial,sans-serif;text-align:center;font-weight:bold;padding:5px 40px;font-size:1rem;line-height:2rem;position:relative;transition:0.5s;}#forkongithub a:hover{background:#c11;color:#fff;}#forkongithub a::before,#forkongithub a::after{content:"";width:100%;display:block;position:absolute;top:1px;left:0;height:1px;background:#fff;}#forkongithub a::after{bottom:1px;top:auto;}@media screen and (min-width:800px){#forkongithub{position:absolute;display:block;top:0;right:0;width:200px;overflow:hidden;height:200px;z-index:9999;}#forkongithub a{width:200px;position:absolute;top:60px;right:-60px;transform:rotate(45deg);-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);-moz-transform:rotate(45deg);-o-transform:rotate(45deg);box-shadow:4px 4px 10px rgba(0,0,0,0.8);}}</style><span id="forkongithub"><a href="https://github.com/nikhil/SwitchBeat">Fork me on GitHub</a></span>
+</html>
