@@ -1,4 +1,5 @@
 # Kumarcode.com
+<img src="/images/frontPage.png" alt="Front Page">
 My Personal website. This website was based from the Minimal Mistakes theme.
 However, I added in several neat features such as:
 <ul>
