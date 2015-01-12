@@ -26,6 +26,16 @@
 <script src="javascript/bootstrap.min.js"></script>
 <script src="javascript/raphael-min.js"></script>
 <script src="javascript/Chart.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56020814-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 
 <script> 
 function playPause(id) {
@@ -46,28 +56,35 @@ function playPause(id) {
 			<h3><i class="fa fa-video-camera fa-fw" style="color:#683A5E"></i>&nbsp;&nbsp;Upload</h3>
 			<hr>
 			<div id = "videos" style="text-align:center;">
-				<h3> Sweet Talking Women + Come on Eileen </h3>	
+				<h3> Sweet Talking Women + Come on Eileen </h3><br>	
 			<button onclick="playPause('video1')">Play/Pause</button> 
 			<video id="video1" style="width:100%; height:100%;" >
   				<source src="videos/SweetTalkingEileen.webm" type="video/webm">
   				Your browser does not support the video tag.
 			</video>
 				<br>
-				<h3>Doug + Space Jam </h3>	
+				<h3>Trains + Lateralus</h3><br>	
+			<button onclick="playPause('secondVideo')">Play/Pause</button> 
+			<video id="secondVideo" style="width:100%; height:100%;" >
+  				<source src="videos/TrainLateralus.webm" type="video/webm">
+  				Your browser does not support the video tag.
+			</video>
+				<br>
+				<h3>Doug + Space Jam </h3><br>	
 			<button onclick="playPause('video2')">Play/Pause</button> 
 			<video id="video2" style="width:100%; height:100%;" >
   				<source src="videos/SpaceDoug.webm" type="video/webm">
   				Your browser does not support the video tag.
 			</video>
 				<br>
-				<h3>Thrift Shop + Gangnam style</h3>
+				<h3>Thrift Shop + Gangnam style</h3><br>
 			<button onclick="playPause('video3')">Play/Pause</button> 
 			<video id="video3" style="width:100%; height:100%;" >
   				<source src="videos/ThriftStyle.webm" type="video/webm">
   				Your browser does not support the video tag.
 			</video>
 				<br>
-				<h3>Seinfeld Theme + Constanza's Masterpiece</h3>
+				<h3>Seinfeld Theme + Constanza's Masterpiece</h3><br>
 			<button onclick="playPause('video4')">Play/Pause</button> 
 			<video id="video4" style="width:100%; height:100%;" >
   				<source src="videos/Seinfeld.webm" type="video/webm">
