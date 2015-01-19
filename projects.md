@@ -23,6 +23,16 @@ programs:
   - name: Pillow
   - name: Email
   prize: Won the Context.io award
+- name: SwitchBeat
+  url: http://kumarcode.com/switchbeat.html
+  description: Dynamically Mashups any two songs
+  images: 
+  - image: SwitchBeat.png
+  location: Independent
+  tags:
+  - name: Javascript
+  - name: Mashups
+  - name: EchoNest
 - name: MyoMelodies
   url: https://github.com/Erin-Corrado/MyoMelodies
   description: Lua script that allows you to control Foobar2000 from the Myo.
@@ -45,6 +55,17 @@ programs:
   - name: Math
   - name: Trig
   - name: canvas
+- name: Zork
+  url: http://zork.kumarcode.com
+  description: Using php to host Zork on heroku
+  images: 
+  - image: zork.png 
+  location: Independent
+  tags:
+  - name: Php
+  - name: Bash
+  - name: Heroku
+  - name: Text Adventure
 - name: Slam
   url: https://github.com/nikhil/Slam
   description: Streaming Live Awesome Music. Python script for streaming music from iheartradio.
