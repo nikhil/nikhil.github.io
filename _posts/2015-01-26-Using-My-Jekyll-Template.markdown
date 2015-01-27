@@ -269,19 +269,19 @@ The types supported:
 
 <table style=" width: 40%;">
 <tbody>
-<tr><td> <i class="icon-shell"></i></td><td>  Bash</td></tr>
-<tr><td> <i class="fa fa-file-code-o"></i></td><td>  [any name](File)</td></tr>
-<tr><td> <i class="icon-python"></i></td><td>  Python</td></tr>
-<tr><td> <i class="icon-aws"></i></td><td>  Packages</td></tr>
-<tr><td> <i class="icon-c"></i></td><td>  C</td></tr>
-<tr><td> <i class="icon-html"></i></td><td>  Html</td></tr>
-<tr><td> <i class="icon-java"></i></td><td>  Java</td></tr>
-<tr><td> <i class="icon-javascript"></i></td><td>  Javascript</td></tr>
-<tr><td> <i class="icon-nodejs"></i></td><td>  Nodejs</td></tr>
-<tr><td> <i class="icon-perl"></i></td><td>  Perl</td></tr>
-<tr><td> <i class="icon-php"></i></td><td>  Php</td></tr>
-<tr><td> <i class="icon-ruby"></i></td><td>  Ruby</td></tr>
-<tr><td> <i class="icon-css"></i></td><td>  Css</td></tr>
+<tr><td> <i class="icon-shell" style="color:#68385e"></i></td><td>  Bash</td></tr>
+<tr><td> <i class="fa fa-file-code-o" style="color:#68385e"></i></td><td>  [any name](File)</td></tr>
+<tr><td> <i class="icon-python" style="color:#68385e"></i></td><td>  Python</td></tr>
+<tr><td> <i class="icon-aws" style="color:#68385e"></i></td><td>  Packages</td></tr>
+<tr><td> <i class="icon-c" style="color:#68385e"></i></td><td>  C</td></tr>
+<tr><td> <i class="icon-html" style="color:#68385e"></i></td><td>  Html</td></tr>
+<tr><td> <i class="icon-java" style="color:#68385e"></i></td><td>  Java</td></tr>
+<tr><td> <i class="icon-javascript" style="color:#68385e"></i></td><td>  Javascript</td></tr>
+<tr><td> <i class="icon-nodejs" style="color:#68385e"></i></td><td>  Nodejs</td></tr>
+<tr><td> <i class="icon-perl" style="color:#68385e"></i></td><td>  Perl</td></tr>
+<tr><td> <i class="icon-php" style="color:#68385e"></i></td><td>  Php</td></tr>
+<tr><td> <i class="icon-ruby" style="color:#68385e"></i></td><td>  Ruby</td></tr>
+<tr><td> <i class="icon-css" style="color:#68385e"></i></td><td>  Css</td></tr>
 
 </tbody>
 </table>
