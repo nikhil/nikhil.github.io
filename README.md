@@ -187,14 +187,9 @@ As you can see, I have several icon sets in this template.
 
 `IconicIcons` is my custom font. I created it to display:
 
-<table style=" width: 30%;">
-<tbody>
-<tr><td>Arch icon</td><td> <i class="icon-arch" style="color:#268bd2"></i></td></tr>
-<tr><td>i3 icon</td><td><i class="icon-i3" style="color:#3ec2ff"></i></td></tr>
-<tr><td>Chrome</td><td>  <i class="icon-chrome"  style="color:#ccac00"></i></td></tr>
-<tr><td>Firefox</td><td>  <i class="icon-firefox" style="color:#e66000"></i></td></tr>
-</tbody>
-</table>
+<img src="images/website16.png">
+
+
 
 ###Cool Code Blocks
 
@@ -235,24 +230,9 @@ code:
 
 The types supported:
 
-<table style=" width: 40%;">
-<tbody>
-<tr><td> <i class="icon-shell"></i></td><td>  Bash</td></tr>
-<tr><td> <i class="fa fa-file-code-o"></i></td><td>  [any name](File)</td></tr>
-<tr><td> <i class="icon-python"></i></td><td>  Python</td></tr>
-<tr><td> <i class="icon-aws"></i></td><td>  Packages</td></tr>
-<tr><td> <i class="icon-c"></i></td><td>  C</td></tr>
-<tr><td> <i class="icon-html"></i></td><td>  Html</td></tr>
-<tr><td> <i class="icon-java"></i></td><td>  Java</td></tr>
-<tr><td> <i class="icon-javascript"></i></td><td>  Javascript</td></tr>
-<tr><td> <i class="icon-nodejs"></i></td><td>  Nodejs</td></tr>
-<tr><td> <i class="icon-perl"></i></td><td>  Perl</td></tr>
-<tr><td> <i class="icon-php"></i></td><td>  Php</td></tr>
-<tr><td> <i class="icon-ruby"></i></td><td>  Ruby</td></tr>
-<tr><td> <i class="icon-css"></i></td><td>  Css</td></tr>
 
-</tbody>
-</table>
+<img src="images/website17.png">
+
 
 If you specify a type `file`, you can add any name you want. Here is an example
 to have a header that says `C3d File`:
