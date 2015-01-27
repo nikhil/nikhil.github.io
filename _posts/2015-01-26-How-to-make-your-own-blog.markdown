@@ -103,6 +103,9 @@ If you are interested in using my theme you can `fork` it off my github repo.
 2. Visit my code <a href="https://github.com/nikhil/nikhil.github.io">here</a>
 3. Click the `Fork` button on the upper right.
 
+I wrote a blog post on how to use all the features of my blog <a
+href="http://kumarcode.com/Using-My-Jekyll-Template/">here.</a>
+
 Now you have a working (hopefully) jekyll repo. Cool!
 
 ###Starting from scratch

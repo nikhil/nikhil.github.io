@@ -1,0 +1,50 @@
+---
+layout: post
+comments: true
+title: Zork
+code:
+- type: html
+  count: 0
+
+- type: php
+  count: 1
+ 
+---
+
+
+<img src="../images/projects/zork.png" alt="zork">
+
+I decided to spend the beginning of my winter break learning how to use
+`Heroku`. I decided to make my first program a `zork` game that uses Heroku to
+run the Zork game in a local bash shell. I have learned several things in the
+process and added a really cool game to my website.
+
+###Check it out
+
+Check out the game<a href="http://zork.kumarcode.com/"> here</a>
+
+###Form handling
+
+One thing I learned from this project is how to handle form handling. This
+takes data entered in the html and gives it to another script.
+
+You can enter the data using a `form` tag. 
+
+{% highlight html lineous %}
+<form name="prompt" action="zork.php" method="post">
+&gt;&nbsp;
+<input class="prompt" type="text" name="inputPrompt" autocomplete="off">
+</form>
+{% endhighlight %}
+
+You can then retrieve the data in `php` like so:
+
+{% highlight php lineous startinline=true %}
+
+$inputPrompt = $_POST["inputPrompt"];
+
+
+{% endhighlight %}
+
+Now the inputed string is in `inputPrompt`.
+
