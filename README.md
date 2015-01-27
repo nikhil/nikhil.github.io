@@ -1,8 +1,3 @@
-<link href="assets/css/IconicIcons.css" rel="stylesheet">
-<link href="assets/css/browser.css" rel="stylesheet">
-<link href="assets/css/font-mfizz.css" rel="stylesheet">
-<link href="assets/css/font-awesome.css" rel="stylesheet">
-
 ###Kumarcode.com
 I have decided to dedicate a post on the layout of this website. If someone
 looking for a Jekyll template wants to use my website, they can follow the
@@ -14,6 +9,16 @@ them as your own.
 
 If you do not have Jekyll or have not yet forked my repository, I recommend that you see my post regarding how to
 get started <a href="http://kumarcode.com/How-to-make-your-own-blog/">here.</a>
+
+###Get your own local copy
+
+```bash
+mkdir MyWebsite
+cd MyWebsite
+git init
+git clone https://github.com/[username]/[username].github.io
+
+```
 
 ###My Jekyll Template
 
@@ -41,7 +46,7 @@ This is located here:
 
 Here are some of its contents:
 
-```js
+```yml
 
 title:            Kumarcode
 description:      A stylish blog on my code
@@ -147,7 +152,7 @@ work for your repo.
 I created a navigation bar that is neat, colorful and legible. You can modify
 the links in `_config.yml`. 
 
-```js
+```yaml
 
 links:
   - title: About
@@ -237,7 +242,7 @@ The types supported:
 If you specify a type `file`, you can add any name you want. Here is an example
 to have a header that says `C3d File`:
 
-```js
+```yml
 
 code:
 - type: file
@@ -315,7 +320,7 @@ This page is created by `posts.md` located in:
 /_includes/posts.md
 </blockquote>
 
-```js
+```yml
 
 ---
 layout: post-index
@@ -344,7 +349,7 @@ script will fetch the artwork, date, and tags.
 
 Here is how to list your albums under `music:`:
 
-```js
+```yml
 
 ---
 layout: page
@@ -380,7 +385,7 @@ given the info you provide.
 Here is how to list your projects under `programs:`:
 
 
-```js
+```yml
 
 ---
 layout: page
