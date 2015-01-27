@@ -199,7 +199,7 @@ I have developed cool code blocks that will give your code a black background.
 If you want to use this, you need to write the `type` of code that is being
 shown and its count: first code block =0, second code block =1,...etc.
 
-```html
+```yml
 
 ---
 layout: post
