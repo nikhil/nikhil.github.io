@@ -36,7 +36,9 @@ content: "\f100";
 
 You can see
 the each icon has its own unique `unicode` sequence.
+
 ###Add the font to your font cache
+
 Now that you have the `ttf` file for your font. You can now add it to you font
 cache.
 {% highlight java linenos %}
@@ -91,7 +93,7 @@ Here is picture of my i3 status. To view the full screen image click <a href = "
 Here is a close up picture of the <i class="icon-Arch"></i> icon on my i3 status. To view the full screen image click <a href = "/images/i3statusclose.png"> here.</a>
 <br>
 <br>
-<img src="/images/i3statusclose.png" alt="i3status"/>
+<img src="/images/projects/i3bar.png" alt="i3status"/>
 
 
 
