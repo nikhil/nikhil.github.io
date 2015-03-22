@@ -27,6 +27,7 @@ programs:
   url: http://kumarcode.com/switchbeat.html
   description: Dynamically Mashups any two songs
   images: 
+  - image: SwitchBeat1.png
   - image: SwitchBeat.png
   location: Independent
   tags:

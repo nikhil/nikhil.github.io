@@ -47,6 +47,7 @@ Html. The `mathjax` package makes this easy to do.
 
 ##Setting up the html
 
+
 {% highlight html linenos %}
 
 <script type="text/x-mathjax-config">

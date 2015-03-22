@@ -11,11 +11,13 @@ title: Derivation of Flux from Concentration Profile
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
-<body>
+
 
 After learning how to incorporate LaTeX into html. I decided to run through a
 sample Biomedical equation derivation on the transport of a solute through time
 `t` and space `z`.
+
+<body>
 
 <h3>What we know</h3>
 

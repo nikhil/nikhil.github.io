@@ -9,8 +9,7 @@ code:
  
 ---
 
-Embedding vidoes in html is easy. Just do:
-
+Embedding vidoes in html is easy. Just do:                                                                                                                                                                                                                                                                                                                 
 {% highlight html linenos %}
 <video id="video1" controls style="width:100%; height:100%;" >
 	<source src="../videos/SweetTalkingEileen.webm" type="video/webm">

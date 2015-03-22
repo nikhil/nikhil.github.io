@@ -356,6 +356,7 @@ font-size: 80%;
 #sinbtn {
 	background-color: #eee8d5;
 	border-style: groove;
+	color: rgb(88, 110, 117);
 	position: absolute;
     right: 30px;
 	top: 450px;

@@ -80,6 +80,7 @@ coding but I will still talk about other things as well.
 <li> Hot Fuzz </li>
 <li> Shaun of the Dead </li>
 <li> Canadian Bacon </li>
+<li> John Wick </li>
 </ul>
 </div>
 
@@ -94,8 +95,10 @@ coding but I will still talk about other things as well.
 <li> Deus Ex: Human Revolution </li>
 <li> The Witcher </li>
 <li> Portal </li>
-<li> Portal2 </li>
+<li> Portal 2 </li>
 <li> Braid </li>
+<li> Bastion </li>
+<li> Dishonored </li>
 
 </ul>
 </div>
@@ -114,6 +117,7 @@ Jumping out of bed only to realize that his landing foot is still asleep.
 <li> HackNY Fall 2013 </li>
 <li> HackRU Spring 2014 </li>
 <li> Penn Apps X Fall 2014</li>
+<li> HackRU Fall 2014 </li>
 </ul>
 </div>
 
