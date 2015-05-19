@@ -16,7 +16,7 @@ image:
 Year  <span class="distros"> Distro </span> <span class="desktop"> Desktop Enviornment</span>
 <span>   </span>
 <hr>
-2010 <span class="distros"> <i class="icon-ubuntu"></i>  ubuntu </span> <span class="desktop"> <i class="icon-gnome"></i> Gnome </span><br> 
+2012 <span class="distros"> <i class="icon-ubuntu"></i>  ubuntu </span> <span class="desktop"> <i class="icon-gnome"></i> Gnome </span><br> 
 2012 <span class="distros"><i class="icon-linux-mint"></i>  linux mint </span> <span class="desktop"><i class="icon-kde"></i> KDE </span><br>
 2013 <span class="distros"><i class="icon-arch"></i>  Arch </span> <span class="desktop"><i class="icon-i3"></i> i3 </p></span><br> 
 </div>
