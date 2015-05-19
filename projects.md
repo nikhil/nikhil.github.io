@@ -10,9 +10,24 @@ image:
   feature: rabbit.jpg
   credit: A Rabbit from my backyard.
 programs:
+- name: FreeBird
+  url: http://freebird.kumarcode.com/ 
+  description: Helps allow Doctors easily monitor and visualize the mental health of patients, dietary, and sleeping pattern. Correlates nutrition and sleep with the changes in mood.
+  images: 
+  - image: FreeBirdResult.png 
+  location: Rutgers Hackathon Spring 2015
+  tags:
+  - name: Python
+  - name: Twitter
+  - name: MongoDB
+  - name: Openshift
+  - name: USDA
+  - name: Mood
+  - name: Health
+  prize: Won the Twitter award
 - name: PostalPortraits
   url: https://github.com/Erin-Corrado/PostalPortraits
-  description: Analyzes the content of a conversation thread on a users email and then transfers those changes through image modifations using the Pillow image manipulation tool.
+  description: Analyzes the content of a conversation thread on a users email and then transfers those changes through image modifications using the Pillow image manipulation tool.
   images: 
   - image: huskybefore.jpg
   - image: huskyafter.jpg
@@ -91,7 +106,7 @@ programs:
   - name: Btk
 - name: galaxytocummerbund 
   url: https://github.com/nikhil/galaxytocummerbund
-  description: A bash script that batch renames all the output files downloaded from the Galaxy server so that it can be used to run cummerbund.
+  description: A bash script that batch renames all the output files downloaded from the Galaxy server so that it can be used to run CummeRbund.
   images: 
   - image: galaxy.png
   - image: rna.jpg
