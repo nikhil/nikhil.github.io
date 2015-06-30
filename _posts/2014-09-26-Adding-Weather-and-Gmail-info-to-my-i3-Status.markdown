@@ -57,7 +57,7 @@ Now configure your i3blocks configuration file:
 separator_block_width=14
 
 [Weather]
-command=~/.i3/IconicWeather.sh "08840"
+command=~/.i3/IconicWeather.sh "10001"
 interval=1800
 color=#e97ac8
 
