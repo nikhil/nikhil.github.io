@@ -20,7 +20,7 @@ code:
 - type: bash
   count: 4
 
-- type: perl
+- type: bash
   count: 5
 
 - type: bash
@@ -149,7 +149,7 @@ icons to indicate the type of weather at a location. So I piped the curl script
 output in a `perl` script to print a `font-awsome` icon from a given weather
 condition. 
 
-{% highlight perl linenos %}
+{% highlight python linenos %}
 #!/bin/bash 
 
 METRIC=0 #Should be 0 or 1; 0 for F, 1 for C
@@ -203,7 +203,7 @@ print"$values[1]"; }'
 
 ### The Gmail Script
 
-The gamil script in the wiki was not parsing the xml correctly. I fixed the
+The gmail script in the wiki was not parsing the xml correctly. I fixed the
 issue. The script shows the number of unread emails you have:
 
 {% highlight bash linenos %}

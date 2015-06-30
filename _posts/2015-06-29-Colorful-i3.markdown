@@ -1,0 +1,349 @@
+---
+layout: post
+comments: true
+title: Colorful i3 customization
+code:
+- type: bash
+  count: 0
+
+- type: file
+  file: config	
+  count: 1
+
+- type: bash
+  count: 2
+
+- type: file
+  file:	i3blocks.conf
+  count: 3
+
+- type: bash
+  count: 4
+
+- type: perl
+  count: 5
+
+- type: bash
+  count: 6
+
+- type: bash
+  count: 7
+
+---
+This post is meant to guide others who are interested in getting colors and
+icons on their i3 status. Here is a snapshot of my i3 status.
+<br>
+<br>
+<img src="/images/i3status.png" alt="i3status"/>
+
+##Get i3blocks
+i3blocks is a cool package for i3 which will make all this configuration
+possible. 
+
+{% highlight java linenos %}
+
+pacaur -S i3blocks-git
+
+{% endhighlight %}
+
+Now configure your i3 `config` located in:
+
+<blockquote>
+~/.i3/config
+</blockquote>
+Add these lines to the file. The important line here is the one with
+`status_command`. That will allow i3 to use
+i3blocks for your i3status bar.
+
+{% highlight python linenos %}
+
+bar {
+ 	font pango:Source Sans Pro-10 10
+	status_command i3blocks -c ~/.i3/i3blocks.conf
+  colors {
+    separator #268bd2
+    background #002b36
+    statusline #839496
+    focused_workspace #fdf6e3 #6c71c4 #fdf6e3
+    active_workspace #fdf6e3 #6c71c4 #fdf6e3
+    inactive_workspace #002b36 #586e75 #002b36
+    urgent_workspace #d33682 #d33682 #fdf6e3
+  }
+}
+client.focused #6c71c4 #6c71c4 #fdf6e3 #6c71c4
+client.focused_inactive #073642 #073642 #eee8d5 #6c71c4
+client.unfocused #073642 #073642 #93a1a1 #586e75
+client.urgent #d33682 #d33682 #fdf6e3 #dc322f
+
+{% endhighlight %}
+<a href="/resources/config" download="config"><i class= "fa fa-download fa-fw"></i> Download config</a><br>
+
+##Get the icons
+I have added 3 sets of icons to my i3status. The `.ttf` are linked below: 
+
+<ul>
+	<li><a href="/resources/fontawesome-webfont.ttf" download="fontawesome-webfont.ttf"><i class= "fa fa-download fa-fw"></i>   Fontawesome</a></li>
+	<li><a href="/resources/AIcons.ttf" download="AIcons.ttf"><i class= "fa fa-download fa-fw"></i>   Arch Icon</a></li>
+	<li><a href="/resources/icons.ttf" download="icons.ttf"><i class= "fa fa-download fa-fw"></i>   Clock and Temperature Icons</a></li>
+</ul>
+
+
+Add the ttf files that you received to your font cache:
+
+{% highlight python linenos %}
+
+mkdir ~/.local/share/fonts
+cp *.ttf ~/.local/share/fonts
+fc-cache -fv
+
+{% endhighlight %}
+
+<i class="fa fa-warning"></i>  **Notice:** You can also install Font Awsome by running: pacaur -S ttf-font-awesome  
+{: .notice}
+
+##Edit your i3blocks configuration
+Now we can add the icons and colors to our i3status bar! You need to know edit
+your i3blocks configuration file located here:
+
+<blockquote>
+~/.i3/i3blocks.conf
+</blockquote>
+
+{% highlight java linenos %}
+separator_block_width=14
+
+[Weather]
+command=~/.i3/IconicWeather.sh "10001"
+interval=1800
+color=#e97ac8
+
+
+[mail]
+label= 
+command=~/.i3/.mail.sh.x
+interval=100
+color=#7F00FF 
+
+[disk-root]
+label=:
+command=/usr/libexec/i3blocks/disk /
+interval=30
+color=#1793D1
+
+
+[disk-home]
+label=:
+command=/usr/libexec/i3blocks/disk $HOME
+interval=30
+color=#859900
+
+[ssid]
+label=
+command=echo "$(iw dev wlo1 link | grep SSID | cut -d " " -f 2-)"
+color=#d33682
+interval=5
+
+
+
+[wireless]
+instance=wlo1
+command=/usr/libexec/i3blocks/network
+color=#00FF00
+interval=10
+
+[strength]
+command=echo "$(iw dev wlo1 link | grep signal | cut -d " " -f 2-)"
+interval=10
+color=#cb4b16
+
+[temp]
+label=
+command=echo "$(sensors coretemp-isa-0000 | awk '/Physical/ {print $4}')"
+interval=10
+color=#b58900
+
+[battery]
+
+command=~/.i3/battery BAT0
+
+interval=30
+
+[load]
+label= 
+command=/usr/libexec/i3blocks/load_average
+interval=10
+color=#6c71c4
+
+
+[volume]
+label=
+command=/usr/libexec/i3blocks/volume
+interval=2
+signal=10
+color=#d70a53
+
+
+[time]
+label=
+command=date '+%a %m-%d-%y %l:%M:%S %p'
+interval=5
+color=#50C878
+{% endhighlight %}
+
+<i class="fa fa-warning"></i>  **Notice:** You will need to get scripts for
+[Weather] , [mail] and [battery] to work. In addition remeber to replace `10001` with your
+zip code
+{: .notice}
+
+<a href="/resources/i3blocks.conf" download="i3blocks.conf"><i class= "fa fa-download fa-fw"></i> Download i3blocks.conf</a><br>
+
+##The Gmail Script
+
+{% highlight bash linenos %}
+USER=Your_Gmail_Username
+PASS=Your_Password
+  
+COUNT=`curl -su $USER:$PASS https://mail.google.com/mail/feed/atom || echo "<fullcount>unknown number of</fullcount>"`
+COUNT=`echo "$COUNT" | grep -oPm1 "(?<=<fullcount>)[^<]+" `
+echo $COUNT
+if [ "$COUNT" != "0" ]; then
+   if [ "$COUNT" = "1" ];then
+      WORD="mail";
+   else
+      WORD="mails";
+   fi
+fi
+{% endhighlight %}
+
+<a href="/resources/mail.sh" download="mail.sh"><i class= "fa fa-download fa-fw"></i> Download mail.sh</a><br>
+
+You need to enter your Gmail username and password into this script. Then save
+it to `.mail.sh`. You would need to obfuscate the script and make it execute
+only. Follow the directions <a
+href="http://kumarcode.com/Making-My-Gmail-Script-Execute-Only/">here</a>. Save
+the execute only file to:
+<blockquote>
+~/.i3/.mail.sh.x
+</blockquote>
+
+and delete `.mail.sh`
+
+##The Weather Script
+This script displays the current temperature and icon based on the zip code you
+enter on the `i3blocks.conf` file
+
+Save the script here:
+<blockquote>
+~/.i3/IconicWeather.sh
+</blockquote>
+
+{% highlight python linenos %}
+#!/bin/bash 
+
+METRIC=0 #Should be 0 or 1; 0 for F, 1 for C
+ 
+if [ -z $1 ]; then
+echo
+echo "USAGE: weather.sh <locationcode>"
+echo
+exit 0;
+fi
+ 
+curl -s http://rss.accuweather.com/rss/liveweather_rss.asp\?metric\=${METRIC}\&locCode\=$1 | perl -ne 'use utf8; if (/Currently/) {chomp;/\<title\>Currently: (.*)?\<\/title\>/; my @values=split(":",$1); if( $values[0] eq "Sunny" || $values[0] eq "Mostly Sunny" || $values[0] eq "Partly Sunny" || $values[0] eq "Intermittent Clouds" || $values[0] eq "Hazy Sunshine" || $values[0] eq "Hazy Sunshine" || $values[0] eq "Hot") 
+{
+my $sun = "";
+binmode(STDOUT, ":utf8");
+print "$sun";
+}
+if( $values[0] eq "Mostly Cloudy" || $values[0] eq "Cloudy" || $values[0] eq "Dreary (Overcast)" || $values[0] eq "Fog")
+{
+my $cloud = "";
+binmode(STDOUT, ":utf8");
+print "$cloud";
+}
+if( $values[0] eq "Showers" || $values[0] eq "Mostly Cloudy w/ Showers" || $values[0] eq "Partly Sunny w/ Showers" || $values[0] eq "T-Storms"|| $values[0] eq "Mostly Cloudy w/ T-Storms"|| $values[0] eq "Partly Sunny w/ T-Storms"|| $values[0] eq "Rain")
+{
+my $rain = "";
+binmode(STDOUT, ":utf8");
+print "$rain";
+}
+if( $values[0] eq "Windy")
+{
+my $wind = "";
+binmode(STDOUT, ":utf8");
+print "$wind";
+} 
+if($values[0] eq "Flurries" || $values[0] eq "Mostly Cloudy w/ Flurries" || $values[0] eq "Partly Sunny w/ Flurries"|| $values[0] eq "Snow"|| $values[0] eq "Mostly Cloudy w/ Snow"|| $values[0] eq "Ice"|| $values[0] eq "Sleet"|| $values[0] eq "Freezing Rain"|| $values[0] eq "Rain and Snow"|| $values[0] eq "Cold")
+{
+my $snow = "";
+binmode(STDOUT, ":utf8");
+print "$rain";
+}
+if($values[0] eq "Clear" || $values[0] eq "Mostly Clear" || $values[0] eq "Partly Cloudy"|| $values[0] eq "Intermittent Clouds"|| $values[0] eq "Hazy Moonlight"|| $values[0] eq "Mostly Cloudy"|| $values[0] eq "Partly Cloudy w/ Showers"|| $values[0] eq "Mostly Cloudy w/ Showers"|| $values[0] eq "Partly Cloudy w/ T-Storms"|| $values[0] eq "Mostly Cloudy w/ Flurries" || $values[0] eq "Mostly Cloudy w/ Snow")
+{
+my $night = "";
+binmode(STDOUT, ":utf8");
+print "$night";
+}
+print"$values[1]"; }'
+
+
+{% endhighlight %}
+
+<a href="/resources/IconicWeather.sh" download="IconicWeather.sh"><i class= "fa fa-download fa-fw"></i> Download IconicWeather.sh </a><br>
+
+
+##The Charging script
+To display a different icon when the battery is charing or being discharged I
+created a battery script.
+Save the script here:
+<blockquote>
+~/.i3/battery
+</blockquote>
+
+This is a modification of the i3blocks battery script. It changes these lines:
+
+{% highlight bash linenos %}
+
+$full_text = "$percent%";
+
+if ($status eq 'Discharging') {
+	$full_text .= ' DIS';
+} elsif ($status eq 'Charging') {
+	$full_text .= ' CHR';
+}
+{% endhighlight %}
+
+into:
+
+{% highlight bash linenos %}
+
+$full_text = "";
+if ($status eq 'Discharging') {
+    
+	$full_text .= "⚡ $percent% Bat";
+} elsif ($status eq 'Charging') {
+	$full_text .= " $percent% Chr";
+}
+ elsif ($status eq 'Unknown' || $status eq 'Full') {
+	$full_text .= "⚡ $percent%";
+}
+
+
+{% endhighlight %}
+
+
+Now your i3status bar should be fully customized. 
+
+
+
+
+
+
+
+
+
+
+
+
+

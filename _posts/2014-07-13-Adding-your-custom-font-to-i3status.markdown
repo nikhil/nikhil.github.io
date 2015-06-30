@@ -14,6 +14,11 @@ code:
   file: i3status.conf
   count: 3
 ---
+<i class="fa fa-warning"></i>  **Notice:** This is a guide for an old version of my i3status. To access the guide to the newer version click <a href="http://kumarcode.com/Colorful-i3/">here. </a> 
+{: .notice}
+
+
+
 Now that I have created my custom icon font. I would like to add this font to
 my i3status. This will be a challenge since before I was able to use a `css
 selector` to add my icon. I cannot use css selectors in my i3status config.
@@ -84,16 +89,16 @@ so for the Arch icon it would be:<br>
 After that, all you need to do is refresh i3 by:<br>
 `ctrl + shift + r` <br>
 Now, sit back and admire your icons on your i3status bar!
-Here is picture of my i3 status. To view the full screen image click <a href = "/images/i3status.png"> here.</a>
+Here is picture of my i3 status. To view the full screen image click <a href = "/images/oldi3status.png"> here.</a>
 <br>
 <br>
-<img src="/images/i3status.png" alt="i3status"/>
+<img src="/images/oldi3status.png" alt="i3status"/>
 <br>
 <br>
-Here is a close up picture of the <i class="icon-Arch"></i> icon on my i3 status. To view the full screen image click <a href = "/images/i3statusclose.png"> here.</a>
+Here is a close up picture of the <i class="icon-Arch"></i> icon on my i3 status. To view the full screen image click <a href = "/images/oldi3statusclose.png"> here.</a>
 <br>
 <br>
-<img src="/images/projects/i3bar.png" alt="i3status"/>
+<img src="/images/oldi3statusclose.png" alt="i3status"/>
 
 
 
