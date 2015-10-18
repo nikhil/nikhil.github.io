@@ -253,6 +253,27 @@ $( document ).ready(function() {
 </script>
 {% endif %}
 
+
+{% if codetag.type == 'csharp' %}
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+	       rel:'  C Sharp'
+		   }).appendTo("pre:eq({{codetag.count}})");
+
+});	
+
+</script>
+{% endif %}
+
+
+
+
+
 {% if codetag.type == 'css' %}
 
 <script type="text/javascript">
