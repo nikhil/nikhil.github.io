@@ -115,13 +115,15 @@ $$h_{01}(t) = -2t^3 +3t^2 $$
 
 $$h_{11}(t) = t^3 - t^2 $$
 
+###Tangent Equation
+
 Current point is the next point you will reach
 
 $$ Tangent_0 $$ has i = currentPoint -1
 
 $$ Tagent_1 $$ has  i = currentPoint
 
-If First Segment of Curve:
+####If First Segment of Curve:
 
 $$ FirstCoef = \frac{(t_2 - t_{0})}{(t_{2} - t_{1})}$$
 
@@ -131,11 +133,11 @@ $$ SecondCoef = -1 * \frac{(t_{1} - t_0) }{(t_{2} - t_{1})}$$
 
 $$ SecondTerm = \frac{(p_2 - p_{0})}{(t_2 - t_{0})} $$
 
-$$ Tangent_0 = firstCoeff * firstTerm + $$ 
+$$ Tangent = firstCoeff * firstTerm + $$ 
 
 $$secondCoeff * secondTerm $$
 
-If Last Segment of Curve:
+####If Last Segment of Curve:
 
 $$ FirstCoef = \frac{(t_i - t_{i-})}{(t_{i-1} - t_{i-2})}$$
 
@@ -145,11 +147,11 @@ $$ SecondCoef = -1 * \frac{(t_{i} - t_{i-1}) }{(t_{i-1} - t_{i-2})}$$
 
 $$ SecondTerm = \frac{(p_i - p_{i-2})}{(t_i - t_{i-2})} $$
 
-$$ Tangent_0 = firstCoeff * firstTerm + $$ 
+$$ Tangent = firstCoeff * firstTerm + $$ 
 
 $$secondCoeff * secondTerm $$
 
-Any Segment between First and Last:
+####Any Segment between First and Last:
 
 $$ FirstCoef = \frac{(t_i - t_{i-1})}{(t_{i+1} - t_{i-1})}$$
 
@@ -159,7 +161,7 @@ $$ SecondCoef = \frac{(t_{i+1} - t_i) }{(t_{i+1} - t_{i-1})}$$
 
 $$ SecondTerm = \frac{(p_i - p_{i-1})}{(t_i - t_{i-1})} $$
 
-$$ Tangent_0 = firstCoeff * firstTerm + $$ 
+$$ Tangent = firstCoeff * firstTerm + $$ 
 
 $$secondCoeff * secondTerm $$
 
