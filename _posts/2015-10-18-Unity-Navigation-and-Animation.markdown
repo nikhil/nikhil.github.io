@@ -11,11 +11,15 @@ code:
   count: 2  
 - type: csharp
   count: 3
+- type: csharp
+  count: 4
+- type: csharp
+  count: 5
 
 ---
 
 In this post we will discuss the implementation of Navigation and Animation in
-Unity. The projects were created by a team of 3 as part of a class project for Introduction to Computer Science at Rutgers University.
+Unity. The projects were created by a team of 3 as part of a class project for Introduction to Computer Graphics at Rutgers University.
 
 ####Team Members:
 
@@ -179,5 +183,72 @@ if(Input.GetKeyDown(KeyCode.Space))
 {% endhighlight %}
 
 
+##Combination Navigation and Animation
+
+You can play the Unity by clicking on the link 
+<a href="/B1Part3Game.html"> here.</a>
+
+<a href="/B1Part3Game.html"><img src="/images/Graphics/B1Part3Start.png" alt="B1Part3Start"/></a>
+
+<i class="fa fa-gamepad"></i> **Controls** 
+`Left click` to select the agents. `Right click` to walk.
+Hold down `left shift` and `right click` to run.
+The characters will automatically jump when navigating to a higher level plane.
+Obstacles and Roaming Obstacles  follow the same controls as part 1 
+{: .notice}
+
+In this part we combined both the animation and the navigation in Unity.
+
+###Play Through
+
+You can select an agent by left clicking on them. The agent will turn green.
+
+<img src="/images/Graphics/B1Part3Selected.png" alt="B1Part3Selected."/>
+
+You can right click on an area to have the agents walk to that area.
+
+<img src="/images/Graphics/B1Part3Walk.png" alt="B1Part3Walk"/>
+
+You can hold down left shift while right clicking to make the agent run.
+
+<img src="/images/Graphics/B1Part3Running.png" alt="B1Part3Running"/>
+
+The agents jump automatically jump when needed.
+
+<img src="/images/Graphics/B1Part3Jump.png" alt="B1Part3Jump"/>
 
 
+###Brief Implementation Description
+
+The navigation agent parameters were used to update the agents animations.
+
+For Running:
+{% highlight C# linenos %}
+...
+if (Physics.Raycast (ray, out hit, 100)) 
+{
+	if(Input.GetKey(KeyCode.LeftShift)) 
+	{
+		navMeshAgent.speed = 6f;
+	}
+
+...
+{% endhighlight %}
+
+The higher speed signals a transition from the walking state to the running
+state.
+
+For jumping, we override the jump animation for the MeshLink
+{% highlight C# linenos %}
+...
+else if (!anim.IsInTransition(0)) {
+	if(anim.GetCurrentAnimatorStateInfo(0).tagHash != jumpHash) {
+		agent.CompleteOffMeshLink();
+		agent.Resume();
+		agent.nextPosition = currLink.endPos;
+		traversingLink = false;
+	}
+...
+{% endhighlight %}
+
+Github Link: <a href="https://github.com/CG-F15-9-Rutgers/UnityProjects/tree/master/BAssignments/B1"> Here </a>
