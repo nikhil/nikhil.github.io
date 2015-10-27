@@ -64,7 +64,7 @@ Simulation is running..
 
 ###Example 2
 
-<img src="/images/Graphics/A2Example1.png" alt="A2Example2"/>
+<img src="/images/Graphics/A2Example2.png" alt="A2Example2"/>
 
 
 {% highlight bash linenos %}
@@ -81,7 +81,7 @@ Simulation is running...
 
 ### Fixed test case of Example 2
 
-<img src="/images/Graphics/A2Example1.png" alt="A2Example3"/>
+<img src="/images/Graphics/A2Example3.png" alt="A2Example3"/>
 
 {% highlight bash linenos %}
 $ ./steersim -testcase polygons2-fixed -ai collisionAI
