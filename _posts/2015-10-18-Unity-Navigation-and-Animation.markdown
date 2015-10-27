@@ -251,4 +251,4 @@ else if (!anim.IsInTransition(0)) {
 ...
 {% endhighlight %}
 
-Github Link: <a href="https://github.com/CG-F15-9-Rutgers/UnityProjects/tree/master/BAssignments/B1"> Here </a>
+<i class="fa fa-github-alt"></i> Github Link: <a href="https://github.com/CG-F15-9-Rutgers/UnityProjects/tree/master/BAssignments/B1"> Here </a>

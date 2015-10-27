@@ -262,7 +262,7 @@ $( document ).ready(function() {
        $("pre").addClass("terminal");
 	   
 		 $("<span>",{
-	       rel:'  C Sharp'
+	       rel:' '
 		   }).appendTo("pre:eq({{codetag.count}})");
 
 });	
@@ -270,6 +270,22 @@ $( document ).ready(function() {
 </script>
 {% endif %}
 
+
+{% if codetag.type == 'cplusplus' %}
+
+<script type="text/javascript">
+$( document ).ready(function() {
+     
+       $("pre").addClass("terminal");
+	   
+		 $("<span>",{
+	       rel:' '
+		   }).appendTo("pre:eq({{codetag.count}})");
+
+});	
+
+</script>
+{% endif %}
 
 
 

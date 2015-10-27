@@ -165,7 +165,7 @@ $$ Tangent = firstCoeff * firstTerm + $$
 
 $$secondCoeff * secondTerm $$
 
-Github link: <a
+<i class="fa fa-github-alt"></i> Github link: <a
 href="https://github.com/CG-F15-9-Rutgers/SteerLite/blob/master/steerlib/src/Curve.cpp">
 Here </a>
 
