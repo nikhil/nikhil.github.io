@@ -97,6 +97,19 @@ Simulation is running...
 
 {% endhighlight %}
 
+The output for polygons2.xml shows a collision detected, while observing
+the polygons there is clearly no collision between the two shapes. This
+is because the shapes are concave, and our implementation is not able to
+handle this case. Since the usual solution is to have the engine
+represent concave shapes as multiple convex shapes for the purposes of
+collision detection, we can manually modify the testcase to represent
+the same shapes with more polygons.
+
+The fixed version of polygons2 represents the larger "bow tie" shape as
+two triangles. The smaller shape is unmodified as the first change was
+sufficient: the output of this fixed case properly shows that there are
+no collisions between the two (now three) shapes.
+
 ##Gilbert-Johnson-Keerthi Algorithm 
 
 GJK is an algorithm which helps us decide if two shapes are colliding. You need
