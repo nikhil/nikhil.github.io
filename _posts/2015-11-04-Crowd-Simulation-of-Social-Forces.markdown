@@ -252,7 +252,10 @@ for (std::set<SteerLib::SpatialDatabaseItemPtr>::iterator neighbor = _neighbors.
 <i class="fa fa-github-alt"></i> Github Link: <a href="https://github.com/CG-F15-9-Rutgers/SteerLite/blob/master/socialForcesAI/src/SocialForcesAgent.cpp"> Here </a>
 
 <script>
-      renderMathInElement(
+
+document.addEventListener("DOMContentLoaded", function(event) { 
+
+	renderMathInElement(
           document.body,
           {
               delimiters: [
@@ -261,6 +264,8 @@ for (std::set<SteerLib::SpatialDatabaseItemPtr>::iterator neighbor = _neighbors.
              ]
           }
       );
+});
+
 </script>
 
 
