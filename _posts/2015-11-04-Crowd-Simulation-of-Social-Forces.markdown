@@ -145,7 +145,7 @@ avg. number of collisions per agent: 0.015
 
 ####Sum of Forces:
 
-$( m_i\frac{dv_i}{dt} = F_{goal} + F_{agents} + F_{walls} )$
+$$ m_i\frac{dv_i}{dt} = F_{goal} + F_{agents} + F_{walls} $$
 
 This is the sum of all the forces that make up the Social Force.
 
@@ -159,7 +159,7 @@ Util::Vector acceleration = (prefForce + repulsionForce + proximityForce) / AGEN
 
 ####Goal Directed Force:
 
-$( F_{goal} = m_i\frac{v_i^0(t)e^0_i(t) - v_i(t)}{\tau_i} )$
+$$ F_{goal} = m_i\frac{v_i^0(t)e^0_i(t) - v_i(t)}{\tau_i} $$
 
 This Force changes the speed and direction according to the direction of the
 goal. 
