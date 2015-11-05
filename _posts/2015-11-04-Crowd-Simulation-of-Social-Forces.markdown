@@ -15,10 +15,12 @@ code:
   count: 4
 - type: cplusplus
   count: 5
-- type: cplusplus
+- type: bash
   count: 6
 - type: cplusplus
   count: 7
+- type: cplusplus
+  count: 8
 
 ---
 <script type="text/x-mathjax-config">
@@ -173,6 +175,21 @@ Vector SocialForcesAgent::calcGoalForce(Vector _goalDirection, float _dt)
     
 }
 {% endhighlight %}
+
+
+We choose to divide the goal force by 5 so that it does not overpower other
+collision avoiding forces during cases such as the bottleneck test case. Here
+is a print out of the results before goal force was divided. We can see that
+the magnitude is roughly equal to the repulsion force. This is not good.
+
+{% highlight bash linenos %}
+...
+agent198 repulsion force (71.9985,0,-0.630486)
+agent198 proximity force (6.77865,0,-14.0264)
+agent198 pref force (-38.7242,0,-62.2515)
+...
+{% endhighlight %}
+
 
 ####Agent Collision Avoidance Force:
 
