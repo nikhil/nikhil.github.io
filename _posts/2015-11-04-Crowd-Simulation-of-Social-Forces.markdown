@@ -254,7 +254,8 @@ for (std::set<SteerLib::SpatialDatabaseItemPtr>::iterator neighbor = _neighbors.
 <script>
 
 document.addEventListener("DOMContentLoaded", function(event) { 
-
+	
+    
 	renderMathInElement(
           document.body,
           {
@@ -267,5 +268,24 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 
 </script>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(event) { 
+	
+    
+	renderMathInElement(
+          document.body,
+          {
+              delimiters: [
+                  {left: "$[", right: "]$", display: true},
+                  {left: "$(", right: ")$", display: false},
+             ]
+          }
+      );
+});
+
+</script>
+
 
 
