@@ -19,14 +19,12 @@ code:
   count: 6
 - type: cplusplus
   count: 7
-- type: cplusplus
-  count: 8
-- type: cplusplus
-  count: 9
-- type: cplusplus
-  count: 10
 
 ---
+
+<link rel="stylesheet" href="../css/katex.min.css"> 
+<script src="../javascript/katex.min.js"></script>
+<script src="../javascript/auto-render.min.js"></script>
 
 In this post we will discuss the implementation of Social Forces in crowd
 simulations using <a href="https://github.com/SteerSuite/SteerLite">SteerLite.</a> The projects were created by a team of 3 as part of a class project for Introduction to Computer Graphics at Rutgers University. 
@@ -140,7 +138,129 @@ avg. number of collisions per agent: 0.015
                         final score: 1783.08
 {% endhighlight %}
 
+#Implementation
+
+####Sum of Forces:
+
+$[ m_i\frac{dv_i}{dt} = F_{goal} + F_{agents} + F_{walls} ]$
+
+This is the sum of all the forces that make up the Social Force.
+
+{% highlight c++ linenos %}
+
+Util::Vector acceleration = (prefForce + repulsionForce + proximityForce) / AGENT_MASS;
+
+{% endhighlight %}
 
 
+
+####Goal Directed Force:
+
+$[ F_{goal} = m_i\frac{v_i^0(t)e^0_i(t) - v_i(t)}{\tau_i} ]$
+
+This Force changes the speed and direction according to the direction of the
+goal. 
+
+{% highlight c++ linenos %}
+
+Vector SocialForcesAgent::calcGoalForce(Vector _goalDirection, float _dt)
+{
+  Util::Vector goalForce = (((_goalDirection * PREFERED_SPEED) - velocity()) / _dt)/5;
+  return goalForce;
+    
+}
+{% endhighlight %}
+
+####Agent Collision Avoidance Force:
+
+$[ F_{agents} = \sum_{j \ne i }F_{ij} ]$
+
+$[ F_{ij} = (A_ie^{\frac{r_{ij}-d_{ij}}{B_i}} + kg(r_{ij} - d_{ij}))n_{ij} + kg(r_{ij}-d_{ij})\Delta v^t_{ji}t_{ij} ]$
+
+$( F_{ij} )$ is the sum of forces of agent j on agent i \\
+R is the Radii \\
+d is the distance between centers of mass \\
+A and B are constants
+
+{% highlight c++ linenos %}
+
+Util::Vector SocialForcesAgent::calcAgentRepulsionForce(float dt)
+{
+...
+for(std::set<SteerLib::SpatialDatabaseItemPtr>::iterator neighbor = _neighbors.begin(); neighbor != _neighbors.end(); neighbor++)
+{
+    if( (*neighbor)->isAgent() )
+      tempAgent = dynamic_cast<SteerLib::AgentInterface *> (*neighbor);
+    
+    else
+      continue;
+    
+    if( (id() != tempAgent->id() ) && (tempAgent->computePenetration(this->position(),this->radius()) > 0.000001))
+    {
+     agent_repulsion_force = agent_repulsion_force + ( tempAgent->computePenetration(this->position(),this->radius()) * _SocialForcesParams.sf_agent_body_force * dt) * normalize(position() - tempAgent->position());  
+     
+    }
+     
+}
+...
+}
+
+{% endhighlight %}
+
+
+####Wall Collision Avoidance Force:
+
+$[ F_{walls} = \sum_{j \ne i}F_{iW} ]$
+
+$[ F_{iW} = (A_ie^{\frac{r_{i}-d_{iW}}{B_i}} + kg(r_{i} - d_{iW}))n_{iW} - kg(r_{i}-d_{iW})(v_i * t_{iW})t_{iW}]$
+
+$( F_{iW} )$ is the sum of forces of wall W on agent i  \\
+R is the Radii  \\
+d is the distance between centers of mass \\
+A and B are constants
+
+{% highlight c++ linenos %}
+
+Util::Vector SocialForcesAgent::calcWallRepulsionForce(float dt)
+{
+...
+
+for (std::set<SteerLib::SpatialDatabaseItemPtr>::iterator neighbor = _neighbors.begin(); neighbor!=_neighbors.end(); neighbor++)
+{
+	 if(!(*neighbor)->isAgent())
+	   tmp_ob = dynamic_cast<SteerLib::ObstacleInterface *>(*neighbor);
+	 
+	 else
+	   continue;
+	 
+	 if(tmp_ob->computePenetration(this->position(), this->radius()) > 0.000001)
+	 {
+	  Util::Vector wallNormal = calcWallNormal(tmp_ob);
+	  std::pair<Util::Point,Util::Point> line = calcWallPointsFromNormal(tmp_ob, wallNormal);
+	  std::pair<float, Util::Point> min_stuff = minimum_distance(line.first, line.second, this->position());
+	  wall_repulsion_force = wall_repulsion_force +  wallNormal * (min_stuff.first + this->radius()) * _SocialForcesParams.sf_body_force*dt;
+
+	 }
+	  
+}
+
+...
+}
+
+{% endhighlight %}
+
+<i class="fa fa-github-alt"></i> Github Link: <a href="https://github.com/CG-F15-9-Rutgers/SteerLite/blob/master/socialForcesAI/src/SocialForcesAgent.cpp"> Here </a>
+
+<script>
+      renderMathInElement(
+          document.body,
+          {
+              delimiters: [
+                  {left: "$[", right: "]$", display: true},
+                  {left: "$(", right: ")$", display: false},
+             ]
+          }
+      );
+</script>
 
 
