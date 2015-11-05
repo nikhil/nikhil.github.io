@@ -21,10 +21,13 @@ code:
   count: 7
 
 ---
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
-<link rel="stylesheet" href="../css/katex.min.css"> 
-<script src="../javascript/katex.min.js"></script>
-<script src="../javascript/auto-render.min.js"></script>
 
 In this post we will discuss the implementation of Social Forces in crowd
 simulations using <a href="https://github.com/SteerSuite/SteerLite">SteerLite.</a> The projects were created by a team of 3 as part of a class project for Introduction to Computer Graphics at Rutgers University. 
@@ -173,11 +176,11 @@ Vector SocialForcesAgent::calcGoalForce(Vector _goalDirection, float _dt)
 
 ####Agent Collision Avoidance Force:
 
-$( F_{agents} = \sum_{j \ne i }F_{ij} )$
+$$ F_{agents} = \sum_{j \ne i }F_{ij} $$
 
-$( F_{ij} = (A_ie^{\frac{r_{ij}-d_{ij}}{B_i}} + kg(r_{ij} - d_{ij}))n_{ij} + kg(r_{ij}-d_{ij})\Delta v^t_{ji}t_{ij} )$
+$$ F_{ij} = (A_ie^{\frac{r_{ij}-d_{ij}}{B_i}} + kg(r_{ij} - d_{ij}))n_{ij} + kg(r_{ij}-d_{ij})\Delta v^t_{ji}t_{ij} $$
 
-$(( F_{ij} ))$ is the sum of forces of agent j on agent i \\
+$ F_{ij} $ is the sum of forces of agent j on agent i \\
 R is the Radii \\
 d is the distance between centers of mass \\
 A and B are constants
@@ -210,11 +213,11 @@ for(std::set<SteerLib::SpatialDatabaseItemPtr>::iterator neighbor = _neighbors.b
 
 ####Wall Collision Avoidance Force:
 
-$( F_{walls} = \sum_{j \ne i}F_{iW} )$
+$$ F_{walls} = \sum_{j \ne i}F_{iW} $$
 
-$( F_{iW} = (A_ie^{\frac{r_{i}-d_{iW}}{B_i}} + kg(r_{i} - d_{iW}))n_{iW} - kg(r_{i}-d_{iW})(v_i * t_{iW})t_{iW} )$
+$$ F_{iW} = (A_ie^{\frac{r_{i}-d_{iW}}{B_i}} + kg(r_{i} - d_{iW}))n_{iW} - kg(r_{i}-d_{iW})(v_i * t_{iW})t_{iW} $$
 
-$(( F_{iW} ))$ is the sum of forces of wall W on agent i  \\
+$ F_{iW} $ is the sum of forces of wall W on agent i  \\
 R is the Radii  \\
 d is the distance between centers of mass \\
 A and B are constants
@@ -251,24 +254,6 @@ for (std::set<SteerLib::SpatialDatabaseItemPtr>::iterator neighbor = _neighbors.
 
 <i class="fa fa-github-alt"></i> Github Link: <a href="https://github.com/CG-F15-9-Rutgers/SteerLite/blob/master/socialForcesAI/src/SocialForcesAgent.cpp"> Here </a>
 
-<script>
-
-document.addEventListener("DOMContentLoaded", function(event) { 
-	
-    
-	renderMathInElement(
-          document.body,
-          {
-              delimiters: [
-                  {left: "$[", right: "]$", display: true},
-				  {left: "$((", right: "))$", display: false},
-                  {left: "$(", right: ")$", display: true},
-             ]
-          }
-      );
-});
-
-</script>
 
 
 
