@@ -3,24 +3,16 @@ layout: post
 comments: true
 title: A* PAthfinding   
 code:
-- type: bash 
+- type: cplusplus 
   count: 0
-- type: bash
+- type: cplusplus
   count: 1
-- type: bash
+- type: cplusplus
   count: 2  
-- type: bash 
+- type: cplusplus
   count: 3
 - type: cplusplus
   count: 4
-- type: cplusplus
-  count: 5
-- type: bash
-  count: 6
-- type: cplusplus
-  count: 7
-- type: cplusplus
-  count: 8
 
 ---
 
@@ -209,6 +201,24 @@ distance.
 
 Both the Manhattan and the Euclidean Heuristic were weighted with weights of 2,4,and 8.
 
+{% highlight C++ linenos %}
+
+double AStarPlanner::Heuristic(Util::Point a, Util::Point b)
+{
+	if(USE_MANHATTAN_DISTANCE) 
+	{
+     	return WEIGHT*Manhattan(a,b);
+	} 
+	else 
+	{
+		return WEIGHT*(double)distanceBetween(a,b);
+	}
+}
+
+{% endhighlight %}
+
+
+
 A* Heuristic of Weight 2 Manhattan First Test Case
 
 <iframe width="480" height="270" src="https://www.youtube.com/embed/D9VWXU2fTv4" frameborder="0" allowfullscreen></iframe>
@@ -265,6 +275,8 @@ path found less likely to be the optimal one. Therefore, weighted A Star is not 
 the optimal path. This can be seen in Search-2 Euclidean when the weight is 8. The optimal path
 is 79. 799, but adding a weight of 8 finds a path of length 82.3848 although the number of
 expanded nodes is greatly decreased.
+
+<i class="fa fa-github-alt"></i> Github Link: <a href="https://github.com/CG-F15-9-Rutgers/SteerLite/blob/master/steerlib/src/AStarPlanner.cpp"> Here </a>
 
 
 
