@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: A* PAthfinding   
+title: A* Pathfinding   
 code:
 - type: cplusplus 
   count: 0
