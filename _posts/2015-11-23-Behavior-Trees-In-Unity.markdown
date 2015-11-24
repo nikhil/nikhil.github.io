@@ -14,6 +14,11 @@ code:
 The projects were created by a team of 3 as part of a class project for Introduction to Computer Graphics at Rutgers University.
 
 
+##Video 
+
+<iframe width="480" height="270" src="https://www.youtube.com/embed/HhCYzRJoxO8" frameborder="0" allowfullscreen></iframe>
+
+
 ##Behavior Tree
 
 You can play the Unity by clicking on the link 
