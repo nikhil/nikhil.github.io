@@ -31,7 +31,7 @@ The story takes place in a post-apocalyptic world, ravaged by the Chaos Dunk whi
 
 You can play the Unity Game by clicking on the link <a href="/B4Part1.html">here.</a>
 
-<a href="/B4Part1.html"><img src="/images/Graphics/B1Start.png" alt="B4Start1"/></a>
+<a href="/B4Part1.html"><img src="/images/Graphics/B4Start.png" alt="B4Start1"/></a>
 
 <i class="fa fa-gamepad"></i> **Controls** 
 This part is just a narration, there are no controls for this part.
@@ -41,7 +41,7 @@ This part is just a narration, there are no controls for this part.
 
 You can play the Unity Game by clicking on the link <a href="/B4Part2.html">here.</a>
 
-<a href="/B4Part2.html"><img src="/images/Graphics/B1Start.png" alt="B4Start2"/></a>
+<a href="/B4Part2.html"><img src="/images/Graphics/B4Start.png" alt="B4Start2"/></a>
 
 <i class="fa fa-gamepad"></i> **Controls** 
 You can use the `left mouse button` to control the player.
@@ -52,13 +52,28 @@ You can use the `left mouse button` to control the player.
 
 You can play the Unity Game by clicking on the link <a href="/B4Part3.html">here.</a>
 
-<a href="/B4Part3.html"><img src="/images/Graphics/B1Start.png" alt="B4Start3"/></a>
+<a href="/B4Part3.html"><img src="/images/Graphics/B4Start.png" alt="B4Start3"/></a>
 
 <i class="fa fa-gamepad"></i> **Controls** 
 You can use the `left mouse button` to control the player. Use the `A` and `D`
 keys to switch characters.
 {: .notice}
 
+##Vidoes
+
+Here are the video recordings of each part. The audio has not been recorded.
+
+Part 1
+
+<iframe width="480" height="270" src="https://www.youtube.com/embed/MmHtww2Vz88" frameborder="0" allowfullscreen></iframe>
+
+Part 2
+
+<iframe width="480" height="270" src="https://www.youtube.com/embed/KROaXCStwE4" frameborder="0" allowfullscreen></iframe>
+
+Part 3
+
+<iframe width="480" height="270" src="https://www.youtube.com/embed/Iwxy634mc3c" frameborder="0" allowfullscreen></iframe>
 
 ##Narrative
 
@@ -207,6 +222,31 @@ public class Basketballsong : MonoBehaviour {
 
 {% endhighlight %}
 
+<i class="fa fa-github-alt"></i> Github Link: <a href="https://github.com/CG-F15-9-Rutgers/UnityProjects/tree/master/BAssignments/B4"> Here </a>
+
+###Credit
+
+This game took a great deal of work to make, and we would like to give special thanks to the movie Space Jam (1996) and the independent video game, Barkley, Shut Up and Jam Gaiden for inspiring our concept, storyline, and music. 
+
+We used these Space Jam mashups in our game:
+
+Carry On Wayward Slam
+
+<iframe width="480" height="270" src="https://www.youtube.com/embed/iBIf0OgZffU" frameborder="0" allowfullscreen></iframe>
+
+U Can't Slam This
+
+<iframe width="480" height="270" src="https://www.youtube.com/embed/E72cbmPDv9k" frameborder="0" allowfullscreen></iframe>
+
+Ghostslammers
+
+<iframe width="480" height="270" src="https://www.youtube.com/embed/awkUfIjl1R0" frameborder="0" allowfullscreen></iframe>
+
+Can't Hold the Slam
+
+<iframe width="480" height="270" src="https://www.youtube.com/embed/_CpWBXBAk1k" frameborder="0" allowfullscreen></iframe>
 
 
-<i class="fa fa-github-alt"></i> Github Link: <a href="https://github.com/CG-F15-9-Rutgers/UnityProjects/tree/master/BAssignments/B1"> Here </a>
+
+
+

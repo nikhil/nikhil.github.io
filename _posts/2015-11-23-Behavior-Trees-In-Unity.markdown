@@ -163,3 +163,4 @@ new MyNode((i) => GoToPosition(friends[i], x))
 
 This works similarly to LeafInvoke but allows the user to send in an index to control the array that is a parameter for GoToPosition. This is useful when you want a list of objects to perform the same action, such as people going to a certain position.
 
+<i class="fa fa-github-alt"></i> Github Link: <a href="https://github.com/CG-F15-9-Rutgers/UnityProjects/tree/master/BAssignments/B3"> Here </a>
