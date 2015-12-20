@@ -47,18 +47,18 @@ function LastFM(options){
 			iframe.width        = 1;
 			iframe.height       = 1;
 			iframe.style.border = 'none';
+
+			/* Append iframe. */
+			html.appendChild(iframe);
 			iframe.onload       = function(){
 				/* Remove iframe element. */
-				//html.removeChild(iframe);
+				html.removeChild(iframe);
 
 				/* Call user callback. */
 				if(typeof(callbacks.success) != 'undefined'){
 					callbacks.success();
 				}
 			};
-
-			/* Append iframe. */
-			html.appendChild(iframe);
 
 			/* Get iframe document. */
 			if(typeof(iframe.contentWindow) != 'undefined'){
@@ -112,12 +112,7 @@ function LastFM(options){
 
 			/* Set callback name and response format. */
 			params.callback = jsonp;
-			params.jsonpCallback = 'jsonp';
 			params.format   = 'json';
-			params.contentType = "application/json";
-			params.dataType = 'jsonp';
-			params.async = 'true';
-		/*	params.timeout = '1000000';*/
 
 			/* Create JSONP callback function. */
 			window[jsonp] = function(data){
@@ -234,6 +229,10 @@ function LastFM(options){
 
 		getTags : function(params, session, callbacks){
 			signedCall('album.getTags', params, session, callbacks);
+		},
+
+		getTopTags: function(params, callbacks){
+			signedCall('album.getTopTags', params, callbacks);
 		},
 
 		removeTag : function(params, session, callbacks){
@@ -831,20 +830,13 @@ function LastFM(options){
 	/* Private auth methods. */
 	var auth = {
 		getApiSignature : function(params){
-			var keys   = [];
+			var keys = Object.keys(params);
 			var string = '';
 
-			for(var key in params){
-				keys.push(key);
-			}
-
 			keys.sort();
-
-			for(var index in keys){
-				var key = keys[index];
-
+			keys.forEach(function(key) {
 				string += key + params[key];
-			}
+			});
 
 			string += apiSecret;
 

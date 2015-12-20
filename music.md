@@ -84,6 +84,12 @@ music:
 
 - name: London Calling
   by: The Clash
+
+- name: Endless Forms Most Beautiful
+  by: Nightwish
+
+- name: Haven
+  by: Kamelot
 ---
 <p> A log of my favorite music tracks</p>
 <h1>Albums</h1>
@@ -96,23 +102,23 @@ music:
 
 Dexys Midnight Runners: Come on Eileen
 
-<iframe width="640" height="390" src="//www.youtube.com/embed/rVxcwe7EcaY" frameborder="0" allowfullscreen></iframe>
+<iframe width="480" height="270" src="//www.youtube.com/embed/rVxcwe7EcaY" frameborder="0" allowfullscreen></iframe>
 
 Focus: Hocus Pocus
 
-<iframe width="640" height="390" src="//www.youtube.com/embed/NGaVUApDVuY" frameborder="0" allowfullscreen></iframe>
+<iframe width="480" height="270" src="//www.youtube.com/embed/NGaVUApDVuY" frameborder="0" allowfullscreen></iframe>
 
 Warren Zevon: Werewolves of London
 
-<iframe width="640" height="390" src="//www.youtube.com/embed/iDpYBT0XyvA" frameborder="0" allowfullscreen></iframe>
+<iframe width="480" height="270" src="//www.youtube.com/embed/iDpYBT0XyvA" frameborder="0" allowfullscreen></iframe>
 
 Frank Zappa: Joe's garage
 
-<iframe width="640" height="390" src="//www.youtube.com/embed/ZlIe5mBqIB4" frameborder="0" allowfullscreen></iframe>
+<iframe width="480" height="270" src="//www.youtube.com/embed/ZlIe5mBqIB4" frameborder="0" allowfullscreen></iframe>
 
 Ryan Star: Losing Your Memory
 
-<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/26704099&amp;color=00aabb&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+<iframe width="480" height="270" src="//www.youtube.com/embed/5Lt_lFTBrNI" frameborder="0" allowfullscreen></iframe>
 
 Buckethead: Carpal Tunnel Slug
 
@@ -120,11 +126,11 @@ Buckethead: Carpal Tunnel Slug
 
 Yoko Kanno & Scott Matthey:Beauty is Within Us
 
-<iframe width="640" height="390" src="//www.youtube.com/embed/QOt-sqiVQtI" frameborder="0" allowfullscreen></iframe>
+<iframe width="480" height="270" src="//www.youtube.com/embed/QOt-sqiVQtI" frameborder="0" allowfullscreen></iframe>
 
 Yoko Kanno: Dew
 
-<iframe width="640" height="390" src="//www.youtube.com/embed/zLiWov6aAKc" frameborder="0" allowfullscreen></iframe>
+<iframe width="480" height="270" src="//www.youtube.com/embed/zLiWov6aAKc" frameborder="0" allowfullscreen></iframe>
 
  
 
@@ -144,7 +150,8 @@ Carry On My Wayward Slam: Kansas "Carry on Wayward Son" + Space Jam
 
 We are Coming Undone: Korn "Coming Undone" + Taylor Swift "We are never getting back together"
 
-<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/69595950&amp;color=00aabb&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false"></iframe>
+<iframe width="480" height="270" src="//www.youtube.com/embed/QQAjHO-jzB8" frameborder="0" allowfullscreen></iframe>
+
 
 Call Me A Hole: Nine Inch Nails "Head Like A Hole" + Carly Rae Jepsen "Call Me Maybe"
 
@@ -156,20 +163,19 @@ Owner of a Futurama: Futurama theme song + Yes "Owner Of A Lonely Heart"
 
 Never Gonna Wake You Up: Rick Astley "Never going to give you up" + Avicii "Wake Me Up"  
 
-<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/148495758&amp;color=00aabb&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+<iframe width="480" height="270" src="//www.youtube.com/embed/oT3mCybbhf0" frameborder="0" allowfullscreen></iframe>
 
 Thunder Busters: AC/DC: Thunderstruck + Ray Parker Jr: Ghostbusters
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/141848227&amp;color=00aabb&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
 
-In The End, You&aps;re An All Star: Linkin Park: In The End + Smash Mouth: All Star
+In The End, You&#39;re An All Star: Linkin Park: In The End + Smash Mouth: All Star
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/157507703&amp;color=00aabb&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
 
 Royal Burn: Multiple Songs/Artists
 
-<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/113087227&amp;color=00aabb&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-
+<iframe width="480" height="270" src="//www.youtube.com/embed/HjxEe9cdQ_Q" frameborder="0" allowfullscreen></iframe>
 
 
 

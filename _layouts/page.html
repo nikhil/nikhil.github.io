@@ -71,10 +71,14 @@ var lastfm = new LastFM({
 /* Load some artist info. */
 lastfm.album.getInfo({artist: '{{albumel.by}}',album: '{{albumel.name}}'}, {success: function(data){
 
-
+console.log(data.album);
 var name = data.album.name;
 var artist = data.album.artist;
 var releasedate = data.album.releasedate;
+
+if(typeof releasedate !== "undefined")
+{
+
 {% if albumel.name == 'IV' %}
 releasedate = '8 Nov 1971'
 {% endif %}
@@ -84,15 +88,23 @@ releasedate = '21 Nov 1981'
 
 var pieces = releasedate.split(",");
 var date = pieces[0];
-var tags = data.album.toptags.tag;
+}
+
+var tags = data.album.tags.tag;
 var tag;
 var url = data.album.image[2]["#text"];
 var albumimage = '<img src="'+url+'">';
 var title = '<p>' + artist + ' - ' + name +'</p>';
+if(typeof releasedate !== "undefined")
+{
 var dateelem = '<p>' +'Released: '+ date + '</p>';
+}
 
 var html = title;
+if(typeof releasedate !== "undefined")
+{
 html += dateelem;
+}
 var codetag;
 var tag;
 var length = tags.length;
@@ -101,7 +113,7 @@ html += 'Tags: ';
 for(var i=0; i<tags.length; i++)
 {
    tag = tags[i];
-   if(tag.name != "albums i own")
+   if(tag.name != "albums I own")
    {
 		codetag = '<code>'+ tag.name + '</code>';
         html += codetag;
