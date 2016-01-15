@@ -29,7 +29,7 @@ Unity. The projects were created by a team of 3 as part of a class project for I
 
 ##Navigation
 
-You can play the Unity by clicking on the link 
+You can play the Unity game by clicking on the link 
 <a href="/UnityProjectBuilds/B1Build/part1/index.html"> here.</a>
 
 <a href="/UnityProjectBuilds/B1Build/part1/index.html"><img src="/images/Graphics/B1Start.png" alt="B1Start"/></a>
