@@ -29,9 +29,9 @@ The story takes place in a post-apocalyptic world, ravaged by the Chaos Dunk whi
 
 ##Part 1
 
-You can play the Unity Game by clicking on the link <a href="/B4Part1.html">here.</a>
+You can play the Unity Game by clicking on the link <a href="/UnityProjectBuilds/B4Build/part1/index.html">here.</a>
 
-<a href="/B4Part1.html"><img src="/images/Graphics/B4Start.PNG" alt="B4Start1"/></a>
+<a href="/UnityProjectBuilds/B4Build/part1/index.html"><img src="/images/Graphics/B4Start.PNG" alt="B4Start1"/></a>
 
 <i class="fa fa-gamepad"></i> **Controls** 
 This part is just a narration, there are no controls for this part.
@@ -39,9 +39,9 @@ This part is just a narration, there are no controls for this part.
 
 ##Part 2
 
-You can play the Unity Game by clicking on the link <a href="/B4Part2.html">here.</a>
+You can play the Unity Game by clicking on the link <a href="/UnityProjectBuilds/B4Build/part2/index.html">here.</a>
 
-<a href="/B4Part2.html"><img src="/images/Graphics/B4Start.PNG" alt="B4Start2"/></a>
+<a href="/UnityProjectBuilds/B4Build/part2/index.html"><img src="/images/Graphics/B4Start.PNG" alt="B4Start2"/></a>
 
 <i class="fa fa-gamepad"></i> **Controls** 
 You can use the `left mouse button` to control the player.
@@ -50,9 +50,9 @@ You can use the `left mouse button` to control the player.
 
 ##Part 3
 
-You can play the Unity Game by clicking on the link <a href="/B4Part3.html">here.</a>
+You can play the Unity Game by clicking on the link <a href="/UnityProjectBuilds/B4Build/part3/index.html">here.</a>
 
-<a href="/B4Part3.html"><img src="/images/Graphics/B4Start.PNG" alt="B4Start3"/></a>
+<a href="/UnityProjectBuilds/B4Build/part3/index.html"><img src="/images/Graphics/B4Start.PNG" alt="B4Start3"/></a>
 
 <i class="fa fa-gamepad"></i> **Controls** 
 You can use the `left mouse button` to control the player. Use the `A` and `D`

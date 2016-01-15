@@ -22,9 +22,9 @@ The projects were created by a team of 3 as part of a class project for Introduc
 ##Behavior Tree
 
 You can play the Unity by clicking on the link 
-<a href="/B2Game.html"> here.</a>
+<a href="/UnityProjectBuilds/B3Build/index.html"> here.</a>
 
-<a href="/B2Game.html"><img src="/images/Graphics/B2Start.png" alt="B2Start"/></a>
+<a href="/UnityProjectBuilds/B3Build/index.html"><img src="/images/Graphics/B2Start.png" alt="B2Start"/></a>
 
 <i class="fa fa-gamepad"></i> **Controls** 
 After the zombie introduction in the story, use the `Left Mouse Button` to click a location for the participant to move. You will need to run to the end of the map, into the military base by the barrel in order to win the game. If the zombie catches up to you the game is over.

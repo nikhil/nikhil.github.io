@@ -30,9 +30,9 @@ Unity. The projects were created by a team of 3 as part of a class project for I
 ##Navigation
 
 You can play the Unity by clicking on the link 
-<a href="/B1Part1Game.html"> here.</a>
+<a href="/UnityProjectBuilds/B1Build/part1/index.html"> here.</a>
 
-<a href="/B1Part1Game.html"><img src="/images/Graphics/B1Start.png" alt="B1Start"/></a>
+<a href="/UnityProjectBuilds/B1Build/part1/index.html"><img src="/images/Graphics/B1Start.png" alt="B1Start"/></a>
 
 The Agents here are the purple capsules and the movable obstacles are the red
 cylinders. 
@@ -126,9 +126,9 @@ The MeshLinks were created by using empty object to link two Navigation Meshes
 ##Animation
 
 You can play the Unity by clicking on the link 
-<a href="/B1Part2Game.html"> here.</a>
+<a href="/UnityProjectBuilds/B1Build/part2/index.html"> here.</a>
 
-<a href="/B1Part2Game.html"><img src="/images/Graphics/B1WalkAnimation.png" alt="B1WalkAnimation"/></a>
+<a href="/UnityProjectBuilds/B1Build/part2/index.html"><img src="/images/Graphics/B1WalkAnimation.png" alt="B1WalkAnimation"/></a>
 
 <i class="fa fa-gamepad"></i> **Controls** 
 Use the `arrow keys` to move the player around. The player will only walk.
@@ -186,9 +186,9 @@ if(Input.GetKeyDown(KeyCode.Space))
 ##Combination Navigation and Animation
 
 You can play the Unity by clicking on the link 
-<a href="/B1Part3Game.html"> here.</a>
+<a href="/UnityProjectBuilds/B1Build/part3/index.html"> here.</a>
 
-<a href="/B1Part3Game.html"><img src="/images/Graphics/B1Part3Start.png" alt="B1Part3Start"/></a>
+<a href="/UnityProjectBuilds/B1Build/part3/index.html"><img src="/images/Graphics/B1Part3Start.png" alt="B1Part3Start"/></a>
 
 <i class="fa fa-gamepad"></i> **Controls** 
 `Left click` to select the agents. `Right click` to walk.
