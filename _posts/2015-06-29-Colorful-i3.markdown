@@ -42,9 +42,12 @@ possible.
 
 {% highlight java linenos %}
 
-pacaur -S i3blocks-git
+pacaur -S i3blocks
 
 {% endhighlight %}
+
+<i class="fa fa-warning"></i>  **Notice:** You also have the option to install the git package for the latest release by running: pacaur -S i3blocks-git. However, this package is less stable than the i3blocks package.   
+{: .notice}
 
 Now configure your i3 `config` located in:
 
@@ -126,14 +129,14 @@ color=#7F00FF
 
 [disk-root]
 label=:
-command=/usr/libexec/i3blocks/disk /
+command=/usr/lib/i3blocks/disk /
 interval=30
 color=#1793D1
 
 
 [disk-home]
 label=:
-command=/usr/libexec/i3blocks/disk $HOME
+command=/usr/lib/i3blocks/disk $HOME
 interval=30
 color=#859900
 
@@ -147,7 +150,7 @@ interval=5
 
 [wireless]
 instance=wlo1
-command=/usr/libexec/i3blocks/network
+command=/usr/lib/i3blocks/iface
 color=#00FF00
 interval=10
 
@@ -170,14 +173,14 @@ interval=30
 
 [load]
 label= 
-command=/usr/libexec/i3blocks/load_average
+command=/usr/lib/i3blocks/load_average
 interval=10
 color=#6c71c4
 
 
 [volume]
 label=
-command=/usr/libexec/i3blocks/volume
+command=/usr/lib/i3blocks/volume
 interval=2
 signal=10
 color=#d70a53
@@ -189,6 +192,9 @@ command=date '+%a %m-%d-%y %l:%M:%S %p'
 interval=5
 color=#50C878
 {% endhighlight %}
+
+<i class="fa fa-warning"></i>  **Notice:** If you installed the i3blocks-git package, you need to replace `lib` with `libexec` in the script path.
+{: .notice}
 
 <i class="fa fa-warning"></i>  **Notice:** You will need to get scripts for
 [Weather] , [mail] and [battery] to work. In addition remeber to replace `10001` with your
