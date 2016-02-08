@@ -29,7 +29,7 @@ code:
 ---
 Today I decided to use a program known as `i3blocks` to customize my `i3status`. It allows me to run outputs of scripts and colorize sections as well.
 
-##Installing and configuring i3blocks
+## Installing and configuring i3blocks
 
 First you need to install i3blocks:
 
@@ -137,12 +137,12 @@ If you want to remove the separator from a section just include the line:
 `separator=false` 
 
 
-##Configuring the Scripts
+## Configuring the Scripts
 
 I modified many of the scripts I found on the <a
 href="https://github.com/vivien/i3blocks/wiki"> i3blocks wiki</a>
 
-###The Weather Script
+### The Weather Script
 
 I wanted to display weather on my i3status but I wanted to include 
 icons to indicate the type of weather at a location. So I piped the curl script

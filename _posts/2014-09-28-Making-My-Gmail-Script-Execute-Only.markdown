@@ -36,7 +36,7 @@ hidden
 execute only binary is significantly more protected than a hidden script file.
 {: .notice}
 
-##Installing and using shc
+## Installing and using shc
 
 You can install shc by running:
 
@@ -74,7 +74,7 @@ shc -r -v -T -f .mail.sh
 
 Now your binary script should work.
 
-##Makeing the binary execute only
+## Makeing the binary execute only
 
 Now change to owner of your binary to root using `chown`:
 

@@ -35,9 +35,9 @@ In this post we will discuss the implementation of Social Forces in crowd
 simulations using <a href="https://github.com/SteerSuite/SteerLite">SteerLite.</a> The projects were created by a team of 3 as part of a class project for Introduction to Computer Graphics at Rutgers University. 
 
 
-##Demonstration
+## Demonstration
 
-###Bottle Neck
+### Bottle Neck
 
 <iframe width="480" height="270" src="https://www.youtube.com/embed/CQgaVsLDAIU" frameborder="0" allowfullscreen></iframe>
 
@@ -67,7 +67,7 @@ avg. number of collisions per agent: 18.25
 
 
 
-###One Way Hallway
+### One Way Hallway
 
 <iframe width="480" height="270" src="https://www.youtube.com/embed/RuCOo32EpaQ" frameborder="0" allowfullscreen></iframe>
 
@@ -93,7 +93,7 @@ avg. number of collisions per agent: 0
 {% endhighlight %}
 
 
-###Two Way Hallway
+### Two Way Hallway
 
 <iframe width="480" height="270" src="https://www.youtube.com/embed/U7gWIndARuI" frameborder="0" allowfullscreen></iframe>
 
@@ -119,7 +119,7 @@ avg. number of collisions per agent: 0
 
 {% endhighlight %}
 
-###Four Way Hallway
+### Four Way Hallway
 
 <iframe width="480" height="270" src="https://www.youtube.com/embed/1NwwyWxPtmk" frameborder="0" allowfullscreen></iframe>
 
@@ -143,9 +143,9 @@ avg. number of collisions per agent: 0.015
                         final score: 1783.08
 {% endhighlight %}
 
-#Implementation
+# Implementation
 
-####Sum of Forces:
+#### Sum of Forces:
 
 $$ m_i\frac{dv_i}{dt} = F_{goal} + F_{agents} + F_{walls} $$
 
@@ -159,7 +159,7 @@ Util::Vector acceleration = (prefForce + repulsionForce + proximityForce) / AGEN
 
 
 
-####Goal Directed Force:
+#### Goal Directed Force:
 
 $$ F_{goal} = m_i\frac{v_i^0(t)e^0_i(t) - v_i(t)}{\tau_i} $$
 
@@ -191,7 +191,7 @@ agent198 pref force (-38.7242,0,-62.2515)
 {% endhighlight %}
 
 
-####Agent Collision Avoidance Force:
+#### Agent Collision Avoidance Force:
 
 $$ F_{agents} = \sum_{j \ne i }F_{ij} $$
 
@@ -228,7 +228,7 @@ for(std::set<SteerLib::SpatialDatabaseItemPtr>::iterator neighbor = _neighbors.b
 {% endhighlight %}
 
 
-####Wall Collision Avoidance Force:
+#### Wall Collision Avoidance Force:
 
 $$ F_{walls} = \sum_{j \ne i}F_{iW} $$
 

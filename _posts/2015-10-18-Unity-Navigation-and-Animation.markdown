@@ -21,13 +21,13 @@ code:
 In this post we will discuss the implementation of Navigation and Animation in
 Unity. The projects were created by a team of 3 as part of a class project for Introduction to Computer Graphics at Rutgers University.
 
-####Team Members:
+#### Team Members:
 
 * Nikhil Kumar
 * Erin Corrado
 * Daniel Bordak
 
-##Navigation
+## Navigation
 
 You can play the Unity game by clicking on the link 
 <a href="/UnityProjectBuilds/B1Build/part1/index.html"> here.</a>
@@ -54,7 +54,7 @@ different heights.
 4. Roaming Obstacles - Obstacles that automatically move through the
    environment.
 
-###Play Through 
+### Play Through 
 
 You can select an agent by clicking on the purple capsule using the Left Mouse
 Button. 
@@ -77,7 +77,7 @@ enter the room.
 
 <img src="/images/Graphics/B1LongWay.png" alt="B1Longway"/>
 
-###Brief Implementation Description
+### Brief Implementation Description
 
 <blockquote>
 Unity Tutorial Used: <a
@@ -123,7 +123,7 @@ Vector3 difference;
 
 The MeshLinks were created by using empty object to link two Navigation Meshes
 
-##Animation
+## Animation
 
 You can play the Unity by clicking on the link 
 <a href="/UnityProjectBuilds/B1Build/part2/index.html"> here.</a>
@@ -140,7 +140,7 @@ In Unity, Animation helps animate the character as it is in various states.
 A transition occurs from one state to another when the parameter condition of a
 transition is met. We made a simple character who can walk, run and jump.
 
-###Play Through
+### Play Through
 
 Use the arrow keys to get the  character walking.
 
@@ -155,7 +155,7 @@ character jumping.
 
 <img src="/images/Graphics/B1JumpAnimation.png" alt="B1JumpAnimation"/>
 
-###Brief Implementation Description
+### Brief Implementation Description
 
 <blockquote>
 Blend Trees 1-D Blending: <a
@@ -183,7 +183,7 @@ if(Input.GetKeyDown(KeyCode.Space))
 {% endhighlight %}
 
 
-##Combination Navigation and Animation
+## Combination Navigation and Animation
 
 You can play the Unity by clicking on the link 
 <a href="/UnityProjectBuilds/B1Build/part3/index.html"> here.</a>
@@ -199,7 +199,7 @@ Obstacles and Roaming Obstacles  follow the same controls as part 1
 
 In this part we combined both the animation and the navigation in Unity.
 
-###Play Through
+### Play Through
 
 You can select an agent by left clicking on them. The agent will turn green.
 
@@ -218,7 +218,7 @@ The agents jump automatically jump when needed.
 <img src="/images/Graphics/B1Part3Jump.png" alt="B1Part3Jump"/>
 
 
-###Brief Implementation Description
+### Brief Implementation Description
 
 The navigation agent parameters were used to update the agents animations.
 

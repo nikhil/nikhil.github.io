@@ -63,7 +63,7 @@ Original Test Case
 
 <iframe width="480" height="270" src="https://www.youtube.com/embed/ayQpalBsPVY" frameborder="0" allowfullscreen></iframe>
 
-###Equation
+### Equation
 
 $$ p(x) = h_{00}(t)p_k + h_{10}(t)(x_{k+1} - x_{k})m_k + h_{01}(t)p_{k+1} + $$
 $$ h_{11}(t)(x_{k+1}-x_{k})m_{k+1} $$ 
@@ -78,7 +78,7 @@ $$h_{01}(t) = -2t^3 +3t^2 $$
 
 $$h_{11}(t) = t^3 - t^2 $$
 
-##Catmull Rom Videos
+## Catmull Rom Videos
 
 Curve 1
 
@@ -100,7 +100,7 @@ Original Test Case
 
 <iframe width="480" height="270" src="https://www.youtube.com/embed/sWplE-kpviM" frameborder="0" allowfullscreen></iframe>
 
-###Equation
+### Equation
 
 $$ p(x) = h_{00}(t)p_k + h_{10}(t)(tangent_{0})m_k + h_{01}(t)p_{k+1} + $$
 $$ h_{11}(t)(tangent_{1})m_{k+1} $$ 
@@ -115,7 +115,7 @@ $$h_{01}(t) = -2t^3 +3t^2 $$
 
 $$h_{11}(t) = t^3 - t^2 $$
 
-###Tangent Equation
+### Tangent Equation
 
 Current point is the next point you will reach
 
@@ -123,7 +123,7 @@ $$ Tangent_0 $$ has i = currentPoint -1
 
 $$ Tagent_1 $$ has  i = currentPoint
 
-####If First Segment of Curve:
+#### If First Segment of Curve:
 
 $$ FirstCoef = \frac{(t_2 - t_{0})}{(t_{2} - t_{1})}$$
 
@@ -137,7 +137,7 @@ $$ Tangent = firstCoeff * firstTerm + $$
 
 $$secondCoeff * secondTerm $$
 
-####If Last Segment of Curve:
+#### If Last Segment of Curve:
 
 $$ FirstCoef = \frac{(t_i - t_{i-})}{(t_{i-1} - t_{i-2})}$$
 
@@ -151,7 +151,7 @@ $$ Tangent = firstCoeff * firstTerm + $$
 
 $$secondCoeff * secondTerm $$
 
-####Any Segment between First and Last:
+#### Any Segment between First and Last:
 
 $$ FirstCoef = \frac{(t_i - t_{i-1})}{(t_{i+1} - t_{i-1})}$$
 

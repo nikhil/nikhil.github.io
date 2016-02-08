@@ -36,15 +36,15 @@ code:
 I am currently doing research on the differences between Barefoot running and Shod running(running with shoes). I am working with software known as the `AnyBody Modeling System` using the `Gait lower Extremity model`. This allows me to input motion captured data, which is givin in the form of a `.c3d` file. However, I ran into a problem where I wanted to modify the .c3d file but I could not find anyt decent software to allow me to do this. I was able to find `btk` a `python` package that allows me to modify .c3d files.
 
 
-##C3d files
+## C3d files
 
-###What are c3d files:
+### What are c3d files:
 
 According to the c3d main page:
 <blockquote>
 The C3D format is a public domain, binary file format that has been used in Biomechanics, Animation and Gait Analysis laboratories to record synchronized 3D and analog data since the mid 1980's.  It is supported by all 3D major Motion Capture System manufacturers, as well as other companies in the Biomechanics, Motion Capture and Animation Industries.<a href="http://www.c3d.org/"><i class="fa fa-file"></i></a></blockquote>
 
-###File Structure
+### File Structure
 The structure of the C3d file is as follows:
 
 {% highlight text linenos%}
@@ -80,7 +80,7 @@ The structure of the C3d file is as follows:
 
 
 
-##Instalation
+## Instalation
 
 ## What is Btk?
 According to the BTk site on google code:
@@ -90,7 +90,7 @@ BTK is an open-source and cross-platform library for biomechanical analysis. BTK
 
 
 
-##Python packages needed
+## Python packages needed
 
 
 

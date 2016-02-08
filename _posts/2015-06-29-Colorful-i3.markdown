@@ -36,7 +36,7 @@ icons on their i3 status. Here is a snapshot of my i3 status.
 <br>
 <img src="/images/i3status.png" alt="i3status"/>
 
-##Get i3blocks
+## Get i3blocks
 i3blocks is a cool package for i3 which will make all this configuration
 possible. 
 
@@ -81,7 +81,7 @@ client.urgent #d33682 #d33682 #fdf6e3 #dc322f
 {% endhighlight %}
 <a href="/resources/config" download="config"><i class= "fa fa-download fa-fw"></i> Download config</a><br>
 
-##Get the icons
+## Get the icons
 I have added 3 sets of icons to my i3status. The `.ttf` are linked below: 
 
 <ul>
@@ -104,7 +104,7 @@ fc-cache -fv
 <i class="fa fa-warning"></i>  **Notice:** You can also install Font Awsome by running: pacaur -S ttf-font-awesome  
 {: .notice}
 
-##Edit your i3blocks configuration
+## Edit your i3blocks configuration
 Now we can add the icons and colors to our i3status bar! You need to know edit
 your i3blocks configuration file located here:
 
@@ -203,7 +203,7 @@ zip code
 
 <a href="/resources/i3blocks.conf" download="i3blocks.conf"><i class= "fa fa-download fa-fw"></i> Download i3blocks.conf</a><br>
 
-##The Gmail Script
+## The Gmail Script
 
 {% highlight bash linenos %}
 USER=Your_Gmail_Username
@@ -234,7 +234,7 @@ the execute only file to:
 
 and delete `.mail.sh`
 
-##The Weather Script
+## The Weather Script
 This script displays the current temperature and icon based on the zip code you
 enter on the `i3blocks.conf` file
 
@@ -299,7 +299,7 @@ print"$values[1]"; }'
 <a href="/resources/IconicWeather.sh" download="IconicWeather.sh"><i class= "fa fa-download fa-fw"></i> Download IconicWeather.sh </a><br>
 
 
-##The Charging script
+## The Charging script
 To display a different icon when the battery is charing or being discharged I
 created a battery script.
 Save the script here:

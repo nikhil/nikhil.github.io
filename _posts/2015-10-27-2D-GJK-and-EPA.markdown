@@ -30,9 +30,9 @@ code:
 
 In this post we will discuss the implementation of GJK (Gilbert-Johnson-Keerthi) and EPA(Expanding Polytope Algorithm) in C++. The projects were created by a team of 3 as part of a class project for Introduction to Computer Graphics at Rutgers University.
 
-##Demonstration
+## Demonstration
 
-###Example 1
+### Example 1
 
 <img src="/images/Graphics/A2Example1.png" alt="A2Example1"/>
 
@@ -62,7 +62,7 @@ Simulation is running..
 
 {% endhighlight %}
 
-###Example 2
+### Example 2
 
 <img src="/images/Graphics/A2Example2.png" alt="A2Example2"/>
 
@@ -110,7 +110,7 @@ two triangles. The smaller shape is unmodified as the first change was
 sufficient: the output of this fixed case properly shows that there are
 no collisions between the two (now three) shapes.
 
-##Gilbert-Johnson-Keerthi Algorithm 
+## Gilbert-Johnson-Keerthi Algorithm 
 
 GJK is an algorithm which helps us decide if two shapes are colliding. You need
 to first create a helper method which will calculate the point that will give

@@ -21,26 +21,26 @@ that you provide. I have spent most of my winter break working on this. It is by
 largest program I have ever written.
 
 
-##Check it out
+## Check it out
 
 <a href="http://kumarcode.com/switchbeat.html" alt="kumarcode.com/switchbeat">kumarcode.com/switchbeat.html</a>
 
-##Examples
+## Examples
 
 <a href="http://kumarcode.com/switchbeatexamples.html" alt="kumarcode.com/switchbeatexamples">kumarcode.com/switchbeatexamples.html</a>
 
-##Uses
+## Uses
 
 {% highlight java linenos %}
 Raphaël.js
 Chart.js
 {% endhighlight %}
 
-##Description
+## Description
 
 Takes any two songs that you supply and creates a mashup between them. 
 
-###How it works
+### How it works
 
 The program was inspired by the infinite jukebox. Music Analysis is done on
 the Echonest servers. SwitchBeat uses this analysis to compare the beats of
@@ -48,9 +48,9 @@ both songs. Using this analysis it creates a normally distributed beat distance
 dataset. Then using the parameters you specify it generates connections
 between both songs.
 
-###How to use it
+### How to use it
 
-####1. Select the parameters 
+#### 1. Select the parameters 
 
 `%` for <b>music connections</b>: Increasing this will increase the number of
 connections created. I have set the default to `5%`.<br>
@@ -62,17 +62,17 @@ number of connections a beat can have. I have set the default to `4`.<br>
 of one song it will jump to the start of another. I have set the default to
 `on`.<br>
 
-####2. Upload songs
+#### 2. Upload songs
 
 You will be asked to upload your songs one by one. 
 Please upload a `.mp3`, `.flacs`, `.m4a`, or `.opus` will not be
 accepted. Try to upload in good quality `320 kbps` or `V0` is fine
 
-####3. Wait for the analysis to finish
+#### 3. Wait for the analysis to finish
 
 I have created a neat loading animation using `chart.js`
 
-####4. Play the Mashup!
+#### 4. Play the Mashup!
 
 Have fun mashing up your favorite songs.
 

@@ -66,7 +66,7 @@ $(".lazy").unveil();
 });
 {% endhighlight %}
 
-#Example
+# Example
 
 <img class="lazy" data-src="/images/gardening/lily.JPG" src="/images/loading.gif" />
 
@@ -79,7 +79,7 @@ $(".lazy").unveil();
 });
 </script>
 
-#Generating the animation
+# Generating the animation
 
 I decided I wanted to create my own custom loading animation. I was able to
 create my own animation on the `canvas` using `javascript`.
@@ -225,7 +225,7 @@ function drawinSine(t) {
 
 {% endhighlight %}
 
-#Example
+# Example
 
 Here is how the loading canvas animation looks:
 
@@ -362,13 +362,13 @@ function drawinSine(t) {
 
 </script>
 
-#Loading the animation into a gif
+# Loading the animation into a gif
 
 I had two approaches to converting the animation into a `.gif`. One approach
 was run the conversion in javascript with a tool known as `jsgif`. The other approach was to use `byzanz`, a tool that
 generate gifs from a screen capture.
 
-#Using byzanz
+# Using byzanz
 
 I was able to find an extension of byzanz that actually lets you trace the
 region you want to record <a href= "http://askubuntu.com/questions/107726/how-to-create-animated-gif-images-of-a-screencast"> here. </a>
@@ -425,7 +425,7 @@ The gif location would be `/tmp/recorded.gif`
 This was much more effective than the other approach. However, I would still
 mention it as the quality may be improved in the future.
 
-#Using jsgif
+# Using jsgif
 
 You can find the git repo <a href="https://github.com/antimatter15/jsgif">
 here. </a>

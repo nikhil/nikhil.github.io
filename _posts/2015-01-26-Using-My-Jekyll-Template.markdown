@@ -42,12 +42,12 @@ instructions here on how to personalize their website. I will be outlining the
 features I worked on and how you can make a few simple changes to personalize
 them as your own.
 
-###First thing is first: fork my template
+### First thing is first: fork my template
 
 If you do not have Jekyll or have not yet forked my repository, I recommend that you see my post regarding how to
 get started <a href="http://kumarcode.com/How-to-make-your-own-blog/">here.</a>
 
-###My Jekyll Template
+### My Jekyll Template
 
 <img src="../images/website11.png">
 
@@ -57,7 +57,7 @@ I use the `solarized light` color scheme. This helps keep the website clear, leg
 
 CSS effects are added to posts to make them seem as a raised page.
 
-###Side info
+### Side info
 
 <img src="../images/website3.png">
 
@@ -135,7 +135,7 @@ Your `resume.pdf` must be located here:
 /resume.pdf
 </blockquote>
 
-###Git change log
+### Git change log
 
 <img src="../images/website2.png">
 
@@ -172,7 +172,7 @@ function(data){
 Change the url so that it has your `username` instead of `nikhil` and it should
 work for your repo.
 
-###Navigation bar
+### Navigation bar
 
 <img src="../images/website5.png">
 
@@ -209,7 +209,7 @@ links:
 
 {% endhighlight %}
 
-###Icons
+### Icons
 
 As you can see, I have several icon sets in this template.
 
@@ -228,7 +228,7 @@ As you can see, I have several icon sets in this template.
 </tbody>
 </table>
 
-###Cool Code Blocks
+### Cool Code Blocks
 
 <img src="../images/website15.png">
 
@@ -298,7 +298,7 @@ code:
 
 {% endhighlight %}
 
-###Footer
+### Footer
 
 <img src="../images/website4.png">
 
@@ -309,7 +309,7 @@ the text in `_footer.html` here:
 /_includes/_footer.html
 </blockquote>
 
-###Side Math Art
+### Side Math Art
 
 <img src="../images/website1.png">
 
@@ -320,7 +320,7 @@ right side of the website. You can modify this in `_side-sine.html` here:
 /_includes/_side-sine.html
 </blockquote>
 
-###Loading animation
+### Loading animation
 
 Here is the animation:
 
@@ -352,7 +352,7 @@ $(".lazy").unveil();
 {% endhighlight %}
 
 
-###Linked pages
+### Linked pages
 
 You can modify how your linked pages (the pages linked to the navigation bar)
 look with `markdown files`.
@@ -385,7 +385,7 @@ image:
 
 The `---` here are important and should not be omitted.
 
-###Music Page
+### Music Page
 
 <img src="../images/website8.png">
 
@@ -422,7 +422,7 @@ music:
 ---
 {% endhighlight %}
 
-###Project Page
+### Project Page
 
 <img src="../images/website9.png">
 

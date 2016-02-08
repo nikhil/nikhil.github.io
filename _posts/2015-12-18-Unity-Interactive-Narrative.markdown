@@ -22,12 +22,12 @@ In this post we will discuss the implementation of an Interactive Narrative
 Game in Unity. The projects were created by a team of 3 as part of a class project for Introduction to Computer Graphics at Rutgers University.
 We used this Interactive Narrative to create a game in Unity called "Pacman: Come on and Slam Edition"
 
-##Background Story
+## Background Story
 
 The story takes place in a post-apocalyptic world, ravaged by the Chaos Dunk which wiped out most life on Earth and turned some people into zombies. Daniel and his four friends, Michael, Charles, Jordan, and Barkley, are former basketball players hiding in a safe house in the countryside. Each day they take turns running into the surrounding hedges to scavenge for food for survival.
 
 
-##Part 1
+## Part 1
 
 You can play the Unity Game by clicking on the link <a href="/UnityProjectBuilds/B4Build/part1/index.html">here.</a>
 
@@ -37,7 +37,7 @@ You can play the Unity Game by clicking on the link <a href="/UnityProjectBuilds
 This part is just a narration, there are no controls for this part.
 {: .notice}
 
-##Part 2
+## Part 2
 
 You can play the Unity Game by clicking on the link <a href="/UnityProjectBuilds/B4Build/part2/index.html">here.</a>
 
@@ -48,7 +48,7 @@ You can use the `left mouse button` to control the player.
 {: .notice}
 
 
-##Part 3
+## Part 3
 
 You can play the Unity Game by clicking on the link <a href="/UnityProjectBuilds/B4Build/part3/index.html">here.</a>
 
@@ -59,7 +59,7 @@ You can use the `left mouse button` to control the player. Use the `A` and `D`
 keys to switch characters.
 {: .notice}
 
-##Vidoes
+## Vidoes
 
 Here are the video recordings of each part. The audio has not been recorded.
 
@@ -75,11 +75,11 @@ Part 3
 
 <iframe width="480" height="270" src="https://www.youtube.com/embed/Iwxy634mc3c" frameborder="0" allowfullscreen></iframe>
 
-##Narrative
+## Narrative
 
 To win the game, Daniel and his friends much collect all the food items in the arena before the zombies attack all of them. The game starts off with Daniel in control while his friends walk around randomly in the safe house (nonlinear and ambient characters). Daniel first walks up to the door and opens it by clapping. After exiting the safe house, Daniel walks around picking up food collectables as he goes (either autonomously or controlled by the user). The zombies in the surrounding area  each randomly spawn in one of three possible places (nonlinear complexity), to ensure a slightly different game experience each time. If Daniel picks up a basketball, a song remixed with the Space Jam theme song begins playing and Daniel becomes super-powered. He runs faster and can attack and kill zombies by running into them. The power only lasts for about a minute and then the game returns to normal. The zombies chase down the player. If a zombie gets too close to Daniel, he will die and control goes to a randomly selected friend. The user has five chances (five friends) to collect all of the food and win the game. If the user loses all five friends to the zombies, the player loses.
 
-##Interaction
+## Interaction
 
 The user can control Daniel and his friends by left clicking with the mouse (if in part 2 or part 3). If in part 3, the user can switch between controlling a human and controlling a zombie by pressing 'a' or 'd' to cycle through the characters. This allows the user to play as zombies if they desire. The overhead shows how close each zombie or human is to one another in the hedge maze.
 <br>
@@ -100,7 +100,7 @@ List of interactions and events:
 
 Above shows the entire interactive behavior tree for Part 3. For parts 1 and 2, the behavior tree is essentially the same, but part 1 does not have the nodes pertaining to user clicks and the nodes for switching characters, and part 2 does not have the nodes pertaining to user key presses to switch characters.
 
-###Play Through 
+### Play Through 
 
 <img src="/images/Graphics/B4StartGame.png" alt="B4StartGame"/>
 
@@ -124,7 +124,7 @@ The user wins by collecting all the food items.
 
 The zombie wins by defeating all the players.
 
-###Brief Implementation Description
+### Brief Implementation Description
 
 <blockquote>
 Behavior Tree created with KADAPT: <a
@@ -224,7 +224,7 @@ public class Basketballsong : MonoBehaviour {
 
 <i class="fa fa-github-alt"></i> Github Link: <a href="https://github.com/CG-F15-9-Rutgers/UnityProjects/tree/master/BAssignments/B4"> Here </a>
 
-###Credit
+### Credit
 
 This game took a great deal of work to make, and we would like to give special thanks to the movie Space Jam (1996) and the independent video game, Barkley, Shut Up and Jam Gaiden for inspiring our concept, storyline, and music. 
 

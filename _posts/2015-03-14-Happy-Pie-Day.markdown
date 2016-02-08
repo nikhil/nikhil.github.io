@@ -45,7 +45,7 @@ code:
 In honor of Pie day I decided to learn how to incorporate a math typeset onto
 Html. The `mathjax` package makes this easy to do.
 
-##Setting up the html
+## Setting up the html
 
 
 {% highlight html linenos %}
@@ -59,7 +59,7 @@ Html. The `mathjax` package makes this easy to do.
 
 {% endhighlight %}
 
-##Usage
+## Usage
 You can now insert `LaTeX` equations in html by inserting them in the middle of two `$$` for an equation on a new line and two `$` for an equation on the same line.. 
 
 <body>

@@ -27,7 +27,7 @@ Yesterday I have decided to remodel my resume in latex. I decided that I would
 like to use some of the icons from FontAwsome on my contact section to save
 space. This was not as easy as expected, nevertheless I found a solution.
 
-##Packages needed
+## Packages needed
 
 {% highlight python linenos %}
 fontspec
@@ -36,7 +36,7 @@ XeLaTeX or LuaTex
 
 {% endhighlight %}
 
-##Load the font
+## Load the font
 
 After installing the packages you can load the font by creating a file such as
 `fontawesome.sty` that would be used as a LaTeX package.

@@ -330,8 +330,8 @@ textarea {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  margin-bottom: 1.5em;
-  width: 100%;
+  /*margin-bottom: 1.5em;
+  width: 100%;*/
   /* make full width */
 }
 /* Variables and mixins ==================================== */
@@ -660,7 +660,7 @@ span[rel]:before {
   /* Name.Variable.Instance */
   /* Literal.Number.Integer.Long */
 }
-.highlight pre {
+.highlight .terminal{
   position: relative;
   margin: 0;
   padding: 1em;

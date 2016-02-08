@@ -28,7 +28,7 @@ display: inline-block;
 {% endhighlight %}
 
 
-###Browser support
+### Browser support
 <p>Different browsers have different versions of the same css command.</p>
 <div class= "browsercontainer">
 <div class="property">

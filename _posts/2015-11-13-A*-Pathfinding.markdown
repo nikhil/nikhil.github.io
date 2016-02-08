@@ -18,11 +18,11 @@ code:
 
 In this post we will discuss the implementation of A* pathfinding  using <a href="https://github.com/SteerSuite/SteerLite">SteerLite.</a> The projects were created by a team of 3 as part of a class project for Introduction to Computer Graphics at Rutgers University. 
 
-##Implementation
+## Implementation
 
 We implemented A* using two different heuristic methods: Euclidean distance and Manhattan distance. `Euclidean` distance is the straight line distance between any two points. `Manhattan` distance on the other hand is based only on horizontal and vertical paths on a grid.
 
-###Manhattan distance
+### Manhattan distance
 
 {% highlight C++ linenos %}
 
@@ -36,7 +36,7 @@ double AStarPlanner::Manhattan(Util::Point FirstPoint, Util::Point SecondPoint)
 
 {% endhighlight %}
 
-###Euclidean distance
+### Euclidean distance
 
 {% highlight C++ linenos %}
 
@@ -56,7 +56,7 @@ double AStarPlanner::Heuristic(Util::Point a, Util::Point b)
 
 {% endhighlight %}
 
-###Example Videos
+### Example Videos
 
 A* Manhattan First Test Case
 
@@ -74,7 +74,7 @@ A* Euclidiean Second Test Case
 
 <iframe width="480" height="270" src="https://www.youtube.com/embed/UY-Y2VCb-Qc" frameborder="0" allowfullscreen></iframe>
 
-##Handling Ties in F value
+## Handling Ties in F value
 
 Ties in F values when searching for the lowest F value were handled by either
 selecting the node with the higher or lower G value.
@@ -113,7 +113,7 @@ else if(NodeMap.at(OpenSet[i]).f == lowestFScore)
 }
 {% endhighlight %}
 
-###Example Videos
+### Example Videos
 
 A* Big G Favoring Manhattan First Test Case
 
@@ -154,7 +154,7 @@ number of nodes that are expanded will be less than or equal to the number of no
 the original A Star algorithm. The exact value depends on the structure of the environment, but
 performance will never be worse than A Star.
 
-##Increasing Diagonal Cost
+## Increasing Diagonal Cost
 
 The cost of taking Diagonal paths were increased.
 
@@ -172,7 +172,7 @@ if(PART3)
 
 {% endhighlight %}
 
-###Example Videos
+### Example Videos
 
 A* Diagonally Weighted Manhattan First Test Case
 
@@ -197,7 +197,7 @@ the goal, so performance is worsened. For Manhattan distance, the paths are unaf
 expected because the agent will never travel diagonally when the heuristic is set to Manhattan
 distance.
 
-##Weighted Heuristic
+## Weighted Heuristic
 
 Both the Manhattan and the Euclidean Heuristic were weighted with weights of 2,4,and 8.
 

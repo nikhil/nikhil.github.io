@@ -19,11 +19,11 @@ I decided to spend the beginning of my winter break learning how to use
 run the Zork game in a local bash shell. I have learned several things in the
 process and added a really cool game to my website.
 
-###Check it out
+### Check it out
 
 Check out the game<a href="http://zork.kumarcode.com/"> here</a>
 
-###Form handling
+### Form handling
 
 One thing I learned from this project is how to handle form handling. This
 takes data entered in the html and gives it to another script.

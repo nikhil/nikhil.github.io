@@ -14,12 +14,12 @@ code:
 The projects were created by a team of 3 as part of a class project for Introduction to Computer Graphics at Rutgers University.
 
 
-##Video 
+## Video 
 
 <iframe width="480" height="270" src="https://www.youtube.com/embed/HhCYzRJoxO8" frameborder="0" allowfullscreen></iframe>
 
 
-##Behavior Tree
+## Behavior Tree
 
 You can play the Unity by clicking on the link 
 <a href="/UnityProjectBuilds/B3Build/index.html"> here.</a>
@@ -32,7 +32,7 @@ After the zombie introduction in the story, use the `Left Mouse Button` to click
 
 
 
-##Description
+## Description
 
 In this project, we used implemented a Behavior Tree using the KADAPT library in order to create our simulation. We also using the Final Inverse Kinematics library on Unity for creating animations.
 The game starts out with the main character Daniel and his friends inside a small house. Daniel claps his hands and the door to the house opens.
@@ -69,7 +69,7 @@ Animations and Inverse Kinematics were used to create the actions of clapping, d
 
 More about the ADAPT/KADAPT libraries for Unity can be found <a href="http://www.cs.rutgers.edu/~mk1353/pdfs/2013-tvcg-adapt-preprint.pdf">here.</a>
 
-##Implementation
+## Implementation
 
 Our project was implemented using KADAPT and Final IK. I will briefly describe how we implemented the affordance clapping:
 
@@ -151,7 +151,7 @@ Mouse controls were implemented by:
 
 {% endhighlight %}
 
-##Custom Node
+## Custom Node
 
 Our custom node is called MyNode, and it allows LeafInvoke to take in functions with a single parameter. This can work as a serial generator. For example:
 

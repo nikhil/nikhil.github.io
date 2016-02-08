@@ -18,7 +18,7 @@ code:
 
 In this post I will discuss the implementation of my first Unity project. The projects were created as a class project for Introduction to Computer Graphics at Rutgers University.
 
-###Roll A Ball
+### Roll A Ball
 
 You can play the Unity game by clicking on the link 
 <a href="/UnityProjectBuilds/B0Build/index.html"> here.</a>
@@ -32,13 +32,13 @@ controls for the second player are: `a` to go left, `w` to go forward, `d` to go
 jump.
 {: .notice}
 
-##Video 
+## Video 
 
 <iframe width="480" height="270" src="https://www.youtube.com/embed/C4racQM0hG8" frameborder="0" allowfullscreen></iframe>
 
 
 
-###Description
+### Description
 
 This game is a two player game. Two players must compete to get the most points by picking up
 the yellow rotating cubes. The players are two rolling balls. The red ball is the first player, while the blue
@@ -62,7 +62,7 @@ win a collision with another player, loose a collision with another player, and 
 another player.
 4. The Game is hosted online and playable with Javascript and Html5 
 
-###Playthrough
+### Playthrough
 
 <img src="/images/Graphics/B0Camera.png" alt="B0Start"/>
 
@@ -85,7 +85,7 @@ to loose points.
 
 
 
-###Brief Implementation Description
+### Brief Implementation Description
 
 <blockquote>
 Unity Tutorial Used: <a href="https://unity3d.com/learn/tutorials/projects/roll-ball-tutorial"> Link </a>

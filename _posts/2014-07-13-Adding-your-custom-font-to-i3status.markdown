@@ -42,7 +42,7 @@ content: "\f100";
 You can see
 the each icon has its own unique `unicode` sequence.
 
-###Add the font to your font cache
+### Add the font to your font cache
 
 Now that you have the `ttf` file for your font. You can now add it to you font
 cache.

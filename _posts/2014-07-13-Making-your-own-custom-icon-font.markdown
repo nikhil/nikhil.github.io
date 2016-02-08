@@ -18,7 +18,7 @@ code:
 
 I have recently decided to spice up my i3 status by adding icons to all of my info display sections. However, I also wanted to add an Arch icon in the front. This led me to an issue, as there are no icon fonts that I could find that have the arch icon included. So I decided to make my own icon font.
 
-###Getting the Arch icon svg
+### Getting the Arch icon svg
 In order to create a custom icon you need to first have an `svg` image of
 picture.
 <blockquote>
@@ -45,11 +45,11 @@ You now have two choices for icons:
 <br>
 It is based on your preference but I choose the Crystal icon.
 
-###Generating the font
+### Generating the font
 Now that you have the svg files, you can create the font with the program
 `fontcustom`.
 
-####Packages needed
+#### Packages needed
 {% highlight ruby linenos %}
 fontforge
 ttfautohint
