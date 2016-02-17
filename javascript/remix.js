@@ -16,12 +16,18 @@ function createJRemixer(context, jquery, apiKey) {
 
            var retryCount = 3;
            var retryInterval = 3000;
+           var TrackAudioUrl = "";
 
             function lookForAnalysis(trackID, trackURL, callback) {
                 $.getJSON(url, {id:trackID, api_key:apiKey}, function(data) {
                     var analysisURL = data.response.track.audio_summary.analysis_url;
                     track = data.response.track;
+                    console.log(data);
+                    $.getJSON("http://static.echonest.com/infinite_jukebox_data/"+trackID+".json",function(data) {
+
+                        TrackAudioUrl = data.response.track.info.url;
                     
+                     console.log(data);
                     // This call is proxied through the yahoo query engine.  
                     // This is temporary, but works.
                     $.getJSON("http://query.yahooapis.com/v1/public/yql", 
@@ -31,7 +37,8 @@ function createJRemixer(context, jquery, apiKey) {
                             if (data.query.results != null) {
                                 track.analysis = data.query.results.json;
                                 console.log("Analysis obtained...");
-                                remixer.remixTrack(track, trackURL, callback);   
+                                console.log(track.info)
+                                remixer.remixTrack(track, TrackAudioUrl, callback);   
                             }
                             else {
                                 retryCount = retryCount - 1;
@@ -48,6 +55,7 @@ function createJRemixer(context, jquery, apiKey) {
                                 }
                             }
                     }) // end yahoo proxy getJson
+                })
 					.fail(function()
 						{
 							console.log("retrying json request");
@@ -119,6 +127,7 @@ function createJRemixer(context, jquery, apiKey) {
 
         remixTrack : function(track, trackURL, callback) {
             function fetchAudio(url) {
+                console.log(url);
                 var request = new XMLHttpRequest();
                 trace("fetchAudio " + url);
                 track.buffer = null;
@@ -309,6 +318,7 @@ function createJRemixer(context, jquery, apiKey) {
 
 
             if (track.status == 'complete') {
+                console.log(trackURL);
                 preprocessTrack(track);
                 fetchAudio(trackURL);
             } else {
@@ -634,11 +644,11 @@ function fixFileName(name) {
     name = name.replace(/c:\\fakepath\\/i, '');
     name = name.replace(/[^A-Z0-9.\-]+/gi, ' ');
     name = Math.floor(Math.random(10000) * 10000) + ".mp3";
-    return 'remix_audio/' + apiKey + '/' + new Date().getTime() + '/' + name;
+    return 'audio2/' + new Date().getTime() + '/' + name;
 }
 
 function fetchSignature() {
-    var url = 'http://remix.echonest.com/Uploader/verify?callback=?&v=audio';
+    var url = 'policy';
     $.getJSON(url, {}, function(data) {
         policy = data.policy;
         signature = data.signature;
@@ -649,7 +659,7 @@ function fetchSignature() {
 }
 
 function getProfile(trackID, callback) {
-    var url = 'http://remix.echonest.com/Uploader/profile?callback=?';
+    var url = 'http://labs.echonest.com/Uploader/profile?callback=?';
 	console.log(url+'trid='+trackID);
     return $.getJSON(url, {trid: trackID}, callback); 
 }

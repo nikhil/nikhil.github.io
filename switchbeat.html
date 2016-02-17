@@ -1005,7 +1005,7 @@ function stop()
 
 // Get an estimation of analysis time
 function fetchQinfo() {
-    var url = 'http://remix.echonest.com/Uploader/qinfo?callback=?'
+    var url = 'http://labs.echonest.com/Uploader/qinfo?callback=?'
     $.getJSON(url, {}, function(data) {
         $("#info").text("Estimated analysis time: " + Math.floor(data.estimated_wait * 1.2) + " seconds.");
 		if(Math.floor(data.estimated_wait * 1.2)>20)
@@ -1021,8 +1021,8 @@ function fetchQinfo() {
 
 // Get the analysis, if it is ready
 function analyzeAudio(audio, tag, callback) {
-    var url = 'http://remix.echonest.com/Uploader/qanalyze?callback=?'
-    $.getJSON(url, { url:audio, api_key:apiKey, tag:tag}, function(data) {
+    var url = 'http://labs.echonest.com/Uploader/qanalyze?callback=?'
+    $.getJSON(url, { url:audio}, function(data) {
 		if (data.status === 'done' || data.status === 'error') {
             callback(data);
         } else {
@@ -1992,7 +1992,7 @@ window.onload = init;
         <section>
         <div id='select-track'>
             <form action="https://s3.amazonaws.com/static.echonest.com" method="post" enctype="multipart/form-data" onSubmit="submitForm(this);">
-              <input id='f-filename' type="hidden" name="key" value="remix_audio/${filename}">
+              <input id='f-filename' type="hidden" name="key" value="audio2/${filename}">
               <input id='f-key' type="hidden" name="AWSAccessKeyId" value="YOUR_AWS_ACCESS_KEY"> 
               <input type="hidden" name="acl" value="public-read"> 
               <input id='redirect-url' type="hidden" name="success_action_redirect"
@@ -2007,7 +2007,7 @@ window.onload = init;
         </div>
 		<div id='select-track1' class='hidden'>
             <form action="https://s3.amazonaws.com/static.echonest.com" method="post" enctype="multipart/form-data" onSubmit="submitForm1(this);">
-              <input id='f-filename' type="hidden" name="key" value="remix_audio/${filename}">
+              <input id='f-filename' type="hidden" name="key" value="audio2/${filename}">
               <input id='f-key' type="hidden" name="AWSAccessKeyId" value="YOUR_AWS_ACCESS_KEY"> 
               <input type="hidden" name="acl" value="public-read"> 
               <input id='redirect-url' type="hidden" name="success_action_redirect"
