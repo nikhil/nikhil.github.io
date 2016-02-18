@@ -648,14 +648,21 @@ function fixFileName(name) {
 }
 
 function fetchSignature() {
-    var url = 'policy';
-    $.getJSON(url, {}, function(data) {
-        policy = data.policy;
-        signature = data.signature;
-        $('#f-policy').val(data.policy);
-        $('#f-signature').val(data.signature);
-        $('#f-key').val(data.key);
-    });
+     $.getJSON("http://query.yahooapis.com/v1/public/yql", 
+                        { q: "select * from json where url=\"" + "http://labs.echonest.com/Uploader/policy" + "\"", format: "json"}, 
+     function(data) {
+        console.log(data.query.results.json);
+        //var url = 'policy';
+    //$.getJSON(url, {}, function(data) {
+        jsonData = data.query.results.json;
+        policy = jsonData.policy;
+        signature = jsonData.signature;
+        $('#f-policy').val(jsonData.policy);
+        $('#f-signature').val(jsonData.signature);
+        $('#f-key').val(jsonData.key);
+    //});
+
+     }) // end yahoo proxy getJson
 }
 
 function getProfile(trackID, callback) {

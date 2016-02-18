@@ -1,6 +1,0 @@
-{
-    "full_policy": "{\"conditions\": [{\"bucket\": \"static.echonest.com\"}, [\"starts-with\", \"$key\", \"audio2/\"], {\"acl\": \"public-read\"}, [\"starts-with\", \"$success_action_redirect\", \"http://\"], [\"starts-with\", \"$Content-Type\", \"audio/mpeg\"], [\"content-length-range\", 0, 40000000]], \"expiration\": \"2016-02-17T11:09:34.103528Z\"}",
-    "key": "AKIAJRDFEY23UEVW42BQ",
-    "policy": "eyJjb25kaXRpb25zIjogW3siYnVja2V0IjogInN0YXRpYy5lY2hvbmVzdC5jb20ifSwgWyJzdGFydHMtd2l0aCIsICIka2V5IiwgImF1ZGlvMi8iXSwgeyJhY2wiOiAicHVibGljLXJlYWQifSwgWyJzdGFydHMtd2l0aCIsICIkc3VjY2Vzc19hY3Rpb25fcmVkaXJlY3QiLCAiaHR0cDovLyJdLCBbInN0YXJ0cy13aXRoIiwgIiRDb250ZW50LVR5cGUiLCAiYXVkaW8vbXBlZyJdLCBbImNvbnRlbnQtbGVuZ3RoLXJhbmdlIiwgMCwgNDAwMDAwMDBdXSwgImV4cGlyYXRpb24iOiAiMjAxNi0wMi0xN1QxMTowOTozNC4xMDM1MjhaIn0=",
-    "signature": "PI7X8NOh/M/khEHsuAOEjRmrYNI="
-}
