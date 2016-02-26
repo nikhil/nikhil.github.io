@@ -32,8 +32,7 @@ I decided to make a more updated blog post on the installation.
 ## Installation
 
 OpenShift now officially supports a python cartridge, so you do not need to
-install it manually. This requires you to fix the installation parameters for
-OpenCV (its okay I did that for you). Choose `Python 2.7` for your cartridge. Log in to your
+install it manually. Choose `Python 2.7` for your cartridge. Log in to your
 application by using your apps ssh link. Now go into your temp directory.
 
 {% highlight bash linenos=table %}
