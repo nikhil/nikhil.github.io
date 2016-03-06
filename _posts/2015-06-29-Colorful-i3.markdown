@@ -105,7 +105,7 @@ fc-cache -fv
 {: .notice}
 
 ## Edit your i3blocks configuration
-Now we can add the icons and colors to our i3status bar! You need to know edit
+Now we can add the icons and colors to our i3status bar! You need to edit
 your i3blocks configuration file located here:
 
 <blockquote>
