@@ -19,7 +19,12 @@
     </div>
     <p class="footer">&laquo; created with <a href="http://unity3d.com/" title="Go to unity3d.com">Unity</a> &raquo;</p>
     <script type='text/javascript'>
-  var Module = {
+  function SendMessageFunction()
+  {
+    SendMessage("ChangeStatusObject","ChangeText", "John Cena");
+  }
+  
+var Module = {
     TOTAL_MEMORY: 268435456,
     errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
     compatibilitycheck: null,
@@ -27,8 +32,9 @@
     codeUrl: "Release/ApiBuild.js",
     memUrl: "Release/ApiBuild.mem",
   };
+  
 </script>
 <script src="Release/UnityLoader.js"></script>
 
-  </body>
+  </bod>
 </html>
