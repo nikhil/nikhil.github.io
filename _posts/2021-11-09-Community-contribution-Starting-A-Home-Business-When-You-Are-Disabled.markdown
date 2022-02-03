@@ -14,6 +14,9 @@ Now that I’m retired, I’m committed to continuing my services, even though I
 If you are interested in working with me, please contact me via my contact form. All of my services are free.
 </blockquote>
 
+<i class="fa fa-info-circle"></i> **Notice:** The following article is contributed by Ed Carter. He is the sole author of this post. Please contact him [here](https://ablefutures.org/contact-us/) for any inquiries/comments about this article.
+{: .notice}
+
 # Tips for Launching a Small Business For People With Disabilities
 
 Getting a job can be difficult if you’re disabled. Inadequate accessibility features, inflexible work arrangements, the disability pay gap, and lack of confidence from employers are just a few of the challenges people with disabilities face in the traditional workplace. Starting a business is a great way to leave that all behind and pave your own path!
