@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: (Community Contribution) 5 Steps to Building a Successful Freelancing Team
+title: (Community Contribution) Love Video Games? You Can Turn your passion into a Career!
 ---
 
 The following article is a community contribution from Ed Carter. Ed is a retired financial planner who runs the site: <a href="https://ablefutures.org/">AbleFutures</a>, where he is working on providing financial literacy for the disabled. He reached out to contribute an article and I am more than happy to help him spread the word! If you would like to contribute an article you can contact me <a href="mailto:nikhil@kumarcode.com">here</a>.
@@ -17,62 +17,48 @@ If you are interested in working with me, please contact me via my contact form.
 <i class="fa fa-info-circle"></i> **Notice:** The following article is contributed by Ed Carter. He is the sole author of this post. Please contact him [here](https://ablefutures.org/contact-us/) for any inquiries/comments about this article.
 {: .notice}
 
-# Building a Successful Freelancing Team
+Have you ever dreamed of making a living creating the games you love? Video games continue to become more popular and lucrative, and the industry is always looking for talented and passionate individuals like yourself. Plus, it’s easier to get started than you might think! In this article we explore the skills and tools necessary to succeed as a game developer, learning opportunities worth seeking, and more.
 
-In an age when remote work is on the rise as the new normal of business, it's important to
-understand how your business can benefit from this trend. One of the key resources that
-remote work makes available is access to professional freelancers who can be
-mobilized to complete specific projects as needed.
+## Specific Skills Necessary for Success
 
-## Step One: Putting the Infrastructure in Place
+There’s no one-size-fits-all list of skills needed to flourish in game development, but some traits and abilities are [highly valued in the industry](https://murdoch.kaplan.com.sg/top-6-skills-needed-successful-video-game-developer/). First and foremost, developers must have a keen eye for detail and creativity.
 
-The first step is putting in place a business structure suited to dealing with freelancing
-teams on a regular basis. One common way of going about this is to form a limited liability
-company (LLC), a flexible business structure that offers certain tax advantages and limited
-personal liability. The regulations for forming an LLC vary depending on the jurisdiction, so
-it's a good idea to check the rules that apply in your state or to use a [business formation service.](https://incorporationguru.com/llc-formation-services/)
+It’s also essential to have excellent communication skills because game development centers on collaboration. Being well-versed in programming languages like C++ and Java can help you thrive, as can [experience with game engines](https://www.juegostudio.com/blog/best-game-engines) like Unity, Unreal, or CryEngine.
 
-## Step Two: Deciding How to Pay Freelancers
+## Tools to Invest In
 
-Payroll should be as frictionless as possible. International wire transfers and typical
-payment platforms come with inherent costs that can build up over time, so seek out a
-reliable money transfer service with low fees. [Remitly](https://www.remitly.com/us/en), one popular choice, charges very
-low rates for each instance of sending money from your bank account converted to another currency ( e.g. Indian Rupees).
+One beautiful thing about video game development is that you don’t need access to high-end computers or software to start your journey. Some of the most popular tools are free and open-source and give users various pre-built game assets, a visual scripting system, and cross-platform support.
 
-## Step Three: Collaborative Tools
+Harnessing a 3D modeling tool can help you create realistic, immersive game environments quickly and efficiently. Not only does this help you craft detailed and lifelike worlds with ease, but it also saves time and money since you don’t have to outsource or hire extra personnel for your development projects. And you can focus more on story and gameplay!
 
-Think through the tools you'll be using on a day-to-day basis to organize freelance projects.
-There will be a lot of online paperwork to deal with, so having a centralized place to upload
-and share files is key. One useful tool is Adobe Acrobat's online converter, [free software](https://www.cnet.com/tech/computing/adobe-offers-new-free-online-tools-for-handling-pdf-files/)
-that converts PDFs into editable formats like DOCX files without any loss of formatting.
+3D modeling tools provide greater control over the artistic elements of a game, equipping you to make precise adjustments with limited coding or programming knowledge. And using such a tool gives you an added level of realism and emotion compared to traditional 2D assets, significantly enhancing the overall gaming experience.
 
-## Step Four: Finding Freelancers
+## The Best Learning Opportunities
 
-Online job boards can be a great resource for finding freelancers. One of the most popular,
-[Guru](https://www.guru.com/), hosts country-specific boards if you're trying to source freelancers from a specific
-region (e.g. India ). In general, it's a good idea to seek freelancers with solid client references who can show a portfolio of work relevant to the tasks you'll
-require.
+Video game development is a highly competitive field, and it’s crucial to stay up to date with the latest trends and technologies. Fortunately, aspiring game developers have plenty of educational resources at their disposal. Some of the [most well-known online learning platforms](https://www.verywellfamily.com/best-online-learning-platforms-5073725) include Coursera and Udemy, which provide courses on everything from game design to coding.
 
-## Step Five: Engaging With Freelancers
+You might also explore game development boot camps and game design schools that offer a more traditional in-person educational experience. While you’re at it, be sure to follow industry news and attend local game development meetups or conferences.
 
-Once you've recruited a freelancing team, make sure you have a transparent and efficient
-process in place for communicating with them and responding to their needs.
+An online IT degree can prepare you for a career in video games by providing the technical expertise required to design and develop complex gaming software, as well as the problem-solving and critical thinking skills necessary to innovate within the constantly evolving gaming industry. [This is a good option to consider](https://www.wgu.edu/online-it-degrees/it-certifications.html) if you want flexible learning opportunities.
 
-- The team should have a single point of contact with the company. Any feedback — even if it ultimately originates with multiple stakeholders in your company — should
-  be conveyed through that contact person.
-- The goals and expectations of every project should be clear, realistic, and consistent. The process should be as free as possible from on-the-fly changes.
-- The quantity of work should be stated plainly [upfront](https://productive.speedlancer.com/how-to-write-a-killer-brief-for-a-freelancer-on-a-freelance-platform-14552c96a5ee). Workers should be provided with all information and resources that will be necessary for successful completion.
+## Putting Together an Impressive Resume
 
-The clearer you are about what you need and expect from a freelancing team, the more
-confident they can be about helping you.
+When you’ve spent countless hours developing your skills and creating games, you need to put your experience into action and create a portfolio that showcases your abilities. Your portfolio should include examples of your work, [including finished games and demo projects](https://gamedevacademy.org/game-developer-portfolio-tutorial/).
 
-## Setting the Stage For Success
+It can also include experience in related fields like animation, programming, or graphic design. And remember to provide a cover letter detailing your passion for game development and why you’re the ideal candidate for the job.
 
-Following these five steps will set the stage for productive freelancing teams with high
-morale and motivation. Combine the principles underlying these steps with effective long-
-term goal setting and project planning, and you can expect to attract the best freelancing
-talent.
+## Practical Tips for Landing a Job
 
-<img src="/images/posts/pexels-ketut-subiyanto-4308100.jpg" alt="young-ethnic-spouses-with-notepad-and-laptop-at-home-4308100"/>
+Learning a job in the competitive video game development world can be intimidating, especially for first-timers. But there are some practical ways to stand out. For example, start by building a network of contacts within the industry, attending events, and [getting your name out there](https://www.gameindustrycareerguide.com/how-to-break-into-video-game-industry/) as much as possible.
 
-Photo by Ketut Subiyanto from <a href="https://www.pexels.com/photo/young-ethnic-spouses-with-notepad-and-laptop-at-home-4308100/">Pexels</a>
+Offering your services as a freelance developer can also help you gain experience and make connections. Remember to tailor each resume and cover letter specifically to the company and position you’re applying for, and [go into every interview well-prepared](https://hbr.org/2021/11/10-common-job-interview-questions-and-how-to-answer-them).
+
+## Conclusion
+
+A career in game development can be a thrilling and fulfilling path to take when you love video games. You can turn your passion into a profession with the right skills, tools, and learning opportunities.
+
+Remember to craft an outstanding portfolio and network within the industry to boost your chances of landing a job. Learn new skills through online learning opportunities. And take time to research 3D modeling tools and other technologies that can help you make your dream a reality!
+
+<img src="/images/posts/pexels-erik-mclean-7476606.jpg" alt="Free Back view of anonymous geek male in casual clothes and cap sitting on carpet and playing console video game in living room full of toys and stuff from comic Stock Photo"/>
+
+Photo by Erik Mclean from <a href=" https://www.pexels.com/photo/unrecognizable-man-playing-videogame-at-home-7476606/">Pexels</a>
