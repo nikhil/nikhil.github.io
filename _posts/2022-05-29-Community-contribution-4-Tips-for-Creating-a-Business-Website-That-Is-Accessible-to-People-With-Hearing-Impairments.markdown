@@ -85,6 +85,6 @@ Ensuring that your site is accessible to people with hearing impairments helps y
 legal issues, makes your site better, and increases your potential customer base. These tips
 can help you get started.
 
-<img src="images/posts/pexels-cottonbro-studio-6321244.jpg" alt="Woman in Gray Sweater Sitting by the Table Doing Hand Sign While Having Video Chat"/>
+<img src="/images/posts/pexels-cottonbro-studio-6321244.jpg" alt="Woman in Gray Sweater Sitting by the Table Doing Hand Sign While Having Video Chat"/>
 
 Photo by Cottonbro Studio from <a href="https://www.pexels.com/photo/woman-in-gray-sweater-sitting-by-the-table-doing-hand-sign-while-having-video-chat-6321244/">Pexels</a>
