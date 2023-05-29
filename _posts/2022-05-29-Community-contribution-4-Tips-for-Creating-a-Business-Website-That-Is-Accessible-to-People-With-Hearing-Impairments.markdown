@@ -1,8 +1,7 @@
 ---
 layout: post
 comments: true
-title: (Community Contribution) 4 Tips for Creating a Business Website That Is
-Accessible to People With Hearing Impairments
+title: (Community Contribution) 4 Tips for Creating a Business Website That Is Accessible to People With Hearing Impairments
 ---
 
 The following article is a community contribution from Ed Carter. Ed is a retired financial planner who runs the site: <a href="https://ablefutures.org/">AbleFutures</a>, where he is working on providing financial literacy for the disabled. He reached out to contribute an article and I am more than happy to help him spread the word! If you would like to contribute an article you can contact me <a href="mailto:nikhil@kumarcode.com">here</a>.
