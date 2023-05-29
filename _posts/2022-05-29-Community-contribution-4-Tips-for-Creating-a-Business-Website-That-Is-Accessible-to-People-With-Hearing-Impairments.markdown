@@ -43,11 +43,12 @@ accessible also provide multiple other benefits:
 - Broadens audience
 - Improves search engine optimization
 - Normalizes accessibility
-  Creating an accessible site can also boost your company's reputation.
-  Building an accessible site isn't a simple undertaking. You may need to hire a consultant or
-  [web designer with expertise](https://www.business.com/articles/tips-hiring-great-web-developer/) in creating accessible sites. It may also be useful to have an
-  attorney review your site for any ADA compliance issues. Additionally, consider hiring
-  freelancers or a transcription service to add captions to your videos.
+
+Creating an accessible site can also boost your company's reputation.
+Building an accessible site isn't a simple undertaking. You may need to hire a consultant or
+[web designer with expertise](https://www.business.com/articles/tips-hiring-great-web-developer/) in creating accessible sites. It may also be useful to have an
+attorney review your site for any ADA compliance issues. Additionally, consider hiring
+freelancers or a transcription service to add captions to your videos.
 
 ## 3. Research Ways to Improve Your Site
 
