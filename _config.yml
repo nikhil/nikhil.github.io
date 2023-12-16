@@ -1,16 +1,16 @@
-title:            Kumarcode
-description:      A stylish blog on my code
+title: Kumarcode
+description: A stylish blog on my code
 # Your site's domain goes here. Leave localhost server or blank when working locally.
 url:
-url1: http://www.kumarcode.com                  
+url1: https://www.kumarcode.com
 disqus_shortname: kumarcode
 
 # Owner/author information
 owner:
-  name:           Nikhil Kumar
-  avatar:         bio-photo.jpg
-  bio:            "A stylish blog on my code"
-  email:          nikhilkumar516@gmail.com
+  name: Nikhil Kumar
+  avatar: bio-photo.jpg
+  bio: "A stylish blog on my code"
+  email: nikhilkumar516@gmail.com
   # Social networking links are used in author-bio sidebar. Update and remove as you like.
   twitter:
   facebook:
@@ -25,8 +25,7 @@ owner:
   steam:
   dribbble:
   # For Google Authorship https://plus.google.com/authorship
-  google_plus:  
-
+  google_plus:
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:
@@ -40,36 +39,36 @@ links:
   - title: About
     url: /about/
     icon: fa fa-user
-    count: 1    
+    count: 1
   - title: Posts
     url: /posts/
     icon: fa fa-inbox
-    count: 2    
+    count: 2
   - title: Gardening
-    url: /gardening/ 
+    url: /gardening/
     icon: fa fa-leaf
-    count: 3   
+    count: 3
   - title: Arch Linux
     url: /arch/
-    icon: icon-arch 
-    count: 4   
+    icon: icon-arch
+    count: 4
   - title: music
-    url: /music/ 
+    url: /music/
     icon: fa fa-music
-    count: 5    
+    count: 5
   - title: projects
-    url: /projects/ 
-    icon: fa fa-flask 
-    count: 6    
-  
+    url: /projects/
+    icon: fa fa-flask
+    count: 6
+
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
-future:      true
+timezone: America/New_York
+future: true
 highlighter: rouge
-markdown:    kramdown
+markdown: kramdown
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title/
+permalink: /:categories/:title/
 
 kramdown:
   auto_ids: true
@@ -86,4 +85,26 @@ kramdown:
     coderay_css: class
 
 include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
+exclude:
+  [
+    "lib",
+    "config.rb",
+    "Capfile",
+    "config",
+    "log",
+    "Rakefile",
+    "Rakefile.rb",
+    "tmp",
+    "less",
+    "*.sublime-project",
+    "*.sublime-workspace",
+    "test",
+    "spec",
+    "Gruntfile.js",
+    "package.json",
+    "node_modules",
+    "Gemfile",
+    "Gemfile.lock",
+    "LICENSE",
+    "README.md",
+  ]
