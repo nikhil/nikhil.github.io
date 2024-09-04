@@ -113,6 +113,6 @@ market.
 
 The [Kumarcode](https://kumarcode.com/) blog shares tips on everything from gardening and music to technology. Feel free to post any questions that you might have!
 
-<img src="images/posts/pexels-young-business-worker.jpg" alt="Young business worker"/>
+<img src="/images/posts/pexels-young-business-worker.jpg" alt="Young business worker"/>
 
 <a href="https://www.freepik.com/free-photo/young-arab-man-business-worker-talking-smartphone-reading-document-office_61117669.htm">Image by krakenimages.com on Freepik</a>
