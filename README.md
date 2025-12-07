@@ -426,7 +426,7 @@ programs:
 ---
 ```
 
-This has multiple image support. You can list as amny images as you want. You
+This has multiple image support. You can list as many images as you want. You
 can also use `prize` to indicate if a program won a competition.
 
 <img src="images/website10.png">
